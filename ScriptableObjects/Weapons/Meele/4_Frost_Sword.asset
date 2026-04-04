@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642cea587b21fea4a82f7ac04d4db4c3, type: 3}
+  m_Name: 4_Frost_Sword
+  m_EditorClassIdentifier: Assembly-CSharp::Objects.Weapons.Weapons
+  Type: 0
+  Damage: 50
+  Cooldown: 0.65
+  ManaCost: 10
+  LifeCost: 0
+  WeaponId: 4
+  ItemId: 0
+  Sfx: {fileID: 8300000, guid: 48f4069cdc17de74297d829f27460c20, type: 3}
+  CustomMeeleAnimation: 1
+  MeeleAnimationName: Frost
+  Arrow: {fileID: 0}
+  Speed: 10
+  LifeTime: 5
+  IsDamageWeapon: 1
+  Effect: {fileID: 0}
+  ManaHealing: 0
+  LifeHealing: 0

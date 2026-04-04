@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642cea587b21fea4a82f7ac04d4db4c3, type: 3}
+  m_Name: 7_Wooden_Bow
+  m_EditorClassIdentifier: Assembly-CSharp::Objects.Weapons.Weapons
+  Type: 2
+  Damage: 5
+  Cooldown: 1.2
+  ManaCost: 0
+  LifeCost: 0
+  WeaponId: 7
+  ItemId: 0
+  Sfx: {fileID: 0}
+  CustomMeeleAnimation: 0
+  MeeleAnimationName: Default
+  Arrow: {fileID: 6216145165119299992, guid: a0e7e306364be154d8a0e093ef49ead0, type: 3}
+  Speed: 25
+  LifeTime: 5
+  IsDamageWeapon: 1
+  Effect: {fileID: 0}
+  ManaHealing: 0
+  LifeHealing: 0

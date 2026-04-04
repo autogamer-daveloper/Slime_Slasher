@@ -1,0 +1,115 @@
+using UnityEngine;
+
+public class EnemyAttack : MonoBehaviour
+{
+    [Header("Attack - Main")]
+    [SerializeField] private float speed;
+
+    [Header("Attack - Melee")]
+    [SerializeField] private Animation meeleAnim;
+
+    [Header("Attack - Range")]
+    [SerializeField] private Transform aim;
+    [SerializeField] private Transform bulletSpawn;
+    [SerializeField] private GameObject bullet;
+
+    [Header("Rotation")]
+    [Tooltip("Градусы, чтобы подогнать ориентацию спрайта (например, если спрайт 'смотрит' вверх, поставьте 90).")]
+    [SerializeField] private float rotationOffset = 0f;
+    [Tooltip("Скорость плавного поворота (градусы/сек). Если 0 — поворот будет мгновенным.")]
+    [SerializeField] private float rotationSpeed = 360f;
+
+    private bool isRange = false;
+    private bool isAttacking = false;
+
+    internal void isRangeEnemy(bool answer)
+    {
+        isRange = answer;
+    }
+
+    private void Update()
+    {
+        if (isRange && aim != null && bulletSpawn != null)
+        {
+            Vector3 dir = aim.position - bulletSpawn.position;
+            float targetAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + rotationOffset;
+            Quaternion targetRot = Quaternion.Euler(0f, 0f, targetAngle);
+
+            if (rotationSpeed <= 0f)
+            {
+                bulletSpawn.rotation = targetRot;
+            }
+            else
+            {
+                float step = rotationSpeed * Time.deltaTime;
+                bulletSpawn.rotation = Quaternion.RotateTowards(bulletSpawn.rotation, targetRot, step);
+            }
+        }
+
+        if (isRange == true) return;
+
+        Vector2 enemy = gameObject.transform.position;
+        Vector2 target = aim.position;
+        float dist = Vector2.Distance(enemy, target);
+
+        if (dist >= 5)
+        {
+            disableAttack();
+        }
+        else
+        {
+            activateAttack();
+        }
+    }
+
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (isRange == true) return;
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         activateAttack();
+    //     }
+    // }
+
+    // private void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (isRange == true) return;
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         disableAttack();
+    //     }
+    // }
+
+    internal void activateAttack()
+    {
+        if (isAttacking == true) return;
+        isAttacking = true;
+        InvokeRepeating(nameof(Attack), 0f, speed);
+    }
+
+    internal void disableAttack()
+    {
+        if (isAttacking == false) return;
+        isAttacking = false;
+        CancelInvoke(nameof(Attack));
+    }
+
+    private void Attack()
+    {
+        if (isRange == false)
+        {
+            if (meeleAnim != null) meeleAnim.Play();
+        }
+        else
+        {
+            if (aim != null && bulletSpawn != null)
+            {
+                Vector3 dir = aim.position - bulletSpawn.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + rotationOffset;
+                bulletSpawn.rotation = Quaternion.Euler(0f, 0f, angle);
+            }
+
+            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+        }
+    }
+}
