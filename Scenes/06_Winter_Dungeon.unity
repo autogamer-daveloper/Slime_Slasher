@@ -57155,7 +57155,7 @@ GameObject:
   - component: {fileID: 299063853}
   - component: {fileID: 299063852}
   m_Layer: 5
-  m_Name: WorkCompleting (1)
+  m_Name: PrisonTrader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57194,7 +57194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CraftOrTradingSystem
   switchPanel:
-  - {fileID: 2142955048}
+  - {fileID: 1495609594}
   - {fileID: 574995813}
   panel: {fileID: 299063851}
   speed: 0.5
@@ -57207,34 +57207,55 @@ MonoBehaviour:
     whatToDo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8961099092658331262}
-          m_TargetAssemblyTypeName: PrisonTimer, Assembly-CSharp
-          m_MethodName: CompleteTask
-          m_Mode: 1
+        - m_Target: {fileID: 299063852}
+          m_TargetAssemblyTypeName: CraftOrTradingSystem, Assembly-CSharp
+          m_MethodName: GetItemOnce
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - acceptTrade: {fileID: 0}
+  - acceptTrade: {fileID: 269588505}
     itemsId: 20000000
     needItems: 14000000
     countItems:
-    - {fileID: 0}
+    - {fileID: 1442121828}
     whatToDo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8961099092658331262}
-          m_TargetAssemblyTypeName: PrisonTimer, Assembly-CSharp
-          m_MethodName: CompleteTask
-          m_Mode: 1
+        - m_Target: {fileID: 299063852}
+          m_TargetAssemblyTypeName: CraftOrTradingSystem, Assembly-CSharp
+          m_MethodName: GetItemOnce
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - acceptTrade: {fileID: 1677105791}
+    itemsId: 1f00000020000000
+    needItems: 0f0000000f000000
+    countItems:
+    - {fileID: 1354713133}
+    - {fileID: 1350506144}
+    whatToDo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 299063852}
+          m_TargetAssemblyTypeName: CraftOrTradingSystem, Assembly-CSharp
+          m_MethodName: GetItemOnce
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 17
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -93038,10 +93059,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SelectCraft
   panels:
   - {fileID: 1609696387}
-  - {fileID: 0}
+  - {fileID: 997900935}
+  - {fileID: 1382389538}
   select:
   - {fileID: 2086195523}
   - {fileID: 1946218899}
+  - {fileID: 669583753}
 --- !u!114 &485968203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93049,7 +93072,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485968200}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
@@ -263926,7 +263949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1382389539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -360127,7 +360150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b33e4f952782124aaa393b76b65b5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectCraftStantion
-  button: {fileID: 2142955046}
+  button: {fileID: 1495609592}
 --- !u!70 &1898706019
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
