@@ -4,6 +4,7 @@ public class EnemyAttack : MonoBehaviour
 {
     [Header("Attack - Main")]
     [SerializeField] private float speed;
+    [SerializeField] private bool boss = false;
 
     [Header("Attack - Melee")]
     [SerializeField] private Animation meeleAnim;
@@ -21,6 +22,22 @@ public class EnemyAttack : MonoBehaviour
 
     private bool isRange = false;
     private bool isAttacking = false;
+
+    private bool isBlocked = false;
+
+    private void Start()
+    {
+        if (boss)
+        {
+            isBlocked = true;
+            Invoke(nameof(UnlockAttacks), 7.5f);
+        }
+    }
+
+    private void UnlockAttacks()
+    {
+        isBlocked = false;
+    }
 
     internal void isRangeEnemy(bool answer)
     {
@@ -52,9 +69,16 @@ public class EnemyAttack : MonoBehaviour
         Vector2 target = aim.position;
         float dist = Vector2.Distance(enemy, target);
 
-        if (dist >= 5)
+        if (!boss)
         {
-            disableAttack();
+            if (dist >= 10)
+            {
+                disableAttack();
+            }
+            else
+            {
+                activateAttack();
+            }
         }
         else
         {
@@ -82,21 +106,22 @@ public class EnemyAttack : MonoBehaviour
 
     internal void activateAttack()
     {
-        if (isAttacking == true) return;
+        if (isAttacking) return;
+        if (isBlocked) return;
         isAttacking = true;
         InvokeRepeating(nameof(Attack), 0f, speed);
     }
 
     internal void disableAttack()
     {
-        if (isAttacking == false) return;
+        if (!isAttacking) return;
         isAttacking = false;
         CancelInvoke(nameof(Attack));
     }
 
     private void Attack()
     {
-        if (isRange == false)
+        if (!isRange)
         {
             if (meeleAnim != null) meeleAnim.Play();
         }

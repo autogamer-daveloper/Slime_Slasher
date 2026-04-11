@@ -25,7 +25,7 @@ public class DropSystem : MonoBehaviour
         {
             int _result = UnityEngine.Random.Range(0, 101);
 
-            if (item.chance <= _result)
+            if (item.chance >= _result)
             {
                 Instantiate(item.item, this.gameObject.transform.position, this.gameObject.transform.rotation);
                 Debug.Log($"Dropped item with result: {_result}");

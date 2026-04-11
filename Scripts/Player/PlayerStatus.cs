@@ -123,6 +123,13 @@ public class PlayerStatus : MonoBehaviour
         manaSlider.value = mana;
     }
 
+    private void GetExtraMana(int extraMana)
+    {
+        mana += extraMana;
+        if (mana >= maxMana + _extraMana) { mana = maxMana + _extraMana; }
+        manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
+    }
+
     internal void SetBonus(int lifeBonus, int manaBonus)
     {
         boostHealthRegen = lifeBonus;
@@ -251,6 +258,16 @@ public class PlayerStatus : MonoBehaviour
                 GetDamage(attack.Damage);
                 isBlocked = true;
                 Invoke(nameof(UnlockDamage), 0.1f);
+            }
+        }
+        if (other.CompareTag("ExtraMana"))
+        {
+            ExtraManaPoint point = other.GetComponent<ExtraManaPoint>();
+            if (point != null)
+            {
+                int temp = point.CountOfExtraMana();
+                GetExtraMana(temp);
+                point.DestroyThisPoint();
             }
         }
     }
