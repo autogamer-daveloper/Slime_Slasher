@@ -66,9 +66,9 @@ public class LevelLoading : MonoBehaviour
         isEasyMode.onValueChanged.RemoveAllListeners();
     }
 
-    private void ShowStart() { panelStartNew.DOAnchorPos(shown, 0.5f); locked = true; }
-    private void ShowContinue() { panelContinue.DOAnchorPos(shown, 0.5f); locked = true; }
-    private void ShowExit() { panelExit.DOAnchorPos(shown, 0.5f); locked = true; }
+    private void ShowStart() { panelStartNew.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); }
+    private void ShowContinue() { panelContinue.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); }
+    private void ShowExit() { panelExit.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); }
 
     private void HideAllPanels()
     {

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class SkeletonLordSecretBossFight : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
     [SerializeField] private Transform boss;
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject healthBar;
+    [SerializeField] private SkeletonUniqueAttack uniqueAttack;
+    [SerializeField] private Image skeletonVision;
+    [SerializeField] private Color visible;
+    [SerializeField] private Color invisible;
 
     private int _isSkeletonLordDefeated = 0;
     private bool _isSecondPhase = false;
@@ -91,6 +96,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
 
         foreach (GameObject obj in activateInFight) { obj.SetActive(true); }
         foreach (GameObject obj in deactivateInFight) { obj.SetActive(false); }
+        skeletonVision.DOColor(visible, 0.5f);
     }
 
     private void ShowFirstDialogue()
@@ -108,6 +114,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
 
     private void SpawnCoils()
     {
+        uniqueAttack.Attack();
         if (!_isSecondPhase)
         {
             showAnimation(3);
@@ -189,6 +196,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
         foreach (GameObject obj in activateInFight) { obj.SetActive(false); }
         foreach (GameObject obj in deactivateInFight) { obj.SetActive(true); }
         foreach (GameObject obj in deactivateAfterFight) { obj.SetActive(false); }
+        skeletonVision.DOColor(invisible, 0.5f);
         boss.position = startPos.position;
 
         showAnimation(0);
@@ -213,6 +221,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
         foreach (GameObject obj in activateInFight) { obj.SetActive(false); }
         foreach (GameObject obj in deactivateInFight) { obj.SetActive(true); }
         foreach (GameObject obj in deactivateAfterFight) { obj.SetActive(false); }
+        skeletonVision.DOColor(invisible, 0.5f);
     }
 
     private void ShowIdle()

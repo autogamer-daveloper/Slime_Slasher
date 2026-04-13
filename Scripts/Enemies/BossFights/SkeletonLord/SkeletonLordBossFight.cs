@@ -31,6 +31,7 @@ public class SkeletonLordBossFight : MonoBehaviour
     [SerializeField] private Transform boss;
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject healthBar;
+    [SerializeField] private SkeletonUniqueAttack uniqueAttack;
 
     private int _isSkeletonLordDefeated = 0;
     private bool _isSecondPhase = false;
@@ -108,6 +109,7 @@ public class SkeletonLordBossFight : MonoBehaviour
 
     private void SpawnCoils()
     {
+        uniqueAttack.Attack();
         if (!_isSecondPhase)
         {
             showAnimation(3);
