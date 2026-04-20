@@ -1,13 +1,17 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyAttack : MonoBehaviour
 {
     [Header("Attack - Main")]
     [SerializeField] private float speed;
     [SerializeField] private bool boss = false;
+    [SerializeField] private float distantion = 10f;
 
     [Header("Attack - Melee")]
     [SerializeField] private Animation meeleAnim;
+    [SerializeField] private bool isHaveCustomPunch = false;
+    [SerializeField] private UnityEvent CustomPunch;
 
     [Header("Attack - Range")]
     [SerializeField] private Transform aim;
@@ -71,7 +75,7 @@ public class EnemyAttack : MonoBehaviour
 
         if (!boss)
         {
-            if (dist >= 10)
+            if (dist >= distantion)
             {
                 disableAttack();
             }
@@ -123,7 +127,8 @@ public class EnemyAttack : MonoBehaviour
     {
         if (!isRange)
         {
-            if (meeleAnim != null) meeleAnim.Play();
+            if (isHaveCustomPunch) { CustomPunch.Invoke(); }
+            else { if (meeleAnim != null) meeleAnim.Play(); }
         }
         else
         {

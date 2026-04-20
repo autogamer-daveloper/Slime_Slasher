@@ -23,6 +23,7 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private int maxHealth = 15;
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private bool autoUnlock = true;
     [Header("__ Boss fight __")]
     [SerializeField] private bool needSave = false;
     [SerializeField] private HealthEvents[] healthEvents;
@@ -38,12 +39,12 @@ public class EnemyStats : MonoBehaviour
         healthText.text = maxHealth.ToString() + "/" + health.ToString();
 
         blockedDamage = true;
-        Invoke("UnlockDamage", 0.2f);
+        if (autoUnlock) Invoke("UnlockDamage", 0.2f);
     }
 
     private void GetDamage(int damage)
     {
-        if (blockedDamage == true) return;
+        if (blockedDamage) return;
         Debug.Log("Damaged");
         health -= damage;
         if (healthEvents != null)
@@ -89,6 +90,7 @@ public class EnemyStats : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (blockedDamage) return;
         Debug.Log("Triggered");
         if (other.tag == "PlayerAttack")
         {

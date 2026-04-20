@@ -147,6 +147,7 @@ public class PrisonTimer : MonoBehaviour
         SetTimer(0);
         inPrisonHelpObj.SetActive(true);
         inPrisonHelp.Play();
+        PlayTimer();
     }
 
     public void PauseTimer()

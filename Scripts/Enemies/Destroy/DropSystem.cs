@@ -14,6 +14,8 @@ public class DropSystem : MonoBehaviour
     [Header("__ Extra settings __")]
     [SerializeField] private bool atStart = true;
 
+    private bool _wasRewarded = false;
+
     private void Start()
     {
         if (atStart) { GiveResult(); }
@@ -21,6 +23,7 @@ public class DropSystem : MonoBehaviour
 
     public void GiveResult()
     {
+        if (_wasRewarded) return;
         foreach (DropType item in element)
         {
             int _result = UnityEngine.Random.Range(0, 101);
@@ -32,6 +35,7 @@ public class DropSystem : MonoBehaviour
             }
             else { Debug.Log($"Nothing dropped with result: {_result}"); }
         }
+        _wasRewarded = true;
 
         Destroy(this.gameObject);
     }

@@ -60,8 +60,8 @@ public class PortalActivating : MonoBehaviour
         else { deactivatedPortal.SetActive(true); activatedPortal.SetActive(false); }
 
         bool canActivatePortal = CheckItems();
-        if (canActivatePortal) { deactivatedPortal.SetActive(false); activatedPortal.SetActive(true); }
-        else { deactivatedPortal.SetActive(true); activatedPortal.SetActive(false); }
+        if (canActivatePortal) { deactivatedPortalP.SetActive(false); activatedPortalP.SetActive(true); }
+        else { deactivatedPortalP.SetActive(true); activatedPortalP.SetActive(false); }
     }
 
     private bool CheckItems()
@@ -87,6 +87,7 @@ public class PortalActivating : MonoBehaviour
                 int index = i;
                 KeyManager.Spend_Item(_itemsId[index], _itemsCount[index]);
             }
+            KeyManager.Set_Bool_Key(_isPortalActivated, 1);
         }
 
         CheckStatus();

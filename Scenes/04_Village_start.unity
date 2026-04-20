@@ -17633,6 +17633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1
+  boss: 0
   meeleAnim: {fileID: 1934150623}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1519166355}
@@ -21729,7 +21730,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1504702910}
   enemyRigidbody: {fileID: 1504702912}
-  moveSpeed: 6
+  moveSpeed: 8.5
   isRangeEnemy: 1
   stopRange: 8.5
   flipOnDirection: 1
@@ -33352,7 +33353,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1164214928}
   enemyRigidbody: {fileID: 1164214930}
-  moveSpeed: 8.25
+  moveSpeed: 11
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -35246,7 +35247,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1488722773}
   enemyRigidbody: {fileID: 1488722775}
-  moveSpeed: 7.75
+  moveSpeed: 10.5
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -118868,7 +118869,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -125550,6 +125551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2.15
+  boss: 0
   meeleAnim: {fileID: 1907362998}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 904395800}
@@ -141896,7 +141898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 10
+  speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 2035849052}
   runAnim: {fileID: 2035185518}
@@ -187579,6 +187581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1.5
+  boss: 0
   meeleAnim: {fileID: 1077534689}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 805903593}
@@ -195737,6 +195740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1.5
+  boss: 0
   meeleAnim: {fileID: 1530410072}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 633677906}
@@ -267468,6 +267472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 0.85
+  boss: 0
   meeleAnim: {fileID: 1901569530}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 982234700}
@@ -298090,6 +298095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2
+  boss: 0
   meeleAnim: {fileID: 1103002453}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1766978467}
@@ -343902,6 +343908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 0.9
+  boss: 0
   meeleAnim: {fileID: 827648733}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 362614010}
@@ -347740,6 +347747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2.15
+  boss: 0
   meeleAnim: {fileID: 1114653993}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 2059980777}
@@ -423951,7 +423959,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 552389213}
   enemyRigidbody: {fileID: 552389215}
-  moveSpeed: 6
+  moveSpeed: 8.5
   isRangeEnemy: 1
   stopRange: 8.5
   flipOnDirection: 1
@@ -467762,6 +467770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1.5
+  boss: 0
   meeleAnim: {fileID: 1837012886}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 507061707}
@@ -492487,7 +492496,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 7908406555194984333}
   enemyRigidbody: {fileID: 2932172243937626126}
-  moveSpeed: 7
+  moveSpeed: 9
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -493626,6 +493635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1
+  boss: 0
   meeleAnim: {fileID: 2166641256203021725}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1326493738524847415}

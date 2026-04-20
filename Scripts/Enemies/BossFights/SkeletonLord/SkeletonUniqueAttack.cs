@@ -11,8 +11,8 @@ public class SkeletonUniqueAttack : MonoBehaviour
 {
     [Header("__ Spawn points __")]
     [SerializeField] private CoilSpawnPoints[] points;
-    [SerializeField] private float beforeStart = 1.5f;
-    [SerializeField] private float betweenSpawns = 0.5f;
+    [SerializeField] private float beforeStart = 1.25f;
+    [SerializeField] private float betweenSpawns = 0.15f;
     [SerializeField] private GameObject coils;
     [SerializeField] private Animation pentogramAnim;
 

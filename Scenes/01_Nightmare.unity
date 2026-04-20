@@ -17676,7 +17676,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1384722114}
   enemyRigidbody: {fileID: 1384722111}
-  moveSpeed: 3
+  moveSpeed: 7
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -31259,7 +31259,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -37267,7 +37267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
+  speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 2035849052}
   runAnim: {fileID: 2035185518}
@@ -56153,6 +56153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2
+  boss: 0
   meeleAnim: {fileID: 223349246}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 924885536}
@@ -61315,7 +61316,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1284292908}
   enemyRigidbody: {fileID: 1284292911}
-  moveSpeed: 3
+  moveSpeed: 7
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -69473,7 +69474,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 897951303}
   enemyRigidbody: {fileID: 897951300}
-  moveSpeed: 3
+  moveSpeed: 7
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -78881,6 +78882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2
+  boss: 0
   meeleAnim: {fileID: 1103002453}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1766978467}
@@ -84679,6 +84681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2
+  boss: 0
   meeleAnim: {fileID: 2034065787}
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 893917625}

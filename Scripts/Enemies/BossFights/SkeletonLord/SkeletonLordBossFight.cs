@@ -25,6 +25,7 @@ public class SkeletonLordBossFight : MonoBehaviour
     [SerializeField] private GameObject coil02;
     [SerializeField] private GameObject spawnEffect;
     [SerializeField] private UnityEvent afterKilling;
+    [SerializeField] private UnityEvent onLosed;
     [SerializeField] private GameObject[] activateInFight;
     [SerializeField] private GameObject[] deactivateInFight;
     [SerializeField] private GameObject[] deactivateAfterFight;
@@ -192,7 +193,6 @@ public class SkeletonLordBossFight : MonoBehaviour
         foreach (GameObject obj in deactivateInFight) { obj.SetActive(true); }
         foreach (GameObject obj in deactivateAfterFight) { obj.SetActive(false); }
         boss.position = startPos.position;
-
         showAnimation(0);
     }
 

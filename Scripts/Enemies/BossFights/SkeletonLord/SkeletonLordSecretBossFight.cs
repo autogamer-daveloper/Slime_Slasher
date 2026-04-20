@@ -198,7 +198,6 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
         foreach (GameObject obj in deactivateAfterFight) { obj.SetActive(false); }
         skeletonVision.DOColor(invisible, 0.5f);
         boss.position = startPos.position;
-
         showAnimation(0);
     }
 

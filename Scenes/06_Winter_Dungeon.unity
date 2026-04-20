@@ -8299,6 +8299,7 @@ MonoBehaviour:
   maxHealth: 60
   healthText: {fileID: 1466163255}
   healthBar: {fileID: 797543441}
+  autoUnlock: 1
   needSave: 0
   healthEvents: []
 --- !u!70 &41364858
@@ -17533,8 +17534,8 @@ MonoBehaviour:
     - {fileID: 756452604}
     - {fileID: 1534885271}
     - {fileID: 1090043471}
-  beforeStart: 1.5
-  betweenSpawns: 0.5
+  beforeStart: 1.25
+  betweenSpawns: 0.15
   coils: {fileID: 6383496603029393861, guid: 36482e8694eacd04ca3974b62069f433, type: 3}
   pentogramAnim: {fileID: 93427967}
 --- !u!111 &93427967
@@ -33990,7 +33991,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2.75
   boss: 0
+  distantion: 10
   meeleAnim: {fileID: 1454084459}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1592214688}
   bullet: {fileID: 4311507231391963243, guid: bab4851339948414e98b79e82e9e3344, type: 3}
@@ -52901,7 +52907,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2.75
   boss: 0
+  distantion: 10
   meeleAnim: {fileID: 1678563798}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1461720309}
   bullet: {fileID: 4311507231391963243, guid: bab4851339948414e98b79e82e9e3344, type: 3}
@@ -104589,7 +104600,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -158581,6 +158592,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onLosed:
+    m_PersistentCalls:
+      m_Calls: []
   activateInFight:
   - {fileID: 1135823089}
   deactivateInFight:
@@ -169305,6 +169319,7 @@ MonoBehaviour:
   maxHealth: 85
   healthText: {fileID: 494119873}
   healthBar: {fileID: 109243117}
+  autoUnlock: 1
   needSave: 0
   healthEvents: []
 --- !u!70 &828431221
@@ -194161,6 +194176,7 @@ MonoBehaviour:
   maxHealth: 750
   healthText: {fileID: 235517243}
   healthBar: {fileID: 350857728}
+  autoUnlock: 0
   needSave: 1
   healthEvents:
   - health: 300
@@ -228323,7 +228339,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 0.85
   boss: 0
+  distantion: 10
   meeleAnim: {fileID: 1653005311}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1508798874}
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
@@ -231848,7 +231869,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2.5
   boss: 1
+  distantion: 10
   meeleAnim: {fileID: 1764427694}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 464309171}
   bullet: {fileID: 4311507231391963243, guid: 02744fbf019d84b46bf74bff31d20c43, type: 3}
@@ -234015,7 +234041,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 5
   boss: 1
+  distantion: 10
   meeleAnim: {fileID: 2100438222}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 539586885}
   bullet: {fileID: 4311507231391963243, guid: 02744fbf019d84b46bf74bff31d20c43, type: 3}
@@ -237385,7 +237416,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 0.85
   boss: 0
+  distantion: 10
   meeleAnim: {fileID: 1901569530}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 982234700}
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
@@ -288689,6 +288725,7 @@ MonoBehaviour:
   maxHealth: 1250
   healthText: {fileID: 24495059}
   healthBar: {fileID: 1070634679}
+  autoUnlock: 0
   needSave: 1
   healthEvents:
   - health: 500
@@ -305811,7 +305848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1498239877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -337517,6 +337554,7 @@ MonoBehaviour:
   maxHealth: 60
   healthText: {fileID: 1352395276}
   healthBar: {fileID: 1634645419}
+  autoUnlock: 1
   needSave: 0
   healthEvents: []
 --- !u!70 &1656589557
@@ -343340,6 +343378,7 @@ MonoBehaviour:
   maxHealth: 85
   healthText: {fileID: 1141712408}
   healthBar: {fileID: 870696670}
+  autoUnlock: 1
   needSave: 0
   healthEvents: []
 --- !u!70 &1691521217
@@ -433958,7 +433997,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2
+  m_Radius: 3.5
 --- !u!114 &564916187014875006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435045,7 +435084,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.25
+  m_Radius: 2
 --- !u!1 &2847067498693904031
 GameObject:
   m_ObjectHideFlags: 0
@@ -435511,7 +435550,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.25
+  m_Radius: 3.5
 --- !u!58 &3401718695377196725
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -438258,7 +438297,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.25
+  m_Radius: 2
 --- !u!212 &8585280293766668007
 SpriteRenderer:
   serializedVersion: 2
