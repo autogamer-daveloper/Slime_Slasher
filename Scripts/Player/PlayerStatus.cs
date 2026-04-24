@@ -145,6 +145,7 @@ public class PlayerStatus : MonoBehaviour
 
         healthSlider.value = health;
         manaSlider.value = mana;
+        DeathCheck();
     }
 
     internal void GetDamage(int dmg)
@@ -154,6 +155,11 @@ public class PlayerStatus : MonoBehaviour
 
         healthSlider.value = health;
 
+        DeathCheck();
+    }
+
+    private void DeathCheck()
+    {
         if (health <= 0)
         {
             Debug.Log("You died!");

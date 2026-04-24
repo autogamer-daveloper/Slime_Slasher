@@ -74,14 +74,8 @@ public class RyanSamuraiBossFight : MonoBehaviour
         stats.BlockDamage();
         _isSamuraiDefeated = KeyManager.Get_Bool_Key(bossKey);
 
-        if (_isSamuraiDefeated == 1)
-        {
-            showAnimation(5);
-        }
-        else
-        {
-            showAnimation(0);
-        }
+        if (_isSamuraiDefeated == 1) { showAnimation(5); afterKilling.Invoke(); }
+        else { showAnimation(0); }
 
         startFight.onClick.AddListener(PreStartFight);
         fight.onClick.AddListener(StartFight);
@@ -289,9 +283,10 @@ public class RyanSamuraiBossFight : MonoBehaviour
         foreach (GameObject obj in activateInFight) { obj.SetActive(false); }
         foreach (GameObject obj in deactivateInFight) { obj.SetActive(true); }
         foreach (GameObject obj in deactivateAfterFight) { obj.SetActive(false); }
-        help.SetActive(true);
-        helpAnim.Play();
+        Help();
     }
+
+    public void Help() { help.SetActive(true); helpAnim.Play(); }
 
     private void ShowIdle() { if (_wasFightStarted) showAnimation(2); }
 

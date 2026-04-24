@@ -28,6 +28,7 @@ public class EnemyAttack : MonoBehaviour
     private bool isAttacking = false;
 
     private bool isBlocked = false;
+    private bool visionBlock = false;
 
     private void Start()
     {
@@ -38,10 +39,7 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    private void UnlockAttacks()
-    {
-        isBlocked = false;
-    }
+    private void UnlockAttacks() { isBlocked = false; }
 
     internal void isRangeEnemy(bool answer)
     {
@@ -111,8 +109,8 @@ public class EnemyAttack : MonoBehaviour
     internal void activateAttack()
     {
         if (isAttacking) return;
-        if (isBlocked) return;
         isAttacking = true;
+        if (isBlocked) return;
         InvokeRepeating(nameof(Attack), 0f, speed);
     }
 
@@ -121,6 +119,16 @@ public class EnemyAttack : MonoBehaviour
         if (!isAttacking) return;
         isAttacking = false;
         CancelInvoke(nameof(Attack));
+    }
+
+    internal void Visible_Attack() { isBlocked = false; UnlockAttack(); }
+    internal void Invisible_Attack() { CancelInvoke(nameof(Attack)); isBlocked = true; visionBlock = false; }
+
+    private void UnlockAttack()
+    {
+        if (visionBlock) return;
+        if (isAttacking) { InvokeRepeating(nameof(Attack), 0f, speed); }
+        visionBlock = true;
     }
 
     private void Attack()

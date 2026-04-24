@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("__ Camera animation __")]
     [SerializeField] private GameObject cameraAnim;
+    [SerializeField] private bool isAnimated = true;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        if (cameraAnim != null)
+        if (cameraAnim != null && isAnimated)
         {
             cameraAnimation = cameraAnim.GetComponent<Animation>();
 
@@ -56,6 +57,8 @@ public class PlayerController : MonoBehaviour
         else if (facingRight && moveInput.x < 0)
             Flip();
 
+        if (!isAnimated) return;
+
         bool nowIdle = moveInput.x == 0f && moveInput.y == 0f;
 
         if (nowIdle && !isIdle)
@@ -78,10 +81,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + moveVelocity * Time.deltaTime);
-    }
+    private void FixedUpdate() { rb.MovePosition(rb.position + moveVelocity * Time.deltaTime); }
 
     private void Flip()
     {
@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetCameraIdle()
     {
+        if (!isAnimated) return;
         if (cameraAnimation == null) return;
 
         if (!cameraAnimation.IsPlaying("Idle"))
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetCameraRun()
     {
+        if (!isAnimated) return;
         if (cameraAnimation == null) return;
 
         if (!cameraAnimation.IsPlaying("Run"))

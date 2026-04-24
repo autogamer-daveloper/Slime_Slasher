@@ -10,6 +10,9 @@ using UnityEngine;
 /// </summary>
 public class EnemyMovement : MonoBehaviour
 {
+    [Header("Fear")]
+    [SerializeField] private bool isFeared;
+
     [Header("Ray Check")]
     [SerializeField] private Transform _targetRay;
 
@@ -178,6 +181,7 @@ public class EnemyMovement : MonoBehaviour
             else
             {
                 Vector2 dir = (playerPos - enemyPos).normalized;
+                if(isFeared) { dir = (enemyPos - playerPos).normalized; }
                 Vector2 target = enemyPos + dir * moveSpeed * Time.fixedDeltaTime;
                 enemyRigidbody.MovePosition(target);
                 isWalking = true;
@@ -275,6 +279,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void CheckRayToTarget()
     {
+        if (isFeared) { Visible(); return; }
         if (_targetRay == null) return;
 
         Vector2 origin = _selfCollider != null
@@ -324,12 +329,14 @@ public class EnemyMovement : MonoBehaviour
             if (isWalking) { SetAnimation(1); }
             else { SetAnimation(0); }
         }
+        attack.Visible_Attack();
     }
 
     private void Invisible()
     {
         isPlayerVisible = false;
         if (isUsingAnims) { SetAnimation(0); }
+        attack.Invisible_Attack();
     }
 
     private void SetAnimation(int id)

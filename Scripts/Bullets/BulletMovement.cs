@@ -18,24 +18,10 @@ public class BulletMovement : MonoBehaviour
             lifeTime = weapon.LifeTime;
         }
 
-        Invoke("DestroyThis", lifeTime);
+        Invoke(nameof(DestroyThis), lifeTime);
     }
 
-    private void Update()
-    {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-    }
+    private void Update() { transform.Translate(Vector2.right * speed * Time.deltaTime); }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("DestroyBullets"))
-        {
-            DestroyThis();
-        }
-    }
-
-    private void DestroyThis()
-    {
-        Destroy(this.gameObject);
-    }
+    internal void DestroyThis() { CancelInvoke(nameof(DestroyThis)); Destroy(this.gameObject); }
 }

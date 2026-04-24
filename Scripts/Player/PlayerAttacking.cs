@@ -104,8 +104,6 @@ public class PlayerAttacking : MonoBehaviour
         else
             Debug.LogWarning("defaultAnimation GameObject is not assigned in inspector.");
 
-        // Если aim — дочерний объект и ты хочешь управлять местоположением в world,
-        // он всё еще корректно позиционируется через aim.transform.position.
         SelectThisWeapon(_selectedWeapon);
     }
 
