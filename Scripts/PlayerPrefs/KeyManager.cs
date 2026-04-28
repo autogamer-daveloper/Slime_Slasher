@@ -85,4 +85,6 @@ public class KeyManager : MonoBehaviour
         int i = PlayerPrefs.GetInt(name.ToString(), 0);
         return i;
     }
+
+    internal static void Delete_All() { PlayerPrefs.DeleteAll(); }
 }

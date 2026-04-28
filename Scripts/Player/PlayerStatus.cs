@@ -130,6 +130,13 @@ public class PlayerStatus : MonoBehaviour
         manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
     }
 
+    private void GetExtraLife(int extraLife)
+    {
+        health += extraLife;
+        if (health >= maxHealth + _extraLife) { health = maxHealth + _extraLife; }
+        healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
+    }
+
     internal void SetBonus(int lifeBonus, int manaBonus)
     {
         boostHealthRegen = lifeBonus;
@@ -167,8 +174,9 @@ public class PlayerStatus : MonoBehaviour
             deadPlayer.SetActive(true);
             if (isFirstNightmare == true)
             {
-                nightmare.DeadSlime();
+                if (nightmare != null) { nightmare.DeadSlime(); }
                 controller.LockInput();
+                clearEnemies.Invoke();
             }
             else
             {
@@ -271,8 +279,10 @@ public class PlayerStatus : MonoBehaviour
             ExtraManaPoint point = other.GetComponent<ExtraManaPoint>();
             if (point != null)
             {
-                int temp = point.CountOfExtraMana();
-                GetExtraMana(temp);
+                int tempMana = point.CountOfExtraMana();
+                GetExtraMana(tempMana);
+                int tempLife = point.CountOfExtraLife();
+                GetExtraLife(tempLife);
                 point.DestroyThisPoint();
             }
         }

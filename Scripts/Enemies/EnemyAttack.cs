@@ -30,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
     private bool isBlocked = false;
     private bool visionBlock = false;
 
-    private void Start()
+    private void OnEnable()
     {
         if (boss)
         {

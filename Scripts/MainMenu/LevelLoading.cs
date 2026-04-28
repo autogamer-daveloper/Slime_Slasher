@@ -85,7 +85,7 @@ public class LevelLoading : MonoBehaviour
     private void StartNewGame()
     {
         if (locked) return;
-        PlayerPrefs.DeleteAll();
+        KeyManager.Delete_All();
         KeyManager.Set_Bool_Key("gameEpisode", 0);
         saveIndex = 0;
         if(startWithEasyMode == true) { KeyManager.Set_Bool_Key("easyMode", 1); }
