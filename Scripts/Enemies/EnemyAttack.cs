@@ -32,12 +32,17 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnEnable()
     {
+        InvokeRepeating(nameof(Checking), 0.1f, 0.1f);
+
         if (boss)
         {
             isBlocked = true;
             Invoke(nameof(UnlockAttacks), 7.5f);
         }
     }
+
+    private void OnDestroy() { CancelInvoke(nameof(Checking)); }
+    private void OnDisable() { CancelInvoke(nameof(Checking)); }
 
     private void UnlockAttacks() { isBlocked = false; }
 
@@ -46,7 +51,7 @@ public class EnemyAttack : MonoBehaviour
         isRange = answer;
     }
 
-    private void Update()
+    private void Checking()
     {
         if (isRange && aim != null && bulletSpawn != null)
         {
@@ -87,24 +92,6 @@ public class EnemyAttack : MonoBehaviour
             activateAttack();
         }
     }
-
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (isRange == true) return;
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         activateAttack();
-    //     }
-    // }
-
-    // private void OnTriggerExit2D(Collider2D other)
-    // {
-    //     if (isRange == true) return;
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         disableAttack();
-    //     }
-    // }
 
     internal void activateAttack()
     {

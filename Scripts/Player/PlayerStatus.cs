@@ -26,7 +26,7 @@ public class PlayerStatus : MonoBehaviour
     [Header("__ Dead __")]
     [SerializeField] private GameObject[] deadPanels;
     [SerializeField] private Animation[] deadAnims;
-    [SerializeField] private int deathCutsceneIndex = 0;
+    private int _deathCutsceneIndex = 13;
     [SerializeField] private UnityEvent clearEnemies;
     [SerializeField] private Transform spawnPoint;
     [Header("__ Textures __")]
@@ -202,7 +202,8 @@ public class PlayerStatus : MonoBehaviour
                     {
                         deadPanels[2].SetActive(true);
                         deadAnims[2].Play();
-                        Invoke(nameof(HideDeadPanels), 4.5f);
+                        KeyManager.Delete_All();
+                        Invoke(nameof(HideDeadPanels), 4f);
                         Invoke(nameof(DeadCutscene), 4f);
                     }
 
@@ -240,10 +241,7 @@ public class PlayerStatus : MonoBehaviour
         manaSlider.value = mana + _extraMana;
     }
 
-    private void DeadCutscene()
-    {
-        LoadLevel.LoadLevelById(deathCutsceneIndex);
-    }
+    private void DeadCutscene() { LoadLevel.LoadLevelById(_deathCutsceneIndex); }
 
     private void Teleport()
     {

@@ -15,13 +15,12 @@ public class EnemySpawner : MonoBehaviour
             if (isBlocked) return;
 
             isBlocked = true;
+            prototype.SetActive(true);
             Instantiate(prototype, gameObject.transform.position, gameObject.transform.rotation);
+            prototype.SetActive(false);
             Invoke(nameof(Unlock), cooldown);
         }
     }
 
-    private void Unlock()
-    {
-        isBlocked = false;
-    }
+    private void Unlock() { isBlocked = false; }
 }
