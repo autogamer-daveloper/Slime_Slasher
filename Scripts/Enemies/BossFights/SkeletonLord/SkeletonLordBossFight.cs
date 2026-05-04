@@ -24,8 +24,8 @@ public class SkeletonLordBossFight : MonoBehaviour
     [SerializeField] private GameObject coil01;
     [SerializeField] private GameObject coil02;
     [SerializeField] private GameObject spawnEffect;
+    [SerializeField] private UnityEvent spawned;
     [SerializeField] private UnityEvent afterKilling;
-    [SerializeField] private UnityEvent onLosed;
     [SerializeField] private GameObject[] activateInFight;
     [SerializeField] private GameObject[] deactivateInFight;
     [SerializeField] private GameObject[] deactivateAfterFight;
@@ -33,6 +33,10 @@ public class SkeletonLordBossFight : MonoBehaviour
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject healthBar;
     [SerializeField] private SkeletonUniqueAttack uniqueAttack;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip magicAttack;
+    [SerializeField] private AudioClip circleAttack;
 
     private int _isSkeletonLordDefeated = 0;
     private bool _isSecondPhase = false;
@@ -43,8 +47,8 @@ public class SkeletonLordBossFight : MonoBehaviour
     private float _beforeFirstDialogue = 0.5f;
     private float _beforeFight = 6f;
     private float _afterSpawn = 4f;
-    private float _betweenCoilSpawns = 0.33f;
-    private float _afterCoilSpawns = 1f;
+    private float _betweenCoilSpawns = 0.5f;
+    private float _afterCoilSpawns = 7f;
 
     private int coilCount = 0;
 
@@ -87,6 +91,7 @@ public class SkeletonLordBossFight : MonoBehaviour
     private void StartFight()
     {
         showAnimation(1);
+        spawned.Invoke();
         Invoke(nameof(ShowFirstDialogue), _beforeFirstDialogue);
         healthBar.SetActive(true);
         playerVision.SetActive(true);
@@ -111,14 +116,21 @@ public class SkeletonLordBossFight : MonoBehaviour
     private void SpawnCoils()
     {
         uniqueAttack.Attack();
+        src.PlayOneShot(circleAttack);
+        _SpawnCoils();
+    }
+
+    private void _SpawnCoils()
+    {
         if (!_isSecondPhase)
         {
             showAnimation(3);
             Invoke(nameof(ShowIdle), _attackTime);
             Instantiate(coil01, player.position, player.rotation);
+            src.PlayOneShot(magicAttack);
             if (coilCount <= 1)
             {
-                Invoke(nameof(SpawnCoils), _betweenCoilSpawns);
+                Invoke(nameof(_SpawnCoils), _betweenCoilSpawns);
             }
             else
             {
@@ -131,9 +143,10 @@ public class SkeletonLordBossFight : MonoBehaviour
             showAnimation(4);
             Invoke(nameof(ShowIdle), _attackTime);
             Instantiate(coil02, player.position, player.rotation);
+            src.PlayOneShot(magicAttack);
             if (coilCount <= 3)
             {
-                Invoke(nameof(SpawnCoils), _betweenCoilSpawns);
+                Invoke(nameof(_SpawnCoils), _betweenCoilSpawns);
             }
             else
             {
@@ -150,6 +163,7 @@ public class SkeletonLordBossFight : MonoBehaviour
 
     private void _SpawnEnemy()
     {
+        src.PlayOneShot(circleAttack);
         Debug.LogWarning("SPAWN SKELETONS");
         coilCount = 0;
         Invoke(nameof(SpawnCoils), _afterSpawn);

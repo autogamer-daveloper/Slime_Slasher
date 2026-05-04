@@ -13,11 +13,18 @@ public class InventoryPanel : MonoBehaviour
     [SerializeField] private RectTransform panelAccessories;
     [SerializeField] private RectTransform panelItems;
 
+    [Header("__ Audio Source __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip openInv;
+    [SerializeField] private AudioClip closeInv;
+    [SerializeField] private AudioClip click;
+
     private bool _isHidden = true;
     private Vector2 showed = new Vector2(0, 0);
     private Vector2 hidden = new Vector2(0, -2000);
 
     private bool isMoving = false;
+    private bool isMutedFirst = true;
     private int selectedInventory = 0;
 
     private void OnEnable()
@@ -43,10 +50,12 @@ public class InventoryPanel : MonoBehaviour
         if (_isHidden == true)
         {
             panel.DOAnchorPos(showed, 0.5f);
+            src.PlayOneShot(openInv);
         }
         else
         {
             panel.DOAnchorPos(hidden, 0.5f);
+            src.PlayOneShot(closeInv);
         }
 
         _isHidden = !_isHidden;
@@ -86,6 +95,9 @@ public class InventoryPanel : MonoBehaviour
         }
 
         Invoke("UnlockSwitchInventories", 0.5f);
+
+        if (isMutedFirst) { isMutedFirst = false; return; }
+        src.PlayOneShot(click);
     }
 
     private void UnlockSwitchInventories()

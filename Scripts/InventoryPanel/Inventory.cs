@@ -24,6 +24,7 @@ public class GameElement
     public int itemId = 0;
     public InstrumentType type = InstrumentType.None;
     public int needPower = 0;
+    public AudioClip receiveClip;
 }
 
 public class Inventory : MonoBehaviour
@@ -33,6 +34,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Color no_interactable;
     [Header("__ Items __")]
     public GameElement[] elements;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
 
     private UnityAction[] receiveActions;
 
@@ -69,6 +72,7 @@ public class Inventory : MonoBehaviour
             receiveActions[i] = action;
 
             el.receive.onClick.AddListener(action);
+            el.receive.onClick.AddListener(() => { src.PlayOneShot(el.receiveClip); });
         }
     }
 

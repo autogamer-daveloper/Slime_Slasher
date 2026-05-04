@@ -37,6 +37,11 @@ public class CraftOrTradingSystem : MonoBehaviour
     [SerializeField] private Craft[] crafts;
     [Header("__ Inventory __")]
     [SerializeField] private Inventory inv;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip whoosh;
+    [SerializeField] private AudioClip button;
+    [SerializeField] private AudioClip getInv;
 
     private bool isShown = false;
 
@@ -121,6 +126,8 @@ public class CraftOrTradingSystem : MonoBehaviour
             panel.DOAnchorPos(shown, speed);
         }
 
+        src.PlayOneShot(button);
+        src.PlayOneShot(whoosh);
         isShown = !isShown;
         ShowPlayersItemCount();
     }
@@ -251,5 +258,6 @@ public class CraftOrTradingSystem : MonoBehaviour
     public void GetItemOnce(int id)
     {
         KeyManager.Receive_Item(id, 1);
+        src.PlayOneShot(getInv);
     }
 }

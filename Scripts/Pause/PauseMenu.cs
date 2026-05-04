@@ -11,6 +11,9 @@ public class PauseMenu : MonoBehaviour
     [Header("__ UI __")]
     [SerializeField] private GameObject loader;
     [SerializeField] private RectTransform panel;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip click;
 
     private Vector2 shown = new Vector2(0, 0);
     private Vector2 hidden = new Vector2(0, -2000);
@@ -37,13 +40,14 @@ public class PauseMenu : MonoBehaviour
         menu.onClick.RemoveListener(TemporaryBlockActions);
     }
 
-    private void Pause() { panel.DOAnchorPos(shown, 0.5f); Invoke(nameof(StopTime), 0.5f); }
-    private void Continue() { panel.DOAnchorPos(hidden, 0.5f); PlayTime(); }
+    private void Pause() { panel.DOAnchorPos(shown, 0.5f); Invoke(nameof(StopTime), 0.5f); src.PlayOneShot(click); }
+    private void Continue() { panel.DOAnchorPos(hidden, 0.5f); PlayTime(); src.PlayOneShot(click); }
     private void Menu()
     {
         PlayTime();
         loader.SetActive(true);
         Invoke(nameof(_LoadLevel), 1f);
+        src.PlayOneShot(click);
     }
 
     private void _LoadLevel()

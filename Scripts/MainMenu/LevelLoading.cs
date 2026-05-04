@@ -22,6 +22,10 @@ public class LevelLoading : MonoBehaviour
     [SerializeField] private Toggle isEasyMode;
     [Header("__ Hide panels __")]
     [SerializeField] private Button[] hideAll;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip buttonSFX;
+    [SerializeField] private AudioSource music;
 
     private int saveIndex = 0;
     private bool locked = false;
@@ -34,6 +38,7 @@ public class LevelLoading : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
+        music.DOFade(0.25f, 1.5f);
         saveIndex = KeyManager.Get_Bool_Key("gameEpisode");
         if (saveIndex == 0) { continueGame.interactable = false; }
         else { continueGame.interactable = true; }
@@ -66,21 +71,22 @@ public class LevelLoading : MonoBehaviour
         isEasyMode.onValueChanged.RemoveAllListeners();
     }
 
-    private void ShowStart() { panelStartNew.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); }
-    private void ShowContinue() { panelContinue.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); }
-    private void ShowExit() { panelExit.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); }
+    private void ShowStart() { panelStartNew.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); PlayButtonSFX(); }
+    private void ShowContinue() { panelContinue.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); PlayButtonSFX(); }
+    private void ShowExit() { panelExit.DOAnchorPos(shown, 0.5f); locked = true; UnlockByTimer(0.5f); PlayButtonSFX(); }
 
     private void HideAllPanels()
     {
         panelStartNew.DOAnchorPos(hidden, 0.5f);
         panelContinue.DOAnchorPos(hidden, 0.5f);
         panelExit.DOAnchorPos(hidden, 0.5f);
+        PlayButtonSFX();
     }
 
     private void UnlockByTimer(float time) { Invoke(nameof(UnlockInteractable), time); }
     private void UnlockInteractable() { locked = false; }
 
-    private void Exit() { if (locked) return; Application.Quit(); }
+    private void Exit() { if (locked) return; PlayButtonSFX(); Application.Quit(); }
 
     private void StartNewGame()
     {
@@ -88,10 +94,12 @@ public class LevelLoading : MonoBehaviour
         KeyManager.Delete_All();
         KeyManager.Set_Bool_Key("gameEpisode", 0);
         saveIndex = 0;
-        if(startWithEasyMode == true) { KeyManager.Set_Bool_Key("easyMode", 1); }
+        if (startWithEasyMode == true) { KeyManager.Set_Bool_Key("easyMode", 1); }
         else { KeyManager.Set_Bool_Key("easyMode", 0); }
         Invoke(nameof(LoadGame), 1f);
         loader.SetActive(true);
+        PlayButtonSFX();
+        music.DOFade(0f, 0.5f);
     }
 
     private void ContinueGame()
@@ -99,9 +107,13 @@ public class LevelLoading : MonoBehaviour
         if (locked) return;
         Invoke(nameof(LoadGame), 1f);
         loader.SetActive(true);
+        PlayButtonSFX();
+        music.DOFade(0f, 0.5f);
     }
 
-    private void LoadGame() { LoadLevel.LoadLevelById(sceneIndex[saveIndex]); }
+    private void LoadGame() { LoadLevel.LoadLevelById(sceneIndex[saveIndex]); PlayButtonSFX(); }
 
-    private void OnToggleChanged(Toggle change) { startWithEasyMode = change.isOn; }
+    private void OnToggleChanged(Toggle change) { startWithEasyMode = change.isOn; PlayButtonSFX(); }
+    
+    private void PlayButtonSFX() { src.PlayOneShot(buttonSFX); }
 }

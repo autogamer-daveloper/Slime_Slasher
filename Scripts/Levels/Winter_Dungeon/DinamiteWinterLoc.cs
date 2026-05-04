@@ -13,6 +13,9 @@ public class DinamiteWinterLoc : MonoBehaviour
     [SerializeField] private Animation tip;
     [SerializeField] private GameObject tipObj;
     [SerializeField] private GameObject tnt;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip explosion;
 
     private int _clickedId;
     private bool _isDetonating = false;
@@ -52,6 +55,7 @@ public class DinamiteWinterLoc : MonoBehaviour
             _clickedId = id;
             _isDetonating = true;
             Invoke(nameof(_Activation), 5.5f);
+            Invoke(nameof(PlaySound), 5f);
         }
         else
         {
@@ -59,6 +63,8 @@ public class DinamiteWinterLoc : MonoBehaviour
             tip.Play();
         }
     }
+
+    private void PlaySound(){ src.PlayOneShot(explosion); }
 
     private void _Activation()
     {

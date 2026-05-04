@@ -18,7 +18,11 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private GameObject bullet;
 
-    [Header("Rotation")]
+    [Header("__ Audio __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip sound;
+
+    [Header("__ Rotation __")]
     [Tooltip("Градусы, чтобы подогнать ориентацию спрайта (например, если спрайт 'смотрит' вверх, поставьте 90).")]
     [SerializeField] private float rotationOffset = 0f;
     [Tooltip("Скорость плавного поворота (градусы/сек). Если 0 — поворот будет мгновенным.")]
@@ -28,6 +32,7 @@ public class EnemyAttack : MonoBehaviour
     private bool isAttacking = false;
 
     private bool isBlocked = false;
+    private bool isBossLock = false;
     private bool visionBlock = false;
 
     private void OnEnable()
@@ -36,7 +41,7 @@ public class EnemyAttack : MonoBehaviour
 
         if (boss)
         {
-            isBlocked = true;
+            isBossLock = true;
             Invoke(nameof(UnlockAttacks), 7.5f);
         }
     }
@@ -44,7 +49,7 @@ public class EnemyAttack : MonoBehaviour
     private void OnDestroy() { CancelInvoke(nameof(Checking)); }
     private void OnDisable() { CancelInvoke(nameof(Checking)); }
 
-    private void UnlockAttacks() { isBlocked = false; }
+    private void UnlockAttacks() { isBossLock = false; }
 
     internal void isRangeEnemy(bool answer)
     {
@@ -98,6 +103,7 @@ public class EnemyAttack : MonoBehaviour
         if (isAttacking) return;
         isAttacking = true;
         if (isBlocked) return;
+        if (isBossLock) return;
         InvokeRepeating(nameof(Attack), 0f, speed);
     }
 
@@ -114,12 +120,16 @@ public class EnemyAttack : MonoBehaviour
     private void UnlockAttack()
     {
         if (visionBlock) return;
+        if (isBossLock) return;
         if (isAttacking) { InvokeRepeating(nameof(Attack), 0f, speed); }
         visionBlock = true;
     }
 
     private void Attack()
     {
+        if (isBossLock) return;
+        src.PlayOneShot(sound);
+
         if (!isRange)
         {
             if (isHaveCustomPunch) { CustomPunch.Invoke(); }

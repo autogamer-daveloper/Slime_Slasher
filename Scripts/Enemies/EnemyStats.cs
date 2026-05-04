@@ -27,6 +27,9 @@ public class EnemyStats : MonoBehaviour
     [Header("__ Boss fight __")]
     [SerializeField] private bool needSave = false;
     [SerializeField] private HealthEvents[] healthEvents;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip dmg;
 
     private int health = 15;
     private bool blockedDamage = false;
@@ -66,6 +69,7 @@ public class EnemyStats : MonoBehaviour
         {
             healthBar.value = health;
             healthText.text = maxHealth.ToString() + "/" + health.ToString();
+            src.PlayOneShot(dmg);
         }
         else
         {

@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject cameraAnim;
     [SerializeField] private bool isAnimated = true;
 
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
@@ -38,6 +41,8 @@ public class PlayerController : MonoBehaviour
             if (cameraAnimation == null)
                 Debug.LogWarning("На cameraAnim нет компонента Animation!");
         }
+
+        if (src != null) { src.mute = true; }
     }
 
     private void Update()
@@ -95,18 +100,16 @@ public class PlayerController : MonoBehaviour
     {
         if (!isAnimated) return;
         if (cameraAnimation == null) return;
-
-        if (!cameraAnimation.IsPlaying("Idle"))
-            cameraAnimation.Play("Idle");
+        if (!cameraAnimation.IsPlaying("Idle")) { cameraAnimation.Play("Idle"); }
+        if (src != null) { src.mute = true; }
     }
 
     private void SetCameraRun()
     {
         if (!isAnimated) return;
         if (cameraAnimation == null) return;
-
-        if (!cameraAnimation.IsPlaying("Run"))
-            cameraAnimation.Play("Run");
+        if (!cameraAnimation.IsPlaying("Run")) { cameraAnimation.Play("Run"); }
+        if (src != null) { src.mute = false; }
     }
 
     internal void LockInput()

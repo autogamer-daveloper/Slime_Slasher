@@ -1,29 +1,21 @@
 using UnityEngine;
 
-/// <summary>
-/// Скрипт привешивается к объекту-триггеру (Collider2D с IsTrigger = true).
-/// В поле enemyTransform указывай Transform врага, который должен двигаться.
-/// Если у врага есть Rigidbody2D и ты хочешь использовать физическое перемещение, 
-/// присвой его в enemyRigidbody. Иначе будет использовано прямое изменение Transform.position.
-/// Добавлена логика разворачивания по X в сторону цели.
-/// Теперь также корректируется масштаб hpBar, чтобы он визуально не переворачивался.
-/// </summary>
 public class EnemyMovement : MonoBehaviour
 {
-    [Header("Fear")]
+    [Header("__ Fear __")]
     [SerializeField] private bool isFeared;
 
-    [Header("Ray Check")]
+    [Header("__ Ray Check __")]
     [SerializeField] private Transform _targetRay;
 
-    [Header("References")]
+    [Header("__ References __")]
     [Tooltip("Transform врага, который будет двигаться")]
     public Transform enemyTransform;
 
     [Tooltip("Опционально: Rigidbody2D врага. Если задан — движение через MovePosition (FixedUpdate).")]
     public Rigidbody2D enemyRigidbody;
 
-    [Header("Movement")]
+    [Header("__ Movement __")]
     [Tooltip("Скорость движения (ед./сек)")]
     public float moveSpeed = 3f;
 
@@ -33,48 +25,43 @@ public class EnemyMovement : MonoBehaviour
     [Tooltip("Дистанция, при которой враг останавливается (если isRangeEnemy = true)")]
     public float stopRange = 5f;
 
-    [Header("Flip (facing) settings")]
+    [Header("__ Flip (facing) settings __")]
     [Tooltip("Включить автоматическое разворачивание врага в сторону цели")]
     public bool flipOnDirection = true;
 
     [Tooltip("Мёртвая зона по X (чтобы при почти одинаковой X не дергался масштаб)")]
     public float flipDeadzone = 0.05f;
 
-    [Header("Attack")]
+    [Header("__ Attack __")]
     [SerializeField] private EnemyAttack attack;
 
-    [Header("Health Bar")]
+    [Header("__ Health Bar __")]
     [SerializeField] private Transform hpBar;
 
-    [Header("Animations")]
+    [Header("__ Animations __")]
     [SerializeField] private bool isUsingAnims = false;
     [SerializeField] private GameObject[] animations;
 
+    [Header("__ Audio __")]
+    [SerializeField] private AudioSource moveSrc;
+
     private int usingAnimation = 0;
 
-    // публичный бул, который ты просил — можно читать/писать снаружи
     [HideInInspector]
     public bool isWalking = false;
 
-    // приватная ссылка на Transform игрока, если он сейчас в триггере
     private Transform _playerTransform = null;
-
-    // следующая позиция, вычисляемая для FixedUpdate или Update
     private Vector2 _nextPosition;
-
-    // исходный масштаб врага, чтобы сохранять абсолютные значения осей
     private Vector3 _initialScale = Vector3.one;
-
-    // --- Новое: сохраняем исходный локальный масштаб hpBar, чтобы корректно компенсировать flip ---
     private Vector3 _initialHpBarLocalScale = Vector3.one;
 
     private Collider2D _selfCollider;
-
     private bool isPlayerVisible = false;
+
+    private void OnDisable() { moveSrc.mute = true; }
 
     private void Reset()
     {
-        // удобство: если скрипт повешен на того же объекта, что и Rigidbody2D врага, попробуем подставить
         if (enemyRigidbody == null && enemyTransform != null)
         {
             var rb = enemyTransform.GetComponent<Rigidbody2D>();
@@ -94,25 +81,21 @@ public class EnemyMovement : MonoBehaviour
         if (enemyTransform != null)
             _initialScale = enemyTransform.localScale;
 
-        // Если hpBar задан — сохраняем его начальный локальный масштаб
         if (hpBar != null)
             _initialHpBarLocalScale = hpBar.localScale;
     }
 
     private void OnValidate()
     {
-        // при изменениях в инспекторе - убедимся, что initialScale не нулевой
         if (enemyTransform != null && _initialScale == Vector3.zero)
             _initialScale = enemyTransform.localScale;
 
-        // на случай правки в инспекторе — сохраним начальный масштаб hpBar, если он не нулевой
         if (hpBar != null && _initialHpBarLocalScale == Vector3.zero)
             _initialHpBarLocalScale = hpBar.localScale;
     }
 
     private void Update()
     {
-        // если enemyTransform не задан — ничего не делаем
         if (enemyTransform == null) return;
 
         CheckRayToTarget();
@@ -124,15 +107,13 @@ public class EnemyMovement : MonoBehaviour
             Vector2 playerPos = _playerTransform.position;
             float dist = Vector2.Distance(enemyPos, playerPos);
 
-            // если это диапазонный враг и игрок слишком близко — стоп
             if (isRangeEnemy && dist <= stopRange)
             {
                 isWalking = false;
-                _nextPosition = enemyPos; // оставляем на месте
+                _nextPosition = enemyPos;
             }
             else
             {
-                // движение к игроку (через Transform)
                 Vector2 dir = (playerPos - enemyPos).normalized;
                 _nextPosition = enemyPos + dir * moveSpeed * Time.deltaTime;
 
@@ -143,26 +124,20 @@ public class EnemyMovement : MonoBehaviour
                 isWalking = true;
             }
 
-            // обновляем разворот при движении/присутствии игрока
             if (flipOnDirection)
                 UpdateFlip(enemyPos, playerPos);
         }
         else
         {
-            // игрок не в триггере — стоп
             isWalking = false;
         }
 
-        if (isUsingAnims)
-        {
-            if (isWalking) { SetAnimation(1); }
-            else { SetAnimation(0); }
-        }
+        if (isWalking) { SetAnimation(1); moveSrc.mute = false; }
+        else { SetAnimation(0); moveSrc.mute = true; }
     }
 
     private void FixedUpdate()
     {
-        // если задан Rigidbody2D — используй MovePosition в FixedUpdate
         if (enemyRigidbody == null) return;
         if (enemyTransform == null) return;
         if (!isPlayerVisible) return;
@@ -176,7 +151,6 @@ public class EnemyMovement : MonoBehaviour
             if (isRangeEnemy && dist <= stopRange)
             {
                 isWalking = false;
-                // не двигаем
             }
             else
             {
@@ -187,7 +161,6 @@ public class EnemyMovement : MonoBehaviour
                 isWalking = true;
             }
 
-            // обновляем разворот
             if (flipOnDirection)
                 UpdateFlip(enemyPos, playerPos);
         }
@@ -201,7 +174,6 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // сохраняем ссылку на игрока
             _playerTransform = other.transform;
             if (attack != null && isRangeEnemy == true)
             {
@@ -214,7 +186,6 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // если выходит именно тот объект, который был сохранён — убираем ссылку
             if (_playerTransform == other.transform)
             {
                 _playerTransform = null;
@@ -225,25 +196,14 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
-
-    /// <summary>
-    /// Обновляет localScale по X в сторону игрока.
-    /// Сохраняет абсолютные значения initialScale.y и initialScale.z.
-    /// Использует flipDeadzone чтобы избежать дерганий при почти равных X.
-    /// Также компенсирует масштаб hpBar так, чтобы он визуально не переворачивался.
-    /// </summary>
     private void UpdateFlip(Vector2 enemyPos, Vector2 playerPos)
     {
         if (enemyTransform == null) return;
-
         float dx = playerPos.x - enemyPos.x;
 
-        // если в пределах мёртвой зоны — не меняем
         if (Mathf.Abs(dx) <= flipDeadzone) return;
 
         int desiredSign = dx < 0f ? -1 : 1;
-
-        // текущий знак по X
         int currentSign = enemyTransform.localScale.x < 0f ? -1 : 1;
 
         if (currentSign != desiredSign)
@@ -251,18 +211,14 @@ public class EnemyMovement : MonoBehaviour
             Vector3 newScale = enemyTransform.localScale;
             float absInitX = Mathf.Abs(_initialScale.x);
             newScale.x = absInitX * desiredSign;
-            // оставляем y и z положительными абсолютными значениями initial (чтобы не инвертировать случайно)
             newScale.y = Mathf.Abs(_initialScale.y);
             newScale.z = Mathf.Abs(_initialScale.z);
             enemyTransform.localScale = newScale;
 
-            // --- Новое: компенсируем локальный масштаб hpBar, чтобы глобально он оставался как был ---
             if (hpBar != null)
             {
                 Vector3 hpNew = _initialHpBarLocalScale;
-                // умножаем на desiredSign: это компенсирует flip родителя (childLocal.x = initLocal.x * desiredSign)
                 hpNew.x = _initialHpBarLocalScale.x * desiredSign;
-                // сохраняем y и z из initial локального масштаба hpBar
                 hpNew.y = _initialHpBarLocalScale.y;
                 hpNew.z = _initialHpBarLocalScale.z;
                 hpBar.localScale = hpNew;
@@ -270,7 +226,6 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Опционально: публичный метод чтобы форсировать остановку (если захочешь)
     public void ForceStop()
     {
         _playerTransform = null;
@@ -324,23 +279,21 @@ public class EnemyMovement : MonoBehaviour
     private void Visible()
     {
         isPlayerVisible = true;
-        if (isUsingAnims)
-        {
-            if (isWalking) { SetAnimation(1); }
-            else { SetAnimation(0); }
-        }
+        if (isWalking) { SetAnimation(1); moveSrc.mute = false; }
+        else { SetAnimation(0); moveSrc.mute = true; }
         attack.Visible_Attack();
     }
 
     private void Invisible()
     {
         isPlayerVisible = false;
-        if (isUsingAnims) { SetAnimation(0); }
+        SetAnimation(0); moveSrc.mute = true;
         attack.Invisible_Attack();
     }
 
     private void SetAnimation(int id)
     {
+        if (!isUsingAnims) return;
         if (id == usingAnimation) return;
 
         if (animations.Length != 0)

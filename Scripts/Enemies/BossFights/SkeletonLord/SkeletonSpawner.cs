@@ -29,6 +29,9 @@ public class SkeletonSpawner : MonoBehaviour
     [SerializeField] private Button summonBoss2;
     [SerializeField] private NeedItems[] summonItems2;
     [SerializeField] private TMP_Text summoningText2;
+    [Header("__ Audio Setting __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip button;
 
     private Vector2 shown = new Vector2(0, 0);
     private Vector2 hidden = new Vector2(0, -2000);
@@ -97,6 +100,7 @@ public class SkeletonSpawner : MonoBehaviour
         _isActive = !_isActive;
         CheckDefeating();
         Invoke(nameof(ActivateRunes), 0.5f);
+        src.PlayOneShot(button);
     }
 
     private void ActivateRunes()
@@ -115,6 +119,7 @@ public class SkeletonSpawner : MonoBehaviour
             if (canSummon) { summonButton1.SetActive(true); }
             else { } //Error
         }
+        src.PlayOneShot(button);
     }
 
     private void CountSummoningHardBoss()
@@ -127,6 +132,7 @@ public class SkeletonSpawner : MonoBehaviour
             if (canSummon) { summonButton2.SetActive(true); }
             else { } //Error
         }
+        src.PlayOneShot(button);
     }
 
     private bool CanSummonNormalBoss()

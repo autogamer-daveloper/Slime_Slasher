@@ -1,0 +1,1 @@
+using UnityEngine; public class LetterTrigger : MonoBehaviour { private void Start() { KeyManager.Set_Bool_Key("LetterTriggered", 1); } }

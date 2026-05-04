@@ -43,6 +43,12 @@ public class RyanSamuraiBossFight : MonoBehaviour
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject healthBar;
     [SerializeField] private Animation samuraiEye;
+    [SerializeField] private UnityEvent onStartedFight;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip magic;
+    [SerializeField] private AudioClip slash;
+    [SerializeField] private AudioClip fear;
 
     private int _isSamuraiDefeated = 0;
     private bool _isSecondPhase = false;
@@ -126,6 +132,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
     private void StartFight()
     {
         HideSelecting();
+        onStartedFight.Invoke();
         startFightD.SetActive(true);
         Invoke(nameof(Fight), _beforeFight);
     }
@@ -165,6 +172,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     private void SpawnCoils()
     {
+        src.PlayOneShot(magic);
         if (!_isSecondPhase)
         {
             Instantiate(coil01, player.position, player.rotation);
@@ -201,7 +209,8 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     private void _SpawnEnemy()
     {
-        if(slashCount == 0) { samuraiEye.Stop(); samuraiEye.Play(); }
+        src.PlayOneShot(slash);
+        if(slashCount == 0) { samuraiEye.Stop(); samuraiEye.Play(); src.PlayOneShot(fear); }
         Debug.LogWarning("SPAWN RYANS ILLUSIONS");
         if(!_isSecondPhase)
         {
@@ -232,6 +241,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
         showAnimation(4);
         samuraiEye.Stop();
         samuraiEye.Play();
+        src.PlayOneShot(fear);
         _isSecondPhase = true;
         Invoke(nameof(ShowIdle), _ImmortalTime);
         Invoke(nameof(Fight), 0.5f);

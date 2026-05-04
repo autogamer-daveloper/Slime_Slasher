@@ -10,6 +10,9 @@ public class PlayersInstruments : MonoBehaviour
     [Header("__ Instruments: Axe __")]
     [SerializeField] private Button ironAxe;
     [SerializeField] private Button goldenAxe;
+    [Header("__ Audio Source __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip selectItem;
 
     private void Start()
     {
@@ -19,12 +22,12 @@ public class PlayersInstruments : MonoBehaviour
     private void SerializeButtons()
     {
         //pickaxe
-        stonePickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(1); });
-        ironPickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(2); });
-        goldenPickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(3); });
+        stonePickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(1); src.PlayOneShot(selectItem); });
+        ironPickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(2); src.PlayOneShot(selectItem); });
+        goldenPickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(3); src.PlayOneShot(selectItem); });
         //axe
-        ironAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(2); });
-        goldenAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(3); });
+        ironAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(2); src.PlayOneShot(selectItem); });
+        goldenAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(3); src.PlayOneShot(selectItem); });
     }
 
     private void OnDestroy()

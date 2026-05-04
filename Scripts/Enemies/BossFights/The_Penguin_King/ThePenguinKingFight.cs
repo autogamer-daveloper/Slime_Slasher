@@ -1,6 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
-using TMPro;
 using DG.Tweening;
 
 public class ThePenguinKingFight : MonoBehaviour
@@ -12,7 +12,6 @@ public class ThePenguinKingFight : MonoBehaviour
     [SerializeField] private GameObject Dialogue;
     [SerializeField] private float showDialogue = 7f;
     [SerializeField] private RectTransform ui;
-    [SerializeField] private TMP_Text stageTextUI;
     [SerializeField] private Button grenadeButton;
     [Header("__ Settings __")]
     [SerializeField] private EndGameCutsceneLoad endGame;
@@ -27,10 +26,14 @@ public class ThePenguinKingFight : MonoBehaviour
     [Header("__ Spawner __")]
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private int[] enemiesCount = { 5, 5, 1 };
-    [SerializeField] private string[] stageText = { "Stage 1", "Stage 2", "Stage 3", "FINISH HIM!" };
+    [SerializeField] private GameObject[] stageText;
     [SerializeField] private Transform spawnPoint;
     [Header("__ Traps __")]
     [SerializeField] private Animation[] trap;
+    [Header("__ Audio Settings __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip trapClip;
+    [SerializeField] private UnityEvent changeMusic;
 
     private Vector2 hidden = new Vector2(5000, 5000);
     private Vector2 shown = new Vector2(0, 0);
@@ -43,7 +46,6 @@ public class ThePenguinKingFight : MonoBehaviour
     private void Start()
     {
         ShowPenguinAnimation(0);
-        ShowToStageText("");
         ui.DOSizeDelta(hidden, 0.1f);
         penguinPos = new Vector2(penguin.position.x, penguin.position.y);
         grenadeObject.SetActive(false);
@@ -58,11 +60,12 @@ public class ThePenguinKingFight : MonoBehaviour
     private void OnDestroy() { grenadeButton.onClick.AddListener(DropGrenade); }
 
     private void ShowDialogue() { Dialogue.SetActive(true); }
-    private void ShowToStageText(string txt) { stageTextUI.text = txt; }
+    private void ShowToStageText(GameObject txt) { foreach(GameObject obj in stageText) { obj.SetActive(false); } txt.SetActive(true); }
     private void ShowInterface() { ui.DOSizeDelta(shown, 5f); }
 
     private void StartGame()
     {
+        changeMusic.Invoke();
         cutsceneCamera.SetActive(false);
         gameplayCamera.SetActive(true);
         _stage = 0;
@@ -79,7 +82,7 @@ public class ThePenguinKingFight : MonoBehaviour
         Instantiate(enemies[_stage], spawnPoint.position, spawnPoint.rotation);
         _spawned++;
         if (_spawned >= enemiesCount[_stage]) { return; }
-        else { Invoke(nameof(Spawn), 3f); }
+        else { Invoke(nameof(Spawn), 2f); }
     }
 
     public void KilledPenguin()
@@ -102,10 +105,12 @@ public class ThePenguinKingFight : MonoBehaviour
         trap[random].Stop();
         trap[random].Play();
         ShowPenguinAnimation(1);
-
+        Invoke(nameof(PlayTrapSFX), 0.5f);
         Invoke(nameof(ShowIdlePenguin), 0.5f);
         Invoke(nameof(TrapActivate), 1.1f);
     }
+
+    private void PlayTrapSFX() { src.PlayOneShot(trapClip); }
 
     private void ShowIdlePenguin() { ShowPenguinAnimation(0); }
     private void ShowExplodedPenguin() { ShowPenguinAnimation(2); }

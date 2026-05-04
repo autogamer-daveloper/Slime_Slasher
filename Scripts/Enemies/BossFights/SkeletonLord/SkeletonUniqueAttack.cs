@@ -15,13 +15,12 @@ public class SkeletonUniqueAttack : MonoBehaviour
     [SerializeField] private float betweenSpawns = 0.15f;
     [SerializeField] private GameObject coils;
     [SerializeField] private Animation pentogramAnim;
-
-    private bool _isAttacking = false;
+    //private bool _isAttacking = false;
 
     internal void Attack()
     {
-        if (_isAttacking) { Debug.LogError("[SkeletonUniqueAttack]: Can't start attack while attacking"); return; }
-        _isAttacking = true;
+        // if (_isAttacking) { Debug.LogError("[SkeletonUniqueAttack]: Can't start attack while attacking"); return; }
+        // _isAttacking = true;
 
         pentogramAnim.Play();
 
@@ -39,6 +38,6 @@ public class SkeletonUniqueAttack : MonoBehaviour
 
         foreach (var point in points[id].point) { Instantiate(coils, point.position, Quaternion.identity); }
 
-        if (id == points.Length - 1) { _isAttacking = false; }
+        // if (id == points.Length - 1) { _isAttacking = false; }
     }
 }

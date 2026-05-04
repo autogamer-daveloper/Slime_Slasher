@@ -33,6 +33,12 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] private PlayerController controller;
     [SerializeField] private GameObject alivePlayer;
     [SerializeField] private GameObject deadPlayer;
+    [Header("__ Audio __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip damage;
+    [SerializeField] private AudioClip death;
+    [SerializeField] private AudioClip selectItem;
+    [SerializeField] private AudioClip mage;
 
     private int health = 100;
     [HideInInspector] public int mana = 100;
@@ -57,13 +63,11 @@ public class PlayerStatus : MonoBehaviour
     private int _extraManaRegen = 0;
 
     //lifes
-    private int isEasyMode = 0; // false by Default
+    private int isEasyMode = 0;
     private int deathCount = 0;
 
     private void Start()
     {
-        // Сначала назначаем кнопки (чтобы пользователь мог сменить аксессуар сразу),
-        // потом читаем выбранный аксессуар и применяем бонусы.
         SetAccessoriesButtons();
         CheckAccessories();
 
@@ -80,7 +84,6 @@ public class PlayerStatus : MonoBehaviour
         deathCount = KeyManager.Get_Bool_Key("deathCount");
         if (deathCount >= 3)
         {
-            //auto-death
             deadPanels[2].SetActive(true);
             deadAnims[2].Play();
             Invoke(nameof(HideDeadPanels), 4.5f);
@@ -125,6 +128,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void GetExtraMana(int extraMana)
     {
+        src.PlayOneShot(mage);
         mana += extraMana;
         if (mana >= maxMana + _extraMana) { mana = maxMana + _extraMana; }
         manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
@@ -152,7 +156,7 @@ public class PlayerStatus : MonoBehaviour
 
         healthSlider.value = health;
         manaSlider.value = mana;
-        DeathCheck();
+        DeathCheck(true);
     }
 
     internal void GetDamage(int dmg)
@@ -162,13 +166,14 @@ public class PlayerStatus : MonoBehaviour
 
         healthSlider.value = health;
 
-        DeathCheck();
+        DeathCheck(false);
     }
 
-    private void DeathCheck()
+    private void DeathCheck(bool selfHarm)
     {
         if (health <= 0)
         {
+            src.PlayOneShot(death);
             Debug.Log("You died!");
             alivePlayer.SetActive(false);
             deadPlayer.SetActive(true);
@@ -224,6 +229,10 @@ public class PlayerStatus : MonoBehaviour
                     Invoke(nameof(Teleport), 1f);
                 }
             }
+        }
+        else
+        {
+            if (!selfHarm) { src.PlayOneShot(damage); }
         }
     }
 
@@ -299,7 +308,6 @@ public class PlayerStatus : MonoBehaviour
 
     private void CheckAccessories()
     {
-        // Защита: массив пуст или не присвоен
         if (accessories == null || accessories.Length == 0)
         {
             Debug.LogWarning("[PlayerStatus] accessories array is null or empty. No accessory bonuses applied.");
@@ -309,24 +317,19 @@ public class PlayerStatus : MonoBehaviour
 
         int i = KeyManager.GetInt_AccessoryID();
 
-        // Если KeyManager вернул некорректный индекс — корректируем и сохраняем.
         if (i < 0 || i >= accessories.Length)
         {
             Debug.LogWarning($"[PlayerStatus] AccessoryID {i} out of range (0..{accessories.Length - 1}). Clamping to 0.");
             i = Mathf.Clamp(i, 0, accessories.Length - 1);
-            // Попытка исправить сохранённое значение, если KeyManager умеет записывать.
-            // Если у вас есть SetInt_AccessoryID — можно сохранить исправленный индекс:
             try
             {
                 KeyManager.SetInt_AccessoryID(i);
             }
             catch
             {
-                // Игнорируем, если такого метода нет или он кидает исключение.
             }
         }
 
-        // Дополнительные проверки на null внутри элемента
         if (accessories[i] == null || accessories[i].accessory == null)
         {
             Debug.LogWarning($"[PlayerStatus] accessories[{i}] or its accessory is null. No accessory bonuses applied.");
@@ -352,13 +355,13 @@ public class PlayerStatus : MonoBehaviour
             int id = i;
             if (accessories[id] != null && accessories[id].selectButton != null)
             {
-                // Сначала убираем старые слушатели чтобы не дублировались
                 accessories[id].selectButton.onClick.RemoveAllListeners();
 
                 accessories[id].selectButton.onClick.AddListener(() =>
                 {
                     KeyManager.SetInt_AccessoryID(id);
-                    CheckAccessories(); // сразу применяем бонусы после смены
+                    CheckAccessories();
+                    src.PlayOneShot(selectItem);
                 });
             }
         }

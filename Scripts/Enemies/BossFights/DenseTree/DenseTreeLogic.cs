@@ -24,11 +24,17 @@ public class DenseTreeLogic : MonoBehaviour
     [SerializeField] private GameObject druid02;
     [SerializeField] private GameObject wine01;
     [SerializeField] private GameObject wine02;
+    [SerializeField] private UnityEvent spawned;
     [SerializeField] private UnityEvent afterKilling;
     [SerializeField] private GameObject wines;
     [SerializeField] private GameObject[] activateInFight;
     [SerializeField] private GameObject[] deactivateInFight;
     [SerializeField] private GameObject healthBar;
+    [Header("__ Audio Setting __")]
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip winesClip;
+    [SerializeField] private AudioClip whoosh;
+    [SerializeField] private AudioClip magic;
 
     private int _isDenseTreeDefeated = 0;
     private bool _isSecondPhase = false;
@@ -84,6 +90,7 @@ public class DenseTreeLogic : MonoBehaviour
     private void StartFight()
     {
         showAnimation(1);
+        spawned.Invoke();
         Invoke(nameof(ShowFirstDialogue), _beforeFirstDialogue);
         healthBar.SetActive(true);
 
@@ -106,6 +113,7 @@ public class DenseTreeLogic : MonoBehaviour
 
     private void SpawnWines()
     {
+        src.PlayOneShot(magic);
         if (!_isSecondPhase)
         {
             showAnimation(3);
@@ -141,6 +149,7 @@ public class DenseTreeLogic : MonoBehaviour
     private void SpawnEnemy()
     {
         flashbang.Play();
+        src.PlayOneShot(whoosh);
         Invoke(nameof(_SpawnEnemy), 0.5f);
     }
 
@@ -223,6 +232,7 @@ public class DenseTreeLogic : MonoBehaviour
         showAnimation(4);
         _isSecondPhase = true;
         wines.SetActive(true);
+        src.PlayOneShot(winesClip);
         Invoke(nameof(ShowIdle), _attackTime);
         Invoke(nameof(Fight), 0.5f);
     }
@@ -244,18 +254,9 @@ public class DenseTreeLogic : MonoBehaviour
             MinionsDead();
     }
 
-    private void MinionsAlive()
-    {
-        stats.BlockDamage();
-    }
+    private void MinionsAlive() { stats.BlockDamage(); }
 
-    private void MinionsDead()
-    {
-        stats.UnlockDamage();
-    }
+    private void MinionsDead() { stats.UnlockDamage(); }
 
-    internal string GetBossKey()
-    {
-        return bossKey;
-    }
+    internal string GetBossKey() { return bossKey; }
 }

@@ -22,7 +22,7 @@ public class FinalFightLoader : MonoBehaviour
     {
         loadPanel.SetActive(true);
         KeyManager.Set_Bool_Key("gameEpisode", 6);
-        Invoke(nameof(_Escape), 0.5f);
+        Invoke(nameof(_Escape), 1f);
     }
 
     private void _Escape()

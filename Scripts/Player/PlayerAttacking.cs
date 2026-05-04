@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using Objects.Weapons;
 using UnityEngine.InputSystem;
 
-// Если ваш Joystick в другом неймспейсе (например, JoystickPack), добавьте using соответствующий.
-
 public class PlayerAttacking : MonoBehaviour
 {
     [Header("__ Default __")]
@@ -12,17 +10,17 @@ public class PlayerAttacking : MonoBehaviour
     [SerializeField] private GameObject defaultAnimation;
     [SerializeField] private Transform arrowSpawn;
     [SerializeField] private GameObject simpleAttack;
-    [SerializeField] private GameObject aimJoystick;    // контейнер UI джойстика (вкл/выкл)
-    [SerializeField] private GameObject aim;            // маркер прицела (world объект)
+    [SerializeField] private GameObject aimJoystick;
+    [SerializeField] private GameObject aim;
 
     [Header("__ Joystick Settings __")]
-    [SerializeField] private Joystick aimStick;        // джойстик из Joystick Pack
-    [SerializeField] private float aimMaxDistance = 2f; // как далеко от игрока ставить маркер прицела (в world)
-    [SerializeField] private float aimDeadzone = 0.25f; // минимальная величина стика, чтобы считать ввод
-    [SerializeField] private float angleOffset = -90f; // поправка угла для arrowSpawn (настрой в инспекторе)
+    [SerializeField] private Joystick aimStick;
+    [SerializeField] private float aimMaxDistance = 2f;
+    [SerializeField] private float aimDeadzone = 0.25f;
+    [SerializeField] private float angleOffset = -90f;
 
     [Header("__ Rotation / Safety __")]
-    [SerializeField] private bool lockPlayerRotation = true; // если true — будем восстанавливать оригинальный rotation игрока
+    [SerializeField] private bool lockPlayerRotation = true;
     private Quaternion _initialRotation;
 
     [Header("__ Player Setting __")]
@@ -35,9 +33,11 @@ public class PlayerAttacking : MonoBehaviour
 
     [Header("__ Audio __")]
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip selectItem;
 
     private Animation defaultMeeleAnimation;
 
+    private bool isMutedFirst = true;
     private int _selectedWeapon = 0;
     private Objects.Weapons.Weapons.WeaponType _type;
 
@@ -66,12 +66,10 @@ public class PlayerAttacking : MonoBehaviour
     [HideInInspector] public int _manaHealing = 0;
     [HideInInspector] public int _lifeHealing = 0;
 
-    // хранение последнего направления (если джойстик отпущен, можно использовать последний)
     private Vector2 _lastAimDir = Vector2.right;
 
     private void Start()
     {
-        // сохраним начальную ротацию игрока
         _initialRotation = transform.rotation;
 
         for (int i = 0; i < selectWeaponById.Length; i++)
@@ -172,6 +170,9 @@ public class PlayerAttacking : MonoBehaviour
             player.SetBonus(_lifeHealing, _manaHealing);
         else
             Debug.LogWarning("Player reference is null in PlayerAttacking (set it in inspector).");
+
+        if (isMutedFirst) { isMutedFirst = false; return; }
+        audioSource.PlayOneShot(selectItem);
     }
 
     private void isWeaponRange(bool answer)
@@ -183,7 +184,6 @@ public class PlayerAttacking : MonoBehaviour
             aimJoystick.SetActive(true);
             aim.SetActive(true);
 
-            // инициализация маркера прицела (world)
             if (aim != null)
                 aim.transform.position = transform.position + Vector3.up * aimMaxDistance;
         }
@@ -211,19 +211,15 @@ public class PlayerAttacking : MonoBehaviour
                 btn.onClick.RemoveListener(Attack);
     }
 
-    void Update()
+    private void Update()
     {
         //ВРЕМЕННО !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            Attack();
-        }
+        if (Keyboard.current.spaceKey.wasPressedThisFrame) { Attack(); }
 
         if (_isUsingRange)
             HandleAimWithJoystick();
     }
 
-    // В LateUpdate восстанавливаем ротацию игрока, если нужно (перекрываем внешние скрипты).
     private void LateUpdate()
     {
         if (lockPlayerRotation)
@@ -232,7 +228,6 @@ public class PlayerAttacking : MonoBehaviour
 
     private void HandleAimWithJoystick()
     {
-        // --- джойстик (world) ---
         if (aimStick != null)
         {
             Vector2 input = new Vector2(aimStick.Horizontal, aimStick.Vertical);
@@ -242,14 +237,12 @@ public class PlayerAttacking : MonoBehaviour
                 Vector2 norm = input.normalized;
                 _lastAimDir = norm;
 
-                // позиция aim в world (от центра игрока)
                 if (aim != null)
                 {
                     Vector3 worldPos = transform.position + new Vector3(norm.x, norm.y, 0f) * aimMaxDistance;
                     aim.transform.position = worldPos;
                 }
 
-                // поворот arrowSpawn в мировых координатах
                 if (arrowSpawn != null)
                 {
                     float angle = Mathf.Atan2(norm.y, norm.x) * Mathf.Rad2Deg;
@@ -258,7 +251,6 @@ public class PlayerAttacking : MonoBehaviour
             }
             else
             {
-                // джойстик в deadzone — оставляем последний вектор прицеливания (можно изменить поведение)
                 if (aim != null)
                 {
                     Vector3 worldPos = transform.position + new Vector3(_lastAimDir.x, _lastAimDir.y, 0f) * aimMaxDistance;
@@ -273,7 +265,6 @@ public class PlayerAttacking : MonoBehaviour
         }
         else
         {
-            // --- fallback: мышь ---
             if (Camera.main == null) return;
             Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseWorld.z = 0f;
@@ -320,10 +311,7 @@ public class PlayerAttacking : MonoBehaviour
                 Rigidbody2D rb2d = inst.GetComponent<Rigidbody2D>();
                 if (rb2d != null)
                 {
-                    // Важно: выбери forward-ось в зависимости от спрайта стрелы.
-                    // Здесь используется arrowSpawn.up — если стрела "смотрит" вверх в инспекторе (typical for 2D),
-                    // или используй arrowSpawn.right если у тебя по правой стороне вектор.
-                    Vector2 forward = arrowSpawn.up; // поменяй на .right если нужно
+                    Vector2 forward = arrowSpawn.up;
                     rb2d.linearVelocity = forward * _speed;
                 }
                 Destroy(inst, _lifeTime);
