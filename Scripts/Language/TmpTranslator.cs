@@ -11,8 +11,8 @@ public class LocalizedText
 [RequireComponent(typeof(TMP_Text))]
 public class TmpTranslator : MonoBehaviour
 {
-    [Header("__ Languages __")]
-    [SerializeField] private LocalizedText[] texts;
+    [Header("__ Completed sample __")]
+    [SerializeField] private TranslateContainer container;
 
     private TMP_Text txt;
 
@@ -21,7 +21,7 @@ public class TmpTranslator : MonoBehaviour
         int lang = KeyManager.Get_Bool_Key("Language");
         txt = GetComponent<TMP_Text>();
 
-        if (lang >= 0 && lang < texts.Length)
-            txt.text = texts[lang].text;
+        if (container != null && lang >= 0 && lang < container.texts.Length) { txt.text = container.texts[lang].text; }
+        else { Debug.LogWarning($"[TmpTranslator] Missing translation for lang index {lang}", this); }
     }
 }
