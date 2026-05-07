@@ -1782,7 +1782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &180817975
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8935,7 +8935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1178033698
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10173,8 +10173,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8238416306370184873, guid: 3af7639210613c5468357976e87be787, type: 3}
       propertyPath: m_text
-      value: '"Player, try again to defeat the brain. Otherwise you won''t know what
-        really ended..." - 0'
+      value: '"To find out the real moral of the story, you must beat the game to
+        the "Canon" or "Alternative" ending." - 0'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13827,6 +13827,7 @@ GameObject:
   - component: {fileID: 1756518848}
   - component: {fileID: 1756518850}
   - component: {fileID: 1756518849}
+  - component: {fileID: 1756518851}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -13955,6 +13956,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756518847}
   m_CullTransparentMesh: 1
+--- !u!114 &1756518851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756518847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 1493229ba5c84804e8b84e6c4cdb6aa9, type: 2}
 --- !u!1 &1763820761
 GameObject:
   m_ObjectHideFlags: 0

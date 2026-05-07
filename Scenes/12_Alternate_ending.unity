@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 36830078}
   - component: {fileID: 36830080}
   - component: {fileID: 36830079}
+  - component: {fileID: 36830081}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -478,6 +479,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36830077}
   m_CullTransparentMesh: 1
+--- !u!114 &36830081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36830077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: e010bf44cd67f7a4ca73fc0edee7d857, type: 2}
 --- !u!1 &47201374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,6 +2201,7 @@ GameObject:
   - component: {fileID: 353199975}
   - component: {fileID: 353199977}
   - component: {fileID: 353199976}
+  - component: {fileID: 353199978}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2233,7 +2248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: He was very close to his goal. He entertained me, it's a pity that he died.
+  m_text: He was very close to his goal. He entertained me.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -2313,6 +2328,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353199974}
   m_CullTransparentMesh: 1
+--- !u!114 &353199978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353199974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 4a6be559894503e4390ca8f55ecfe37a, type: 2}
 --- !u!1 &353993416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,6 +2512,7 @@ GameObject:
   - component: {fileID: 362477442}
   - component: {fileID: 362477444}
   - component: {fileID: 362477443}
+  - component: {fileID: 362477445}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2611,6 +2640,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362477441}
   m_CullTransparentMesh: 1
+--- !u!114 &362477445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362477441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: a15d1b1ef2294584aa18adf6c01fb4e5, type: 2}
 --- !u!1 &367976652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,11 +3026,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8238416306370184873, guid: 3af7639210613c5468357976e87be787, type: 3}
-      propertyPath: m_text
-      value: "\"Player, you won\u2019t continue torturing the main character, will
-        you?\" - 0"
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3193,6 +3230,7 @@ GameObject:
   - component: {fileID: 432571050}
   - component: {fileID: 432571052}
   - component: {fileID: 432571051}
+  - component: {fileID: 432571053}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3319,6 +3357,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432571049}
   m_CullTransparentMesh: 1
+--- !u!114 &432571053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432571049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 5c87a4703eeb16741b051b131fc19fa1, type: 2}
 --- !u!1 &459568713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,7 +4640,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 501639807}
-  - {fileID: 623868902}
   m_Father: {fileID: 1226278473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4627,8 +4677,8 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 623868903}
-  doTask: 1
+  CancelInvokeButton: {fileID: 0}
+  doTask: 0
 --- !u!111 &621318585
 Animation:
   m_ObjectHideFlags: 0
@@ -4731,140 +4781,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!1 &623868901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 623868902}
-  - component: {fileID: 623868905}
-  - component: {fileID: 623868904}
-  - component: {fileID: 623868903}
-  - component: {fileID: 623868906}
-  m_Layer: 5
-  m_Name: Button (Skip)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &623868902
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623868901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 621318582}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &623868903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623868901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 623868904}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &623868904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623868901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &623868905
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623868901}
-  m_CullTransparentMesh: 1
---- !u!114 &623868906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623868901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691a832e899496746a57a8c6963a1845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkipButton
-  btn: {fileID: 623868903}
 --- !u!1 &639296992
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,6 +5006,7 @@ GameObject:
   - component: {fileID: 657650350}
   - component: {fileID: 657650352}
   - component: {fileID: 657650351}
+  - component: {fileID: 657650353}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5216,6 +5133,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657650349}
   m_CullTransparentMesh: 1
+--- !u!114 &657650353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657650349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 8e36c5cea484d53428a8b9618148dfdf, type: 2}
 --- !u!1 &668097344
 GameObject:
   m_ObjectHideFlags: 0
@@ -5227,6 +5157,7 @@ GameObject:
   - component: {fileID: 668097345}
   - component: {fileID: 668097347}
   - component: {fileID: 668097346}
+  - component: {fileID: 668097348}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5354,6 +5285,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668097344}
   m_CullTransparentMesh: 1
+--- !u!114 &668097348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668097344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 9b2d9bb54f08ecd4e848875c4ba3531c, type: 2}
 --- !u!1 &670046487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8016,7 +7960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &975224532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8338,6 +8282,7 @@ GameObject:
   - component: {fileID: 1024505322}
   - component: {fileID: 1024505324}
   - component: {fileID: 1024505323}
+  - component: {fileID: 1024505325}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -8464,6 +8409,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024505321}
   m_CullTransparentMesh: 1
+--- !u!114 &1024505325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024505321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: f7eed3fa65e9f27498a73ddc4d20b404, type: 2}
 --- !u!1 &1035753478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9641,6 +9599,7 @@ GameObject:
   - component: {fileID: 1225049889}
   - component: {fileID: 1225049891}
   - component: {fileID: 1225049890}
+  - component: {fileID: 1225049892}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9768,6 +9727,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225049888}
   m_CullTransparentMesh: 1
+--- !u!114 &1225049892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225049888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 1c8db108385d4e94aa909c8c428c57a4, type: 2}
 --- !u!1 &1226278472
 GameObject:
   m_ObjectHideFlags: 0
@@ -9784,7 +9756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1226278473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10038,6 +10010,7 @@ GameObject:
   - component: {fileID: 1297268054}
   - component: {fileID: 1297268056}
   - component: {fileID: 1297268055}
+  - component: {fileID: 1297268057}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10165,6 +10138,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297268053}
   m_CullTransparentMesh: 1
+--- !u!114 &1297268057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297268053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 3cb1c3e9f0efc3a48a8e73cbebb29366, type: 2}
 --- !u!1 &1297977649
 GameObject:
   m_ObjectHideFlags: 0
@@ -12999,6 +12985,7 @@ GameObject:
   - component: {fileID: 1649098868}
   - component: {fileID: 1649098870}
   - component: {fileID: 1649098869}
+  - component: {fileID: 1649098871}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -13125,6 +13112,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649098867}
   m_CullTransparentMesh: 1
+--- !u!114 &1649098871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649098867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 349edb81deadb154fa4022b5063d2958, type: 2}
 --- !u!1 &1674340526
 GameObject:
   m_ObjectHideFlags: 0
@@ -13292,7 +13292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1711645571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13850,6 +13850,7 @@ GameObject:
   - component: {fileID: 1750608034}
   - component: {fileID: 1750608036}
   - component: {fileID: 1750608035}
+  - component: {fileID: 1750608037}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -13977,6 +13978,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750608033}
   m_CullTransparentMesh: 1
+--- !u!114 &1750608037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750608033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 0c263704ab7b7784ea128a9368fccd55, type: 2}
 --- !u!1 &1755674140
 GameObject:
   m_ObjectHideFlags: 0
@@ -14325,6 +14339,7 @@ GameObject:
   - component: {fileID: 1805982064}
   - component: {fileID: 1805982066}
   - component: {fileID: 1805982065}
+  - component: {fileID: 1805982067}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -14451,6 +14466,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805982063}
   m_CullTransparentMesh: 1
+--- !u!114 &1805982067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805982063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 3a1cd822c56be8846860352c52e26a0d, type: 2}
 --- !u!1 &1818545380
 GameObject:
   m_ObjectHideFlags: 0
@@ -16380,6 +16408,7 @@ GameObject:
   - component: {fileID: 2014618647}
   - component: {fileID: 2014618649}
   - component: {fileID: 2014618648}
+  - component: {fileID: 2014618650}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -16426,7 +16455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The player probably did not expect such an ending
+  m_text: The player probably did not expect such an ending.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -16506,6 +16535,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014618646}
   m_CullTransparentMesh: 1
+--- !u!114 &2014618650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014618646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 5a4f33ceda8fa844d8664f31126225dc, type: 2}
 --- !u!1 &2039374971
 GameObject:
   m_ObjectHideFlags: 0
@@ -16517,6 +16559,7 @@ GameObject:
   - component: {fileID: 2039374972}
   - component: {fileID: 2039374974}
   - component: {fileID: 2039374973}
+  - component: {fileID: 2039374975}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -16644,6 +16687,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039374971}
   m_CullTransparentMesh: 1
+--- !u!114 &2039374975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039374971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 419a32ddb05f4184db0d392070dadb20, type: 2}
 --- !u!1 &2045384499
 GameObject:
   m_ObjectHideFlags: 0
@@ -17638,6 +17694,7 @@ GameObject:
   - component: {fileID: 2146391562}
   - component: {fileID: 2146391564}
   - component: {fileID: 2146391563}
+  - component: {fileID: 2146391565}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -17765,6 +17822,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146391561}
   m_CullTransparentMesh: 1
+--- !u!114 &2146391565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146391561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 42f1cdb423d9e234e8ed3566457baf27, type: 2}
 --- !u!212 &248377009545262126
 SpriteRenderer:
   serializedVersion: 2
