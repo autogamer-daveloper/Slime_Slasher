@@ -66,7 +66,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
 
         if (_isSkeletonLordDefeated == 1)
         {
-            showAnimation(6);
+            showAnimation(5);
         }
         else
         {
@@ -88,8 +88,8 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
             obj.SetActive(false);
         }
 
-        animationObj[id].SetActive(true);
-        animations[id].Play();
+        if(animationObj[id] != null) animationObj[id].SetActive(true);
+        if(animations[id] != null) animations[id].Play();
     }
 
     private void StartFight()
