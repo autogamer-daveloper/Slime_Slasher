@@ -2295,12 +2295,9 @@ MonoBehaviour:
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b283faa67909c554390560a46d49c557, type: 3}
+  - {fileID: 8300000, guid: b292d90899005254cab9a518a2c9ec75, type: 3}
 --- !u!1 &20408840
 GameObject:
   m_ObjectHideFlags: 0
@@ -95082,6 +95079,7 @@ GameObject:
   - component: {fileID: 1138123572}
   - component: {fileID: 1138123571}
   - component: {fileID: 1138123570}
+  - component: {fileID: 1138123573}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -95150,6 +95148,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138123573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138123569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &1138551366
 GameObject:
   m_ObjectHideFlags: 0
@@ -103728,12 +103738,9 @@ MonoBehaviour:
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 320e1d1b95bdf5742beb4e2d87f3d7f1, type: 3}
+  - {fileID: 8300000, guid: ef0e288c10c37da449478d5f5ff4d1dd, type: 3}
 --- !u!1 &1240970915
 GameObject:
   m_ObjectHideFlags: 0
@@ -150373,12 +150380,9 @@ MonoBehaviour:
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8b3faf956d981ca48851cdbd147b36ea, type: 3}
+  - {fileID: 8300000, guid: 921f4d4b75d707e4e95f72a7c082bbfc, type: 3}
 --- !u!1 &1759172699
 GameObject:
   m_ObjectHideFlags: 0
@@ -193380,28 +193384,17 @@ MonoBehaviour:
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: a6a6bb1bd024adc439a4835767f86584, type: 3}
+  - {fileID: 8300000, guid: 62e73b7471bcdf54d910f0ad392bf82f, type: 3}
+  - {fileID: 8300000, guid: ecf7b179632d35e46a800940ff8aae56, type: 3}
+  - {fileID: 8300000, guid: 401926f915991014fb69b5035b778714, type: 3}
+  - {fileID: 8300000, guid: 91361212efa40664b995922778493871, type: 3}
+  - {fileID: 8300000, guid: 73a06228acec34249a80b49a7d4fb55a, type: 3}
+  - {fileID: 8300000, guid: 4b2aee2899a38ec47a8b1a78488d0b58, type: 3}
+  - {fileID: 8300000, guid: ff6a14a6f1024d440a5443f7b52345cf, type: 3}
+  - {fileID: 8300000, guid: 9bb7fb72eb29b484c95d518e957e9296, type: 3}
+  - {fileID: 8300000, guid: 93b21a0398271f9479362eaa106dc8f5, type: 3}
 --- !u!82 &8033704317748454032
 AudioSource:
   m_ObjectHideFlags: 0

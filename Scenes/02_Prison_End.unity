@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheEnd_Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 1449251658892025960, guid: 3af7639210613c5468357976e87be787, type: 3}
+      propertyPath: container
+      value: 
+      objectReference: {fileID: 11400000, guid: b2ddb25a945510f43bc549bb6024decc, type: 2}
     - target: {fileID: 4256081917548394691, guid: 3af7639210613c5468357976e87be787, type: 3}
       propertyPath: endingMusic
       value: 
@@ -2156,6 +2160,8 @@ GameObject:
   - component: {fileID: 1912984770}
   - component: {fileID: 1912984771}
   - component: {fileID: 1912984772}
+  - component: {fileID: 1912984773}
+  - component: {fileID: 1912984774}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -2267,10 +2273,32 @@ MonoBehaviour:
   src: {fileID: 1019448616}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 7bc723451e6180c45bc494b6ea2569a2, type: 3}
+--- !u!114 &1912984773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912984767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b9f85b658170b4797f4c1880198e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeleteSave
+--- !u!114 &1912984774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912984767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &1930510275
 GameObject:
   m_ObjectHideFlags: 0

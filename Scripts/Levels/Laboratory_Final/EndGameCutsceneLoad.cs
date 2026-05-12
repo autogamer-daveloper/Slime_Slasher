@@ -12,7 +12,6 @@ public class EndGameCutsceneLoad : MonoBehaviour
     public void EndGame(bool isCanon)
     {
         loadPanel.SetActive(true);
-        //KeyManager.Delete_All();
         gameplayCamera.SetActive(false);
         cutsceneCamera.SetActive(true);
         if (isCanon) { Invoke(nameof(_EscapeCanon), 1f); }

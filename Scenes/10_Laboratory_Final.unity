@@ -58322,6 +58322,7 @@ GameObject:
   - component: {fileID: 1138123572}
   - component: {fileID: 1138123571}
   - component: {fileID: 1138123570}
+  - component: {fileID: 1138123573}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -58390,6 +58391,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138123573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138123569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &1138551366
 GameObject:
   m_ObjectHideFlags: 0
@@ -130604,24 +130617,15 @@ MonoBehaviour:
   src: {fileID: 231496797}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 647beedf3da201040b16fbdb4ff9e24f, type: 3}
+  - {fileID: 8300000, guid: d75552ce81b701449b11d5e8a01c3a56, type: 3}
+  - {fileID: 8300000, guid: c237a67d20dda25439b541d9bad1f508, type: 3}
+  - {fileID: 8300000, guid: 956382c60e736af41b14b83aacf23818, type: 3}
+  - {fileID: 8300000, guid: cea9fb254757e4b43ae3008761e08c83, type: 3}
+  - {fileID: 8300000, guid: a6a07092c33ce8048908b6fec0f4e17b, type: 3}
+  - {fileID: 8300000, guid: 3df60134249746d488a6cfdcb9892c7b, type: 3}
+  - {fileID: 8300000, guid: 1138478cb98599046aca81a14b46221d, type: 3}
 --- !u!61 &4932977162592119097
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -80194,28 +80194,17 @@ MonoBehaviour:
   src: {fileID: 883915979}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b0976125ec53231499357002e1ad1669, type: 3}
+  - {fileID: 8300000, guid: 7f061aa1486f0f042a888df261acace9, type: 3}
+  - {fileID: 8300000, guid: 932fde1de15e55f44867f7d53c1187b4, type: 3}
+  - {fileID: 8300000, guid: 05c92a865a10a8249937e65989c1f08e, type: 3}
+  - {fileID: 8300000, guid: c545f59482625984a820f9ed223d50f3, type: 3}
+  - {fileID: 8300000, guid: c39ae9672e5df1a4782812938cd784d3, type: 3}
+  - {fileID: 8300000, guid: 8c69ff2f57b79c3449d8353bed6f9455, type: 3}
+  - {fileID: 8300000, guid: c1fca28211eb4df469bb7c0d48584f9e, type: 3}
+  - {fileID: 8300000, guid: ce97f225cefb0204497f10928a2259ff, type: 3}
+  - {fileID: 8300000, guid: 4f286f1748654934494b6b9c06a02ad1, type: 3}
 --- !u!1 &621863094
 GameObject:
   m_ObjectHideFlags: 0
@@ -101650,6 +101639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775894722}
   - component: {fileID: 775894723}
+  - component: {fileID: 775894724}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -101700,6 +101690,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &775894724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775894721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &776037588
 GameObject:
   m_ObjectHideFlags: 0

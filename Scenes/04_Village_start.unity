@@ -7091,7 +7091,7 @@ MonoBehaviour:
     only ask for help.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15798,7 +15798,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &71585806
 GameObject:
   m_ObjectHideFlags: 0
@@ -23777,7 +23777,7 @@ MonoBehaviour:
     gate by the river.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33731,7 +33731,7 @@ MonoBehaviour:
     know the result.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33916,7 +33916,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &147658114
 GameObject:
   m_ObjectHideFlags: 0
@@ -35843,7 +35843,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &158367128
 GameObject:
   m_ObjectHideFlags: 0
@@ -71856,16 +71856,11 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 59ec09e5d85440c4f80cfd017dd97516, type: 3}
+  - {fileID: 8300000, guid: bc33434289ec7ff4dabfc063f6e24b69, type: 3}
+  - {fileID: 8300000, guid: cb3904dc4d457fe46a355f640efb9de5, type: 3}
+  - {fileID: 8300000, guid: fcd7d4627edfc134a80e0c0cfe6d4094, type: 3}
 --- !u!1 &315039555
 GameObject:
   m_ObjectHideFlags: 0
@@ -81028,7 +81023,7 @@ MonoBehaviour:
     and this is...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -99689,7 +99684,7 @@ MonoBehaviour:
     but there is one problem.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -112005,7 +112000,7 @@ GameObject:
   - component: {fileID: 483639502}
   - component: {fileID: 483639501}
   m_Layer: 0
-  m_Name: Room-mute
+  m_Name: Basement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112039,8 +112034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicTriggers
   controller: {fileID: 1306875764}
-  musicId: 0
-  isMuting: 1
+  musicId: 3
+  isMuting: 0
 --- !u!61 &483639502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113094,7 +113089,7 @@ MonoBehaviour:
     is always available.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -141044,40 +141039,23 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 3a57f1f122d1ff843a58a47aa06e6e69, type: 3}
+  - {fileID: 8300000, guid: fbc1cd44d91d5c94cab04571159b780b, type: 3}
+  - {fileID: 8300000, guid: 4cb4ba8091b63f943ad1338212209731, type: 3}
+  - {fileID: 8300000, guid: b59e481465095c24da1d5a96ad639f11, type: 3}
+  - {fileID: 8300000, guid: 3d19ab23bb18f6f4aafa171fa24c4d86, type: 3}
+  - {fileID: 8300000, guid: 26623428ed44eaf4d98615ac5c287649, type: 3}
+  - {fileID: 8300000, guid: 1854d0fd5c4f4e848be3fd11e17862f6, type: 3}
+  - {fileID: 8300000, guid: ff18c6a76e1a69d499f0058a790aa3ae, type: 3}
+  - {fileID: 8300000, guid: 55260499babc46f41a086c2a7ef73677, type: 3}
+  - {fileID: 8300000, guid: 9579c740535bd27419d6488b7a7d9ccd, type: 3}
+  - {fileID: 8300000, guid: 040065d4ed6ef0540aa02182848967ce, type: 3}
+  - {fileID: 8300000, guid: 287f61d017fa55d47a72f0f2fa87f7b0, type: 3}
+  - {fileID: 8300000, guid: e503d5d0b1476f040881a68a9f6f3396, type: 3}
+  - {fileID: 8300000, guid: 3dcf69ba9e51d1b4c9900ab6f521a508, type: 3}
+  - {fileID: 8300000, guid: 240bc29bc8f173c4fbd8987f5f7923c7, type: 3}
+  - {fileID: 8300000, guid: 3f022fdfa36b30e47a3818be9c7d6cf9, type: 3}
 --- !u!1 &621527939
 GameObject:
   m_ObjectHideFlags: 0
@@ -151405,7 +151383,7 @@ MonoBehaviour:
   m_text: As for Joe, he fled to the samurai's village and after our preparation...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -154008,7 +153986,7 @@ MonoBehaviour:
   m_text: Hmm, better call me "time lord", I have no name, to put it briefly.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -211015,7 +210993,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &898379089
 GameObject:
   m_ObjectHideFlags: 0
@@ -221194,7 +221172,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &950983120
 GameObject:
   m_ObjectHideFlags: 0
@@ -234745,12 +234723,9 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 3befac99361b5724888033863debdce3, type: 3}
+  - {fileID: 8300000, guid: 2709f1fa96559f048b7572e19a101e8c, type: 3}
 --- !u!1 &1014354565
 GameObject:
   m_ObjectHideFlags: 0
@@ -237448,7 +237423,7 @@ MonoBehaviour:
     chaos!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -264270,6 +264245,7 @@ GameObject:
   - component: {fileID: 1138123572}
   - component: {fileID: 1138123571}
   - component: {fileID: 1138123570}
+  - component: {fileID: 1138123573}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -264338,6 +264314,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138123573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138123569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &1138286818
 GameObject:
   m_ObjectHideFlags: 0
@@ -275909,7 +275897,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &1187336407
 GameObject:
   m_ObjectHideFlags: 0
@@ -287185,7 +287173,7 @@ MonoBehaviour:
   m_text: Okay, How will I influence the outcome of the uprising from the future?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -304931,7 +304919,7 @@ MonoBehaviour:
     flowers of mana and life.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -309394,7 +309382,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &1318830410
 GameObject:
   m_ObjectHideFlags: 0
@@ -325368,7 +325356,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0b28dbaa80f76f448ad1ee9ea7385ff9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 42506bbea42985d4cbf59e7ec4d0313c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -332534,7 +332522,7 @@ MonoBehaviour:
   m_text: So, good luck, Kevin, we need to win this standoff.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -356440,10 +356428,8 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b087c3dda064b4c4c9669fbc48600d46, type: 3}
 --- !u!1 &1529173123
 GameObject:
   m_ObjectHideFlags: 0
@@ -376412,7 +376398,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &1621127471
 GameObject:
   m_ObjectHideFlags: 0
@@ -376567,7 +376553,7 @@ MonoBehaviour:
     tree we'll teleport.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -400666,12 +400652,9 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 531b8ce2c7d1a0e478335dc885037898, type: 3}
+  - {fileID: 8300000, guid: e3388633ee02aca46b7d25bfa2581c7a, type: 3}
 --- !u!1 &1731508631
 GameObject:
   m_ObjectHideFlags: 0
@@ -405292,7 +405275,7 @@ MonoBehaviour:
   m_text: I am not material, and I can only help prevent disaster indirectly.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -406380,7 +406363,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &1756909653
 GameObject:
   m_ObjectHideFlags: 0
@@ -418485,7 +418468,7 @@ MonoBehaviour:
     chaos together! But... what should I do?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -440092,22 +440075,14 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 7ef519f31c448cf4c872586bef74660d, type: 3}
+  - {fileID: 8300000, guid: 602dc968fb4a78e47aaab7252f4863cb, type: 3}
+  - {fileID: 8300000, guid: 143164c09632b1b45bdb670e1073dfa6, type: 3}
+  - {fileID: 8300000, guid: 0cd96011d44a85249b4aa713a49f1b08, type: 3}
+  - {fileID: 8300000, guid: 6bfd446b48c636d40bb6dcc00bd795f3, type: 3}
+  - {fileID: 8300000, guid: 2bc7bbc1472b2ee48b7b5b265243ff89, type: 3}
+  - {fileID: 8300000, guid: 3b3c2bd3fb365374fa895fe231a779db, type: 3}
 --- !u!1 &1912134413
 GameObject:
   m_ObjectHideFlags: 0
@@ -443002,7 +442977,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &1925193160
 GameObject:
   m_ObjectHideFlags: 0
@@ -447847,7 +447822,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!114 &1947298749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463959,7 +463934,7 @@ MonoBehaviour:
   m_text: Who are you? And where is my son?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -470375,22 +470350,14 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: eb79bea78cb105741bd4fa264b4828b4, type: 3}
+  - {fileID: 8300000, guid: b8dbfa7ea6123444ea4828a799260489, type: 3}
+  - {fileID: 8300000, guid: 3307e15139fb56c4e83c0b029aa3246d, type: 3}
+  - {fileID: 8300000, guid: 5520547032627c64abcab0fadbb33867, type: 3}
+  - {fileID: 8300000, guid: 5d8efba62331d8f4f82bad1674a6d8c8, type: 3}
+  - {fileID: 8300000, guid: 49727d6499358b941a2dbb68510d38ee, type: 3}
+  - {fileID: 8300000, guid: 2cc5a45677e23554a8dc64d9262f003e, type: 3}
 --- !u!1 &2046547391
 GameObject:
   m_ObjectHideFlags: 0
@@ -503225,7 +503192,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 15
+  m_Radius: 20
 --- !u!1 &7618812188038254277
 GameObject:
   m_ObjectHideFlags: 0
@@ -504836,10 +504803,8 @@ MonoBehaviour:
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
-  engClip:
-  - {fileID: 0}
   rusClip:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 5c4af972b783df34795bd3182899be23, type: 3}
 --- !u!114 &8409695254251930807
 MonoBehaviour:
   m_ObjectHideFlags: 0

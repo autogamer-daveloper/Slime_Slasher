@@ -8,8 +8,8 @@ public class Dialogues : MonoBehaviour
     [Space(10)]
     [Header("__ Voices: Default __")]
     [SerializeField] private AudioClip defaultClip;
-    [Header("__ Voices: English __")]
-    [SerializeField] private AudioClip[] engClip;
+    //[Header("__ Voices: English __")]
+    //[SerializeField] private AudioClip[] engClip;
     [Header("__ Voices: Russian __")]
     [SerializeField] private AudioClip[] rusClip;
 
@@ -17,9 +17,9 @@ public class Dialogues : MonoBehaviour
     private int _usingVoiceId;
     private bool _isSaying = false;
 
-    private bool _Debug = true;
+    private bool _Debug = false;
 
-    private void Start() { _usingLanguage = KeyManager.Get_Bool_Key("Language"); }
+    private void Awake() { _usingLanguage = KeyManager.Get_Bool_Key("Language"); }
 
     public void SayText(int id)
     {
@@ -36,7 +36,7 @@ public class Dialogues : MonoBehaviour
 
         switch (_usingLanguage)
         {
-            case 0: src.PlayOneShot(engClip[_usingVoiceId]); break;
+            case 0: src.PlayOneShot(defaultClip); break;
             case 1: src.PlayOneShot(rusClip[_usingVoiceId]); break;
             default: src.PlayOneShot(defaultClip); break;
         }

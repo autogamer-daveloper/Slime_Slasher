@@ -8825,81 +8825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191434556}
   m_CullTransparentMesh: 1
---- !u!1 &192052937
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 192052938}
-  - component: {fileID: 192052940}
-  - component: {fileID: 192052939}
-  m_Layer: 0
-  m_Name: BLOCK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &192052938
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192052937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 651551602}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &192052939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192052937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &192052940
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192052937}
-  m_CullTransparentMesh: 1
 --- !u!1 &193405510
 GameObject:
   m_ObjectHideFlags: 0
@@ -24973,7 +24898,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.09825561, g: 0.3018868, b: 0.1250673, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -29712,6 +29637,8 @@ MonoBehaviour:
   idleAnim: {fileID: 2035849052}
   runAnim: {fileID: 2035185518}
   cameraAnim: {fileID: 519420028}
+  isAnimated: 1
+  src: {fileID: 0}
 --- !u!114 &627318388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29782,6 +29709,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dc7217850afd46f4baa14f409ba91133, type: 2}
   - {fileID: 11400000, guid: b520fc991ebb7064797ecca07c31166f, type: 2}
   audioSource: {fileID: 0}
+  selectItem: {fileID: 0}
   damage: 1
   _manaHealing: 0
   _lifeHealing: 0
@@ -29818,6 +29746,20 @@ MonoBehaviour:
     selectButton: {fileID: 1042122671}
   - accessory: {fileID: 11400000, guid: 569dd9e1b02588845a6826ec366e990a, type: 2}
     selectButton: {fileID: 1212721673}
+  deadPanels: []
+  deadAnims: []
+  clearEnemies:
+    m_PersistentCalls:
+      m_Calls: []
+  spawnPoint: {fileID: 0}
+  controller: {fileID: 0}
+  alivePlayer: {fileID: 0}
+  deadPlayer: {fileID: 0}
+  src: {fileID: 0}
+  damage: {fileID: 0}
+  death: {fileID: 0}
+  selectItem: {fileID: 0}
+  mage: {fileID: 0}
   mana: 100
 --- !u!114 &627318390
 MonoBehaviour:
@@ -29836,6 +29778,8 @@ MonoBehaviour:
   goldenPickaxe: {fileID: 1449281842}
   ironAxe: {fileID: 1247642834}
   goldenAxe: {fileID: 14991961}
+  src: {fileID: 0}
+  selectItem: {fileID: 0}
 --- !u!1 &630748192
 GameObject:
   m_ObjectHideFlags: 0
@@ -31549,7 +31493,6 @@ RectTransform:
   - {fileID: 1260874427}
   - {fileID: 1732545721}
   - {fileID: 142821640}
-  - {fileID: 192052938}
   - {fileID: 1711645571}
   - {fileID: 975224532}
   m_Father: {fileID: 627318384}
@@ -49382,15 +49325,15 @@ MonoBehaviour:
 
     Inst: @a_games_studio_2'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2164260863
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -62774,6 +62717,8 @@ MonoBehaviour:
   - {fileID: 1934170462}
   - {fileID: 1557979326}
   - {fileID: 1237635448}
+  src: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &1247067319
 GameObject:
   m_ObjectHideFlags: 0
@@ -63710,6 +63655,10 @@ MonoBehaviour:
   panelWeapon: {fileID: 1919044817}
   panelAccessories: {fileID: 994819299}
   panelItems: {fileID: 852888572}
+  src: {fileID: 0}
+  openInv: {fileID: 0}
+  closeInv: {fileID: 0}
+  click: {fileID: 0}
 --- !u!114 &1260874431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63734,6 +63683,7 @@ MonoBehaviour:
     itemId: 0
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 2008913577}
     receive: {fileID: 159224098}
     countGet: 1
@@ -63743,6 +63693,7 @@ MonoBehaviour:
     itemId: 1
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1589446090}
     receive: {fileID: 826574558}
     countGet: 1
@@ -63752,6 +63703,7 @@ MonoBehaviour:
     itemId: 2
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1480235703}
     receive: {fileID: 1043144842}
     countGet: 1
@@ -63761,6 +63713,7 @@ MonoBehaviour:
     itemId: 3
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1089390216}
     receive: {fileID: 1654137595}
     countGet: 1
@@ -63770,6 +63723,7 @@ MonoBehaviour:
     itemId: 4
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 125324909}
     receive: {fileID: 553553147}
     countGet: 1
@@ -63779,6 +63733,7 @@ MonoBehaviour:
     itemId: 5
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1809577564}
     receive: {fileID: 1215900143}
     countGet: 1
@@ -63788,6 +63743,7 @@ MonoBehaviour:
     itemId: 6
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1009744258}
     receive: {fileID: 1780592560}
     countGet: 1
@@ -63797,6 +63753,7 @@ MonoBehaviour:
     itemId: 7
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1744124561}
     receive: {fileID: 1408675777}
     countGet: 1
@@ -63806,6 +63763,7 @@ MonoBehaviour:
     itemId: 8
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 268929795}
     receive: {fileID: 620289503}
     countGet: 1
@@ -63815,6 +63773,7 @@ MonoBehaviour:
     itemId: 9
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1104105100}
     receive: {fileID: 1218966245}
     countGet: 1
@@ -63824,6 +63783,7 @@ MonoBehaviour:
     itemId: 10
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 225153938}
     receive: {fileID: 1247067321}
     countGet: 1
@@ -63833,6 +63793,7 @@ MonoBehaviour:
     itemId: 11
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 371509002}
     receive: {fileID: 929238568}
     countGet: 1
@@ -63842,6 +63803,7 @@ MonoBehaviour:
     itemId: 12
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1812173621}
     receive: {fileID: 1254713398}
     countGet: 1
@@ -63851,6 +63813,7 @@ MonoBehaviour:
     itemId: 13
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1527426697}
     receive: {fileID: 1455272763}
     countGet: 1
@@ -63860,6 +63823,7 @@ MonoBehaviour:
     itemId: 14
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1989467313}
     receive: {fileID: 1698976321}
     countGet: 1
@@ -63869,6 +63833,7 @@ MonoBehaviour:
     itemId: 15
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1430935416}
     receive: {fileID: 1085070690}
     countGet: 1
@@ -63878,6 +63843,7 @@ MonoBehaviour:
     itemId: 16
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 970051184}
     receive: {fileID: 655166361}
     countGet: 1
@@ -63887,6 +63853,7 @@ MonoBehaviour:
     itemId: 17
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 346613383}
     receive: {fileID: 148977358}
     countGet: 1
@@ -63896,6 +63863,7 @@ MonoBehaviour:
     itemId: 18
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1268610829}
     receive: {fileID: 999999625}
     countGet: 1
@@ -63905,6 +63873,7 @@ MonoBehaviour:
     itemId: 19
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1679750183}
     receive: {fileID: 824609764}
     countGet: 1
@@ -63914,6 +63883,7 @@ MonoBehaviour:
     itemId: 20
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 741134957}
     receive: {fileID: 923817727}
     countGet: 1
@@ -63923,6 +63893,7 @@ MonoBehaviour:
     itemId: 21
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 316795387}
     receive: {fileID: 1845903276}
     countGet: 1
@@ -63932,6 +63903,7 @@ MonoBehaviour:
     itemId: 22
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1877514461}
     receive: {fileID: 1769918702}
     countGet: 1
@@ -63941,6 +63913,7 @@ MonoBehaviour:
     itemId: 23
     type: 1
     needPower: 2
+    receiveClip: {fileID: 0}
   - button: {fileID: 678516957}
     receive: {fileID: 1812047393}
     countGet: 1
@@ -63950,6 +63923,7 @@ MonoBehaviour:
     itemId: 24
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 916785700}
     receive: {fileID: 1813559792}
     countGet: 1
@@ -63959,6 +63933,7 @@ MonoBehaviour:
     itemId: 25
     type: 2
     needPower: 1
+    receiveClip: {fileID: 0}
   - button: {fileID: 856395700}
     receive: {fileID: 468254195}
     countGet: 1
@@ -63968,6 +63943,7 @@ MonoBehaviour:
     itemId: 26
     type: 2
     needPower: 1
+    receiveClip: {fileID: 0}
   - button: {fileID: 402315665}
     receive: {fileID: 683731782}
     countGet: 1
@@ -63977,6 +63953,7 @@ MonoBehaviour:
     itemId: 27
     type: 2
     needPower: 2
+    receiveClip: {fileID: 0}
   - button: {fileID: 1794345847}
     receive: {fileID: 1503501262}
     countGet: 1
@@ -63986,6 +63963,7 @@ MonoBehaviour:
     itemId: 28
     type: 2
     needPower: 3
+    receiveClip: {fileID: 0}
   - button: {fileID: 965247386}
     receive: {fileID: 1567651188}
     countGet: 1
@@ -63995,6 +63973,7 @@ MonoBehaviour:
     itemId: 29
     type: 1
     needPower: 3
+    receiveClip: {fileID: 0}
   - button: {fileID: 841570485}
     receive: {fileID: 1103025963}
     countGet: 1
@@ -64004,6 +63983,7 @@ MonoBehaviour:
     itemId: 30
     type: 2
     needPower: 3
+    receiveClip: {fileID: 0}
   - button: {fileID: 1305415406}
     receive: {fileID: 1920036143}
     countGet: 1
@@ -64013,6 +63993,7 @@ MonoBehaviour:
     itemId: 31
     type: 2
     needPower: 3
+    receiveClip: {fileID: 0}
   - button: {fileID: 603826735}
     receive: {fileID: 1763613709}
     countGet: 1
@@ -64022,6 +64003,7 @@ MonoBehaviour:
     itemId: 32
     type: 2
     needPower: 3
+    receiveClip: {fileID: 0}
   - button: {fileID: 2017228656}
     receive: {fileID: 1883994818}
     countGet: 5
@@ -64031,6 +64013,7 @@ MonoBehaviour:
     itemId: 33
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1196668157}
     receive: {fileID: 2082060550}
     countGet: 3
@@ -64040,6 +64023,7 @@ MonoBehaviour:
     itemId: 34
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 247419136}
     receive: {fileID: 659484406}
     countGet: 1
@@ -64049,6 +64033,7 @@ MonoBehaviour:
     itemId: 35
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 118474767}
     receive: {fileID: 1638671350}
     countGet: 1
@@ -64058,6 +64043,7 @@ MonoBehaviour:
     itemId: 36
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1530298469}
     receive: {fileID: 1956064865}
     countGet: 1
@@ -64067,6 +64053,7 @@ MonoBehaviour:
     itemId: 37
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 400270958}
     receive: {fileID: 1722356019}
     countGet: 1
@@ -64076,6 +64063,7 @@ MonoBehaviour:
     itemId: 38
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 677864793}
     receive: {fileID: 224203670}
     countGet: 1
@@ -64085,6 +64073,7 @@ MonoBehaviour:
     itemId: 39
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 246881235}
     receive: {fileID: 1855067179}
     countGet: 1
@@ -64094,6 +64083,7 @@ MonoBehaviour:
     itemId: 40
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1338723525}
     receive: {fileID: 804758705}
     countGet: 1
@@ -64103,6 +64093,7 @@ MonoBehaviour:
     itemId: 41
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 460962736}
     receive: {fileID: 860419066}
     countGet: 1
@@ -64112,6 +64103,7 @@ MonoBehaviour:
     itemId: 42
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 794429198}
     receive: {fileID: 638174229}
     countGet: 1
@@ -64121,6 +64113,7 @@ MonoBehaviour:
     itemId: 43
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1664014087}
     receive: {fileID: 453950131}
     countGet: 1
@@ -64130,6 +64123,7 @@ MonoBehaviour:
     itemId: 44
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 842753380}
     receive: {fileID: 1301043889}
     countGet: 1
@@ -64139,6 +64133,7 @@ MonoBehaviour:
     itemId: 45
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1524110270}
     receive: {fileID: 770749933}
     countGet: 1
@@ -64148,6 +64143,7 @@ MonoBehaviour:
     itemId: 46
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
   - button: {fileID: 1589482716}
     receive: {fileID: 1846615096}
     countGet: 1
@@ -64157,6 +64153,8 @@ MonoBehaviour:
     itemId: 47
     type: 0
     needPower: 0
+    receiveClip: {fileID: 0}
+  src: {fileID: 0}
 --- !u!1 &1264372128
 GameObject:
   m_ObjectHideFlags: 0
@@ -72614,6 +72612,7 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
+  - component: {fileID: 1455715045}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -72700,6 +72699,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
+--- !u!114 &1455715045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &1457637123
 GameObject:
   m_ObjectHideFlags: 0
@@ -79458,6 +79469,8 @@ MonoBehaviour:
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
+  src: {fileID: 0}
+  click: {fileID: 0}
 --- !u!1 &1567651186
 GameObject:
   m_ObjectHideFlags: 0
@@ -86669,15 +86682,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAMEPLAY BY AUTOGAMER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2164260863
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -87346,6 +87359,10 @@ MonoBehaviour:
           m_CallState: 2
   crafts: []
   inv: {fileID: 1260874431}
+  src: {fileID: 0}
+  whoosh: {fileID: 0}
+  button: {fileID: 0}
+  getInv: {fileID: 0}
 --- !u!1 &1736334368
 GameObject:
   m_ObjectHideFlags: 0
@@ -114904,14 +114921,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
   player: {fileID: 627318388}
-  toDestroy: {fileID: 0}
-  deadBody: {fileID: 0}
+  toDestroy: {fileID: 6265473123142415675}
+  deadBody: {fileID: 1966508714223591087, guid: bf9fcd62480e9d04884f24ee123f19ec, type: 3}
   action:
+    m_PersistentCalls:
+      m_Calls: []
+  damaged:
     m_PersistentCalls:
       m_Calls: []
   maxHealth: 15
   healthText: {fileID: 7525689203082634398}
   healthBar: {fileID: 7664016833816198654}
+  autoUnlock: 1
+  needSave: 0
+  healthEvents: []
+  src: {fileID: 0}
+  dmg: {fileID: 0}
 --- !u!1 &4625822711184779177
 GameObject:
   m_ObjectHideFlags: 0
@@ -119401,6 +119426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddcf094b1a4eaf43ab77ed79c4df40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  isFeared: 0
+  _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 6860815625775464372}
   enemyRigidbody: {fileID: 2462432313407270123}
   moveSpeed: 3
@@ -119410,6 +119437,9 @@ MonoBehaviour:
   flipDeadzone: 0.05
   attack: {fileID: 8658918398121613977}
   hpBar: {fileID: 5436718586948721081}
+  isUsingAnims: 0
+  animations: []
+  moveSrc: {fileID: 0}
   isWalking: 0
 --- !u!212 &8462312294375035021
 SpriteRenderer:
@@ -119711,10 +119741,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 2
+  boss: 0
+  distantion: 10
   meeleAnim: {fileID: 2908118036026247946}
+  isHaveCustomPunch: 0
+  CustomPunch:
+    m_PersistentCalls:
+      m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1092084447561901838}
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
+  src: {fileID: 0}
+  sound: {fileID: 0}
   rotationOffset: 0
   rotationSpeed: 360
 --- !u!4 &8735685908407672946

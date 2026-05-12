@@ -1,0 +1,1 @@
+using UnityEngine; public class DeleteSave : MonoBehaviour { private void Start() { KeyManager.Delete_All(); } }

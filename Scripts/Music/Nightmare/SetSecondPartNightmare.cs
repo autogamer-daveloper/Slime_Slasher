@@ -16,8 +16,8 @@ public class SetSecondPartNightmare : MonoBehaviour
     [Header("__ First Muted Time __")]
     [SerializeField] private float fmt = 0.1f;
 
-    private void Start() { activateSecond.onClick.AddListener(SetSecond); Invoke(nameof(UnmuteFirst), fmt); }
-    private void OnDestroy() { activateSecond.onClick.RemoveListener(SetSecond); }
+    private void Start() { DOTween.Clear(true); activateSecond.onClick.AddListener(SetSecond); Invoke(nameof(UnmuteFirst), fmt); }
+    private void OnDestroy() { DOTween.Clear(true); activateSecond.onClick.RemoveListener(SetSecond); }
 
     private void UnmuteFirst() { _1.DOFade(volume, 0.5f); }
 
@@ -28,5 +28,5 @@ public class SetSecondPartNightmare : MonoBehaviour
         _2.DOFade(volume, 0.5f);
     }
 
-    public void MuteAll() { _2.DOFade(0f, 2f); foreach(AudioSource mute in needMute) { mute.DOFade(0f, 2f); } }
+    public void MuteAll() { _2.DOFade(0f, 0.25f).SetAutoKill(true); foreach(AudioSource mute in needMute) { mute.DOFade(0f, 0.25f).SetAutoKill(true); } }
 }

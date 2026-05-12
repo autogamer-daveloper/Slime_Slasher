@@ -86,5 +86,14 @@ public class KeyManager : MonoBehaviour
         return i;
     }
 
-    internal static void Delete_All() { PlayerPrefs.DeleteAll(); }
+    internal static void Delete_All()
+    {
+        int letter = Get_Bool_Key("LetterTriggered");
+        int note = Get_Bool_Key("NoteTriggered");
+        int lang = Get_Bool_Key("Language");
+        PlayerPrefs.DeleteAll();
+        Set_Bool_Key("LetterTriggered", letter);
+        Set_Bool_Key("NoteTriggered", note);
+        Set_Bool_Key("Language", lang);
+    }
 }
