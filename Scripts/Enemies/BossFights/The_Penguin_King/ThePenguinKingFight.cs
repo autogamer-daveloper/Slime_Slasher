@@ -43,6 +43,8 @@ public class ThePenguinKingFight : MonoBehaviour
     private int _spawned;
     private int _killed;
 
+    private float _cryingTimer = 46f;
+
     private void Start()
     {
         ShowPenguinAnimation(0);
@@ -55,12 +57,13 @@ public class ThePenguinKingFight : MonoBehaviour
         Invoke(nameof(ShowDialogue), showDialogue);
         Invoke(nameof(StartGame), startGameplay);
         Invoke(nameof(ShowInterface), startGameplay - 5f);
+        Invoke(nameof(PenguinCrying), _cryingTimer);
     }
 
     private void OnDestroy() { grenadeButton.onClick.AddListener(DropGrenade); }
 
     private void ShowDialogue() { Dialogue.SetActive(true); }
-    private void ShowToStageText(GameObject txt) { foreach(GameObject obj in stageText) { obj.SetActive(false); } txt.SetActive(true); }
+    private void ShowToStageText(GameObject txt) { foreach (GameObject obj in stageText) { obj.SetActive(false); } txt.SetActive(true); }
     private void ShowInterface() { ui.DOSizeDelta(_shown, 5f); }
 
     private void StartGame()
@@ -136,4 +139,6 @@ public class ThePenguinKingFight : MonoBehaviour
 
     public void PlayerDead() { endGame.EndGame(false); }
     private void PlayerKill() { endGame.EndGame(true); }
+    
+    private void PenguinCrying() { ShowPenguinAnimation(3); Invoke(nameof(ShowIdlePenguin), 5f); }
 }
