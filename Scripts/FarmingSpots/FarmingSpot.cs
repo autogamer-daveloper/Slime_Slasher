@@ -15,10 +15,7 @@ public class FarmingSpot : MonoBehaviour
 
     private bool _isGrown = true;
 
-    private void Start()
-    {
-        VisibilityOfHarvest(true);
-    }
+    private void Start() { VisibilityOfHarvest(true); }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -62,10 +59,7 @@ public class FarmingSpot : MonoBehaviour
         Invoke("ShowHarvest", timer);
     }
 
-    private void ShowHarvest()
-    {
-        VisibilityOfHarvest(true);
-    }
+    private void ShowHarvest() { VisibilityOfHarvest(true); }
 
     private bool CanGetItem()
     {
@@ -79,26 +73,14 @@ public class FarmingSpot : MonoBehaviour
         else if (inv.elements[id].type == InstrumentType.Axe)
         {
             int axePower = KeyManager.GetInt_InstrumentPower_Axe();
-            if (inv.elements[id].needPower <= axePower)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (inv.elements[id].needPower <= axePower) { return true; }
+            else { return false; }
         }
         else if (inv.elements[id].type == InstrumentType.Pickaxe)
         {
             int pickaxePower = KeyManager.GetInt_InstrumentPower_Pickaxe();
-            if (inv.elements[id].needPower <= pickaxePower)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (inv.elements[id].needPower <= pickaxePower) { return true; }
+            else { return false; }
         }
         else return true;
     }

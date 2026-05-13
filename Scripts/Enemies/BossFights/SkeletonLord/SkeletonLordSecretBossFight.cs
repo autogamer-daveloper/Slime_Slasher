@@ -54,7 +54,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
     private float _betweenCoilSpawns = 0.33f;
     private float _afterCoilSpawns = 6f;
 
-    private int coilCount = 0;
+    private int _coilCount = 0;
 
     private List<GameObject> _spawnedMinions = new List<GameObject>();
 
@@ -64,29 +64,17 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
         _isSkeletonLordDefeated = KeyManager.Get_Bool_Key(bossKey);
         playerVision.SetActive(false);
 
-        if (_isSkeletonLordDefeated == 1)
-        {
-            showAnimation(5);
-        }
-        else
-        {
-            showAnimation(0);
-        }
+        if (_isSkeletonLordDefeated == 1) { showAnimation(5); }
+        else { showAnimation(0); }
 
         startFight.onClick.AddListener(StartFight);
     }
 
-    private void OnDestroy()
-    {
-        startFight.onClick.RemoveListener(StartFight);
-    }
+    private void OnDestroy() { startFight.onClick.RemoveListener(StartFight); }
 
     private void showAnimation(int id)
     {
-        foreach (GameObject obj in animationObj)
-        {
-            obj.SetActive(false);
-        }
+        foreach (GameObject obj in animationObj) { obj.SetActive(false); }
 
         if(animationObj[id] != null) animationObj[id].SetActive(true);
         if(animations[id] != null) animations[id].Play();
@@ -127,38 +115,23 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
 
     private void _SpawnCoils()
     {
+        Invoke(nameof(ShowIdle), _attackTime);
         if (!_isSecondPhase)
         {
             showAnimation(3);
-            Invoke(nameof(ShowIdle), _attackTime);
             Instantiate(coil01, player.position, player.rotation);
-            src.PlayOneShot(magicAttack);
-            if (coilCount <= 3)
-            {
-                Invoke(nameof(_SpawnCoils), _betweenCoilSpawns);
-            }
-            else
-            {
-                Invoke(nameof(SpawnEnemy), _afterCoilSpawns);
-            }
-            coilCount++;
+            if (_coilCount <= 3) { Invoke(nameof(_SpawnCoils), _betweenCoilSpawns); }
+            else { Invoke(nameof(SpawnEnemy), _afterCoilSpawns); }
         }
         else
         {
             showAnimation(4);
-            Invoke(nameof(ShowIdle), _attackTime);
             Instantiate(coil02, player.position, player.rotation);
-            src.PlayOneShot(magicAttack);
-            if (coilCount <= 5)
-            {
-                Invoke(nameof(_SpawnCoils), _betweenCoilSpawns);
-            }
-            else
-            {
-                Invoke(nameof(SpawnEnemy), _afterCoilSpawns);
-            }
-            coilCount++;
+            if (_coilCount <= 5) { Invoke(nameof(_SpawnCoils), _betweenCoilSpawns); }
+            else { Invoke(nameof(SpawnEnemy), _afterCoilSpawns); }
         }
+        src.PlayOneShot(magicAttack);
+        _coilCount++;
     }
 
     private void SpawnEnemy()
@@ -170,34 +143,31 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
     {
         src.PlayOneShot(circleAttack);
         Debug.LogWarning("SPAWN SKELETONS");
-        coilCount = 0;
+        _coilCount = 0;
         Invoke(nameof(SpawnCoils), _afterSpawn);
 
         _spawnedMinions.RemoveAll(item => item == null);
-        //if (_spawnedMinions.Count > 0) { return; }
+        //if (_spawnedMinions.Count > 0) { return; } Infinity spawn
         foreach (Transform point in enemySpawners)
         {
+            GameObject spawned;
             Instantiate(spawnEffect, point.position, point.rotation);
+            Invoke(nameof(ShowIdle), _attackTime);
             if (!_isSecondPhase)
             {
-                GameObject spawned;
-
                 showAnimation(3);
-                Invoke(nameof(ShowIdle), _attackTime);
+                skeleton01.SetActive(true);
                 spawned = Instantiate(skeleton01, point.position, point.rotation);
-
-                _spawnedMinions.Add(spawned);
+                skeleton01.SetActive(false);
             }
             else
             {
-                GameObject spawned;
-
                 showAnimation(4);
-                Invoke(nameof(ShowIdle), _attackTime);
+                skeleton02.SetActive(true);
                 spawned = Instantiate(skeleton02, point.position, point.rotation);
-
-                _spawnedMinions.Add(spawned);
+                skeleton02.SetActive(false);
             }
+            _spawnedMinions.Add(spawned);
         }
     }
 
@@ -273,18 +243,9 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
             MinionsDead();
     }
 
-    private void MinionsAlive()
-    {
-        stats.BlockDamage();
-    }
+    private void MinionsAlive() { stats.BlockDamage(); }
 
-    private void MinionsDead()
-    {
-        stats.UnlockDamage();
-    }
+    private void MinionsDead() { stats.UnlockDamage(); }
 
-    internal string GetBossKey()
-    {
-        return bossKey;
-    }
+    internal string GetBossKey() { return bossKey; }
 }

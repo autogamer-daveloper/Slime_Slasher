@@ -18,18 +18,9 @@ public class PlayerTalkedWithZero : MonoBehaviour
         if (isTalked == 1) { Talked(); }
     }
 
-    private void OnDestroy()
-    {
-        talk.onClick.RemoveListener(Talk);
-    }
+    private void OnDestroy() { talk.onClick.RemoveListener(Talk); }
 
-    private void Talk()
-    {
-        KeyManager.Set_Bool_Key(key, 1);
-    }
+    private void Talk() { KeyManager.Set_Bool_Key(key, 1); }
 
-    private void Talked()
-    {
-        anim.Play();
-    }
+    private void Talked() { anim.Play(); }
 }

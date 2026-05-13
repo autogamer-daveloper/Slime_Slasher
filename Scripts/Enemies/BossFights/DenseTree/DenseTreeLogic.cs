@@ -49,9 +49,10 @@ public class DenseTreeLogic : MonoBehaviour
     private float _betweenWineSpawns = 0.33f;
     private float _afterWineSpawns = 2f;
 
-    private int wineCount = 0;
+    private int _wineCount = 0;
 
     private List<GameObject> _spawnedMinions = new List<GameObject>();
+    private List<GameObject> _lastWines = new List<GameObject>();
 
     private void Start()
     {
@@ -114,36 +115,25 @@ public class DenseTreeLogic : MonoBehaviour
     private void SpawnWines()
     {
         src.PlayOneShot(magic);
+        Invoke(nameof(ShowIdle), _attackTime);
         if (!_isSecondPhase)
         {
             showAnimation(3);
-            Invoke(nameof(ShowIdle), _attackTime);
             Instantiate(wine01, player.position, player.rotation);
-            if (wineCount <= 1)
-            {
-                Invoke(nameof(SpawnWines), _betweenWineSpawns);
-            }
-            else
-            {
-                Invoke(nameof(SpawnEnemy), _afterWineSpawns);
-            }
-            wineCount++;
+            if (_wineCount <= 1) { Invoke(nameof(SpawnWines), _betweenWineSpawns); }
+            else { Invoke(nameof(SpawnEnemy), _afterWineSpawns); }
         }
         else
         {
+            CheckWines();
+            GameObject wine;
             showAnimation(4);
-            Invoke(nameof(ShowIdle), _attackTime);
-            Instantiate(wine02, player.position, player.rotation);
-            if (wineCount <= 3)
-            {
-                Invoke(nameof(SpawnWines), _betweenWineSpawns);
-            }
-            else
-            {
-                Invoke(nameof(SpawnEnemy), _afterWineSpawns);
-            }
-            wineCount++;
+            wine = Instantiate(wine02, player.position, player.rotation);
+            _lastWines.Add(wine);
+            if (_wineCount <= 3) { Invoke(nameof(SpawnWines), _betweenWineSpawns); }
+            else { Invoke(nameof(SpawnEnemy), _afterWineSpawns); }
         }
+        _wineCount++;
     }
 
     private void SpawnEnemy()
@@ -156,38 +146,36 @@ public class DenseTreeLogic : MonoBehaviour
     private void _SpawnEnemy()
     {
         Debug.LogWarning("SPAWN DRUIDS");
-        wineCount = 0;
+        _wineCount = 0;
         Invoke(nameof(SpawnWines), _afterSpawn);
 
         _spawnedMinions.RemoveAll(item => item == null);
         if (_spawnedMinions.Count > 0) { return; }
         foreach (Transform point in enemySpawners)
         {
+            GameObject spawned;
+            Invoke(nameof(ShowIdle), _attackTime);
             if (!_isSecondPhase)
             {
-                GameObject spawned;
-
                 showAnimation(3);
-                Invoke(nameof(ShowIdle), _attackTime);
+                druid01.SetActive(true);
                 spawned = Instantiate(druid01, point.position, point.rotation);
-
-                _spawnedMinions.Add(spawned);
+                druid01.SetActive(false);
             }
             else
             {
-                GameObject spawned;
-
                 showAnimation(4);
-                Invoke(nameof(ShowIdle), _attackTime);
+                druid02.SetActive(true);
                 spawned = Instantiate(druid02, point.position, point.rotation);
-
-                _spawnedMinions.Add(spawned);
+                druid02.SetActive(false);
             }
+            _spawnedMinions.Add(spawned);
         }
     }
 
     public void PlayerDead()
     {
+        DeleteWines();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));
@@ -200,6 +188,7 @@ public class DenseTreeLogic : MonoBehaviour
 
     public void Killed()
     {
+        DeleteWines();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));
@@ -214,15 +203,9 @@ public class DenseTreeLogic : MonoBehaviour
         Invoke(nameof(ShowDeadTree), _FinalDialogue);
     }
 
-    private void ShowDeadTree()
-    {
-        showAnimation(6);
-    }
+    private void ShowDeadTree() { showAnimation(6); }
 
-    private void ShowIdle()
-    {
-        showAnimation(2);
-    }
+    private void ShowIdle() { showAnimation(2); }
 
     public void SetSecondPhase()
     {
@@ -235,6 +218,14 @@ public class DenseTreeLogic : MonoBehaviour
         src.PlayOneShot(winesClip);
         Invoke(nameof(ShowIdle), _attackTime);
         Invoke(nameof(Fight), 0.5f);
+    }
+
+    private void CheckWines() { _lastWines.RemoveAll(item => item == null); }
+
+    private void DeleteWines()
+    {
+        foreach (GameObject obj in _lastWines) { if (obj != null) { Destroy(obj); }}
+        _lastWines.Clear();
     }
 
     public void CheckMinions()

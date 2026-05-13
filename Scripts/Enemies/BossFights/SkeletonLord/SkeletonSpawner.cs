@@ -159,19 +159,7 @@ public class SkeletonSpawner : MonoBehaviour
         return true;
     }
 
-    private void SummonBossNormal()
-    {
-        foreach (NeedItems item in summonItems1)
-        {
-            KeyManager.Spend_Item(item.id, item.count);
-        }
-    }
+    private void SummonBossNormal() { foreach (NeedItems item in summonItems1) { KeyManager.Spend_Item(item.id, item.count); } }
 
-    private void SummonBossHard()
-    {
-        foreach (NeedItems item in summonItems2)
-        {
-            KeyManager.Spend_Item(item.id, item.count);
-        }
-    }
+    private void SummonBossHard() { foreach (NeedItems item in summonItems2) { KeyManager.Spend_Item(item.id, item.count); } }
 }

@@ -12,60 +12,37 @@ public class DelayStartTimer : MonoBehaviour
     [Tooltip("Optional. May be used for skip")]
     [SerializeField] private Button CancelInvokeButton;
     [SerializeField] private bool doTask = false;
+    [SerializeField] private bool doubleClick = false;
 
-    private void Start()
-    {
-        if (CancelInvokeButton != null) CancelInvokeButton.onClick.AddListener(Cancel);
-    }
+    private bool _isFirstClicked = false;
 
-    private void OnDestroy()
-    {
-        if (CancelInvokeButton != null) CancelInvokeButton.onClick.RemoveListener(Cancel);
-    }
+    private void Start() { if (CancelInvokeButton != null) CancelInvokeButton.onClick.AddListener(Cancel); }
+
+    private void OnDestroy() { if (CancelInvokeButton != null) CancelInvokeButton.onClick.RemoveListener(Cancel); }
 
     private void OnEnable()
     {
-        if (isLoadLevelAction == false)
-        {
-            Invoke(nameof(Action), delay);
-        }
-        else
-        {
-            Invoke(nameof(ActionLevelLoad), delay);
-        }
+        if (isLoadLevelAction == false) { Invoke(nameof(Action), delay); }
+        else { Invoke(nameof(ActionLevelLoad), delay); }
     }
 
-    private void Action()
-    {
-        action.Invoke();
-    }
+    private void Action() { action.Invoke(); }
 
-    private void ActionLevelLoad()
-    {
-        LoadLevel.LoadLevelById(index);
-    }
+    private void ActionLevelLoad() { LoadLevel.LoadLevelById(index); }
 
     private void Cancel()
     {
-        if (isLoadLevelAction == false)
-        {
-            CancelInvoke(nameof(Action));
-        }
-        else
-        {
-            CancelInvoke(nameof(ActionLevelLoad));
-        }
+        if (doubleClick && !_isFirstClicked) { _isFirstClicked = true; Invoke(nameof(CancelDoubleClick), 5f); return; }
+
+        if (isLoadLevelAction == false) { CancelInvoke(nameof(Action)); }
+        else { CancelInvoke(nameof(ActionLevelLoad)); }
 
         if (doTask)
         {
-            if (isLoadLevelAction == false)
-            {
-                Action();
-            }
-            else
-            {
-                ActionLevelLoad();
-            }
+            if (isLoadLevelAction == false) { Action(); }
+            else { ActionLevelLoad(); }
         }
     }
+    
+    private void CancelDoubleClick() { _isFirstClicked = false; }
 }

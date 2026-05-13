@@ -16,10 +16,7 @@ public class KillPlayerFastFlower : MonoBehaviour
     private void Start()
     {
         bossKey = logic.GetBossKey();
-        foreach (Button btn in kill)
-        {
-            btn.onClick.AddListener(Kill);
-        }
+        foreach (Button btn in kill) { btn.onClick.AddListener(Kill); }
 
         Check();
     }
@@ -35,20 +32,11 @@ public class KillPlayerFastFlower : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        foreach (Button btn in kill)
-        {
-            btn.onClick.RemoveListener(Kill);
-        }
-    }
+    private void OnDestroy() { foreach (Button btn in kill) { btn.onClick.RemoveListener(Kill); }}
 
     private void Kill()
     {
         int hasKey = KeyManager.Get_Bool_Key(bossKey);
-        if (hasKey == 0)
-        {
-            Instantiate(killingObject, player.position, player.rotation);
-        }
+        if (hasKey == 0) { Instantiate(killingObject, player.position, player.rotation); }
     }
 }

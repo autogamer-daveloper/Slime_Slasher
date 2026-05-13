@@ -11,8 +11,5 @@ public class SkipButton : MonoBehaviour
         Invoke(nameof(Activate), 1f);
     }
 
-    private void Activate()
-    {
-        btn.interactable = true;
-    }
+    private void Activate() { btn.interactable = true; }
 }

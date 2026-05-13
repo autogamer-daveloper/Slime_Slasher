@@ -15,10 +15,7 @@ public class NightmareManager : MonoBehaviour
         Invoke(nameof(_Dead), 5);
     }
 
-    private void _Dead()
-    {
-        LoadLevel.LoadLevelById(sceneIdDead);
-    }
+    private void _Dead() { LoadLevel.LoadLevelById(sceneIdDead); }
 
     public void Alive()
     {
@@ -27,8 +24,5 @@ public class NightmareManager : MonoBehaviour
         Invoke(nameof(_Alive), 1);
     }
 
-    private void _Alive()
-    {
-        LoadLevel.LoadLevelById(sceneIdAlive);
-    }
+    private void _Alive() { LoadLevel.LoadLevelById(sceneIdAlive); }
 }

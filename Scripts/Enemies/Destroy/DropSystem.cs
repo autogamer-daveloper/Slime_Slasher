@@ -16,10 +16,7 @@ public class DropSystem : MonoBehaviour
 
     private bool _wasRewarded = false;
 
-    private void Start()
-    {
-        if (atStart) { GiveResult(); }
-    }
+    private void Start() { if (atStart) { GiveResult(); } }
 
     public void GiveResult()
     {
@@ -36,7 +33,6 @@ public class DropSystem : MonoBehaviour
             else { Debug.Log($"Nothing dropped with result: {_result}"); }
         }
         _wasRewarded = true;
-
         Destroy(this.gameObject);
     }
 }

@@ -66,13 +66,15 @@ public class RyanSamuraiBossFight : MonoBehaviour
     private float _betweenCoilSpawns = 0.15f;
     private float _afterCoilSpawns = 1.25f;
 
-    private int coilCount = 0;
-    private int slashCount = 0;
+    private int _coilCount = 0;
+    private int _slashCount = 0;
 
-    private Vector2 shown = new Vector2(0, 0);
-    private Vector2 hidden = new Vector2(0, -2000);
+    private Vector2 _shown = new Vector2(0, 0);
+    private Vector2 _hidden = new Vector2(0, -2000);
 
-#region MAIN
+    private List<GameObject> _slashes = new List<GameObject>();
+
+    #region MAIN
 
     private void Start()
     {
@@ -97,7 +99,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     private void showAnimation(int id)
     {
-        if(id == 4) { Invoke(nameof(TeleportToPlayer), 0.5f); }
+        if (id == 4) { Invoke(nameof(TeleportToPlayer), 0.5f); }
 
         foreach (GameObject obj in animationObj) { if (obj != null) obj.SetActive(false); }
 
@@ -109,9 +111,9 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     //internal string GetBossKey() { return bossKey; }
 
-#endregion
+    #endregion
 
-#region DIALOGUES
+    #region DIALOGUES
 
     private void PreStartFight()
     {
@@ -126,8 +128,8 @@ public class RyanSamuraiBossFight : MonoBehaviour
         Invoke(nameof(ShowSelecting), _firstDialogueDuration);
     }
 
-    private void ShowSelecting() { fightOrNotObj.SetActive(true); fightOrNot.DOAnchorPos(shown, 0.5f); }
-    private void HideSelecting() { fightOrNot.DOAnchorPos(hidden, 0.5f).OnComplete(() => { fightOrNotObj.SetActive(false); }); }
+    private void ShowSelecting() { fightOrNotObj.SetActive(true); fightOrNot.DOAnchorPos(_shown, 0.5f); }
+    private void HideSelecting() { fightOrNot.DOAnchorPos(_hidden, 0.5f).OnComplete(() => { fightOrNotObj.SetActive(false); }); }
 
     private void StartFight()
     {
@@ -154,9 +156,9 @@ public class RyanSamuraiBossFight : MonoBehaviour
         afterKillingSuicide.Invoke();
     }
 
-#endregion
+    #endregion
 
-#region FIGHT
+    #region FIGHT
 
     private void Fight()
     {
@@ -176,30 +178,18 @@ public class RyanSamuraiBossFight : MonoBehaviour
         if (!_isSecondPhase)
         {
             Instantiate(coil01, player.position, player.rotation);
-            if (coilCount <= 4)
-            {
-                Invoke(nameof(SpawnCoils), _betweenCoilSpawns);
-            }
-            else
-            {
-                Invoke(nameof(SpawnEnemy), _afterCoilSpawns);
-            }
-            coilCount++;
+            if (_coilCount <= 4) { Invoke(nameof(SpawnCoils), _betweenCoilSpawns); }
+            else { Invoke(nameof(SpawnEnemy), _afterCoilSpawns); }
         }
         else
         {
             Instantiate(coil02, player.position, player.rotation);
-            if (coilCount <= 9)
-            {
-                Invoke(nameof(SpawnCoils), _betweenCoilSpawns);
-            }
-            else
-            {
-                Invoke(nameof(SpawnEnemy), _afterCoilSpawns);
-            }
-            coilCount++;
+            if (_coilCount <= 9) { Invoke(nameof(SpawnCoils), _betweenCoilSpawns); }
+            else { Invoke(nameof(SpawnEnemy), _afterCoilSpawns); }
+            
         }
-        slashCount = 0;
+        _coilCount++;
+        _slashCount = 0;
     }
 
     private void SpawnEnemy()
@@ -209,28 +199,29 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     private void _SpawnEnemy()
     {
+        CheckSlashes();
+        GameObject slashObj;
         src.PlayOneShot(slash);
-        if(slashCount == 0) { samuraiEye.Stop(); samuraiEye.Play(); src.PlayOneShot(fear); }
+        if (_slashCount == 0) { samuraiEye.Stop(); samuraiEye.Play(); src.PlayOneShot(fear); }
         Debug.LogWarning("SPAWN RYANS ILLUSIONS");
-        if(!_isSecondPhase)
+        if (!_isSecondPhase)
         {
-            if (_isNextRight) { Instantiate(samuraiSlashRight, player.position, player.rotation); }
-            else { Instantiate(samuraiSlashLeft, player.position, player.rotation); }
-            if (slashCount <= 2) { Invoke(nameof(_SpawnEnemy), 0.5f); }
+            if (_isNextRight) { slashObj = Instantiate(samuraiSlashRight, player.position, player.rotation); }
+            else { slashObj = Instantiate(samuraiSlashLeft, player.position, player.rotation); }
+            if (_slashCount <= 2) { Invoke(nameof(_SpawnEnemy), 0.5f); }
             else { Invoke(nameof(SpawnCoils), _afterSpawn); }
-            _isNextRight = !_isNextRight;
-            slashCount++;
         }
         else
         {
-            if (_isNextRight) { Instantiate(samuraiSlashRight, player.position, player.rotation); }
-            else { Instantiate(samuraiSlashLeft, player.position, player.rotation); }
-            if (slashCount <= 4) { Invoke(nameof(_SpawnEnemy), 0.35f); }
+            if (_isNextRight) { slashObj = Instantiate(samuraiSlashRight, player.position, player.rotation); }
+            else { slashObj = Instantiate(samuraiSlashLeft, player.position, player.rotation); }
+            if (_slashCount <= 4) { Invoke(nameof(_SpawnEnemy), 0.35f); }
             else { Invoke(nameof(SpawnCoils), _afterSpawn); }
-            _isNextRight = !_isNextRight;
-            slashCount++;
         }
-        coilCount = 0;
+        _isNextRight = !_isNextRight;
+        _slashCount++;
+        _slashes.Add(slashObj);
+        _coilCount = 0;
     }
 
     public void SetSecondPhase()
@@ -254,9 +245,9 @@ public class RyanSamuraiBossFight : MonoBehaviour
         Invoke(nameof(ShowIdle), 0.5f);
     }
 
-#endregion
+    #endregion
 
-#region AFTER FIGHT
+    #region AFTER FIGHT
 
     public void PlayerDead()
     {
@@ -274,6 +265,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     public void Killed()
     {
+        DeleteSlashes();
         healthBar.SetActive(false);
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));
@@ -300,5 +292,13 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     private void ShowIdle() { if (_wasFightStarted) showAnimation(2); }
 
-#endregion
+    #endregion
+
+    private void CheckSlashes() { _slashes.RemoveAll(item => item == null); }
+
+    private void DeleteSlashes()
+    {
+        foreach (GameObject obj in _slashes) { if (obj != null) { Destroy(obj); }}
+        _slashes.Clear();
+    }
 }

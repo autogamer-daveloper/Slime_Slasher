@@ -35,9 +35,9 @@ public class ThePenguinKingFight : MonoBehaviour
     [SerializeField] private AudioClip trapClip;
     [SerializeField] private UnityEvent changeMusic;
 
-    private Vector2 hidden = new Vector2(5000, 5000);
-    private Vector2 shown = new Vector2(0, 0);
-    private Vector2 penguinPos = new Vector2(0, 0);
+    private Vector2 _hidden = new Vector2(5000, 5000);
+    private Vector2 _shown = new Vector2(0, 0);
+    private Vector2 _penguinPos = new Vector2(0, 0);
 
     private int _stage;
     private int _spawned;
@@ -46,8 +46,8 @@ public class ThePenguinKingFight : MonoBehaviour
     private void Start()
     {
         ShowPenguinAnimation(0);
-        ui.DOSizeDelta(hidden, 0.1f);
-        penguinPos = new Vector2(penguin.position.x, penguin.position.y);
+        ui.DOSizeDelta(_hidden, 0.1f);
+        _penguinPos = new Vector2(penguin.position.x, penguin.position.y);
         grenadeObject.SetActive(false);
 
         grenadeButton.onClick.AddListener(DropGrenade);
@@ -61,7 +61,7 @@ public class ThePenguinKingFight : MonoBehaviour
 
     private void ShowDialogue() { Dialogue.SetActive(true); }
     private void ShowToStageText(GameObject txt) { foreach(GameObject obj in stageText) { obj.SetActive(false); } txt.SetActive(true); }
-    private void ShowInterface() { ui.DOSizeDelta(shown, 5f); }
+    private void ShowInterface() { ui.DOSizeDelta(_shown, 5f); }
 
     private void StartGame()
     {
@@ -79,7 +79,9 @@ public class ThePenguinKingFight : MonoBehaviour
     {
         if (_stage >= enemies.Length) { CancelInvoke(nameof(TrapActivate)); return; }
 
+        enemies[_stage].SetActive(true);
         Instantiate(enemies[_stage], spawnPoint.position, spawnPoint.rotation);
+        enemies[_stage].SetActive(false);
         _spawned++;
         if (_spawned >= enemiesCount[_stage]) { return; }
         else { Invoke(nameof(Spawn), 2f); }
@@ -127,7 +129,7 @@ public class ThePenguinKingFight : MonoBehaviour
         Vector2 grenadeStartPos = new Vector2(player.position.x, player.position.y);
         grenade.position = grenadeStartPos;
         grenadeObject.SetActive(true);
-        grenade.DOMove(penguinPos, 1.5f).OnComplete(() => { grenadeObject.SetActive(false); });
+        grenade.DOMove(_penguinPos, 1.5f).OnComplete(() => { grenadeObject.SetActive(false); });
         Invoke(nameof(ShowExplodedPenguin), 1.5f);
         Invoke(nameof(PlayerKill), 2f);
     }

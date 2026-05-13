@@ -14,10 +14,7 @@ public class PlayersInstruments : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip selectItem;
 
-    private void Start()
-    {
-        SerializeButtons();
-    }
+    private void Start() { SerializeButtons(); }
 
     private void SerializeButtons()
     {

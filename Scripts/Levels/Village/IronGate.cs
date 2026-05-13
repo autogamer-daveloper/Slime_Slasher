@@ -14,22 +14,13 @@ public class IronGate : MonoBehaviour
     private void Start()
     {
         isOpened = KeyManager.Get_Bool_Key(key);
-        if (isOpened == 1)
-        {
-            UnlockedGate();
-        }
-        else
-        {
-            LockedGate();
-        }
+        if (isOpened == 1) { UnlockedGate(); }
+        else { LockedGate(); }
 
         unlock.onClick.AddListener(Unlock);
     }
 
-    private void OnDestroy()
-    {
-        unlock.onClick.RemoveListener(Unlock);
-    }
+    private void OnDestroy() { unlock.onClick.RemoveListener(Unlock); }
 
     private void Unlock()
     {

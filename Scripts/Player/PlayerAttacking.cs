@@ -37,7 +37,7 @@ public class PlayerAttacking : MonoBehaviour
 
     private Animation defaultMeeleAnimation;
 
-    private bool isMutedFirst = true;
+    private bool _isMutedFirst = true;
     private int _selectedWeapon = 0;
     private Objects.Weapons.Weapons.WeaponType _type;
 
@@ -92,25 +92,19 @@ public class PlayerAttacking : MonoBehaviour
         }
 
         int savedId = KeyManager.GetInt_WeaponID();
-        if (savedId < 0 || savedId >= weapon.Length)
+        if (savedId < 0 || savedId >= weapon.Length) {
             Debug.LogWarning($"Saved weapon id {savedId} is out of range (0..{weapon.Length - 1}). Clamping to valid range.");
+        }
 
         _selectedWeapon = Mathf.Clamp(savedId, 0, weapon.Length - 1);
 
-        if (defaultAnimation != null)
-            defaultMeeleAnimation = defaultAnimation.GetComponent<Animation>();
-        else
-            Debug.LogWarning("defaultAnimation GameObject is not assigned in inspector.");
+        if (defaultAnimation != null) { defaultMeeleAnimation = defaultAnimation.GetComponent<Animation>(); }
+        else { Debug.LogWarning("defaultAnimation GameObject is not assigned in inspector."); }
 
         SelectThisWeapon(_selectedWeapon);
     }
 
-    private void OnDestroy()
-    {
-        foreach (Button btn in selectWeaponById)
-            if (btn != null)
-                btn.onClick.RemoveAllListeners();
-    }
+    private void OnDestroy() { foreach (Button btn in selectWeaponById) { if (btn != null) { btn.onClick.RemoveAllListeners(); }}}
 
     private void SelectThisWeapon(int id)
     {
@@ -166,12 +160,10 @@ public class PlayerAttacking : MonoBehaviour
             isWeaponRange(false);
         }
 
-        if (player != null)
-            player.SetBonus(_lifeHealing, _manaHealing);
-        else
-            Debug.LogWarning("Player reference is null in PlayerAttacking (set it in inspector).");
+        if (player != null) { player.SetBonus(_lifeHealing, _manaHealing); }
+        else { Debug.LogWarning("Player reference is null in PlayerAttacking (set it in inspector)."); }
 
-        if (isMutedFirst) { isMutedFirst = false; return; }
+        if (_isMutedFirst) { _isMutedFirst = false; return; }
         audioSource.PlayOneShot(selectItem);
     }
 
@@ -184,8 +176,7 @@ public class PlayerAttacking : MonoBehaviour
             aimJoystick.SetActive(true);
             aim.SetActive(true);
 
-            if (aim != null)
-                aim.transform.position = transform.position + Vector3.up * aimMaxDistance;
+            if (aim != null) { aim.transform.position = transform.position + Vector3.up * aimMaxDistance; }
         }
         else
         {
@@ -197,34 +188,20 @@ public class PlayerAttacking : MonoBehaviour
 
     private void OnEnable()
     {
-        if (attackButton.Length != 0)
-            foreach (Button btn in attackButton)
-                btn.onClick.AddListener(Attack);
-        else
-            Debug.LogError("attackButton not assigned in inspector.");
+        if (attackButton.Length != 0) { foreach (Button btn in attackButton) { btn.onClick.AddListener(Attack); }}
+        else { Debug.LogError("attackButton not assigned in inspector."); }
     }
 
-    private void OnDisable()
-    {
-        if (attackButton.Length != 0)
-            foreach (Button btn in attackButton)
-                btn.onClick.RemoveListener(Attack);
-    }
+    private void OnDisable() { if (attackButton.Length != 0) { foreach (Button btn in attackButton) { btn.onClick.RemoveListener(Attack); }}}
 
     private void Update()
     {
-        //ВРЕМЕННО !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //For pc keyboard
         if (Keyboard.current.spaceKey.wasPressedThisFrame) { Attack(); }
-
-        if (_isUsingRange)
-            HandleAimWithJoystick();
+        if (_isUsingRange) { HandleAimWithJoystick(); }
     }
 
-    private void LateUpdate()
-    {
-        if (lockPlayerRotation)
-            transform.rotation = _initialRotation;
-    }
+    private void LateUpdate() { if (lockPlayerRotation) { transform.rotation = _initialRotation; } }
 
     private void HandleAimWithJoystick()
     {
@@ -273,8 +250,7 @@ public class PlayerAttacking : MonoBehaviour
             {
                 Vector2 norm = dir.normalized;
                 _lastAimDir = norm;
-                if (aim != null)
-                    aim.transform.position = transform.position + (Vector3)(norm * aimMaxDistance);
+                if (aim != null) { aim.transform.position = transform.position + (Vector3)(norm * aimMaxDistance); }
 
                 if (arrowSpawn != null)
                 {
@@ -294,13 +270,11 @@ public class PlayerAttacking : MonoBehaviour
         if (_mana >= _manaCost) { player.ManaLose(_manaCost, _lifeCost); }
         else return;
 
-        if (_sfx != null && audioSource != null)
-            audioSource.PlayOneShot(_sfx);
+        if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfx); }
 
-        if (_type == Objects.Weapons.Weapons.WeaponType.Meele)
-        {
-            if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName))
-                defaultMeeleAnimation.Play(_meeleAnimationName);
+        if (_type == Objects.Weapons.Weapons.WeaponType.Meele) {
+            if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName)) {
+                defaultMeeleAnimation.Play(_meeleAnimationName); }
         }
 
         if (_type == Objects.Weapons.Weapons.WeaponType.Range)
@@ -316,16 +290,15 @@ public class PlayerAttacking : MonoBehaviour
                 }
                 Destroy(inst, _lifeTime);
             }
-            else
-                Debug.LogWarning("Arrow or arrowSpawn not set for Range weapon.");
+            else { Debug.LogWarning("Arrow or arrowSpawn not set for Range weapon."); }
         }
 
         if (_type == Objects.Weapons.Weapons.WeaponType.Magic)
         {
             Transform[] enemiesTransform = enemiesAround.GetAllEnemiesTransform();
-            foreach (Transform enemyTransform in enemiesTransform)
-                if (_effect != null)
-                    Instantiate(_effect, enemyTransform.position, _effect.transform.rotation);
+            foreach (Transform enemyTransform in enemiesTransform) {
+                if (_effect != null) { Instantiate(_effect, enemyTransform.position, _effect.transform.rotation); }
+            }
         }
 
         _isAttackBlocked = true;

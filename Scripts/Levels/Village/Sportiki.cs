@@ -24,79 +24,43 @@ public class Sportiki : MonoBehaviour
         isKilledPrisoner = KeyManager.Get_Bool_Key(keyName);
 
         wasAtHome = KeyManager.Get_Bool_Key("VisitedHome");
-        if (wasAtHome == 1)
-        {
-            WasAtHome();
-        }
+        if (wasAtHome == 1) { WasAtHome(); }
 
         spawnButton.onClick.AddListener(InvokeReal);
     }
 
-    private void OnDestroy()
-    {
-        spawnButton.onClick.RemoveListener(InvokeReal);
-    }
+    private void OnDestroy() { spawnButton.onClick.RemoveListener(InvokeReal); }
 
     public void InvokeSportikov()
     {
-        if (isKilledPrisoner == 1)
-        {
-            Killed();
-        }
-        else
-        {
-            NotKilled();
-        }
+        if (isKilledPrisoner == 1) { Killed(); }
+        else { NotKilled(); }
     }
 
     private void WasAtHome()
     {
-        foreach (GameObject obj in any)
-        {
-            obj.SetActive(true);
-        }
-
-        foreach (GameObject obj in anyDestroy)
-        {
-            obj.SetActive(false);
-        }
+        foreach (GameObject obj in any) { obj.SetActive(true); }
+        foreach (GameObject obj in anyDestroy) { obj.SetActive(false); }
     }
 
     private void Killed()
     {
-        foreach (GameObject obj in any)
-        {
-            obj.SetActive(true);
-        }
-
-        foreach (GameObject obj in anyDestroy)
-        {
-            obj.SetActive(false);
-        }
+        foreach (GameObject obj in any) { obj.SetActive(true); }
+        foreach (GameObject obj in anyDestroy) { obj.SetActive(false); }
 
         Jo.SetActive(true);
     }
 
     private void NotKilled()
     {
-        foreach (GameObject obj in any)
-        {
-            obj.SetActive(true);
-        }
-
-        foreach (GameObject obj in anyDestroy)
-        {
-            obj.SetActive(false);
-        }
+        foreach (GameObject obj in any) { obj.SetActive(true); }
+        foreach (GameObject obj in anyDestroy) { obj.SetActive(false); }
 
         if (wasAtHome == 0)
         {
             Jo.SetActive(true);
 
-            foreach (GameObject obj in ifKilled)
-            {
-                obj.SetActive(true);
-            }
+            foreach (GameObject obj in ifKilled) { obj.SetActive(true); }
         }
     }
 
@@ -111,14 +75,7 @@ public class Sportiki : MonoBehaviour
 
     private void SpawnRealKillers()
     {
-        foreach (GameObject obj in ifKilled)
-        {
-            obj.SetActive(false);
-        }
-
-        foreach (GameObject obj in realKillers)
-        {
-            obj.SetActive(true);
-        }
+        foreach (GameObject obj in ifKilled) { obj.SetActive(false); }
+        foreach (GameObject obj in realKillers) { obj.SetActive(true); }
     }
 }

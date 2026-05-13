@@ -48,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         loader.SetActive(true);
         Invoke(nameof(_LoadLevel), 1f);
         src.PlayOneShot(click);
+        KeyManager.Set_Bool_Key("WarningShowed", 1);
     }
 
     private void _LoadLevel()

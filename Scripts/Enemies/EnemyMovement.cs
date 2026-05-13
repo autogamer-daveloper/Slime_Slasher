@@ -45,18 +45,17 @@ public class EnemyMovement : MonoBehaviour
     [Header("__ Audio __")]
     [SerializeField] private AudioSource moveSrc;
 
-    private int usingAnimation = 0;
-
     [HideInInspector]
     public bool isWalking = false;
 
+    private int _usingAnimation = 0;
     private Transform _playerTransform = null;
     private Vector2 _nextPosition;
     private Vector3 _initialScale = Vector3.one;
     private Vector3 _initialHpBarLocalScale = Vector3.one;
 
     private Collider2D _selfCollider;
-    private bool isPlayerVisible = false;
+    private bool _isPlayerVisible = false;
 
     private void OnDisable() { moveSrc.mute = true; }
 
@@ -65,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
         if (enemyRigidbody == null && enemyTransform != null)
         {
             var rb = enemyTransform.GetComponent<Rigidbody2D>();
-            if (rb != null) enemyRigidbody = rb;
+            if (rb != null) { enemyRigidbody = rb; }
         }
     }
 
@@ -73,25 +72,15 @@ public class EnemyMovement : MonoBehaviour
     {
         _selfCollider = GetComponent<Collider2D>();
 
-        if (attack != null)
-        {
-            attack.isRangeEnemy(isRangeEnemy);
-        }
-
-        if (enemyTransform != null)
-            _initialScale = enemyTransform.localScale;
-
-        if (hpBar != null)
-            _initialHpBarLocalScale = hpBar.localScale;
+        if (attack != null) { attack.isRangeEnemy(isRangeEnemy); }
+        if (enemyTransform != null) { _initialScale = enemyTransform.localScale; }
+        if (hpBar != null) { _initialHpBarLocalScale = hpBar.localScale; }
     }
 
     private void OnValidate()
     {
-        if (enemyTransform != null && _initialScale == Vector3.zero)
-            _initialScale = enemyTransform.localScale;
-
-        if (hpBar != null && _initialHpBarLocalScale == Vector3.zero)
-            _initialHpBarLocalScale = hpBar.localScale;
+        if (enemyTransform != null && _initialScale == Vector3.zero) { _initialScale = enemyTransform.localScale; }
+        if (hpBar != null && _initialHpBarLocalScale == Vector3.zero) { _initialHpBarLocalScale = hpBar.localScale; }
     }
 
     private void Update()
@@ -100,37 +89,33 @@ public class EnemyMovement : MonoBehaviour
 
         CheckRayToTarget();
 
-        if (!isPlayerVisible) return;
-        if (_playerTransform != null)
-        {
-            Vector2 enemyPos = enemyTransform.position;
-            Vector2 playerPos = _playerTransform.position;
-            float dist = Vector2.Distance(enemyPos, playerPos);
+        if (!_isPlayerVisible) return;
 
-            if (isRangeEnemy && dist <= stopRange)
-            {
-                isWalking = false;
-                _nextPosition = enemyPos;
-            }
-            else
-            {
-                Vector2 dir = (playerPos - enemyPos).normalized;
-                _nextPosition = enemyPos + dir * moveSpeed * Time.deltaTime;
+        // Past movement logic
 
-                if (enemyRigidbody == null)
-                {
-                    enemyTransform.position = _nextPosition;
-                }
-                isWalking = true;
-            }
+        //if (_playerTransform != null)
+        //{
+        //Vector2 enemyPos = enemyTransform.position;
+        //Vector2 playerPos = _playerTransform.position;
+        //float dist = Vector2.Distance(enemyPos, playerPos);
 
-            if (flipOnDirection)
-                UpdateFlip(enemyPos, playerPos);
-        }
-        else
-        {
-            isWalking = false;
-        }
+        // if (isRangeEnemy && dist <= stopRange)
+        // {
+        //     isWalking = false;
+        //     _nextPosition = enemyPos;
+        // }
+        // else
+        // {
+        //     Vector2 dir = (playerPos - enemyPos).normalized;
+        //     _nextPosition = enemyPos + dir * moveSpeed * Time.deltaTime;
+
+        //     if (enemyRigidbody == null) { enemyTransform.position = _nextPosition; }
+        //     isWalking = true;
+        // }
+
+        // if (flipOnDirection) { UpdateFlip(enemyPos, playerPos); }
+        //}
+        //else { isWalking = false; }
 
         if (isWalking) { SetAnimation(1); moveSrc.mute = false; }
         else { SetAnimation(0); moveSrc.mute = true; }
@@ -140,7 +125,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (enemyRigidbody == null) return;
         if (enemyTransform == null) return;
-        if (!isPlayerVisible) return;
+        if (!_isPlayerVisible) return;
 
         if (_playerTransform != null)
         {
@@ -148,10 +133,7 @@ public class EnemyMovement : MonoBehaviour
             Vector2 playerPos = _playerTransform.position;
             float dist = Vector2.Distance(enemyPos, playerPos);
 
-            if (isRangeEnemy && dist <= stopRange)
-            {
-                isWalking = false;
-            }
+            if (isRangeEnemy && dist <= stopRange) { isWalking = false; }
             else
             {
                 Vector2 dir = (playerPos - enemyPos).normalized;
@@ -161,13 +143,9 @@ public class EnemyMovement : MonoBehaviour
                 isWalking = true;
             }
 
-            if (flipOnDirection)
-                UpdateFlip(enemyPos, playerPos);
+            if (flipOnDirection) { UpdateFlip(enemyPos, playerPos); }
         }
-        else
-        {
-            isWalking = false;
-        }
+        else { isWalking = false; }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -175,10 +153,7 @@ public class EnemyMovement : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _playerTransform = other.transform;
-            if (attack != null && isRangeEnemy == true)
-            {
-                attack.activateAttack();
-            }
+            if (attack != null && isRangeEnemy == true) { attack.activateAttack(); }
         }
     }
 
@@ -186,14 +161,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (_playerTransform == other.transform)
-            {
-                _playerTransform = null;
-            }
-            if (attack != null && isRangeEnemy == true)
-            {
-                attack.disableAttack();
-            }
+            if (_playerTransform == other.transform) { _playerTransform = null; }
+            if (attack != null && isRangeEnemy == true) { attack.disableAttack(); }
         }
     }
     private void UpdateFlip(Vector2 enemyPos, Vector2 playerPos)
@@ -266,19 +235,13 @@ public class EnemyMovement : MonoBehaviour
 
         Debug.DrawLine(origin, target, blocked ? Color.red : Color.green);
 
-        if (!blocked)
-        {
-            Visible();
-        }
-        else
-        {
-            Invisible();
-        }
+        if (!blocked) { Visible(); }
+        else { Invisible(); }
     }
 
     private void Visible()
     {
-        isPlayerVisible = true;
+        _isPlayerVisible = true;
         if (isWalking) { SetAnimation(1); moveSrc.mute = false; }
         else { SetAnimation(0); moveSrc.mute = true; }
         attack.Visible_Attack();
@@ -286,7 +249,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Invisible()
     {
-        isPlayerVisible = false;
+        _isPlayerVisible = false;
         SetAnimation(0); moveSrc.mute = true;
         attack.Invisible_Attack();
     }
@@ -294,17 +257,11 @@ public class EnemyMovement : MonoBehaviour
     private void SetAnimation(int id)
     {
         if (!isUsingAnims) return;
-        if (id == usingAnimation) return;
+        if (id == _usingAnimation) return;
 
-        if (animations.Length != 0)
-        {
-            foreach (GameObject obj in animations)
-            {
-                obj.SetActive(false);
-            }
-        }
+        if (animations.Length != 0) { foreach (GameObject obj in animations) { obj.SetActive(false); } }
 
-        usingAnimation = id;
+        _usingAnimation = id;
 
         if (animations[id] != null) animations[id].SetActive(true);
     }

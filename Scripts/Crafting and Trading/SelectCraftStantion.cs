@@ -4,19 +4,7 @@ public class SelectCraftStantion : MonoBehaviour
 {
     [SerializeField] private GameObject button;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            button.SetActive(true);
-        }
-    }
+    private void OnTriggerEnter2D(Collider2D other) { if (other.tag == "Player") { button.SetActive(true); }}
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            button.SetActive(false);
-        }
-    }
+    private void OnTriggerExit2D(Collider2D other) { if (other.tag == "Player") { button.SetActive(false); }}
 }

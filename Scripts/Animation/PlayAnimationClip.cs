@@ -8,13 +8,7 @@ public class PlayAnimationClip : MonoBehaviour
 
     public void PlayAnim()
     {
-        if (isDefault)
-        {
-            anim.Play();
-        }
-        else
-        {
-            anim.Play(name);
-        }
+        if (isDefault) { anim.Play(); }
+        else { anim.Play(name); }
     }
 }

@@ -8,15 +8,9 @@ public class FinalFightLoader : MonoBehaviour
     [SerializeField] private GameObject loadPanel;
     [SerializeField] private int index = 10;
 
-    private void Start()
-    {
-        escape.onClick.AddListener(Escape);
-    }
+    private void Start() { escape.onClick.AddListener(Escape); }
 
-    private void OnDestroy()
-    {
-        escape.onClick.RemoveListener(Escape);
-    }
+    private void OnDestroy() { escape.onClick.RemoveListener(Escape); }
 
     private void Escape()
     {
@@ -25,8 +19,5 @@ public class FinalFightLoader : MonoBehaviour
         Invoke(nameof(_Escape), 1f);
     }
 
-    private void _Escape()
-    {
-        LoadLevel.LoadLevelById(index);
-    }
+    private void _Escape() { LoadLevel.LoadLevelById(index); }
 }

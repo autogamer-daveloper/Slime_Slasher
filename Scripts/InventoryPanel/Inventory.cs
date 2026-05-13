@@ -37,17 +37,13 @@ public class Inventory : MonoBehaviour
     [Header("__ Audio Settings __")]
     [SerializeField] private AudioSource src;
 
-    private UnityAction[] receiveActions;
+    private UnityAction[] _receiveActions;
 
-    internal void Refresh()
-    {
-        SerializeItems();
-    }
+    internal void Refresh() { SerializeItems(); }
 
     private void Start()
     {
         KeyManager.Receive_Item_Once(0);
-
         SerializeReceiveButtons();
         SerializeItems();
     }
@@ -56,20 +52,18 @@ public class Inventory : MonoBehaviour
     {
         if (elements == null) return;
 
-        if (receiveActions == null || receiveActions.Length != elements.Length)
-            receiveActions = new UnityAction[elements.Length];
+        if (_receiveActions == null || _receiveActions.Length != elements.Length) { _receiveActions = new UnityAction[elements.Length]; }
 
         for (int i = 0; i < elements.Length; i++)
         {
             var el = elements[i];
             if (el == null || el.receive == null) continue;
 
-            if (receiveActions[i] != null)
-                el.receive.onClick.RemoveListener(receiveActions[i]);
+            if (_receiveActions[i] != null) { el.receive.onClick.RemoveListener(_receiveActions[i]); }
 
             int id = i;
             UnityAction action = () => GetItem(id);
-            receiveActions[i] = action;
+            _receiveActions[i] = action;
 
             el.receive.onClick.AddListener(action);
             el.receive.onClick.AddListener(() => { src.PlayOneShot(el.receiveClip); });
@@ -104,19 +98,9 @@ public class Inventory : MonoBehaviour
                 }
             }
 
-            if (el.image != null)
-            {
-                el.image.color = (count <= 0) ? no_interactable : interactable;
-            }
-
-            if (el.countable && el.count != null)
-            {
-                el.count.text = count.ToString();
-            }
-            else if (el.count != null)
-            {
-                el.count.text = "";
-            }
+            if (el.image != null) { el.image.color = (count <= 0) ? no_interactable : interactable; }
+            if (el.countable && el.count != null) { el.count.text = count.ToString(); }
+            else if (el.count != null) { el.count.text = ""; }
         }
     }
 
@@ -141,10 +125,7 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Checking axe power...");
             int power = KeyManager.GetInt_InstrumentPower_Axe();
-            if (power >= el.needPower)
-            {
-                Debug.Log("You have need power to get item");
-            }
+            if (power >= el.needPower) { Debug.Log("You have need power to get item"); }
             else
             {
                 SerializeItems();
@@ -156,10 +137,7 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Checking pickaxe power...");
             int power = KeyManager.GetInt_InstrumentPower_Pickaxe();
-            if (power >= el.needPower)
-            {
-                Debug.Log("You have need power to get item");
-            }
+            if (power >= el.needPower) { Debug.Log("You have need power to get item"); }
             else
             {
                 SerializeItems();
@@ -168,14 +146,8 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        if (el.countable)
-            {
-                KeyManager.Receive_Item(index, el.countGet);
-            }
-            else
-            {
-                KeyManager.Receive_Item_Once(index);
-            }
+        if (el.countable) { KeyManager.Receive_Item(index, el.countGet); }
+        else { KeyManager.Receive_Item_Once(index); }
 
         SerializeItems();
     }

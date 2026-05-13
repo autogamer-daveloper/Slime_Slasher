@@ -6,13 +6,7 @@ public class DeadBody : MonoBehaviour
     [SerializeField] private GameObject body;
     [SerializeField] private float delay = 15f;
 
-    private void Start()
-    {
-        Invoke(nameof(Kill), delay);
-    }
+    private void Start() { Invoke(nameof(Kill), delay); }
 
-    private void Kill()
-    {
-        Destroy(body);
-    }
+    private void Kill() { Destroy(body); }
 }

@@ -15,8 +15,5 @@ public class LoadFinal : MonoBehaviour
         Invoke(nameof(_Escape), 1.5f);
     }
 
-    private void _Escape()
-    {
-        LoadLevel.LoadLevelById(index);
-    }
+    private void _Escape() { LoadLevel.LoadLevelById(index); }
 }

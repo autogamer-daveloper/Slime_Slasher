@@ -23,28 +23,16 @@ public class GetObject : MonoBehaviour
         if (_button == null) { Debug.LogError("[GetObject.cs]:" + button.name + " object hasn't button component!"); }
 
         inventory = GameObject.FindFirstObjectByType<Inventory>();
-        if (inventory == null)
-        {
-            Debug.LogError($"[GetObject {gameObject.name}]: can't find inventory script");
-        }
+        if (inventory == null) { Debug.LogError($"[GetObject {gameObject.name}]: can't find inventory script"); }
 
         obj = GameObject.Find(objName);
         if (obj != null)
         {
             founder = obj.GetComponent<InventoryFounder>();
-            if (founder != null)
-            {
-                button = founder.GetReceiveButtonById(id);
-            }
-            else
-            {
-                Debug.LogError($"[GetObject {gameObject.name}]: founder is null, something went wrong. Maybe 'obj' is empty");
-            }
+            if (founder != null) { button = founder.GetReceiveButtonById(id); }
+            else { Debug.LogError($"[GetObject {gameObject.name}]: founder is null, something went wrong. Maybe 'obj' is empty"); }
         }
-        else
-        {
-            Debug.LogError($"[GetObject {gameObject.name}]: not found 'obj' in scene, can't automatically get receive button");
-        }
+        else { Debug.LogError($"[GetObject {gameObject.name}]: not found 'obj' in scene, can't automatically get receive button"); }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -74,11 +62,7 @@ public class GetObject : MonoBehaviour
 
     private void DestroyGameObject()
     {
-        if (button != null)
-        {
-            button.SetActive(false);
-        }
-
+        if (button != null) { button.SetActive(false); }
         Destroy(forDelete);
     }
 }

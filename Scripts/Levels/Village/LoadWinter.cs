@@ -13,8 +13,5 @@ public class LoadWinter : MonoBehaviour
         Invoke(nameof(_Escape), 1f);
     }
 
-    private void _Escape()
-    {
-        LoadLevel.LoadLevelById(index);
-    }
+    private void _Escape() { LoadLevel.LoadLevelById(index); }
 }

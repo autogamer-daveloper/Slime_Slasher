@@ -5,8 +5,5 @@ public class InventoryFounder : MonoBehaviour
 {
     [SerializeField] private GameObject[] buttonsById;
 
-    internal GameObject GetReceiveButtonById(int id)
-    {
-        return buttonsById[id];
-    }
+    internal GameObject GetReceiveButtonById(int id) { return buttonsById[id]; }
 }

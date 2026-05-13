@@ -1,0 +1,51 @@
+== ENG ==
+
+-- Foreword by the original game developer --
+
+Before publishing the game, do not forget to mention the original developer
+somewhere in the authors (For example: Made using the original
+Slime slasher code from A Games Studio).
+Also, your modification and/or your project must have its own
+name and logo.
+Below I will describe the project settings a little.
+
+-- Project settings --
+
+Adapted platforms:
+-Android
+
+Scene list:
+0 - Scene/Menu
+1 - Scene/01_Nightmare
+2 - Scene/02_Prison_End
+3 - Scene/03_Prison_Start
+4 - Scene/04_Village_Start
+5 - Scene/05_Winter_Dungeon_Cutscene
+6 - Scene/06_Winter_Dungeon
+7 - Scene/07_Dead_Lands
+8 - Scene/08_Psychopath_Cutscene
+9 - Scene/09_Laboratory
+10 - Scene/10_Laboratory_Final
+11 - Scene/11_Canon_ending
+12 - Scene/12_Alternate_ending
+13 - Scene/13_Death
+
+Compression method: LZ4
+Texture compresion: Use player setting
+
+Color space: Linear
+
+Minimal API: 29
+Target API: 36
+
+Scripting backend: IL2CPP
+
+Target architectures:
+-ARMv7
+-ARMv64
+
+ARMv9 security features for ARMv64 - enabled
+
+Default screen resolution: Landscape left
+
+Custom keystore: yes (You need to create your own)

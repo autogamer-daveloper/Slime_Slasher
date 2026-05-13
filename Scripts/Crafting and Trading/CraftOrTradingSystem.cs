@@ -43,14 +43,11 @@ public class CraftOrTradingSystem : MonoBehaviour
     [SerializeField] private AudioClip button;
     [SerializeField] private AudioClip getInv;
 
-    private bool isShown = false;
+    private bool _isShown = false;
 
     private void Start()
     {
-        foreach (Button btn in switchPanel)
-        {
-            btn.onClick.AddListener(SwitchPanel);
-        }
+        foreach (Button btn in switchPanel) { btn.onClick.AddListener(SwitchPanel); }
 
         if (trades != null)
         {
@@ -87,10 +84,7 @@ public class CraftOrTradingSystem : MonoBehaviour
 
     private void OnDestroy()
     {
-        foreach (Button btn in switchPanel)
-        {
-            btn.onClick.RemoveAllListeners();
-        }
+        foreach (Button btn in switchPanel) { btn.onClick.RemoveAllListeners(); }
 
         if (trades != null)
         {
@@ -115,7 +109,7 @@ public class CraftOrTradingSystem : MonoBehaviour
 
     private void SwitchPanel()
     {
-        if (isShown == true)
+        if (_isShown == true)
         {
             Vector2 hidden = new Vector2(0, -2000);
             panel.DOAnchorPos(hidden, speed);
@@ -128,7 +122,7 @@ public class CraftOrTradingSystem : MonoBehaviour
 
         src.PlayOneShot(button);
         src.PlayOneShot(whoosh);
-        isShown = !isShown;
+        _isShown = !_isShown;
         ShowPlayersItemCount();
     }
 
@@ -166,20 +160,11 @@ public class CraftOrTradingSystem : MonoBehaviour
         {
             int item = x;
             int itemCount = KeyManager.Get_Item_Count(trades[tradeId].itemsId[item]);
-            if (itemCount >= trades[tradeId].needItems[item])
-            {
-                tradableItems++;
-            }
+            if (itemCount >= trades[tradeId].needItems[item]) { tradableItems++; }
         }
 
-        if (tradableItems >= needToBeTraded)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        if (tradableItems >= needToBeTraded) { return true; }
+        else { return false; }
     }
 
     private bool CanCraft(int craftId)
@@ -191,20 +176,11 @@ public class CraftOrTradingSystem : MonoBehaviour
         {
             int item = x;
             int itemCount = KeyManager.Get_Item_Count(crafts[craftId].itemsId[item]);
-            if (itemCount >= crafts[craftId].needItems[item])
-            {
-                craftableItems++;
-            }
+            if (itemCount >= crafts[craftId].needItems[item]) { craftableItems++; }
         }
 
-        if (craftableItems >= needToBeCrafted)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        if (craftableItems >= needToBeCrafted) { return true; }
+        else { return false; }
     }
 
     private void TradeItem(int tradeId)
@@ -223,10 +199,7 @@ public class CraftOrTradingSystem : MonoBehaviour
             trades[tradeId].whatToDo.Invoke();
             inv.Refresh();
         }
-        else
-        {
-            Debug.Log($"[CraftOrTradingSystem {gameObject.name}]: can't trade items {tradeId}. No enought items");
-        }
+        else { Debug.Log($"[CraftOrTradingSystem {gameObject.name}]: can't trade items {tradeId}. No enought items"); }
 
         ShowPlayersItemCount();
     }
@@ -247,10 +220,7 @@ public class CraftOrTradingSystem : MonoBehaviour
             KeyManager.Receive_Item(crafts[craftId].receivedItemId, crafts[craftId].receivedItemCount);
             inv.Refresh();
         }
-        else
-        {
-            Debug.Log($"[CraftOrTradingSystem {gameObject.name}]: can't craft item {craftId}. No enought items");
-        }
+        else { Debug.Log($"[CraftOrTradingSystem {gameObject.name}]: can't craft item {craftId}. No enought items"); }
 
         ShowPlayersItemCount();
     }

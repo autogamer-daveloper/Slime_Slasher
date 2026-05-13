@@ -43,7 +43,6 @@ public class CheckForEnemies : MonoBehaviour
 
     public Transform[] GetAllEnemiesTransform()
     {
-        // Чистим null, если враг был уничтожен
         enemies.RemoveAll(t => t == null);
         return enemies.ToArray();
     }

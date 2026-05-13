@@ -63,8 +63,8 @@ public class PlayerStatus : MonoBehaviour
     private int _extraManaRegen = 0;
 
     //lifes
-    private int isEasyMode = 0;
-    private int deathCount = 0;
+    private int _isEasyMode = 0;
+    private int _deathCount = 0;
 
     private void Start()
     {
@@ -80,9 +80,9 @@ public class PlayerStatus : MonoBehaviour
         Regeneration();
         InvokeRepeating("Regeneration", 1, 1);
 
-        isEasyMode = KeyManager.Get_Bool_Key("easyMode");
-        deathCount = KeyManager.Get_Bool_Key("deathCount");
-        if (deathCount >= 3)
+        _isEasyMode = KeyManager.Get_Bool_Key("easyMode");
+        _deathCount = KeyManager.Get_Bool_Key("deathCount");
+        if (_deathCount >= 3)
         {
             deadPanels[2].SetActive(true);
             deadAnims[2].Play();
@@ -94,13 +94,8 @@ public class PlayerStatus : MonoBehaviour
     private void OnDestroy()
     {
         if (accessories == null) return;
-
-        for (int i = 0; i < accessories.Length; i++)
-        {
-            if (accessories[i] != null && accessories[i].selectButton != null)
-            {
-                accessories[i].selectButton.onClick.RemoveAllListeners();
-            }
+        for (int i = 0; i < accessories.Length; i++) {
+            if (accessories[i] != null && accessories[i].selectButton != null) { accessories[i].selectButton.onClick.RemoveAllListeners(); }
         }
     }
 
@@ -109,15 +104,8 @@ public class PlayerStatus : MonoBehaviour
         health += healthRegen + boostHealthRegen + _extraRegen;
         mana += manaRegen + boostManaRegen + _extraManaRegen;
 
-        if (health >= maxHealth + _extraLife)
-        {
-            health = maxHealth + _extraLife;
-        }
-
-        if (mana >= maxMana + _extraMana)
-        {
-            mana = maxMana + _extraMana;
-        }
+        if (health >= maxHealth + _extraLife) { health = maxHealth + _extraLife; }
+        if (mana >= maxMana + _extraMana) { mana = maxMana + _extraMana; }
 
         healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
         manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
@@ -165,7 +153,6 @@ public class PlayerStatus : MonoBehaviour
         healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
 
         healthSlider.value = health;
-
         DeathCheck(false);
     }
 
@@ -187,20 +174,19 @@ public class PlayerStatus : MonoBehaviour
             {
                 isDead = true;
                 controller.LockInput();
-                if (isEasyMode == 0)
+                if (_isEasyMode == 0)
                 {
-                    if (deathCount < 0)
+                    if (_deathCount < 0)
                     {
-                        deadPanels[deathCount].SetActive(true);
-                        deadAnims[deathCount].Play();
+                        deadPanels[_deathCount].SetActive(true);
+                        deadAnims[_deathCount].Play();
                         Invoke(nameof(HideDeadPanels), 5.5f);
-
-                        deathCount = 0;
+                        _deathCount = 0;
                     }
-                    if (deathCount < 2)
+                    if (_deathCount < 2)
                     {
-                        deadPanels[deathCount].SetActive(true);
-                        deadAnims[deathCount].Play();
+                        deadPanels[_deathCount].SetActive(true);
+                        deadAnims[_deathCount].Play();
                         Invoke(nameof(HideDeadPanels), 5.5f);
                     }
                     else
@@ -208,22 +194,20 @@ public class PlayerStatus : MonoBehaviour
                         deadPanels[2].SetActive(true);
                         deadAnims[2].Play();
                         KeyManager.Delete_All();
-                        Invoke(nameof(HideDeadPanels), 4f);
                         Invoke(nameof(DeadCutscene), 4f);
                     }
 
                     Invoke(nameof(Clear), 1f);
                     Invoke(nameof(Teleport), 1f);
                     Invoke(nameof(UnlockDamageByDead), 5f);
-                    deathCount++;
-                    KeyManager.Set_Bool_Key("deathCount", deathCount);
+                    _deathCount++;
+                    KeyManager.Set_Bool_Key("deathCount", _deathCount);
                 }
                 else
                 {
                     deadPanels[0].SetActive(true);
                     deadAnims[0].Play();
                     Invoke(nameof(HideDeadPanels), 5.5f);
-
                     Invoke(nameof(Clear), 1f);
                     Invoke(nameof(UnlockDamageByDead), 5f);
                     Invoke(nameof(Teleport), 1f);
@@ -259,13 +243,7 @@ public class PlayerStatus : MonoBehaviour
         deadPlayer.SetActive(false);
     }
 
-    private void HideDeadPanels()
-    {
-        foreach (GameObject obj in deadPanels)
-        {
-            obj.SetActive(false);
-        }
-    }
+    private void HideDeadPanels() { foreach (GameObject obj in deadPanels) { obj.SetActive(false); }}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -295,10 +273,7 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-    private void UnlockDamage()
-    {
-        isBlocked = false;
-    }
+    private void UnlockDamage() { isBlocked = false; }
 
     private void UnlockDamageByDead()
     {
@@ -321,13 +296,8 @@ public class PlayerStatus : MonoBehaviour
         {
             Debug.LogWarning($"[PlayerStatus] AccessoryID {i} out of range (0..{accessories.Length - 1}). Clamping to 0.");
             i = Mathf.Clamp(i, 0, accessories.Length - 1);
-            try
-            {
-                KeyManager.SetInt_AccessoryID(i);
-            }
-            catch
-            {
-            }
+            try { KeyManager.SetInt_AccessoryID(i); }
+            catch {}
         }
 
         if (accessories[i] == null || accessories[i].accessory == null)

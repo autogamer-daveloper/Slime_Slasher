@@ -12,15 +12,9 @@ public class PlayerSimpleTeleport : MonoBehaviour
     [Header("__ Target __")]
     [SerializeField] private Transform target;
 
-    private void Start()
-    {
-        teleportButton.onClick.AddListener(Teleport);
-    }
+    private void Start() { teleportButton.onClick.AddListener(Teleport); }
 
-    private void OnDestroy()
-    {
-        teleportButton.onClick.RemoveListener(Teleport);
-    }
+    private void OnDestroy() { teleportButton.onClick.RemoveListener(Teleport); }
 
     private void Teleport()
     {
@@ -28,8 +22,5 @@ public class PlayerSimpleTeleport : MonoBehaviour
         Invoke(nameof(_Teleport), 0.5f);
     }
 
-    private void _Teleport()
-    {
-        player.transform.position = new Vector3(target.transform.position.x, target.transform.position.y, 0);
-    }
+    private void _Teleport() { player.transform.position = new Vector3(target.transform.position.x, target.transform.position.y, 0); }
 }

@@ -28,12 +28,12 @@ public class EnemyAttack : MonoBehaviour
     [Tooltip("Скорость плавного поворота (градусы/сек). Если 0 — поворот будет мгновенным.")]
     [SerializeField] private float rotationSpeed = 360f;
 
-    private bool isRange = false;
-    private bool isAttacking = false;
+    private bool _isRange = false;
+    private bool _isAttacking = false;
 
-    private bool isBlocked = false;
-    private bool isBossLock = false;
-    private bool visionBlock = false;
+    private bool _isBlocked = false;
+    private bool _isBossLock = false;
+    private bool _visionBlock = false;
 
     private void OnEnable()
     {
@@ -41,7 +41,7 @@ public class EnemyAttack : MonoBehaviour
 
         if (boss)
         {
-            isBossLock = true;
+            _isBossLock = true;
             Invoke(nameof(UnlockAttacks), 7.5f);
         }
     }
@@ -49,25 +49,19 @@ public class EnemyAttack : MonoBehaviour
     private void OnDestroy() { CancelInvoke(nameof(Checking)); }
     private void OnDisable() { CancelInvoke(nameof(Checking)); }
 
-    private void UnlockAttacks() { isBossLock = false; }
+    private void UnlockAttacks() { _isBossLock = false; }
 
-    internal void isRangeEnemy(bool answer)
-    {
-        isRange = answer;
-    }
+    internal void isRangeEnemy(bool answer) { _isRange = answer; }
 
     private void Checking()
     {
-        if (isRange && aim != null && bulletSpawn != null)
+        if (_isRange && aim != null && bulletSpawn != null)
         {
             Vector3 dir = aim.position - bulletSpawn.position;
             float targetAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + rotationOffset;
             Quaternion targetRot = Quaternion.Euler(0f, 0f, targetAngle);
 
-            if (rotationSpeed <= 0f)
-            {
-                bulletSpawn.rotation = targetRot;
-            }
+            if (rotationSpeed <= 0f) { bulletSpawn.rotation = targetRot; }
             else
             {
                 float step = rotationSpeed * Time.deltaTime;
@@ -75,7 +69,7 @@ public class EnemyAttack : MonoBehaviour
             }
         }
 
-        if (isRange == true) return;
+        if (_isRange == true) return;
 
         Vector2 enemy = gameObject.transform.position;
         Vector2 target = aim.position;
@@ -83,54 +77,45 @@ public class EnemyAttack : MonoBehaviour
 
         if (!boss)
         {
-            if (dist >= distantion)
-            {
-                disableAttack();
-            }
-            else
-            {
-                activateAttack();
-            }
+            if (dist >= distantion) { disableAttack(); }
+            else { activateAttack(); }
         }
-        else
-        {
-            activateAttack();
-        }
+        else { activateAttack(); }
     }
 
     internal void activateAttack()
     {
-        if (isAttacking) return;
-        isAttacking = true;
-        if (isBlocked) return;
-        if (isBossLock) return;
+        if (_isAttacking) return;
+        _isAttacking = true;
+        if (_isBlocked) return;
+        if (_isBossLock) return;
         InvokeRepeating(nameof(Attack), 0f, speed);
     }
 
     internal void disableAttack()
     {
-        if (!isAttacking) return;
-        isAttacking = false;
+        if (!_isAttacking) return;
+        _isAttacking = false;
         CancelInvoke(nameof(Attack));
     }
 
-    internal void Visible_Attack() { isBlocked = false; UnlockAttack(); }
-    internal void Invisible_Attack() { CancelInvoke(nameof(Attack)); isBlocked = true; visionBlock = false; }
+    internal void Visible_Attack() { _isBlocked = false; UnlockAttack(); }
+    internal void Invisible_Attack() { CancelInvoke(nameof(Attack)); _isBlocked = true; _visionBlock = false; }
 
     private void UnlockAttack()
     {
-        if (visionBlock) return;
-        if (isBossLock) return;
-        if (isAttacking) { InvokeRepeating(nameof(Attack), 0f, speed); }
-        visionBlock = true;
+        if (_visionBlock) return;
+        if (_isBossLock) return;
+        if (_isAttacking) { InvokeRepeating(nameof(Attack), 0f, speed); }
+        _visionBlock = true;
     }
 
     private void Attack()
     {
-        if (isBossLock) return;
+        if (_isBossLock) return;
         src.PlayOneShot(sound);
 
-        if (!isRange)
+        if (!_isRange)
         {
             if (isHaveCustomPunch) { CustomPunch.Invoke(); }
             else { if (meeleAnim != null) meeleAnim.Play(); }

@@ -31,19 +31,10 @@ public class InventoryPanel : MonoBehaviour
     {
         SelectInventory(2);
 
-        foreach (Button btn in switchPanel)
-        {
-            btn.onClick.AddListener(Switch);
-        }
+        foreach (Button btn in switchPanel) { btn.onClick.AddListener(Switch); }
     }
 
-    private void OnDisable()
-    {
-        foreach (Button btn in switchPanel)
-        {
-            btn.onClick.RemoveListener(Switch);
-        }
-    }
+    private void OnDisable() { foreach (Button btn in switchPanel) { btn.onClick.RemoveListener(Switch); } }
 
     private void Switch()
     {

@@ -37,9 +37,7 @@ public class PlayerController : MonoBehaviour
         if (cameraAnim != null && isAnimated)
         {
             cameraAnimation = cameraAnim.GetComponent<Animation>();
-
-            if (cameraAnimation == null)
-                Debug.LogWarning("На cameraAnim нет компонента Animation!");
+            if (cameraAnimation == null) { Debug.LogWarning("На cameraAnim нет компонента Animation!"); }
         }
 
         if (src != null) { src.mute = true; }
@@ -57,13 +55,10 @@ public class PlayerController : MonoBehaviour
         moveInput = new Vector2(joystick.Horizontal, joystick.Vertical);
         moveVelocity = moveInput.normalized * speed;
 
-        if (!facingRight && moveInput.x > 0)
-            Flip();
-        else if (facingRight && moveInput.x < 0)
-            Flip();
+        if (!facingRight && moveInput.x > 0) { Flip(); }
+        else if (facingRight && moveInput.x < 0) { Flip(); }
 
         if (!isAnimated) return;
-
         bool nowIdle = moveInput.x == 0f && moveInput.y == 0f;
 
         if (nowIdle && !isIdle)
@@ -72,7 +67,6 @@ public class PlayerController : MonoBehaviour
             if (runAnim != null) runAnim.SetActive(false);
 
             SetCameraIdle();
-
             isIdle = true;
         }
         else if (!nowIdle && isIdle)
@@ -81,7 +75,6 @@ public class PlayerController : MonoBehaviour
             if (runAnim != null) runAnim.SetActive(true);
 
             SetCameraRun();
-
             isIdle = false;
         }
     }
@@ -112,13 +105,7 @@ public class PlayerController : MonoBehaviour
         if (src != null) { src.mute = false; }
     }
 
-    internal void LockInput()
-    {
-        lockedInput = true;
-    }
+    internal void LockInput() { lockedInput = true; }
 
-    internal void UnlockInput()
-    {
-        lockedInput = false;
-    }
+    internal void UnlockInput() { lockedInput = false; }
 }

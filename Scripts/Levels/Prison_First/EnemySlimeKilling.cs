@@ -9,20 +9,11 @@ public class EnemySlimeKilling : MonoBehaviour
 
     private bool isKilled = false;
 
-    private void Start()
-    {
-        SetKeyButton.onClick.AddListener(SetKey);
-    }
+    private void Start() { SetKeyButton.onClick.AddListener(SetKey); }
 
-    private void OnDestroy()
-    {
-        SetKeyButton.onClick.RemoveListener(SetKey);
-    }
+    private void OnDestroy() { SetKeyButton.onClick.RemoveListener(SetKey); }
 
-    public void Kill()
-    {
-        isKilled = true;
-    }
+    public void Kill() { isKilled = true; }
 
     private void SetKey()
     {

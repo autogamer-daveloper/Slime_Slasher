@@ -14,9 +14,7 @@ public class DeleteEnemies : MonoBehaviour
 
         foreach (GameObject obj in objects)
         {
-            if (obj == null)
-                continue;
-
+            if (obj == null) { continue; }
             bool shouldSkip = false;
 
             if (dontDelete != null)
@@ -24,18 +22,11 @@ public class DeleteEnemies : MonoBehaviour
                 foreach (GameObject protectedObj in dontDelete)
                 {
                     if (protectedObj == null) continue;
-                    if (protectedObj == obj)
-                    {
-                        shouldSkip = true;
-                        break;
-                    }
+                    if (protectedObj == obj) { shouldSkip = true; break; }
                 }
             }
 
-            if (!shouldSkip)
-            {
-                Destroy(obj);
-            }
+            if (!shouldSkip) { Destroy(obj); }
         }
     }
 }

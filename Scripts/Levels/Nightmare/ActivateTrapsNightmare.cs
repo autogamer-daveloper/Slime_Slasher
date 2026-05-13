@@ -20,37 +20,20 @@ public class ActivateTrapsNightmare : MonoBehaviour
     private int _minutes = 0;
     private int _seconds = 45;
 
-    private void Start()
-    {
-        activate.onClick.AddListener(ActivateTrap);
-    }
+    private void Start() { activate.onClick.AddListener(ActivateTrap); }
 
-    private void OnDestroy()
-    {
-        activate.onClick.RemoveListener(ActivateTrap);
-    }
+    private void OnDestroy() { activate.onClick.RemoveListener(ActivateTrap); }
 
     private void ActivateTrap()
     {
-        foreach (GameObject en in toEnNow)
-        {
-            en.SetActive(true);
-        }
-
+        foreach (GameObject en in toEnNow) { en.SetActive(true); }
         Invoke(nameof(ActivateWithDelay), 0.5f);
     }
 
     private void ActivateWithDelay()
     {
-        foreach (GameObject dis in toDis)
-        {
-            dis.SetActive(false);
-        }
-
-        foreach (GameObject en in toEn)
-        {
-            en.SetActive(true);
-        }
+        foreach (GameObject dis in toDis) { dis.SetActive(false); }
+        foreach (GameObject en in toEn) { en.SetActive(true); }
 
         InvokeRepeating(nameof(Count), 1, 1);
     }
@@ -70,10 +53,7 @@ public class ActivateTrapsNightmare : MonoBehaviour
                 _seconds = 59;
             }
         }
-        else
-        {
-            _seconds -= 1;
-        }
+        else { _seconds -= 1; }
 
         if(_seconds <= 9) { timer_text.text = _minutes.ToString() + ":0" + _seconds.ToString(); }
         else timer_text.text = _minutes.ToString() + ":" + _seconds.ToString();

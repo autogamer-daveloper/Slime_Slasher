@@ -16,9 +16,6 @@ public class VisitHome : MonoBehaviour
         AfterVisitingHome.Invoke();
         KeyManager.Set_Bool_Key("VisitedHome", 1);
 
-        foreach (GameObject obj in activate)
-        {
-            obj.SetActive(true);
-        }
+        foreach (GameObject obj in activate) { obj.SetActive(true); }
     }
 }

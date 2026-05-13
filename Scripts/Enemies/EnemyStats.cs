@@ -31,30 +31,30 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip dmg;
 
-    private int health = 15;
-    private bool blockedDamage = false;
+    private int _health = 15;
+    private bool _blockedDamage = false;
 
     private void OnEnable()
     {
         healthBar.maxValue = maxHealth;
-        health = maxHealth;
-        healthBar.value = health;
-        healthText.text = maxHealth.ToString() + "/" + health.ToString();
+        _health = maxHealth;
+        healthBar.value = _health;
+        healthText.text = maxHealth.ToString() + "/" + _health.ToString();
 
-        blockedDamage = true;
+        _blockedDamage = true;
         if (autoUnlock) Invoke("UnlockDamage", 0.2f);
     }
 
     private void GetDamage(int damage)
     {
-        if (blockedDamage) return;
+        if (_blockedDamage) return;
         Debug.Log("Damaged");
-        health -= damage;
+        _health -= damage;
         if (healthEvents != null)
         {
             foreach (HealthEvents events in healthEvents)
             {
-                if (health <= events.health)
+                if (_health <= events.health)
                 {
                     if (events.isActed == false)
                     {
@@ -65,10 +65,10 @@ public class EnemyStats : MonoBehaviour
             }
         }
 
-        if (health > 0)
+        if (_health > 0)
         {
-            healthBar.value = health;
-            healthText.text = maxHealth.ToString() + "/" + health.ToString();
+            healthBar.value = _health;
+            healthText.text = maxHealth.ToString() + "/" + _health.ToString();
             src.PlayOneShot(dmg);
         }
         else
@@ -94,24 +94,21 @@ public class EnemyStats : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (blockedDamage) return;
+        if (_blockedDamage) return;
         Debug.Log("Triggered");
         if (other.tag == "PlayerAttack")
         {
             GetDamage(player.damage);
-            blockedDamage = true;
+            _blockedDamage = true;
             Invoke("UnlockDamage", 0.2f);
         }
     }
 
     internal void UnlockDamage()
     {
-        blockedDamage = false;
+        _blockedDamage = false;
         damaged.Invoke();
     }
 
-    internal void BlockDamage()
-    {
-        blockedDamage = true;
-    }
+    internal void BlockDamage() { _blockedDamage = true; }
 }
