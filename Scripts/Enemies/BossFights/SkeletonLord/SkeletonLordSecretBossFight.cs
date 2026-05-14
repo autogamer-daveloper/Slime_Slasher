@@ -226,26 +226,5 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
         Invoke(nameof(Fight), 0.5f);
     }
 
-    public void CheckMinions()
-    {
-        _spawnedMinions.RemoveAll(item => item == null);
-
-        bool minionsAlive = _spawnedMinions.Count > 0;
-
-        if (minionsAlive == _damageBlocked)
-            return;
-
-        _damageBlocked = minionsAlive;
-
-        if (minionsAlive)
-            MinionsAlive();
-        else
-            MinionsDead();
-    }
-
-    private void MinionsAlive() { stats.BlockDamage(); }
-
-    private void MinionsDead() { stats.UnlockDamage(); }
-
     internal string GetBossKey() { return bossKey; }
 }
