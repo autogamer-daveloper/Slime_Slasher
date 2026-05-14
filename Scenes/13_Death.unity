@@ -6419,7 +6419,6 @@ GameObject:
   - component: {fileID: 834575195}
   - component: {fileID: 834575194}
   - component: {fileID: 834575193}
-  - component: {fileID: 834575196}
   m_Layer: 5
   m_Name: DeadPanel
   m_TagString: Untagged
@@ -6502,27 +6501,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834575191}
   m_CullTransparentMesh: 1
---- !u!114 &834575196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834575191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55bd9a3629f2b4e48a226c11989a237e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DelayStartTimer
-  delay: 5
-  action:
-    m_PersistentCalls:
-      m_Calls: []
-  isLoadLevelAction: 0
-  index: 0
-  CancelInvokeButton: {fileID: 0}
-  doTask: 0
-  doubleClick: 0
 --- !u!1 &848643677
 GameObject:
   m_ObjectHideFlags: 0
@@ -14933,7 +14911,6 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
-  doubleClick: 0
 --- !u!111 &1912984770
 Animation:
   m_ObjectHideFlags: 0

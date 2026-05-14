@@ -522,6 +522,135 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &658154714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658154715}
+  - component: {fileID: 658154716}
+  m_Layer: 0
+  m_Name: Voices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658154715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658154714}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1912984768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &658154716
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658154714}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.002
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1.0037537
+      inSlope: 0.000022382106
+      outSlope: 0.000022382106
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16543992
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &810482726
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +857,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  doubleClick: 0
 --- !u!1 &858910879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,6 +2318,7 @@ Transform:
   - {fileID: 2044096076}
   - {fileID: 1965835179}
   - {fileID: 1019448617}
+  - {fileID: 658154715}
   - {fileID: 1265757261}
   - {fileID: 1139284776}
   - {fileID: 1783200313}
@@ -2225,6 +2356,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  doubleClick: 0
 --- !u!111 &1912984770
 Animation:
   m_ObjectHideFlags: 0
@@ -2270,7 +2402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
-  src: {fileID: 1019448616}
+  src: {fileID: 658154716}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
   rusClip:

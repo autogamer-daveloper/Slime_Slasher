@@ -9,7 +9,7 @@ public class MainMusicController : MonoBehaviour
     [SerializeField] private int defaultMusicId = 0;
 
     private int _usingMusic = -1;
-    private bool _isBlocked = false;
+    private bool _isBlocked = true;
 
     private void Start() { Unlock(); }
 

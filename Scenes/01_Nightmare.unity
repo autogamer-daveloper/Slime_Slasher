@@ -7549,6 +7549,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  doubleClick: 0
 --- !u!1 &143750126
 GameObject:
   m_ObjectHideFlags: 0
@@ -41274,135 +41275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
   container: {fileID: 11400000, guid: 7b8d76cd6d659194da67bc0e21f2e627, type: 2}
---- !u!1 &711280623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 711280624}
-  - component: {fileID: 711280625}
-  m_Layer: 0
-  m_Name: Voices
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &711280624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711280623}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6057992556130565806}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &711280625
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711280623}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.5
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 2
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.002
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0.999176
-      inSlope: 0.000050064926
-      outSlope: 0.000050064926
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.18729044
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &714559467
 GameObject:
   m_ObjectHideFlags: 0
@@ -55320,7 +55192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
-  src: {fileID: 711280625}
+  src: {fileID: 3144018679053467229}
   sfx: {fileID: 8300000, guid: 464faad8939a1e44a9f2406f5efbcb58, type: 3}
   isNeedDelay: 1
   delay: 1
@@ -63540,6 +63412,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  doubleClick: 0
 --- !u!114 &1080533702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63552,7 +63425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
-  src: {fileID: 711280625}
+  src: {fileID: 3144018679053467229}
   sfx: {fileID: 8300000, guid: a37b7ed8f251a224fbe2064ff4a41f24, type: 3}
   isNeedDelay: 0
   delay: 1
@@ -114617,6 +114490,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  doubleClick: 0
 --- !u!114 &1955459584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129411,7 +129285,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 712928498357896483}
-  - {fileID: 711280624}
   - {fileID: 6108824351757582844}
   - {fileID: 1386025460}
   - {fileID: 344979424}

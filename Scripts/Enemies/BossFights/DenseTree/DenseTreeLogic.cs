@@ -64,25 +64,16 @@ public class DenseTreeLogic : MonoBehaviour
             showAnimation(6);
             wines.SetActive(true);
         }
-        else
-        {
-            showAnimation(0);
-        }
+        else { showAnimation(0); }
 
         startFight.onClick.AddListener(StartFight);
     }
 
-    private void OnDestroy()
-    {
-        startFight.onClick.RemoveListener(StartFight);
-    }
+    private void OnDestroy() { startFight.onClick.RemoveListener(StartFight); }
 
     private void showAnimation(int id)
     {
-        foreach (GameObject obj in animationObj)
-        {
-            obj.SetActive(false);
-        }
+        foreach (GameObject obj in animationObj) { obj.SetActive(false); }
 
         animationObj[id].SetActive(true);
         animations[id].Play();

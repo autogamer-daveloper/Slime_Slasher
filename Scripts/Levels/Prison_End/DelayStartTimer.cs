@@ -12,7 +12,6 @@ public class DelayStartTimer : MonoBehaviour
     [Tooltip("Optional. May be used for skip")]
     [SerializeField] private Button CancelInvokeButton;
     [SerializeField] private bool doTask = false;
-    [SerializeField] private bool doubleClick = false;
 
     private bool _isFirstClicked = false;
 
@@ -32,8 +31,6 @@ public class DelayStartTimer : MonoBehaviour
 
     private void Cancel()
     {
-        if (doubleClick && !_isFirstClicked) { _isFirstClicked = true; Invoke(nameof(CancelDoubleClick), 5f); return; }
-
         if (isLoadLevelAction == false) { CancelInvoke(nameof(Action)); }
         else { CancelInvoke(nameof(ActionLevelLoad)); }
 

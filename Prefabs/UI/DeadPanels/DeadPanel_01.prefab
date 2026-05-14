@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8829749059311124899}
   - component: {fileID: 115114059333146564}
   - component: {fileID: 3568241440737179237}
+  - component: {fileID: 5032429702272421611}
   m_Layer: 5
   m_Name: DeadPanel_01
   m_TagString: Untagged
@@ -94,6 +95,24 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &5032429702272421611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793043521975619694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
+  src: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 21b38f248bd24774d878186bc734b3db, type: 3}
+  isNeedDelay: 1
+  delay: 0.5
+  isSpecLang: 1
+  usingLang: 1
 --- !u!1 &2131450896905490829
 GameObject:
   m_ObjectHideFlags: 0
