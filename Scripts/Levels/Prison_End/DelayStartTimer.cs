@@ -13,8 +13,6 @@ public class DelayStartTimer : MonoBehaviour
     [SerializeField] private Button CancelInvokeButton;
     [SerializeField] private bool doTask = false;
 
-    private bool _isFirstClicked = false;
-
     private void Start() { if (CancelInvokeButton != null) CancelInvokeButton.onClick.AddListener(Cancel); }
 
     private void OnDestroy() { if (CancelInvokeButton != null) CancelInvokeButton.onClick.RemoveListener(Cancel); }
@@ -40,6 +38,4 @@ public class DelayStartTimer : MonoBehaviour
             else { ActionLevelLoad(); }
         }
     }
-    
-    private void CancelDoubleClick() { _isFirstClicked = false; }
 }

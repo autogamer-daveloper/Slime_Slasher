@@ -116962,18 +116962,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 505090316}
-        m_TargetAssemblyTypeName: DenseTreeLogic, Assembly-CSharp
-        m_MethodName: Killed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   wines: {fileID: 1298200890}
   activateInFight:
   - {fileID: 374721974}
@@ -144909,19 +144897,7 @@ MonoBehaviour:
         m_CallState: 2
   damaged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 505090316}
-        m_TargetAssemblyTypeName: DenseTreeLogic, Assembly-CSharp
-        m_MethodName: CheckMinions
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   maxHealth: 1500
   healthText: {fileID: 1700074641}
   healthBar: {fileID: 1647210553}

@@ -136,7 +136,7 @@ public class DenseTreeLogic : MonoBehaviour
 
     private void _SpawnEnemy()
     {
-        Debug.LogWarning("SPAWN DRUIDS");
+        Debug.Log("SPAWN DRUIDS");
         _wineCount = 0;
         Invoke(nameof(SpawnWines), _afterSpawn);
 
@@ -166,7 +166,7 @@ public class DenseTreeLogic : MonoBehaviour
 
     public void PlayerDead()
     {
-        DeleteWines();
+        DeleteAll();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));
@@ -179,7 +179,7 @@ public class DenseTreeLogic : MonoBehaviour
 
     public void Killed()
     {
-        DeleteWines();
+        DeleteAll();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));
@@ -213,10 +213,13 @@ public class DenseTreeLogic : MonoBehaviour
 
     private void CheckWines() { _lastWines.RemoveAll(item => item == null); }
 
-    private void DeleteWines()
+    private void DeleteAll()
     {
-        foreach (GameObject obj in _lastWines) { if (obj != null) { Destroy(obj); }}
+        foreach (GameObject obj in _lastWines) { if (obj != null) { Destroy(obj); } }
         _lastWines.Clear();
+        
+        foreach (GameObject obj in _spawnedMinions) { if (obj != null) { Destroy(obj); }}
+        _spawnedMinions.Clear();
     }
 
     internal string GetBossKey() { return bossKey; }
