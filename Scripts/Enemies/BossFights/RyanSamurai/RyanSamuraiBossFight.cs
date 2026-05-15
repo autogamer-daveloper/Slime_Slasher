@@ -251,6 +251,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     public void PlayerDead()
     {
+        stats.ResetHealth();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));

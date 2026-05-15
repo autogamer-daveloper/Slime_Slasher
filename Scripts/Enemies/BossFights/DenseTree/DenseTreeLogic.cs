@@ -38,7 +38,7 @@ public class DenseTreeLogic : MonoBehaviour
 
     private int _isDenseTreeDefeated = 0;
     private bool _isSecondPhase = false;
-    private bool _damageBlocked;
+    private bool _isAlreadyKilled = false;
 
     //Timings
     private float _attackTime = 0.2f;
@@ -61,6 +61,7 @@ public class DenseTreeLogic : MonoBehaviour
 
         if (_isDenseTreeDefeated == 1)
         {
+            _isAlreadyKilled = true;
             showAnimation(6);
             wines.SetActive(true);
         }
@@ -167,6 +168,7 @@ public class DenseTreeLogic : MonoBehaviour
     public void PlayerDead()
     {
         DeleteAll();
+        stats.ResetHealth();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));
@@ -179,6 +181,9 @@ public class DenseTreeLogic : MonoBehaviour
 
     public void Killed()
     {
+        if(_isAlreadyKilled) { return; }
+        _isAlreadyKilled = true;
+
         DeleteAll();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));

@@ -52,7 +52,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
     private float _beforeFight = 6f;
     private float _afterSpawn = 5f;
     private float _betweenCoilSpawns = 0.33f;
-    private float _afterCoilSpawns = 6f;
+    private float _afterCoilSpawns = 4f;
 
     private int _coilCount = 0;
 
@@ -174,6 +174,7 @@ public class SkeletonLordSecretBossFight : MonoBehaviour
     public void PlayerDead()
     {
         playerVision.SetActive(false);
+        stats.ResetHealth();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));

@@ -111,4 +111,6 @@ public class EnemyStats : MonoBehaviour
     }
 
     internal void BlockDamage() { _blockedDamage = true; }
+
+    internal void ResetHealth() { maxHealth = _health; healthText.text = maxHealth.ToString() + "/" + _health.ToString(); healthBar.value = _health; }
 }
