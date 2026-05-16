@@ -101,18 +101,13 @@ public class PrisonTimer : MonoBehaviour
     private void CheckStatus()
     {
         loadPanel.Play();
-        if (_inPrison)
-        {
-            Invoke(nameof(GoToWork), 0.5f);
-        }
-        else
-        {
-            Invoke(nameof(GoToPrison), 0.5f);
-        }
+        if (_inPrison) { Invoke(nameof(GoToWork), 0.5f); }
+        else { Invoke(nameof(GoToPrison), 0.5f); }
     }
 
     private void GoToWork()
     {
+        _inPrison = false;
         player.position = work.position;
         SetTimer(1);
         atWorkHelpObj.SetActive(true);
@@ -130,24 +125,19 @@ public class PrisonTimer : MonoBehaviour
         inPrisonHelp.Play();
     }
 
-    public void CompleteTask()
-    {
-        _isCompletedTask = true;
-    }
+    public void CompleteTask() { _isCompletedTask = true; }
 
-    public void Dead()
-    {
-        Invoke(nameof(_Dead), 1f);
-    }
+    public void Dead() { Invoke(nameof(_Dead), 1f); }
 
     private void _Dead()
     {
         _inPrison = true;
         _isCompletedTask = false;
-        SetTimer(0);
-        inPrisonHelpObj.SetActive(true);
-        inPrisonHelp.Play();
-        PlayTimer();
+        // SetTimer(0);
+        // inPrisonHelpObj.SetActive(true);
+        // inPrisonHelp.Play();
+        // PlayTimer();
+        PauseTimer();
     }
 
     public void PauseTimer()

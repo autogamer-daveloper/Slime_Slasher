@@ -198,6 +198,7 @@ public class CraftOrTradingSystem : MonoBehaviour
 
             trades[tradeId].whatToDo.Invoke();
             inv.Refresh();
+            src.PlayOneShot(button);
         }
         else { Debug.Log($"[CraftOrTradingSystem {gameObject.name}]: can't trade items {tradeId}. No enought items"); }
 
@@ -219,6 +220,7 @@ public class CraftOrTradingSystem : MonoBehaviour
 
             KeyManager.Receive_Item(crafts[craftId].receivedItemId, crafts[craftId].receivedItemCount);
             inv.Refresh();
+            src.PlayOneShot(button);
         }
         else { Debug.Log($"[CraftOrTradingSystem {gameObject.name}]: can't craft item {craftId}. No enought items"); }
 

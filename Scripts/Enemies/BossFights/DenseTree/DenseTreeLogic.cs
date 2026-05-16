@@ -168,7 +168,6 @@ public class DenseTreeLogic : MonoBehaviour
     public void PlayerDead()
     {
         DeleteAll();
-        stats.ResetHealth();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));

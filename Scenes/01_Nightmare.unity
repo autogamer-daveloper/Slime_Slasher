@@ -13185,7 +13185,6 @@ MonoBehaviour:
   - {fileID: 1013864067529806207}
   - {fileID: 786687997771570801}
   - {fileID: 7661776550163210251}
-  - {fileID: 3144018679053467229}
   activateSecond: {fileID: 2142955048}
   volume: 0.25
   fmt: 0.1
@@ -35580,6 +35579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53137cfefb131f24eaa6e874bcf14d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatus
+  sceneID: 1
   isFirstNightmare: 1
   nightmare: {fileID: 239362203}
   healthText: {fileID: 2038880669}
@@ -54034,8 +54034,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 5
+  m_AngularDamping: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -54046,7 +54046,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &897951301
 CapsuleCollider2D:
@@ -75518,8 +75518,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 5
+  m_AngularDamping: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -75530,7 +75530,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1284292912
 MonoBehaviour:
@@ -80896,8 +80896,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 5
+  m_AngularDamping: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -80908,7 +80908,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &1384722112
 CapsuleCollider2D:

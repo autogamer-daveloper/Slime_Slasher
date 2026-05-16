@@ -13,6 +13,8 @@ public class Accessories
 
 public class PlayerStatus : MonoBehaviour
 {
+    [Header("__ Scene ID __")]
+    [SerializeField] private int sceneID = 0;
     [Header("__ Special __")]
     [SerializeField] private bool isFirstNightmare = false;
     [SerializeField] private ActivateTrapsNightmare nightmare;
@@ -47,7 +49,7 @@ public class PlayerStatus : MonoBehaviour
     private int maxMana = 100;
 
     private int healthRegen = 5;
-    private int manaRegen = 1;
+    private int manaRegen = 4;
 
     private int boostHealthRegen = 0;
     private int boostManaRegen = 0;
@@ -180,26 +182,25 @@ public class PlayerStatus : MonoBehaviour
                     {
                         deadPanels[_deathCount].SetActive(true);
                         deadAnims[_deathCount].Play();
-                        Invoke(nameof(HideDeadPanels), 5.5f);
+                        Invoke(nameof(HideDeadPanels), 6f);
                         _deathCount = 0;
                     }
                     if (_deathCount < 2)
                     {
                         deadPanels[_deathCount].SetActive(true);
                         deadAnims[_deathCount].Play();
-                        Invoke(nameof(HideDeadPanels), 5.5f);
+                        Invoke(nameof(HideDeadPanels), 6f);
                     }
                     else
                     {
                         deadPanels[2].SetActive(true);
                         deadAnims[2].Play();
                         KeyManager.Delete_All();
-                        Invoke(nameof(DeadCutscene), 4f);
+                        Invoke(nameof(DeadCutscene), 6f);
                     }
 
                     Invoke(nameof(Clear), 1f);
                     Invoke(nameof(Teleport), 1f);
-                    Invoke(nameof(UnlockDamageByDead), 5f);
                     _deathCount++;
                     KeyManager.Set_Bool_Key("deathCount", _deathCount);
                 }
@@ -207,9 +208,8 @@ public class PlayerStatus : MonoBehaviour
                 {
                     deadPanels[0].SetActive(true);
                     deadAnims[0].Play();
-                    Invoke(nameof(HideDeadPanels), 5.5f);
+                    Invoke(nameof(HideDeadPanels), 6f);
                     Invoke(nameof(Clear), 1f);
-                    Invoke(nameof(UnlockDamageByDead), 5f);
                     Invoke(nameof(Teleport), 1f);
                 }
             }
@@ -243,7 +243,8 @@ public class PlayerStatus : MonoBehaviour
         deadPlayer.SetActive(false);
     }
 
-    private void HideDeadPanels() { foreach (GameObject obj in deadPanels) { obj.SetActive(false); }}
+    //private void HideDeadPanels() { foreach (GameObject obj in deadPanels) { obj.SetActive(false); }} OLD
+    private void HideDeadPanels() { LoadLevel.LoadLevelById(sceneID); } //NEW
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -274,12 +275,6 @@ public class PlayerStatus : MonoBehaviour
     }
 
     private void UnlockDamage() { isBlocked = false; }
-
-    private void UnlockDamageByDead()
-    {
-        isDead = false;
-        controller.UnlockInput();
-    }
 
     private void CheckAccessories()
     {

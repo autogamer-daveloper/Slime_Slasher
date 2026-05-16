@@ -169,7 +169,6 @@ public class SkeletonLordBossFight : MonoBehaviour
     public void PlayerDead()
     {
         playerVision.SetActive(false);
-        stats.ResetHealth();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));

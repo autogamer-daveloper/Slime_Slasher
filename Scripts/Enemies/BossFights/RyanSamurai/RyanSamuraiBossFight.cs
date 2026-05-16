@@ -14,6 +14,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
     [Header("__ Boss defeated key __")]
     [SerializeField] private string bossKey = "isRyanSamuraiDefeated";
     [Header("__ UI __")]
+    [SerializeField] private Button startSkip;
     [SerializeField] private Button startFight;
     [SerializeField] private GameObject startDialogue;
     [SerializeField] private RectTransform fightOrNot;
@@ -88,13 +89,15 @@ public class RyanSamuraiBossFight : MonoBehaviour
         startFight.onClick.AddListener(PreStartFight);
         fight.onClick.AddListener(StartFight);
         notFight.onClick.AddListener(NotStartFight);
+        startSkip.onClick.AddListener(StartSkip);
     }
 
     private void OnDestroy()
     {
         startFight.onClick.RemoveListener(PreStartFight);
-        fight.onClick.AddListener(StartFight);
-        notFight.onClick.AddListener(NotStartFight);
+        fight.onClick.RemoveListener(StartFight);
+        notFight.onClick.RemoveListener(NotStartFight);
+        startSkip.onClick.RemoveListener(StartSkip);
     }
 
     private void showAnimation(int id)
@@ -114,6 +117,12 @@ public class RyanSamuraiBossFight : MonoBehaviour
     #endregion
 
     #region DIALOGUES
+
+    private void StartSkip()
+    {
+        CancelInvoke(nameof(ShowSelecting));
+        ShowSelecting();
+    }
 
     private void PreStartFight()
     {
@@ -251,7 +260,6 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     public void PlayerDead()
     {
-        stats.ResetHealth();
         stats.BlockDamage();
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));

@@ -9,22 +9,24 @@ public class NakoDialogue : MonoBehaviour
     [SerializeField] private GameObject Nako;
     [SerializeField] private Button[] hideNako;
     [Header("__ UI __")]
+    [SerializeField] private Button startSkip;
     [SerializeField] private Button startDialogue;
     [SerializeField] private GameObject startDialogueWindow;
-    [SerializeField] private float duration = 20f; //как пример
+    [SerializeField] private float duration = 20f;
     [SerializeField] private RectTransform selectWords;
-    [Header("__ Dialogue First __")] //Сцена, где всё будет хорошо
+    [Header("__ Dialogue First __")]
+    [SerializeField] private Button goodSkip;
     [SerializeField] private GameObject goodEnding;
     [SerializeField] private Button goodEndingButton;
     [SerializeField] private float delaySpawn = 20f;
     [SerializeField] private GameObject artifact;
     [SerializeField] private Transform artifactSpawn;
-    [Header("__ Dialogue Second __")] //Сцена, где чет пойдёт не так
+    [Header("__ Dialogue Second __")]
     [SerializeField] private Animation animDeath;
     [SerializeField] private string animDeathName;
     [SerializeField] private GameObject badEnding;
     [SerializeField] private Button badEndingButton;
-    [Header("__ Dialogue Third __")] //Сцена, где всё пойдёт не так
+    [Header("__ Dialogue Third __")]
     [SerializeField] private Animation animKilling;
     [SerializeField] private string animKillingName;
     [SerializeField] private float delayKill = 10f;
@@ -49,6 +51,9 @@ public class NakoDialogue : MonoBehaviour
         badEndingButton.onClick.AddListener(BadEnding);
         worstEndingButton.onClick.AddListener(WorstEnding);
 
+        startSkip.onClick.AddListener(StartSkip);
+        goodSkip.onClick.AddListener(GoodSkip);
+
         enterSecret.onClick.AddListener(PauseTimer);
         exitSecret.onClick.AddListener(PlayTimer);
 
@@ -60,10 +65,11 @@ public class NakoDialogue : MonoBehaviour
 
     private void OnDestroy()
     {
-        startDialogue.onClick.AddListener(StartDialogue);
-        goodEndingButton.onClick.AddListener(GoodEnding);
-        badEndingButton.onClick.AddListener(BadEnding);
-        worstEndingButton.onClick.AddListener(WorstEnding);
+        startDialogue.onClick.RemoveListener(StartDialogue);
+        goodEndingButton.onClick.RemoveListener(GoodEnding);
+
+        startSkip.onClick.RemoveListener(StartSkip);
+        goodSkip.onClick.RemoveListener(GoodSkip);
 
         enterSecret.onClick.RemoveListener(PauseTimer);
         exitSecret.onClick.RemoveListener(PlayTimer);
@@ -116,4 +122,16 @@ public class NakoDialogue : MonoBehaviour
 
     private void _PlayTimer() { PlayTime.Invoke(); }
     private void _PauseTimer() { PauseTime.Invoke(); }
+
+    private void StartSkip()
+    {
+        CancelInvoke(nameof(ShowEndings));
+        ShowEndings();
+    }
+
+    private void GoodSkip()
+    {
+        CancelInvoke(nameof(GivingArtifact));
+        GivingArtifact();
+    }
 }
