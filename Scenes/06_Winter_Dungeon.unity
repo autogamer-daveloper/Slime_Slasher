@@ -77746,7 +77746,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 394307192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1179493417}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394307192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103319,8 +103331,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -121430,8 +121442,8 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
-  doTask: 0
+  CancelInvokeButton: {fileID: 1654310006}
+  doTask: 1
 --- !u!111 &621318585
 Animation:
   m_ObjectHideFlags: 0
@@ -274101,8 +274113,8 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
-  doTask: 0
+  CancelInvokeButton: {fileID: 165964885}
+  doTask: 1
 --- !u!111 &1384962376
 Animation:
   m_ObjectHideFlags: 0
@@ -279958,8 +279970,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -289486,6 +289498,7 @@ GameObject:
   - component: {fileID: 1460406922}
   - component: {fileID: 1460406924}
   - component: {fileID: 1460406923}
+  - component: {fileID: 1460406925}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -289612,6 +289625,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460406921}
   m_CullTransparentMesh: 1
+--- !u!114 &1460406925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460406921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: d6bba1601b862d5429ae34b9352cfab2, type: 2}
 --- !u!1 &1460490665
 GameObject:
   m_ObjectHideFlags: 0
