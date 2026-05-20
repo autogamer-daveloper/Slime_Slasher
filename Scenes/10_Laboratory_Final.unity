@@ -31646,6 +31646,7 @@ Transform:
   m_Children:
   - {fileID: 902423447}
   - {fileID: 879909932}
+  - {fileID: 231701017721471998}
   - {fileID: 916936638}
   - {fileID: 237138767}
   - {fileID: 651551602}
@@ -31737,6 +31738,11 @@ MonoBehaviour:
   runAnim: {fileID: 2035185518}
   cameraAnim: {fileID: 519420028}
   isAnimated: 0
+  aimTarget: {fileID: 976828105609346995}
+  aimVector: {fileID: 2911258436371588148}
+  aimMaxDistance: 2
+  aimDeadzone: 0.25
+  angleOffset: 0
   src: {fileID: 8011398536717569713}
 --- !u!114 &627318388
 MonoBehaviour:
@@ -31786,6 +31792,7 @@ MonoBehaviour:
   - {fileID: 455671646}
   - {fileID: 2129502292}
   - {fileID: 1523307029}
+  aimVector: {fileID: 2911258436371588148}
   weapon:
   - {fileID: 11400000, guid: 67a3e083df36bd94d8c0b3205b3f63b8, type: 2}
   - {fileID: 11400000, guid: 98ce308b51d66d44aa8d2b2c89d69900, type: 2}
@@ -112328,6 +112335,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &231701017721471998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336083556329749200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 976828105609346995}
+  - {fileID: 2911258436371588148}
+  m_Father: {fileID: 627318384}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &234424271795804139
 SpriteRenderer:
   serializedVersion: 2
@@ -115408,6 +115432,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3045622892650801842}
   m_CullTransparentMesh: 1
+--- !u!4 &976828105609346995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182133956010969796}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 231701017721471998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &981849222177688601
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123030,6 +123069,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6577717347966872962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2911258436371588148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676464130183801416}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 231701017721471998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &2912903387763033752
 GameObject:
   m_ObjectHideFlags: 0
@@ -132045,6 +132099,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &5182133956010969796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 976828105609346995}
+  m_Layer: 0
+  m_Name: AimTarget (Meele)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &5185433794215949669
 GameObject:
   m_ObjectHideFlags: 0
@@ -134325,6 +134395,22 @@ RectTransform:
   m_AnchoredPosition: {x: -575, y: 85}
   m_SizeDelta: {x: 300, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5676464130183801416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2911258436371588148}
+  m_Layer: 0
+  m_Name: AimVector (Meele)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!61 &5676949795904027342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -141308,6 +141394,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &7336083556329749200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231701017721471998}
+  m_Layer: 0
+  m_Name: Vector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!58 &7343646475583028332
 CircleCollider2D:
   m_ObjectHideFlags: 0

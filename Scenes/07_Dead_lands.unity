@@ -52956,6 +52956,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 902423447}
   - {fileID: 879909932}
+  - {fileID: 3871223322342080903}
   - {fileID: 916936638}
   - {fileID: 237138767}
   - {fileID: 651551602}
@@ -53047,6 +53048,11 @@ MonoBehaviour:
   runAnim: {fileID: 2035185518}
   cameraAnim: {fileID: 519420028}
   isAnimated: 1
+  aimTarget: {fileID: 4251415899606400458}
+  aimVector: {fileID: 2227221190571943501}
+  aimMaxDistance: 2
+  aimDeadzone: 0.25
+  angleOffset: 0
   src: {fileID: 3179392337519127836}
 --- !u!114 &627318388
 MonoBehaviour:
@@ -53096,6 +53102,7 @@ MonoBehaviour:
   - {fileID: 455671646}
   - {fileID: 2129502292}
   - {fileID: 1523307029}
+  aimVector: {fileID: 2227221190571943501}
   weapon:
   - {fileID: 11400000, guid: 67a3e083df36bd94d8c0b3205b3f63b8, type: 2}
   - {fileID: 11400000, guid: 98ce308b51d66d44aa8d2b2c89d69900, type: 2}
@@ -187593,6 +187600,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!4 &2227221190571943501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667364184344815665}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3871223322342080903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &2230470605109180066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189528,6 +189550,23 @@ MonoBehaviour:
   inventory: {fileID: 1260874431}
   button: {fileID: 1215900141}
   id: 6
+--- !u!4 &3871223322342080903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999202487592335529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4251415899606400458}
+  - {fileID: 2227221190571943501}
+  m_Father: {fileID: 627318384}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3927035201767156685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189807,6 +189846,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!4 &4251415899606400458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170885012582615229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3871223322342080903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4290465595774448171
 GameObject:
   m_ObjectHideFlags: 0
@@ -191240,6 +191294,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5999202487592335529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3871223322342080903}
+  m_Layer: 0
+  m_Name: Vector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &6007638637336296838
 GameObject:
   m_ObjectHideFlags: 0
@@ -193636,6 +193706,22 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 235, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8170885012582615229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4251415899606400458}
+  m_Layer: 0
+  m_Name: AimTarget (Meele)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!224 &8197931170420394023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -194095,6 +194181,22 @@ GameObject:
   - component: {fileID: 1698833788603970784}
   m_Layer: 5
   m_Name: DialogueText_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &8667364184344815665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2227221190571943501}
+  m_Layer: 0
+  m_Name: AimVector (Meele)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

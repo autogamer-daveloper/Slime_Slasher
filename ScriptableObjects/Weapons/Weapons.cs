@@ -26,6 +26,9 @@ namespace Objects.Weapons
         [Header("__ For Meele __")]
         public bool CustomMeeleAnimation = false;
         public string MeeleAnimationName = "Default Meele Animation Name";
+        public bool isHaveEffect = false;
+        public bool isRotatable = false;
+        public GameObject meeleEffect;
 
         [Header("__ For Range __")]
         public GameObject Arrow;

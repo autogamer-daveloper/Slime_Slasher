@@ -34,9 +34,9 @@ public class VillageHelper : MonoBehaviour
         int foundBoss = KeyManager.Get_Bool_Key(_foundBoss);
 
         if (foundSon == 0) { ShowHint(0); return; }
-        if (foundSon == 0) { ShowHint(1); return; }
-        if (foundSon == 0) { ShowHint(2); return; }
-        if (foundSon == 0) { ShowHint(3); return; }
+        if (foundTawern == 0) { ShowHint(1); return; }
+        if (foundKey == 0) { ShowHint(2); return; }
+        if (foundBoss == 0) { ShowHint(3); return; }
         if (foundSon == 1 && foundTawern == 1 && foundKey == 1 && foundBoss == 1) { ShowHint(4); return; }
     }
 

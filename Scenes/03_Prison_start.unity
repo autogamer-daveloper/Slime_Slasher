@@ -48969,6 +48969,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 902423447}
   - {fileID: 879909932}
+  - {fileID: 2728182104792736146}
   - {fileID: 916936638}
   - {fileID: 454670450}
   - {fileID: 651551602}
@@ -49060,6 +49061,11 @@ MonoBehaviour:
   runAnim: {fileID: 2035185518}
   cameraAnim: {fileID: 519420028}
   isAnimated: 1
+  aimTarget: {fileID: 3126969352120393183}
+  aimVector: {fileID: 1048643744327566936}
+  aimMaxDistance: 2
+  aimDeadzone: 0.25
+  angleOffset: 0
   src: {fileID: 5260275472937137453}
 --- !u!114 &627318388
 MonoBehaviour:
@@ -49109,6 +49115,7 @@ MonoBehaviour:
   - {fileID: 455671646}
   - {fileID: 2129502292}
   - {fileID: 1523307029}
+  aimVector: {fileID: 1048643744327566936}
   weapon:
   - {fileID: 11400000, guid: 67a3e083df36bd94d8c0b3205b3f63b8, type: 2}
   - {fileID: 11400000, guid: 98ce308b51d66d44aa8d2b2c89d69900, type: 2}
@@ -169726,6 +169733,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &1048643744327566936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506801287183665188}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2728182104792736146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &1048990727916949838
 Transform:
   m_ObjectHideFlags: 0
@@ -174566,6 +174588,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!4 &2728182104792736146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4838089559478851772}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3126969352120393183}
+  - {fileID: 1048643744327566936}
+  m_Father: {fileID: 627318384}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2747149767906845701
 Transform:
   m_ObjectHideFlags: 0
@@ -175897,6 +175936,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!4 &3126969352120393183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6990143602086848680}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2728182104792736146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3131984242055355331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180404,6 +180458,22 @@ GameObject:
   - component: {fileID: 2471133623526145676}
   m_Layer: 0
   m_Name: Ground (46)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &4838089559478851772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2728182104792736146}
+  m_Layer: 0
+  m_Name: Vector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187939,6 +188009,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &6990143602086848680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3126969352120393183}
+  m_Layer: 0
+  m_Name: AimTarget (Meele)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &6991198863012313135
 GameObject:
   m_ObjectHideFlags: 0
@@ -189776,6 +189862,22 @@ GameObject:
   - component: {fileID: 7578275570981406961}
   m_Layer: 0
   m_Name: Square (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &7506801287183665188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048643744327566936}
+  m_Layer: 0
+  m_Name: AimVector (Meele)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -80797,6 +80797,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 902423447}
   - {fileID: 879909932}
+  - {fileID: 1048346692222714910}
   - {fileID: 8193635595407389676}
   - {fileID: 237138767}
   - {fileID: 651551602}
@@ -80888,6 +80889,11 @@ MonoBehaviour:
   runAnim: {fileID: 5459628263172756481}
   cameraAnim: {fileID: 519420028}
   isAnimated: 1
+  aimTarget: {fileID: 14971940740593747}
+  aimVector: {fileID: 2728492004509950932}
+  aimMaxDistance: 2
+  aimDeadzone: 0.25
+  angleOffset: 0
   src: {fileID: 37046743295030000}
 --- !u!114 &627318388
 MonoBehaviour:
@@ -80937,6 +80943,7 @@ MonoBehaviour:
   - {fileID: 455671646}
   - {fileID: 2129502292}
   - {fileID: 1523307029}
+  aimVector: {fileID: 2728492004509950932}
   weapon:
   - {fileID: 11400000, guid: 67a3e083df36bd94d8c0b3205b3f63b8, type: 2}
   - {fileID: 11400000, guid: 98ce308b51d66d44aa8d2b2c89d69900, type: 2}
@@ -280859,6 +280866,21 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
+--- !u!4 &14971940740593747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355325840617934116}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1048346692222714910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &26076132500615237
 AudioSource:
   m_ObjectHideFlags: 0
@@ -282638,6 +282660,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &1048346692222714910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7526731287807720752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 14971940740593747}
+  - {fileID: 2728492004509950932}
+  m_Father: {fileID: 627318384}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062059627759910433
 GameObject:
   m_ObjectHideFlags: 0
@@ -285236,6 +285275,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &2728492004509950932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863193904840486312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1048346692222714910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!222 &2736339094195958861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -288725,6 +288779,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &4863193904840486312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2728492004509950932}
+  m_Layer: 0
+  m_Name: AimVector (Meele)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!224 &4865247099620920512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -289317,6 +289387,22 @@ GameObject:
   - component: {fileID: 6567822223543878834}
   m_Layer: 0
   m_Name: EnemyAudioSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &5355325840617934116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14971940740593747}
+  m_Layer: 0
+  m_Name: AimTarget (Meele)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292367,6 +292453,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7663460156751841829}
   m_CullTransparentMesh: 1
+--- !u!1 &7526731287807720752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048346692222714910}
+  m_Layer: 0
+  m_Name: Vector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!82 &7567614206201854677
 AudioSource:
   m_ObjectHideFlags: 0

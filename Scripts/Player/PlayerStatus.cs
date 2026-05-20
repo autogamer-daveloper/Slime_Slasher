@@ -114,6 +114,7 @@ public class PlayerStatus : MonoBehaviour
 
         healthSlider.value = health;
         manaSlider.value = mana;
+        DeathCheck(true);
     }
 
     private void GetExtraMana(int extraMana)
@@ -214,10 +215,7 @@ public class PlayerStatus : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            if (!selfHarm) { src.PlayOneShot(damage); }
-        }
+        else { if (!selfHarm) { src.PlayOneShot(damage); } }
     }
 
     private void Clear()
@@ -306,6 +304,9 @@ public class PlayerStatus : MonoBehaviour
         _extraRegen = accessories[i].accessory.extraRegen;
         _extraMana = accessories[i].accessory.extraMana;
         _extraManaRegen = accessories[i].accessory.extraManaRegen;
+
+        health = maxHealth + _extraLife; //New mechanic
+        mana = maxMana + _extraMana;
 
         healthSlider.maxValue = maxHealth + _extraLife;
         manaSlider.maxValue = maxMana + _extraMana;

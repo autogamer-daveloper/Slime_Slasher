@@ -13,15 +13,18 @@ MonoBehaviour:
   m_Name: 15_Healing
   m_EditorClassIdentifier: Assembly-CSharp::Objects.Weapons.Weapons
   Type: 1
-  Damage: 0
+  Damage: 1
   Cooldown: 0
   ManaCost: 0
   LifeCost: 0
   WeaponId: 15
   ItemId: 0
-  Sfx: {fileID: 0}
+  Sfx: {fileID: 8300000, guid: 48f4069cdc17de74297d829f27460c20, type: 3}
   CustomMeeleAnimation: 0
-  MeeleAnimationName: Default Meele Animation Name
+  MeeleAnimationName: Default
+  isHaveEffect: 0
+  isRotatable: 0
+  meeleEffect: {fileID: 0}
   Arrow: {fileID: 0}
   Speed: 10
   LifeTime: 5

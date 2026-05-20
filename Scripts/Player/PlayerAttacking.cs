@@ -28,6 +28,9 @@ public class PlayerAttacking : MonoBehaviour
     [SerializeField] private CheckForEnemies enemiesAround;
     [SerializeField] private Button[] selectWeaponById;
 
+    [Header("__ Meele Effect Aim __")]
+    [SerializeField] private Transform aimVector;
+
     [Header("__ Weapons __")]
     [SerializeField] private Weapons[] weapon;
 
@@ -52,6 +55,10 @@ public class PlayerAttacking : MonoBehaviour
     // meele params
     private bool _customAnimationMeele = false;
     private string _meeleAnimationName = "Default";
+
+    private bool _isHaveEffect = false;
+    private bool _isRotatable = false;
+    private GameObject _meeleEffect;
 
     // range params
     private GameObject _arrow;
@@ -140,6 +147,9 @@ public class PlayerAttacking : MonoBehaviour
             _meeleAnimationName = w.MeeleAnimationName;
             _manaHealing = 0;
             _lifeHealing = 0;
+            _isHaveEffect = w.isHaveEffect;
+            _isRotatable = w.isRotatable;
+            _meeleEffect = w.meeleEffect;
             isWeaponRange(false);
         }
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Range)
@@ -149,14 +159,22 @@ public class PlayerAttacking : MonoBehaviour
             _lifeTime = w.LifeTime;
             _manaHealing = 0;
             _lifeHealing = 0;
+            _isHaveEffect = false;
+            _isRotatable = false;
+            _meeleEffect = null;
             isWeaponRange(true);
         }
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Magic)
         {
+            _customAnimationMeele = w.CustomMeeleAnimation;
+            _meeleAnimationName = w.MeeleAnimationName;
             _isDamageWeapon = w.IsDamageWeapon;
             _effect = w.Effect;
             _manaHealing = w.ManaHealing;
             _lifeHealing = w.LifeHealing;
+            _isHaveEffect = false;
+            _isRotatable = false;
+            _meeleEffect = null;
             isWeaponRange(false);
         }
 
@@ -272,9 +290,15 @@ public class PlayerAttacking : MonoBehaviour
 
         if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfx); }
 
-        if (_type == Objects.Weapons.Weapons.WeaponType.Meele) {
+        if (_type == Objects.Weapons.Weapons.WeaponType.Meele)
+        {
             if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName)) {
                 defaultMeeleAnimation.Play(_meeleAnimationName); }
+
+            if(_isHaveEffect == false) { return; }
+
+            if (_isRotatable) { Instantiate(_meeleEffect, aimVector.position, aimVector.rotation); }
+            else { Instantiate(_meeleEffect, aimVector.position, this.gameObject.transform.rotation); }
         }
 
         if (_type == Objects.Weapons.Weapons.WeaponType.Range)
@@ -295,9 +319,17 @@ public class PlayerAttacking : MonoBehaviour
 
         if (_type == Objects.Weapons.Weapons.WeaponType.Magic)
         {
-            Transform[] enemiesTransform = enemiesAround.GetAllEnemiesTransform();
-            foreach (Transform enemyTransform in enemiesTransform) {
-                if (_effect != null) { Instantiate(_effect, enemyTransform.position, _effect.transform.rotation); }
+            if (_isDamageWeapon)
+            {
+                Transform[] enemiesTransform = enemiesAround.GetAllEnemiesTransform();
+                foreach (Transform enemyTransform in enemiesTransform) {
+                    if (_effect != null) { Instantiate(_effect, enemyTransform.position, _effect.transform.rotation); }
+                }
+            }
+            else
+            {
+                if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName)) {
+                defaultMeeleAnimation.Play(_meeleAnimationName); }
             }
         }
 
