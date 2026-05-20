@@ -66408,7 +66408,19 @@ MonoBehaviour:
         m_CallState: 2
   afterKillingSuicide:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8961099092658331264}
+        m_TargetAssemblyTypeName: ThiefPlayer, Assembly-CSharp
+        m_MethodName: DelayedThief
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onLosed:
     m_PersistentCalls:
       m_Calls:
@@ -189492,8 +189504,8 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
-  doTask: 0
+  CancelInvokeButton: {fileID: 1137101419}
+  doTask: 1
 --- !u!224 &3827878148739329749
 RectTransform:
   m_ObjectHideFlags: 0
