@@ -8,6 +8,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
 {
     [Header("__ Health __")]
     [SerializeField] private EnemyStats stats;
+    [SerializeField] private EnemyAttack attack;
     [Header("__ Animations __")]
     [SerializeField] private GameObject[] animationObj; // 0 - 7. 0 sit, 1 idle!, 2 idle, 3 attackSimple, 4 Immortal, 5 pre-dying, 6-dying, 7-self-dying
     [SerializeField] private Animation[] animations; // 0 - 7
@@ -165,6 +166,8 @@ public class RyanSamuraiBossFight : MonoBehaviour
         afterKillingSuicide.Invoke();
     }
 
+    private void UnlockDialogueAttack() { attack.UnlockDialogue(); }
+
     #endregion
 
     #region FIGHT
@@ -175,6 +178,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
         _wasFightStarted = true;
         showAnimation(2);
         stats.UnlockDamage();
+        UnlockDialogueAttack();
         Invoke(nameof(SpawnCoils), 0.5f);
 
         foreach (GameObject obj in activateInFight) { obj.SetActive(true); }

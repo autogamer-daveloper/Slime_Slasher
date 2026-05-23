@@ -6,6 +6,7 @@ public class EnemyAttack : MonoBehaviour
     [Header("Attack - Main")]
     [SerializeField] private float speed;
     [SerializeField] private bool boss = false;
+    [SerializeField] private bool dialogueBlock = false;
     [SerializeField] private float distantion = 10f;
 
     [Header("Attack - Melee")]
@@ -34,6 +35,7 @@ public class EnemyAttack : MonoBehaviour
     private bool _isBlocked = false;
     private bool _isBossLock = false;
     private bool _visionBlock = false;
+    private bool _dialogueBlock = false;
 
     private void OnEnable()
     {
@@ -44,6 +46,8 @@ public class EnemyAttack : MonoBehaviour
             _isBossLock = true;
             Invoke(nameof(UnlockAttacks), 7.5f);
         }
+
+        if (dialogueBlock) { _dialogueBlock = true; }
     }
 
     private void OnDestroy() { CancelInvoke(nameof(Checking)); }
@@ -89,6 +93,7 @@ public class EnemyAttack : MonoBehaviour
         _isAttacking = true;
         if (_isBlocked) return;
         if (_isBossLock) return;
+        if (_dialogueBlock) return;
         InvokeRepeating(nameof(Attack), 0f, speed);
     }
 
@@ -102,6 +107,8 @@ public class EnemyAttack : MonoBehaviour
     internal void Visible_Attack() { _isBlocked = false; UnlockAttack(); }
     internal void Invisible_Attack() { CancelInvoke(nameof(Attack)); _isBlocked = true; _visionBlock = false; }
 
+    internal void UnlockDialogue() { _dialogueBlock = true; }
+
     private void UnlockAttack()
     {
         if (_visionBlock) return;
@@ -113,6 +120,7 @@ public class EnemyAttack : MonoBehaviour
     private void Attack()
     {
         if (_isBossLock) return;
+        if (_dialogueBlock) return;
         src.PlayOneShot(sound);
 
         if (!_isRange)
