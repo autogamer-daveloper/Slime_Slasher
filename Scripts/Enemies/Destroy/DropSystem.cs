@@ -13,6 +13,8 @@ public class DropSystem : MonoBehaviour
     [SerializeField] private DropType[] element;
     [Header("__ Extra settings __")]
     [SerializeField] private bool atStart = true;
+    [SerializeField] private bool onlyOneItem = true;
+    [SerializeField] private bool needDestroy = true;
 
     private bool _wasRewarded = false;
 
@@ -29,10 +31,15 @@ public class DropSystem : MonoBehaviour
             {
                 Instantiate(item.item, this.gameObject.transform.position, this.gameObject.transform.rotation);
                 Debug.Log($"Dropped item with result: {_result}");
+                if (onlyOneItem)
+                {
+                    if (needDestroy) { _wasRewarded = true; Destroy(this.gameObject); }
+                    return;
+                }
             }
             else { Debug.Log($"Nothing dropped with result: {_result}"); }
         }
-        _wasRewarded = true;
-        Destroy(this.gameObject);
+        
+        if(needDestroy) { _wasRewarded = true; Destroy(this.gameObject); }
     }
 }

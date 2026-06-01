@@ -3466,6 +3466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1.5
   boss: 0
+  dialogueBlock: 0
   distantion: 10
   meeleAnim: {fileID: 680641869}
   isHaveCustomPunch: 0
@@ -3589,8 +3590,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
   element:
   - item: {fileID: 937657777}
-    chance: 50
+    chance: 25
+  - item: {fileID: 1941867657}
+    chance: 25
   atStart: 0
+  onlyOneItem: 1
+  needDestroy: 1
 --- !u!1 &78653230
 GameObject:
   m_ObjectHideFlags: 0
@@ -17456,8 +17461,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921756828}
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.45714286
+  m_Value: 1.0000011
+  m_Size: 0.4571428
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18161,8 +18166,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575506715}
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.54857147
+  m_Value: 1.0000007
+  m_Size: 0.5485714
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23063,7 +23068,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 528874304}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -32278,8 +32283,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
   element:
   - item: {fileID: 937657777}
-    chance: 50
+    chance: 25
+  - item: {fileID: 1941867657}
+    chance: 25
   atStart: 0
+  onlyOneItem: 1
+  needDestroy: 1
 --- !u!1 &634074928
 GameObject:
   m_ObjectHideFlags: 0
@@ -32514,7 +32523,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1877031838}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -39304,6 +39313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   speed: 1.5
   boss: 0
+  dialogueBlock: 0
   distantion: 10
   meeleAnim: {fileID: 1789058839}
   isHaveCustomPunch: 0
@@ -83620,7 +83630,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1876444092}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -91971,8 +91981,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664007846}
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
-  m_Value: 1.0000056
-  m_Size: 0.88073397
+  m_Value: 1.0000104
+  m_Size: 0.8807337
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -101131,7 +101141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExtraManaPoint
   countOfExtraMana: 10
-  countOfExtraLife: 50
+  countOfExtraLife: 35
   isUsingAction: 1
   Destroying:
     m_PersistentCalls:
@@ -105144,8 +105154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8b087ee6b36a54089003be87a79e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  speed: 0.3
+  speed: 0.2
   boss: 0
+  dialogueBlock: 0
   distantion: 10
   meeleAnim: {fileID: 1053510130}
   isHaveCustomPunch: 0
