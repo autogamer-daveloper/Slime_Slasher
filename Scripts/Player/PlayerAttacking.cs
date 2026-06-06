@@ -60,6 +60,8 @@ public class PlayerAttacking : MonoBehaviour
     private bool _isRotatable = false;
     private GameObject _meeleEffect;
 
+    private int _meele_extra_damage = 0;
+
     // range params
     private GameObject _arrow;
     private float _speed = 10f;
@@ -67,11 +69,15 @@ public class PlayerAttacking : MonoBehaviour
 
     private bool _isUsingRange = false;
 
+    private int _range_extra_damage = 0;
+
     // magic params
     private bool _isDamageWeapon = true;
     private GameObject _effect;
     [HideInInspector] public int _manaHealing = 0;
     [HideInInspector] public int _lifeHealing = 0;
+
+    private int _mage_extra_damage = 0;
 
     private Vector2 _lastAimDir = Vector2.right;
 
@@ -89,8 +95,7 @@ public class PlayerAttacking : MonoBehaviour
             });
         }
 
-        if (enemiesAround == null)
-            enemiesAround = gameObject.AddComponent<CheckForEnemies>();
+        if (enemiesAround == null) { enemiesAround = gameObject.AddComponent<CheckForEnemies>(); }
 
         if (weapon == null || weapon.Length == 0)
         {
@@ -99,7 +104,8 @@ public class PlayerAttacking : MonoBehaviour
         }
 
         int savedId = KeyManager.GetInt_WeaponID();
-        if (savedId < 0 || savedId >= weapon.Length) {
+        if (savedId < 0 || savedId >= weapon.Length)
+        {
             Debug.LogWarning($"Saved weapon id {savedId} is out of range (0..{weapon.Length - 1}). Clamping to valid range.");
         }
 
@@ -108,10 +114,11 @@ public class PlayerAttacking : MonoBehaviour
         if (defaultAnimation != null) { defaultMeeleAnimation = defaultAnimation.GetComponent<Animation>(); }
         else { Debug.LogWarning("defaultAnimation GameObject is not assigned in inspector."); }
 
+        UpdateSkills();
         SelectThisWeapon(_selectedWeapon);
     }
 
-    private void OnDestroy() { foreach (Button btn in selectWeaponById) { if (btn != null) { btn.onClick.RemoveAllListeners(); }}}
+    private void OnDestroy() { foreach (Button btn in selectWeaponById) { if (btn != null) { btn.onClick.RemoveAllListeners(); } } }
 
     private void SelectThisWeapon(int id)
     {
@@ -133,7 +140,6 @@ public class PlayerAttacking : MonoBehaviour
         var w = weapon[id];
         if (w == null) { Debug.LogError($"weapon[{id}] is null!"); return; }
 
-        damage = w.Damage;
         _selectedWeapon = w.WeaponId;
         _manaCost = w.ManaCost;
         _lifeCost = w.LifeCost;
@@ -143,6 +149,7 @@ public class PlayerAttacking : MonoBehaviour
 
         if (w.Type == Objects.Weapons.Weapons.WeaponType.Meele)
         {
+            damage = w.Damage + _meele_extra_damage;
             _customAnimationMeele = w.CustomMeeleAnimation;
             _meeleAnimationName = w.MeeleAnimationName;
             _manaHealing = 0;
@@ -154,6 +161,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Range)
         {
+            damage = w.Damage + _range_extra_damage;
             _arrow = w.Arrow;
             _speed = w.Speed;
             _lifeTime = w.LifeTime;
@@ -166,6 +174,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Magic)
         {
+            damage = w.Damage + _mage_extra_damage;
             _customAnimationMeele = w.CustomMeeleAnimation;
             _meeleAnimationName = w.MeeleAnimationName;
             _isDamageWeapon = w.IsDamageWeapon;
@@ -206,11 +215,11 @@ public class PlayerAttacking : MonoBehaviour
 
     private void OnEnable()
     {
-        if (attackButton.Length != 0) { foreach (Button btn in attackButton) { btn.onClick.AddListener(Attack); }}
+        if (attackButton.Length != 0) { foreach (Button btn in attackButton) { btn.onClick.AddListener(Attack); } }
         else { Debug.LogError("attackButton not assigned in inspector."); }
     }
 
-    private void OnDisable() { if (attackButton.Length != 0) { foreach (Button btn in attackButton) { btn.onClick.RemoveListener(Attack); }}}
+    private void OnDisable() { if (attackButton.Length != 0) { foreach (Button btn in attackButton) { btn.onClick.RemoveListener(Attack); } } }
 
     private void Update()
     {
@@ -292,10 +301,12 @@ public class PlayerAttacking : MonoBehaviour
 
         if (_type == Objects.Weapons.Weapons.WeaponType.Meele)
         {
-            if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName)) {
-                defaultMeeleAnimation.Play(_meeleAnimationName); }
+            if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName))
+            {
+                defaultMeeleAnimation.Play(_meeleAnimationName);
+            }
 
-            if(_isHaveEffect == false) { return; }
+            if (_isHaveEffect == false) { return; }
 
             if (_isRotatable) { Instantiate(_meeleEffect, aimVector.position, aimVector.rotation); }
             else { Instantiate(_meeleEffect, aimVector.position, this.gameObject.transform.rotation); }
@@ -322,14 +333,17 @@ public class PlayerAttacking : MonoBehaviour
             if (_isDamageWeapon)
             {
                 Transform[] enemiesTransform = enemiesAround.GetAllEnemiesTransform();
-                foreach (Transform enemyTransform in enemiesTransform) {
+                foreach (Transform enemyTransform in enemiesTransform)
+                {
                     if (_effect != null) { Instantiate(_effect, enemyTransform.position, _effect.transform.rotation); }
                 }
             }
             else
             {
-                if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName)) {
-                defaultMeeleAnimation.Play(_meeleAnimationName); }
+                if (defaultMeeleAnimation != null && !defaultMeeleAnimation.IsPlaying(_meeleAnimationName))
+                {
+                    defaultMeeleAnimation.Play(_meeleAnimationName);
+                }
             }
         }
 
@@ -338,4 +352,19 @@ public class PlayerAttacking : MonoBehaviour
     }
 
     private void UnlockAttack() => _isAttackBlocked = false;
+
+    internal void UpdateSkills()
+    {
+        _meele_extra_damage = KeyManager.Get_Bool_Key("skill_MEELE");
+        _range_extra_damage = KeyManager.Get_Bool_Key("skill_RANGE");
+        _mage_extra_damage = KeyManager.Get_Bool_Key("skill_MAGE");
+
+        int id = KeyManager.GetInt_WeaponID();
+        var w = weapon[id];
+        if (w == null) { Debug.LogError($"weapon[{id}] is null!"); return; }
+
+        if (w.Type == Objects.Weapons.Weapons.WeaponType.Meele) { damage = w.Damage + _meele_extra_damage; }
+        else if (w.Type == Objects.Weapons.Weapons.WeaponType.Range) { damage = w.Damage + _range_extra_damage; }
+        else if (w.Type == Objects.Weapons.Weapons.WeaponType.Magic) { damage = w.Damage + _mage_extra_damage; }
+    }
 }

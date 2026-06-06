@@ -68,16 +68,21 @@ public class PlayerStatus : MonoBehaviour
     private int _isEasyMode = 0;
     private int _deathCount = 0;
 
+    //skill tree
+    private int _st_health = 0;
+    private int _st_mana = 0;
+
     private void Start()
     {
         SetAccessoriesButtons();
         CheckAccessories();
+        UpdateSkills();
 
-        healthSlider.maxValue = maxHealth + _extraLife;
-        manaSlider.maxValue = maxMana + _extraMana;
+        healthSlider.maxValue = maxHealth + _extraLife + _st_health;
+        manaSlider.maxValue = maxMana + _extraMana + _st_mana;
 
-        healthSlider.value = health + _extraLife;
-        manaSlider.value = mana + _extraMana;
+        healthSlider.value = health + _extraLife + _st_health;
+        manaSlider.value = mana + _extraMana + _st_mana;
 
         Regeneration();
         InvokeRepeating("Regeneration", 1, 1);
@@ -96,7 +101,8 @@ public class PlayerStatus : MonoBehaviour
     private void OnDestroy()
     {
         if (accessories == null) return;
-        for (int i = 0; i < accessories.Length; i++) {
+        for (int i = 0; i < accessories.Length; i++)
+        {
             if (accessories[i] != null && accessories[i].selectButton != null) { accessories[i].selectButton.onClick.RemoveAllListeners(); }
         }
     }
@@ -106,11 +112,11 @@ public class PlayerStatus : MonoBehaviour
         health += healthRegen + boostHealthRegen + _extraRegen;
         mana += manaRegen + boostManaRegen + _extraManaRegen;
 
-        if (health >= maxHealth + _extraLife) { health = maxHealth + _extraLife; }
-        if (mana >= maxMana + _extraMana) { mana = maxMana + _extraMana; }
+        if (health >= maxHealth + _extraLife + _st_health) { health = maxHealth + _extraLife + _st_health; }
+        if (mana >= maxMana + _extraMana + _st_mana) { mana = maxMana + _extraMana + _st_mana; }
 
-        healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
-        manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
+        healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
+        manaText.text = mana.ToString() + "/" + (maxMana + _extraMana + _st_mana).ToString();
 
         healthSlider.value = health;
         manaSlider.value = mana;
@@ -121,15 +127,17 @@ public class PlayerStatus : MonoBehaviour
     {
         src.PlayOneShot(mage);
         mana += extraMana;
-        if (mana >= maxMana + _extraMana) { mana = maxMana + _extraMana; }
-        manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
+        if (mana >= maxMana + _extraMana + _st_mana) { mana = maxMana + _extraMana + _st_mana; }
+        manaText.text = mana.ToString() + "/" + (maxMana + _extraMana + _st_mana).ToString();
+        manaSlider.value = mana;
     }
 
     private void GetExtraLife(int extraLife)
     {
         health += extraLife;
-        if (health >= maxHealth + _extraLife) { health = maxHealth + _extraLife; }
-        healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
+        if (health >= maxHealth + _extraLife + _st_health) { health = maxHealth + _extraLife + _st_health; }
+        healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
+        healthSlider.value = health;
     }
 
     internal void SetBonus(int lifeBonus, int manaBonus)
@@ -142,8 +150,8 @@ public class PlayerStatus : MonoBehaviour
     {
         mana -= count;
         health -= lifeCount;
-        healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
-        manaText.text = (maxMana + _extraMana).ToString() + "/" + mana.ToString();
+        healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
+        manaText.text = mana.ToString() + "/" + (maxMana + _extraMana + _st_mana).ToString();
 
         healthSlider.value = health;
         manaSlider.value = mana;
@@ -153,7 +161,7 @@ public class PlayerStatus : MonoBehaviour
     internal void GetDamage(int dmg)
     {
         health -= dmg;
-        healthText.text = (maxHealth + _extraLife).ToString() + "/" + health.ToString();
+        healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
 
         healthSlider.value = health;
         DeathCheck(false);
@@ -225,11 +233,11 @@ public class PlayerStatus : MonoBehaviour
         health = 100;
         mana = 100;
 
-        healthSlider.maxValue = maxHealth + _extraLife;
-        manaSlider.maxValue = maxMana + _extraMana;
+        healthSlider.maxValue = maxHealth + _extraLife + _st_health;
+        manaSlider.maxValue = maxMana + _extraMana + _st_mana;
 
-        healthSlider.value = health + _extraLife;
-        manaSlider.value = mana + _extraMana;
+        healthSlider.value = health + _extraLife + _st_health;
+        manaSlider.value = mana + _extraMana + _st_mana;
     }
 
     private void DeadCutscene() { LoadLevel.LoadLevelById(_deathCutsceneIndex); }
@@ -290,7 +298,7 @@ public class PlayerStatus : MonoBehaviour
             Debug.LogWarning($"[PlayerStatus] AccessoryID {i} out of range (0..{accessories.Length - 1}). Clamping to 0.");
             i = Mathf.Clamp(i, 0, accessories.Length - 1);
             try { KeyManager.SetInt_AccessoryID(i); }
-            catch {}
+            catch { }
         }
 
         if (accessories[i] == null || accessories[i].accessory == null)
@@ -305,11 +313,11 @@ public class PlayerStatus : MonoBehaviour
         _extraMana = accessories[i].accessory.extraMana;
         _extraManaRegen = accessories[i].accessory.extraManaRegen;
 
-        health = maxHealth + _extraLife; //New mechanic
-        mana = maxMana + _extraMana;
+        health = maxHealth + _extraLife + _st_health; //New mechanic
+        mana = maxMana + _extraMana + _st_mana;
 
-        healthSlider.maxValue = maxHealth + _extraLife;
-        manaSlider.maxValue = maxMana + _extraMana;
+        healthSlider.maxValue = maxHealth + _extraLife + _st_health;
+        manaSlider.maxValue = maxMana + _extraMana + _st_mana;
     }
 
     private void SetAccessoriesButtons()
@@ -331,5 +339,11 @@ public class PlayerStatus : MonoBehaviour
                 });
             }
         }
+    }
+
+    internal void UpdateSkills()
+    {
+        _st_health = KeyManager.Get_Bool_Key("skill_HEALTH");
+        _st_mana = KeyManager.Get_Bool_Key("skill_MANA");
     }
 }

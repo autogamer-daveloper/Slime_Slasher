@@ -13185,6 +13185,7 @@ MonoBehaviour:
   - {fileID: 1013864067529806207}
   - {fileID: 786687997771570801}
   - {fileID: 7661776550163210251}
+  - {fileID: 3144018679053467229}
   activateSecond: {fileID: 2142955048}
   volume: 0.25
   fmt: 0.1
@@ -17020,7 +17021,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1384722114}
   enemyRigidbody: {fileID: 1384722111}
-  moveSpeed: 7
+  moveSpeed: 9
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -18719,7 +18720,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921756828}
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
-  m_Value: 1.0000006
+  m_Value: 1.0000008
   m_Size: 0.45714286
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -19700,8 +19701,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575506715}
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.54857147
+  m_Value: 1.0000006
+  m_Size: 0.5485714
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -54013,8 +54014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8b087ee6b36a54089003be87a79e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  speed: 2
+  speed: 1
   boss: 0
+  dialogueBlock: 0
   distantion: 10
   meeleAnim: {fileID: 223349246}
   isHaveCustomPunch: 0
@@ -55198,7 +55200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
-  src: {fileID: 3144018679053467229}
+  src: {fileID: 1643722869}
   sfx: {fileID: 8300000, guid: 464faad8939a1e44a9f2406f5efbcb58, type: 3}
   isNeedDelay: 1
   delay: 1
@@ -58754,7 +58756,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 1284292908}
   enemyRigidbody: {fileID: 1284292911}
-  moveSpeed: 7
+  moveSpeed: 9
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -66602,7 +66604,7 @@ MonoBehaviour:
   _targetRay: {fileID: 627318384}
   enemyTransform: {fileID: 897951303}
   enemyRigidbody: {fileID: 897951300}
-  moveSpeed: 7
+  moveSpeed: 9
   isRangeEnemy: 0
   stopRange: 5
   flipOnDirection: 1
@@ -75551,8 +75553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8b087ee6b36a54089003be87a79e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  speed: 2
+  speed: 1
   boss: 0
+  dialogueBlock: 0
   distantion: 10
   meeleAnim: {fileID: 1103002453}
   isHaveCustomPunch: 0
@@ -80875,8 +80878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8b087ee6b36a54089003be87a79e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  speed: 2
+  speed: 1
   boss: 0
+  dialogueBlock: 0
   distantion: 10
   meeleAnim: {fileID: 2034065787}
   isHaveCustomPunch: 0
@@ -95756,6 +95760,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643020741}
   m_CullTransparentMesh: 1
+--- !u!1 &1643722867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643722868}
+  - component: {fileID: 1643722869}
+  m_Layer: 0
+  m_Name: PlayerSFX (UnloadDialogue)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643722868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643722867}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6057992556130565806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1643722869
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643722867}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.002
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.999176
+      inSlope: 0.000050064926
+      outSlope: 0.000050064926
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18729044
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1645002990
 GameObject:
   m_ObjectHideFlags: 0
@@ -104503,7 +104636,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664007846}
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
-  m_Value: 1.0000056
+  m_Value: 1.0000075
   m_Size: 0.88073397
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -129352,6 +129485,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 712928498357896483}
+  - {fileID: 1643722868}
   - {fileID: 6108824351757582844}
   - {fileID: 1386025460}
   - {fileID: 344979424}

@@ -38,6 +38,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private AudioSource src;
 
     private UnityAction[] _receiveActions;
+    private UnityAction[] _soundActions;
 
     internal void Refresh() { SerializeItems(); }
 
@@ -54,6 +55,8 @@ public class Inventory : MonoBehaviour
 
         if (_receiveActions == null || _receiveActions.Length != elements.Length) { _receiveActions = new UnityAction[elements.Length]; }
 
+        if (_soundActions == null || _soundActions.Length != elements.Length) { _soundActions = new UnityAction[elements.Length]; }
+
         for (int i = 0; i < elements.Length; i++)
         {
             var el = elements[i];
@@ -61,12 +64,17 @@ public class Inventory : MonoBehaviour
 
             if (_receiveActions[i] != null) { el.receive.onClick.RemoveListener(_receiveActions[i]); }
 
-            int id = i;
-            UnityAction action = () => GetItem(id);
-            _receiveActions[i] = action;
+            if (_soundActions[i] != null) { el.receive.onClick.RemoveListener(_soundActions[i]); }
 
-            el.receive.onClick.AddListener(action);
-            el.receive.onClick.AddListener(() => { src.PlayOneShot(el.receiveClip); });
+            int id = i;
+
+            UnityAction itemAction = () => GetItem(id);
+            _receiveActions[i] = itemAction;
+            el.receive.onClick.AddListener(itemAction);
+
+            UnityAction soundAction = () => { if (src != null && el.receiveClip != null) { src.PlayOneShot(el.receiveClip); }};
+            _soundActions[i] = soundAction;
+            el.receive.onClick.AddListener(soundAction);
         }
     }
 
