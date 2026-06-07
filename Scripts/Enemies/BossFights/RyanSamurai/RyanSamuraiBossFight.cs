@@ -35,7 +35,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
     [SerializeField] private GameObject coil01;
     [SerializeField] private GameObject coil02;
     [SerializeField] private UnityEvent afterKilling;
-    [SerializeField] private UnityEvent afterKillingSuicide;
+    [SerializeField] private UnityEvent afterFinalDialogue;
     [SerializeField] private UnityEvent onLosed;
     [SerializeField] private GameObject playerVisible;
     [SerializeField] private GameObject[] activateInFight;
@@ -84,7 +84,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
         stats.BlockDamage();
         _isSamuraiDefeated = KeyManager.Get_Bool_Key(bossKey);
 
-        if (_isSamuraiDefeated == 1) { showAnimation(5); afterKilling.Invoke(); }
+        if (_isSamuraiDefeated == 1) { showAnimation(5); afterKilling.Invoke(); Invoke(nameof(SendPenguin), 11f); }
         else { showAnimation(0); }
 
         startFight.onClick.AddListener(PreStartFight);
@@ -163,7 +163,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
         stats.BlockDamage();
         Invoke(nameof(OnBossDefeated), 0.5f);
         KeyManager.Set_Bool_Key(bossKey, 1);
-        afterKillingSuicide.Invoke();
+        Invoke(nameof(SendPenguin), 11f);
     }
 
     private void UnlockDialogueAttack() { attack.UnlockDialogue(); }
@@ -199,7 +199,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
             Instantiate(coil02, player.position, player.rotation);
             if (_coilCount <= 9) { Invoke(nameof(SpawnCoils), _betweenCoilSpawns); }
             else { Invoke(nameof(SpawnEnemy), _afterCoilSpawns); }
-            
+
         }
         _coilCount++;
         _slashCount = 0;
@@ -290,6 +290,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
         Invoke(nameof(OnBossDefeated), 2.5f);
         KeyManager.Set_Bool_Key(bossKey, 1);
         afterKilling.Invoke();
+        Invoke(nameof(SendPenguin), 11f);
         showAnimation(5);
     }
 
@@ -311,7 +312,9 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     private void DeleteSlashes()
     {
-        foreach (GameObject obj in _slashes) { if (obj != null) { Destroy(obj); }}
+        foreach (GameObject obj in _slashes) { if (obj != null) { Destroy(obj); } }
         _slashes.Clear();
     }
+
+    private void SendPenguin() { afterFinalDialogue.Invoke(); }
 }

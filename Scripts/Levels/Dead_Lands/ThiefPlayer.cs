@@ -4,6 +4,6 @@ using UnityEngine.Events;
 public class ThiefPlayer : MonoBehaviour
 {
     [SerializeField] private UnityEvent Thief;
-    public void DelayedThief() { Invoke(nameof(Steal), 20f); }
+    public void DelayedThief() { Invoke(nameof(Steal), 15f); }
     private void Steal() { Thief.Invoke(); }
 }
