@@ -23,8 +23,10 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] private TMP_Text manaText;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Slider manaSlider;
-    [Header("__ Accesories __")]
+    [Header("__ Accessories __")]
     public Accessories[] accessories;
+    [Header("__ Accessories Picture __")]
+    [SerializeField] private GameObject[] accessoriesPictures;
     [Header("__ Dead __")]
     [SerializeField] private GameObject[] deadPanels;
     [SerializeField] private Animation[] deadAnims;
@@ -308,6 +310,8 @@ public class PlayerStatus : MonoBehaviour
             return;
         }
 
+        SelectAccessoriesPicture(i);
+
         _extraLife = accessories[i].accessory.extraLife;
         _extraRegen = accessories[i].accessory.extraRegen;
         _extraMana = accessories[i].accessory.extraMana;
@@ -346,4 +350,6 @@ public class PlayerStatus : MonoBehaviour
         _st_health = KeyManager.Get_Bool_Key("skill_HEALTH");
         _st_mana = KeyManager.Get_Bool_Key("skill_MANA");
     }
+
+    private void SelectAccessoriesPicture(int id) { foreach(GameObject obj in accessoriesPictures) { obj.SetActive(false); } accessoriesPictures[id].SetActive(true); }
 }

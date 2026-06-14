@@ -13,6 +13,17 @@ public class KeyManager : MonoBehaviour
         PlayerPrefs.SetInt("weaponID", i);
     }
 
+    internal static int GetInt_VisualAccessoryID()
+    {
+        int i = PlayerPrefs.GetInt("visual_accessoryID", 0);
+        return i;
+    }
+
+    internal static void SetInt_VisualAccessoryID(int i)
+    {
+        PlayerPrefs.SetInt("visual_accessoryID", i);
+    }
+
     internal static int GetInt_AccessoryID()
     {
         int i = PlayerPrefs.GetInt("accessoryID", 0);
@@ -91,9 +102,28 @@ public class KeyManager : MonoBehaviour
         int letter = Get_Bool_Key("LetterTriggered");
         int note = Get_Bool_Key("NoteTriggered");
         int lang = Get_Bool_Key("Language");
+        int astraslimes = Get_Bool_Key("Astraslimes");
+        int visual0 = Get_Bool_Key("visual_bought_0");
+        int visual1 = Get_Bool_Key("visual_bought_1");
+        int visual2 = Get_Bool_Key("visual_bought_2");
+        int visual3 = Get_Bool_Key("visual_bought_3");
+        int usingVisual = GetInt_VisualAccessoryID();
         PlayerPrefs.DeleteAll();
         Set_Bool_Key("LetterTriggered", letter);
         Set_Bool_Key("NoteTriggered", note);
         Set_Bool_Key("Language", lang);
+        Set_Bool_Key("Astraslimes", astraslimes);
+        Set_Bool_Key("visual_bought_0", visual0);
+        Set_Bool_Key("visual_bought_1", visual1);
+        Set_Bool_Key("visual_bought_2", visual2);
+        Set_Bool_Key("visual_bought_3", visual3);
+        SetInt_VisualAccessoryID(usingVisual);
+    }
+
+    internal static void EndedGame()
+    {
+        int i = Get_Bool_Key("Astraslimes");
+        i += 1000;
+        Set_Bool_Key("Astraslimes", i);
     }
 }

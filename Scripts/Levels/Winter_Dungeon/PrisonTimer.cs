@@ -21,6 +21,8 @@ public class PrisonTimer : MonoBehaviour
     [SerializeField] private Animation loadPanel;
     [SerializeField] private TMP_Text timer_text;
     [SerializeField] private GameObject timer_obj;
+    [SerializeField] private GameObject planCompleted;
+    [SerializeField] private GameObject[] completeTask;
     [Header("__ UI helpers __")]
     [SerializeField] private Animation inPrisonHelp;
     [SerializeField] private Animation atWorkHelp;
@@ -34,7 +36,7 @@ public class PrisonTimer : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private GameObject autoKiller;
 
-    private bool _isCompletedTask = true;
+    private bool _isCompletedTask = false;
     private bool _inPrison = true;
     private int _minutes = 0;
     private int _seconds = 0;
@@ -108,6 +110,7 @@ public class PrisonTimer : MonoBehaviour
     private void GoToWork()
     {
         _inPrison = false;
+        _isCompletedTask = false;
         player.position = work.position;
         SetTimer(1);
         atWorkHelpObj.SetActive(true);
@@ -116,29 +119,21 @@ public class PrisonTimer : MonoBehaviour
 
     private void GoToPrison()
     {
-        if (!_isCompletedTask) { Instantiate(autoKiller, player.position, player.rotation); }
-        _isCompletedTask = false;
-
+        if (!_isCompletedTask) { Instantiate(autoKiller, player.position, player.rotation); return; }
+        _inPrison = true;
+        planCompleted.SetActive(false);
+        foreach(GameObject btn in completeTask) { btn.SetActive(true); }
         player.position = prison.position;
         SetTimer(0);
         inPrisonHelpObj.SetActive(true);
         inPrisonHelp.Play();
     }
 
-    public void CompleteTask() { _isCompletedTask = true; }
+    public void CompleteTask() { _isCompletedTask = true; planCompleted.SetActive(true); foreach(GameObject btn in completeTask) { btn.SetActive(false); }}
 
     public void Dead() { Invoke(nameof(_Dead), 1f); }
 
-    private void _Dead()
-    {
-        _inPrison = true;
-        _isCompletedTask = false;
-        // SetTimer(0);
-        // inPrisonHelpObj.SetActive(true);
-        // inPrisonHelp.Play();
-        // PlayTimer();
-        PauseTimer();
-    }
+    private void _Dead() { PauseTimer(); }
 
     public void PauseTimer()
     {

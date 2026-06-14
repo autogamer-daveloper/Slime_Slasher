@@ -1,1 +1,1 @@
-using UnityEngine; public class DeleteSave : MonoBehaviour { private void Start() { KeyManager.Delete_All(); KeyManager.Set_Bool_Key("WarningShowed", 1); } }
+using UnityEngine; public class DeleteSave : MonoBehaviour { private void Start() { KeyManager.EndedGame(); KeyManager.Delete_All(); KeyManager.Set_Bool_Key("WarningShowed", 1); } }

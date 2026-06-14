@@ -50,9 +50,11 @@ public class SkillTree : MonoBehaviour
     private int _needKill = 15;
     private int _killed = 0;
     private int _skillPoint = 0;
+    private int _astraslimes = 0;
 
     private void Start()
     {
+        _astraslimes = KeyManager.Get_Bool_Key("Astraslimes");
         Initialize();
         InitializeButtons();
         InitializeSkills();
@@ -211,10 +213,16 @@ public class SkillTree : MonoBehaviour
 
     public void KilledEnemy()
     {
-        if (_killed < _needKill - 1) {
+        _astraslimes += 10;
+        KeyManager.Set_Bool_Key("Astraslimes", _astraslimes);
+        
+        if (_killed < _needKill - 1)
+        {
             _killed += 1;
             KeyManager.Set_Bool_Key("killed_enemies", _killed);
-        } else {
+        }
+        else
+        {
             _killed = 0;
             _skillPoint += 1;
             KeyManager.Set_Bool_Key("killed_enemies", _killed);

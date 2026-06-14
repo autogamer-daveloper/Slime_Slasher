@@ -15214,7 +15214,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921756828}
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
-  m_Value: 0.9999996
+  m_Value: 1
   m_Size: 0.45714286
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15905,7 +15905,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575506715}
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
-  m_Value: 0.9999997
+  m_Value: 1
   m_Size: 0.5485714
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -28211,6 +28211,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 381801212348e2946b7dc224105d4866, type: 2}
   - {fileID: 11400000, guid: dc7217850afd46f4baa14f409ba91133, type: 2}
   - {fileID: 11400000, guid: b520fc991ebb7064797ecca07c31166f, type: 2}
+  weaponPictures: []
   audioSource: {fileID: 7456126708508722682}
   selectItem: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
   damage: 1
@@ -28250,6 +28251,7 @@ MonoBehaviour:
     selectButton: {fileID: 1042122671}
   - accessory: {fileID: 11400000, guid: 569dd9e1b02588845a6826ec366e990a, type: 2}
     selectButton: {fileID: 1212721673}
+  accessoriesPictures: []
   deadPanels: []
   deadAnims: []
   clearEnemies:
@@ -28280,8 +28282,10 @@ MonoBehaviour:
   stonePickaxe: {fileID: 989435992}
   ironPickaxe: {fileID: 1831818036}
   goldenPickaxe: {fileID: 1449281842}
+  pickaxePictures: []
   ironAxe: {fileID: 1247642834}
   goldenAxe: {fileID: 14991961}
+  axePictures: []
   src: {fileID: 7456126708508722682}
   selectItem: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
 --- !u!1 &630748192
@@ -60234,7 +60238,7 @@ MonoBehaviour:
     receiveClip: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
   - button: {fileID: 1679750183}
     receive: {fileID: 824609764}
-    countGet: 1
+    countGet: 100
     image: {fileID: 824135745}
     countable: 1
     count: {fileID: 1462420531}
@@ -60264,7 +60268,7 @@ MonoBehaviour:
     receiveClip: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
   - button: {fileID: 1877514461}
     receive: {fileID: 1769918702}
-    countGet: 1
+    countGet: 100
     image: {fileID: 916171770}
     countable: 1
     count: {fileID: 7766537}
@@ -60284,7 +60288,7 @@ MonoBehaviour:
     receiveClip: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
   - button: {fileID: 916785700}
     receive: {fileID: 1813559792}
-    countGet: 1
+    countGet: 100
     image: {fileID: 1929119482}
     countable: 1
     count: {fileID: 825861515}
@@ -74484,6 +74488,7 @@ MonoBehaviour:
   - {fileID: 36335666}
   - {fileID: 1251070484}
   - {fileID: 161101756}
+  autoHideAll: {fileID: 0}
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
@@ -85025,7 +85030,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664007846}
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
-  m_Value: 0.99999624
+  m_Value: 1
   m_Size: 0.88073397
   m_NumberOfSteps: 0
   m_OnValueChanged:

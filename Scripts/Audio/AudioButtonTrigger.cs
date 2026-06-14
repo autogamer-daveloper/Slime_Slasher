@@ -7,9 +7,11 @@ public class AudioButtonTrigger : MonoBehaviour
     [SerializeField] private Button button;
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip sfx;
+    [SerializeField] private bool isPrivate = true;
 
-    private void Start() { button.onClick.AddListener(PlaySound); }
-    private void OnDestroy() { button.onClick.RemoveListener(PlaySound); }
+    private void Start() { if (isPrivate) { button.onClick.AddListener(PlaySound); }}
+    private void OnDestroy() { if (isPrivate) { button.onClick.RemoveListener(PlaySound); }}
 
     private void PlaySound() { src.PlayOneShot(sfx); }
+    public void PlayThisSound() { if (isPrivate) { return; } PlaySound(); }
 }

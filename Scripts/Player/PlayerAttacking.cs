@@ -34,6 +34,9 @@ public class PlayerAttacking : MonoBehaviour
     [Header("__ Weapons __")]
     [SerializeField] private Weapons[] weapon;
 
+    [Header("__ Weapon Pictures __")]
+    [SerializeField] private GameObject[] weaponPictures;
+
     [Header("__ Audio __")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip selectItem;
@@ -146,6 +149,7 @@ public class PlayerAttacking : MonoBehaviour
         _cooldown = w.Cooldown;
         _type = w.Type;
         _sfx = w.Sfx;
+        SelectWeaponPicture();
 
         if (w.Type == Objects.Weapons.Weapons.WeaponType.Meele)
         {
@@ -367,4 +371,6 @@ public class PlayerAttacking : MonoBehaviour
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Range) { damage = w.Damage + _range_extra_damage; }
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Magic) { damage = w.Damage + _mage_extra_damage; }
     }
+
+    private void SelectWeaponPicture() { foreach(GameObject obj in weaponPictures) { obj.SetActive(false); } weaponPictures[_selectedWeapon].SetActive(true); }
 }

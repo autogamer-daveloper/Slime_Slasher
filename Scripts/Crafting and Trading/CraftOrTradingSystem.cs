@@ -12,6 +12,9 @@ public class Trade
     public int[] needItems;
     public TMP_Text[] countItems;
     public UnityEvent whatToDo;
+    public bool isOnceTradeOffer = false;
+    public string tradeOfferName = "trade_offer_axe";
+    public GameObject traded;
 }
 
 [System.Serializable]
@@ -23,6 +26,9 @@ public class Craft
     public TMP_Text[] countItems;
     public int receivedItemId = 1;
     public int receivedItemCount = 1;
+    public bool isOnceOffer = false;
+    public string offerName = "craft_offer_";
+    public GameObject crafted;
 }
 
 public class CraftOrTradingSystem : MonoBehaviour
@@ -54,7 +60,7 @@ public class CraftOrTradingSystem : MonoBehaviour
             for (int i = 0; i < trades.Length; i++)
             {
                 int id = i;
-                var t = trades[i];
+                var t = trades[id];
                 if (t == null) continue;
                 if (t.acceptTrade == null)
                 {
@@ -62,6 +68,15 @@ public class CraftOrTradingSystem : MonoBehaviour
                     continue;
                 }
                 t.acceptTrade.onClick.AddListener(() => TradeItem(id));
+                if (t.isOnceTradeOffer)
+                {
+                    int isTraded = KeyManager.Get_Bool_Key(t.tradeOfferName);
+                    if (isTraded != 0)
+                    {
+                        t.traded.SetActive(true);
+                        t.acceptTrade.interactable = false;
+                    }
+                }
             }
         }
 
@@ -70,7 +85,7 @@ public class CraftOrTradingSystem : MonoBehaviour
             for (int i = 0; i < crafts.Length; i++)
             {
                 int id = i;
-                var c = crafts[i];
+                var c = crafts[id];
                 if (c == null) continue;
                 if (c.acceptCraft == null)
                 {
@@ -78,6 +93,15 @@ public class CraftOrTradingSystem : MonoBehaviour
                     continue;
                 }
                 c.acceptCraft.onClick.AddListener(() => CraftItem(id));
+                if (c.isOnceOffer)
+                {
+                    int isCrafted = KeyManager.Get_Bool_Key(c.offerName);
+                    if (isCrafted != 0)
+                    {
+                        c.crafted.SetActive(true);
+                        c.acceptCraft.interactable = false;
+                    }
+                }
             }
         }
     }
@@ -196,6 +220,13 @@ public class CraftOrTradingSystem : MonoBehaviour
                 KeyManager.Spend_Item(trades[tradeId].itemsId[id], trades[tradeId].needItems[id]);
             }
 
+            if (trades[tradeId].isOnceTradeOffer)
+            {
+                KeyManager.Set_Bool_Key(trades[tradeId].tradeOfferName, 1);
+                trades[tradeId].traded.SetActive(true);
+                trades[tradeId].acceptTrade.interactable = false;
+            }
+
             trades[tradeId].whatToDo.Invoke();
             inv.Refresh();
             src.PlayOneShot(button);
@@ -216,6 +247,13 @@ public class CraftOrTradingSystem : MonoBehaviour
             {
                 int id = i;
                 KeyManager.Spend_Item(crafts[craftId].itemsId[id], crafts[craftId].needItems[id]);
+            }
+
+            if (crafts[craftId].isOnceOffer)
+            {
+                KeyManager.Set_Bool_Key(crafts[craftId].offerName, 1);
+                crafts[craftId].crafted.SetActive(true);
+                crafts[craftId].acceptCraft.interactable = false;
             }
 
             KeyManager.Receive_Item(crafts[craftId].receivedItemId, crafts[craftId].receivedItemCount);

@@ -857,7 +857,6 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
-  doubleClick: 0
 --- !u!1 &858910879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2290,6 @@ GameObject:
   - component: {fileID: 1912984771}
   - component: {fileID: 1912984772}
   - component: {fileID: 1912984773}
-  - component: {fileID: 1912984774}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -2356,7 +2354,6 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
-  doubleClick: 0
 --- !u!111 &1912984770
 Animation:
   m_ObjectHideFlags: 0
@@ -2419,18 +2416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b9f85b658170b4797f4c1880198e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeleteSave
---- !u!114 &1912984774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912984767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42212f23e68235e42a21eb16ae3ff3ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TweenCleaner
 --- !u!1 &1930510275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,7 +2808,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3309,7 +3294,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4561,7 +4546,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7419,7 +7404,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8695,7 +8680,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13241,7 +13226,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13953,7 +13938,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14938,7 +14923,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17238,7 +17223,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9177190961257834277, guid: 039b10c7fd14bb847be8b3c884b0a83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

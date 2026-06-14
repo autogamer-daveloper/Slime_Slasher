@@ -28,5 +28,5 @@ public class SetSecondPartNightmare : MonoBehaviour
         _2.DOFade(volume, 0.5f);
     }
 
-    public void MuteAll() { _2.DOFade(0f, 0.25f).SetAutoKill(true); foreach(AudioSource mute in needMute) { mute.DOFade(0f, 0.25f).SetAutoKill(true); } }
+    public void MuteAll() { _2.DOFade(0f, 0.25f).SetAutoKill(true); foreach(AudioSource mute in needMute) { if (mute != null) { mute.DOFade(0f, 0.25f).SetAutoKill(true); }}}
 }
