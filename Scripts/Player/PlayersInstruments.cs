@@ -32,6 +32,9 @@ public class PlayersInstruments : MonoBehaviour
     private void SelectedPickaxe(int id) { foreach (GameObject obj in pickaxePictures) { obj.SetActive(false); } pickaxePictures[id].SetActive(true); }
     private void SelectedAxe(int id) { foreach (GameObject obj in axePictures) { obj.SetActive(false); } axePictures[id].SetActive(true); }
 
+    public void SelectedPickaxePublic(int id) { SelectedPickaxe(id); }
+    public void SelectedAxePublic(int id) { SelectedAxe(id); }
+
     private void OnDestroy()
     {
         //pickaxe

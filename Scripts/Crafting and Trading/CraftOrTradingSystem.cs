@@ -24,6 +24,7 @@ public class Craft
     public int[] itemsId;
     public int[] needItems;
     public TMP_Text[] countItems;
+    public UnityEvent whatToDo;
     public int receivedItemId = 1;
     public int receivedItemCount = 1;
     public bool isOnceOffer = false;
@@ -159,7 +160,7 @@ public class CraftOrTradingSystem : MonoBehaviour
             {
                 int item = x;
                 int itemCount = KeyManager.Get_Item_Count(trades[id].itemsId[item]);
-                trades[id].countItems[item].text = trades[id].needItems[item] + "/" + itemCount.ToString();
+                trades[id].countItems[item].text = itemCount.ToString() + "/" + trades[id].needItems[item];
             }
         }
 
@@ -170,7 +171,7 @@ public class CraftOrTradingSystem : MonoBehaviour
             {
                 int item = x;
                 int itemCount = KeyManager.Get_Item_Count(crafts[id].itemsId[item]);
-                crafts[id].countItems[item].text = crafts[id].needItems[item] + "/" + itemCount.ToString();
+                crafts[id].countItems[item].text = itemCount.ToString() + "/" + crafts[id].needItems[item];
             }
         }
     }
@@ -256,6 +257,7 @@ public class CraftOrTradingSystem : MonoBehaviour
                 crafts[craftId].acceptCraft.interactable = false;
             }
 
+            crafts[craftId].whatToDo.Invoke();
             KeyManager.Receive_Item(crafts[craftId].receivedItemId, crafts[craftId].receivedItemCount);
             inv.Refresh();
             src.PlayOneShot(button);
