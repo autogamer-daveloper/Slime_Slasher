@@ -67,6 +67,7 @@ public class Inventory : MonoBehaviour
             if (_soundActions[i] != null) { el.receive.onClick.RemoveListener(_soundActions[i]); }
 
             int id = i;
+            //int id = el.itemId;
 
             UnityAction itemAction = () => GetItem(id);
             _receiveActions[i] = itemAction;
@@ -90,7 +91,10 @@ public class Inventory : MonoBehaviour
                 continue;
             }
 
-            int count = KeyManager.Get_Item_Count(i);
+            int count = 0;
+
+            if (el.itemId != 0) { count = KeyManager.Get_Item_Count(el.itemId); }
+            else { count = 1; }
 
             if (el.button != null)
             {
@@ -120,13 +124,14 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        Debug.Log($"Getting item... index = {index}");
+        Debug.Log($"Getting item... index in massive = {index}");
         var el = elements[index];
         if (el == null)
         {
             Debug.LogWarning($"GetItem: elements[{index}] is null.");
             return;
         }
+        Debug.Log($"Item id = {el.itemId}");
 
         if (el.type == InstrumentType.None) { Debug.Log("This item no need to have any instrument"); }
         else if (el.type == InstrumentType.Axe)
@@ -154,8 +159,8 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        if (el.countable) { KeyManager.Receive_Item(index, el.countGet); }
-        else { KeyManager.Receive_Item_Once(index); }
+        if (el.countable) { KeyManager.Receive_Item(el.itemId, el.countGet); }
+        else { KeyManager.Receive_Item_Once(el.itemId); }
 
         SerializeItems();
     }
