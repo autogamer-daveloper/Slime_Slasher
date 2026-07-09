@@ -29,7 +29,7 @@ public class TutorialSceneGuide : MonoBehaviour
 
     #endregion
 
-    public void EndLastDialogue() { Invoke(nameof(LoadScene), 0.5f); }
+    public void EndLastDialogue() { loader.SetActive(true); Invoke(nameof(LoadScene), 0.5f); }
     private void LoadScene() { LoadLevel.LoadLevelById(nextSceneId); }
 
     #region Help
