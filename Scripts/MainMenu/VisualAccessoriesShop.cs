@@ -5,14 +5,18 @@ using TMPro;
 [System.Serializable]
 public class VisualAccessoryProduct
 {
-    public int price = 1200;
-    public TMP_Text priceText;
+    [Header(" Main settings ")]
     public int visualId = 0; // counting from 1
     public string boughtKey = "visual_bought_0";
     public Button use;
+    public GameObject usingDot;
+    [Space(10)]
+    [Header(" Shop settings, if can be bought ")]
+    public bool canBuy = true;
+    public int price = 1200;
+    public TMP_Text priceText;
     public Button buy;
     public GameObject buyButton;
-    public GameObject usingDot;
 }
 
 public class VisualAccessoriesShop : MonoBehaviour
@@ -40,16 +44,21 @@ public class VisualAccessoriesShop : MonoBehaviour
         {
             int index = i;
             int isBought = KeyManager.Get_Bool_Key(products[index].boughtKey);
-            if (isBought != 0) { products[index].buyButton.SetActive(false); }
-            else { products[index].buyButton.SetActive(true); }
+            if (products[index].canBuy)
+            {
+                if (isBought != 0) { products[index].buyButton.SetActive(false); }
+                else { products[index].buyButton.SetActive(true); }
+                products[index].priceText.text = products[index].price.ToString();
+                products[index].buy.onClick.RemoveAllListeners();
+                products[index].buy.onClick.AddListener(() => { BuyVisualAccessory(index); });
+            }
             int isUsing = KeyManager.GetInt_VisualAccessoryID();
             if (isUsing == products[index].visualId) { products[index].usingDot.SetActive(true); }
             else { products[index].usingDot.SetActive(false); }
-            products[index].priceText.text = products[index].price.ToString();
             products[index].use.onClick.RemoveAllListeners();
-            products[index].buy.onClick.RemoveAllListeners();
             products[index].use.onClick.AddListener(() => { UseVisualAccessory(index); });
-            products[index].buy.onClick.AddListener(() => { BuyVisualAccessory(index); });
+            if (isBought != 0) { products[index].use.interactable = true; }
+            else { products[index].use.interactable = false; }
             Debug.LogWarning($"|Initialized {index} visual accessory|");
         }
     }
@@ -87,4 +96,6 @@ public class VisualAccessoriesShop : MonoBehaviour
         KeyManager.SetInt_VisualAccessoryID(0);
         Initialize(); UpdateUI();
     }
+
+    public void ReInitialize() { Initialize(); }
 }
