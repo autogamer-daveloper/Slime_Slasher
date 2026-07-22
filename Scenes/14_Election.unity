@@ -2888,6 +2888,7 @@ GameObject:
   - component: {fileID: 775894722}
   - component: {fileID: 775894724}
   - component: {fileID: 775894725}
+  - component: {fileID: 775894726}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -2950,6 +2951,19 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &775894726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775894721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b05037656a9bf46a803f92aab024f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetWeapon
+  weaponId: 0
 --- !u!1 &776846643
 GameObject:
   m_ObjectHideFlags: 0
