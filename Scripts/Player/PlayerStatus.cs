@@ -15,6 +15,7 @@ public class PlayerStatus : MonoBehaviour
 {
     [Header("__ Scene ID __")]
     [SerializeField] private int sceneID = 0;
+    [SerializeField] private bool isZero = false;
     [Header("__ Special __")]
     [SerializeField] private bool isFirstNightmare = false;
     [SerializeField] private ActivateTrapsNightmare nightmare;
@@ -86,17 +87,41 @@ public class PlayerStatus : MonoBehaviour
         healthSlider.value = health + _extraLife + _st_health;
         manaSlider.value = mana + _extraMana + _st_mana;
 
+        if (isZero == true)
+        {
+            maxHealth = 1;
+            maxMana = 1;
+
+            health = 1;
+            mana = 1;
+
+            healthSlider.maxValue = 1;
+            manaSlider.maxValue = 1;
+
+            healthSlider.value = 1;
+            manaSlider.value = 1;
+
+            //healthText.text = health.ToString() + "/" + maxHealth.ToString();
+            //manaText.text = mana.ToString() + "/" + maxMana.ToString();
+            
+            healthText.text = "Inf";
+            manaText.text = "Inf";
+        }
+
         Regeneration();
         InvokeRepeating("Regeneration", 1, 1);
 
         _isEasyMode = KeyManager.Get_Bool_Key("easyMode");
-        _deathCount = KeyManager.Get_Bool_Key("deathCount");
-        if (_deathCount >= 3)
+        if (isZero != true)
         {
-            deadPanels[2].SetActive(true);
-            deadAnims[2].Play();
-            Invoke(nameof(HideDeadPanels), 4.5f);
-            Invoke(nameof(DeadCutscene), 4.5f);
+            _deathCount = KeyManager.Get_Bool_Key("deathCount");
+            if (_deathCount >= 3)
+            {
+                deadPanels[2].SetActive(true);
+                deadAnims[2].Play();
+                Invoke(nameof(HideDeadPanels), 4.5f);
+                Invoke(nameof(DeadCutscene), 4.5f);
+            }
         }
     }
 
@@ -111,6 +136,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Regeneration()
     {
+        if(isZero == true) { return; }
         health += healthRegen + boostHealthRegen + _extraRegen;
         mana += manaRegen + boostManaRegen + _extraManaRegen;
 
@@ -127,6 +153,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void GetExtraMana(int extraMana)
     {
+        if(isZero == true) { return; }
         src.PlayOneShot(mage);
         mana += extraMana;
         if (mana >= maxMana + _extraMana + _st_mana) { mana = maxMana + _extraMana + _st_mana; }
@@ -136,6 +163,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void GetExtraLife(int extraLife)
     {
+        if(isZero == true) { return; }
         health += extraLife;
         if (health >= maxHealth + _extraLife + _st_health) { health = maxHealth + _extraLife + _st_health; }
         healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
@@ -144,12 +172,14 @@ public class PlayerStatus : MonoBehaviour
 
     internal void SetBonus(int lifeBonus, int manaBonus)
     {
+        if(isZero == true) { return; }
         boostHealthRegen = lifeBonus;
         boostManaRegen = manaBonus;
     }
 
     internal void ManaLose(int count, int lifeCount)
     {
+        if(isZero == true) { return; }
         mana -= count;
         health -= lifeCount;
         healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
@@ -162,6 +192,7 @@ public class PlayerStatus : MonoBehaviour
 
     internal void GetDamage(int dmg)
     {
+        if(isZero == true) { return; }
         health -= dmg;
         healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
 
@@ -171,6 +202,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void DeathCheck(bool selfHarm)
     {
+        if(isZero == true) { return; }
         if (health <= 0)
         {
             src.PlayOneShot(death);
@@ -230,6 +262,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Clear()
     {
+        if(isZero == true) { return; }
         clearEnemies.Invoke();
 
         health = 100;
@@ -242,10 +275,11 @@ public class PlayerStatus : MonoBehaviour
         manaSlider.value = mana + _extraMana + _st_mana;
     }
 
-    private void DeadCutscene() { LoadLevel.LoadLevelById(_deathCutsceneIndex); }
+    private void DeadCutscene() { if(isZero) { return; } LoadLevel.LoadLevelById(_deathCutsceneIndex); }
 
     private void Teleport()
     {
+        if(isZero == true) { return; }
         gameObject.transform.position = spawnPoint.position;
         alivePlayer.SetActive(true);
         deadPlayer.SetActive(false);
@@ -256,6 +290,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(isZero == true) { return; }
         if (isDead == true) return;
         if (isBlocked == true) return;
         if (other.CompareTag("EnemyAttack"))
@@ -286,6 +321,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void CheckAccessories()
     {
+        if(isZero == true) { return; }
         if (accessories == null || accessories.Length == 0)
         {
             Debug.LogWarning("[PlayerStatus] accessories array is null or empty. No accessory bonuses applied.");
@@ -347,6 +383,7 @@ public class PlayerStatus : MonoBehaviour
 
     internal void UpdateSkills()
     {
+        if(isZero == true) { return; }
         _st_health = KeyManager.Get_Bool_Key("skill_HEALTH");
         _st_mana = KeyManager.Get_Bool_Key("skill_MANA");
     }
