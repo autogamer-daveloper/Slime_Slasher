@@ -17,7 +17,10 @@ public class EnemyAttack : MonoBehaviour
     [Header("Attack - Range")]
     [SerializeField] private Transform aim;
     [SerializeField] private Transform bulletSpawn;
+    [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject bullet;
+
+    private int usedSpawnPoint = 0;
 
     [Header("__ Audio __")]
     [SerializeField] private AudioSource src;
@@ -130,6 +133,13 @@ public class EnemyAttack : MonoBehaviour
         }
         else
         {
+            if(spawnPoints.Length >= 1)
+            {
+                if(usedSpawnPoint >= spawnPoints.Length) { usedSpawnPoint = 0; }
+                bulletSpawn.position = spawnPoints[usedSpawnPoint].position;
+                usedSpawnPoint++;
+            }
+
             if (aim != null && bulletSpawn != null)
             {
                 Vector3 dir = aim.position - bulletSpawn.position;
