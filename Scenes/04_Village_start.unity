@@ -17998,6 +17998,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1519166355}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 4667966037794618978}
   sound: {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
@@ -85134,6 +85135,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364439758}
   m_CullTransparentMesh: 1
+--- !u!1001 &364890962
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348581304}
+    m_Modifications:
+    - target: {fileID: 4325452943779947492, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_Name
+      value: GlitchEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+--- !u!4 &364890963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+  m_PrefabInstance: {fileID: 364890962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &366065820
 GameObject:
   m_ObjectHideFlags: 0
@@ -129323,6 +129358,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 904395800}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 6932d4c0a33975c4f9b22f41ea6d4b7d, type: 3}
   src: {fileID: 6413244142955571245}
   sound: {fileID: 8300000, guid: 5637e4c056a6d1a4eb8517a7955dec0b, type: 3}
@@ -194428,6 +194464,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 805903593}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 7766106913954862861}
   sound: {fileID: 8300000, guid: 48f4069cdc17de74297d829f27460c20, type: 3}
@@ -202708,6 +202745,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 633677906}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 1185961177139689428}
   sound: {fileID: 8300000, guid: 48f4069cdc17de74297d829f27460c20, type: 3}
@@ -275471,6 +275509,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 982234700}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 3777231259037503433}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -320769,6 +320808,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1557858135}
+  - {fileID: 364890963}
   - {fileID: 71585807}
   - {fileID: 1653155557}
   m_Father: {fileID: 1783616554}
@@ -352962,6 +353002,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 362614010}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 5723453413718207169}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -356919,6 +356960,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 2059980777}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 86752735f1abcc348bc43a73adef1eaa, type: 3}
   src: {fileID: 1798628392412087249}
   sound: {fileID: 8300000, guid: 5637e4c056a6d1a4eb8517a7955dec0b, type: 3}
@@ -480116,6 +480158,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 507061707}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 5154749409188622781}
   sound: {fileID: 8300000, guid: 48f4069cdc17de74297d829f27460c20, type: 3}
@@ -509015,6 +509058,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1326493738524847415}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 8087098996999665601}
   sound: {fileID: 8300000, guid: 48f4069cdc17de74297d829f27460c20, type: 3}

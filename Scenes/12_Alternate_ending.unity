@@ -2835,6 +2835,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399485738}
   m_CullTransparentMesh: 1
+--- !u!1001 &402104983
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1957173365}
+    m_Modifications:
+    - target: {fileID: 4325452943779947492, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_Name
+      value: GlitchEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+--- !u!4 &402104984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+  m_PrefabInstance: {fileID: 402104983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &407482171
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,6 +4069,40 @@ Transform:
   - {fileID: 2417699118571575591}
   m_Father: {fileID: 775894722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.14}
+--- !u!1001 &521792478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5268169803398562474}
+    m_Modifications:
+    - target: {fileID: 4325452943779947492, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_Name
+      value: GlitchEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+--- !u!4 &521792479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6774454476966519772, guid: 400e3a72d795e7c45b3e2a2ea24ccff9, type: 3}
+  m_PrefabInstance: {fileID: 521792478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &548008596
 GameObject:
   m_ObjectHideFlags: 0
@@ -15519,6 +15587,7 @@ Transform:
   m_Children:
   - {fileID: 1840649782}
   - {fileID: 51483672}
+  - {fileID: 402104984}
   m_Father: {fileID: 775894722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974892505
@@ -18494,6 +18563,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1755674141}
+  - {fileID: 521792479}
   - {fileID: 7393323451590943716}
   m_Father: {fileID: 775894722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
