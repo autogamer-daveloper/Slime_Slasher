@@ -107,6 +107,9 @@ public class KeyManager : MonoBehaviour
         int visual1 = Get_Bool_Key("visual_bought_1");
         int visual2 = Get_Bool_Key("visual_bought_2");
         int visual3 = Get_Bool_Key("visual_bought_3");
+        int visual4 = Get_Bool_Key("visual_bought_4");
+        int visual5 = Get_Bool_Key("visual_bought_5");
+        int rate = Get_Bool_Key("Rated");
         int usingVisual = GetInt_VisualAccessoryID();
         PlayerPrefs.DeleteAll();
         Set_Bool_Key("LetterTriggered", letter);
@@ -117,6 +120,8 @@ public class KeyManager : MonoBehaviour
         Set_Bool_Key("visual_bought_1", visual1);
         Set_Bool_Key("visual_bought_2", visual2);
         Set_Bool_Key("visual_bought_3", visual3);
+        Set_Bool_Key("visual_bought_4", visual4);
+        Set_Bool_Key("Rated", rate);
         SetInt_VisualAccessoryID(usingVisual);
     }
 

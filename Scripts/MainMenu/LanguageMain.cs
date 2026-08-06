@@ -1,30 +1,32 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class LanguageMain : MonoBehaviour
 {
     [Header("__ UI __")]
-    [SerializeField] private GameObject[] buttons;
-    [SerializeField] private Button[] changeLanguage;
+    [SerializeField] private ChangeLangButton[] btn;
     [SerializeField] private GameObject loadLevel;
 
     private int _usingLang;
-    private int _langCount = 2;
 
     private void Start()
     {
         _usingLang = KeyManager.Get_Bool_Key("Language");
-        foreach (GameObject obj in buttons) { obj.SetActive(false); }
-        buttons[_usingLang].SetActive(true);
-        foreach (Button btn in changeLanguage) { btn.onClick.AddListener(ChangeLanguage); }
+        for (int i = 0; i < btn.Length; i++)
+        {
+            int index = i;
+            btn[index].action = () => { ChangeLanguage(index); };
+            btn[index].button.onClick.AddListener(btn[index].action);
+        }
     }
 
-    private void OnDestroy() { foreach (Button btn in changeLanguage) { btn.onClick.RemoveListener(ChangeLanguage); } }
+    private void OnDestroy() { foreach (ChangeLangButton b in btn) { b.button.onClick.RemoveListener(b.action); } }
 
-    private void ChangeLanguage()
+    private void ChangeLanguage(int id)
     {
-        if (_usingLang < _langCount - 1) { _usingLang++; }
-        else { _usingLang = 0; }
+        if (_usingLang == id) { return; }
+        _usingLang = id;
         KeyManager.Set_Bool_Key("Language", _usingLang);
 
         loadLevel.SetActive(true);
@@ -32,4 +34,11 @@ public class LanguageMain : MonoBehaviour
     }
 
     private void LoadScene() { LoadLevel.LoadLevelById(0); }
+}
+
+[System.Serializable]
+internal class ChangeLangButton
+{
+    public Button button;
+    public UnityAction action;
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 
@@ -16,6 +17,7 @@ public class LevelLoading : MonoBehaviour
     [SerializeField] private Button startNew;
     [SerializeField] private Button continueGame;
     [SerializeField] private Button tutorial;
+    [SerializeField] private Button zeroCampaign;
     [Header("__ Accept action __")]
     [SerializeField] private Button exitYes;
     [SerializeField] private Button startNewYes;
@@ -29,6 +31,7 @@ public class LevelLoading : MonoBehaviour
     [SerializeField] private AudioSource music;
 
     private int _tutorialIndexScene = 14;
+    private int _zeroCampaignIndexScene = 17;
     private int _saveIndex = 0;
     private bool _locked = false;
     private Vector2 _hidden = new Vector2(0, -2000);
@@ -54,6 +57,7 @@ public class LevelLoading : MonoBehaviour
         exit.onClick.AddListener(ShowExit);
 
         tutorial.onClick.AddListener(ShowTutorial);
+        zeroCampaign.onClick.AddListener(ZeroCampaignStart);
         exitYes.onClick.AddListener(Exit);
         startNewYes.onClick.AddListener(StartNewGame);
         continueGameYes.onClick.AddListener(ContinueGame);
@@ -68,6 +72,7 @@ public class LevelLoading : MonoBehaviour
         exit.onClick.RemoveListener(ShowExit);
 
         tutorial.onClick.RemoveListener(ShowTutorial);
+        zeroCampaign.onClick.RemoveListener(ZeroCampaignStart);
         exitYes.onClick.RemoveListener(Exit);
         startNewYes.onClick.RemoveListener(StartNewGame);
         continueGameYes.onClick.RemoveListener(ContinueGame);
@@ -118,14 +123,29 @@ public class LevelLoading : MonoBehaviour
     private void ShowTutorial()
     {
         if (_locked) return;
-        Invoke(nameof(LoadTutorial), 1f);
         loader.SetActive(true);
         PlayButtonSFX();
         music.DOFade(0f, 0.5f);
+        LoadCustomCampaign(_tutorialIndexScene, 1f);
+    }
+
+    private void ZeroCampaignStart()
+    {
+        if (_locked) return;
+        loader.SetActive(true);
+        PlayButtonSFX();
+        music.DOFade(0f, 0.5f);
+        LoadCustomCampaign(_zeroCampaignIndexScene, 1f);
     }
 
     private void LoadGame() { LoadLevel.LoadLevelById(sceneIndex[_saveIndex]); PlayButtonSFX(); }
-    private void LoadTutorial() { LoadLevel.LoadLevelById(_tutorialIndexScene); PlayButtonSFX(); }
+    private void LoadYourCampaign(int id) { LoadLevel.LoadLevelById(id); PlayButtonSFX(); }
+
+    IEnumerator LoadCustomCampaign(int id, float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        LoadYourCampaign(id);
+    }
 
     private void OnToggleChanged(Toggle change) { _startWithEasyMode = change.isOn; PlayButtonSFX(); }
     
