@@ -2497,7 +2497,7 @@ GameObject:
   - component: {fileID: 204909568}
   - component: {fileID: 204909567}
   m_Layer: 0
-  m_Name: Trigger (Door) (1)
+  m_Name: Trigger (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3387,7 +3387,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3575,7 +3575,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8827,6 +8827,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5158704730037650588, guid: e71d2a7fb7fe6a642b23fbe96adcb8ba, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158704730037650588, guid: e71d2a7fb7fe6a642b23fbe96adcb8ba, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158704730037650588, guid: e71d2a7fb7fe6a642b23fbe96adcb8ba, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14032,6 +14044,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 204909565}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1492339652}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1492339655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16604,7 +16640,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22080,6 +22116,7 @@ GameObject:
   - component: {fileID: 1558870483296200877}
   - component: {fileID: 7268008091659801835}
   - component: {fileID: 8838007101555406042}
+  - component: {fileID: 8838007101555406043}
   m_Layer: 5
   m_Name: LoadPanel
   m_TagString: Untagged
@@ -22523,6 +22560,27 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+--- !u!114 &8838007101555406043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076089593071373850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128a3a31f66926d4ba343f390a16c83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MuteOnEnable
+  src:
+  - {fileID: 1394686235}
+  - {fileID: 944065580}
+  - {fileID: 806395291}
+  - {fileID: 2339914522905296920}
+  - {fileID: 4667966037794618978}
+  volume: 0
+  time: 0.75
+  isOnEnable: 1
 --- !u!1 &8864690404379010049
 GameObject:
   m_ObjectHideFlags: 0

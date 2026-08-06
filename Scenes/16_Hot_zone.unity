@@ -9499,7 +9499,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.5
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -18054,6 +18054,7 @@ GameObject:
   - component: {fileID: 794613199}
   - component: {fileID: 794613198}
   - component: {fileID: 794613200}
+  - component: {fileID: 794613201}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -18195,6 +18196,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
   container: {fileID: 11400000, guid: 40c9d10d888ea0f4a981ee015c366709, type: 2}
+--- !u!114 &794613201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794613196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
+  src: {fileID: 426870007}
+  sfx: {fileID: 8300000, guid: 0063f29f26a9e6d4f87500527ca23218, type: 3}
+  isNeedDelay: 1
+  delay: 1
+  isSpecLang: 1
+  usingLang: 1
 --- !u!1 &795965387
 GameObject:
   m_ObjectHideFlags: 0

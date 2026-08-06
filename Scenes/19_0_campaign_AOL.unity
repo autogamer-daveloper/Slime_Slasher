@@ -5720,6 +5720,7 @@ GameObject:
   - component: {fileID: 152111865}
   - component: {fileID: 152111866}
   - component: {fileID: 152111867}
+  - component: {fileID: 152111868}
   m_Layer: 5
   m_Name: Space
   m_TagString: Untagged
@@ -5851,10 +5852,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 152111868}
+        m_TargetAssemblyTypeName: MuteOnEnable, Assembly-CSharp
+        m_MethodName: Mute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLoadLevelAction: 0
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+--- !u!114 &152111868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152111860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128a3a31f66926d4ba343f390a16c83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MuteOnEnable
+  src:
+  - {fileID: 1394686235}
+  - {fileID: 2339914522905296920}
+  volume: 0
+  time: 1
+  isOnEnable: 0
 --- !u!1 &161398768
 GameObject:
   m_ObjectHideFlags: 0
@@ -10779,7 +10810,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11323,7 +11354,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416413
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24069,6 +24100,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5158704730037650588, guid: e71d2a7fb7fe6a642b23fbe96adcb8ba, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158704730037650588, guid: e71d2a7fb7fe6a642b23fbe96adcb8ba, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158704730037650588, guid: e71d2a7fb7fe6a642b23fbe96adcb8ba, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29299,6 +29342,7 @@ GameObject:
   - component: {fileID: 1042628305}
   - component: {fileID: 1042628307}
   - component: {fileID: 1042628306}
+  - component: {fileID: 1042628308}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -29430,6 +29474,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042628304}
   m_CullTransparentMesh: 1
+--- !u!114 &1042628308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042628304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
+  src: {fileID: 4667966037794618978}
+  sfx: {fileID: 8300000, guid: 2632c870eac96974598ebe2350bc1c81, type: 3}
+  isNeedDelay: 1
+  delay: 1
+  isSpecLang: 1
+  usingLang: 1
 --- !u!1 &1046522427
 GameObject:
   m_ObjectHideFlags: 0
@@ -39147,6 +39209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1394686234}
   - component: {fileID: 1394686235}
+  - component: {fileID: 1394686236}
   m_Layer: 0
   m_Name: planet_ambient
   m_TagString: Untagged
@@ -39182,7 +39245,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: df5d9ac02ff86af478949125115e5c0a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39266,6 +39329,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &1394686236
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394686233}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 1c21eccdb5355f84b960219902b7f24b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1c21eccdb5355f84b960219902b7f24b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1396879418
 GameObject:
   m_ObjectHideFlags: 0
@@ -52030,7 +52110,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -69077,13 +69157,13 @@ MonoBehaviour:
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
   rusClip:
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
-  - {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
+  - {fileID: 8300000, guid: 09ff6fea58278c8499f7543d0b627f9b, type: 3}
+  - {fileID: 8300000, guid: 3a66d6ea77d1c194aafd38582c14868f, type: 3}
+  - {fileID: 8300000, guid: 777ab8db92937184c87ee95ab0bca6bd, type: 3}
+  - {fileID: 8300000, guid: 65d8b8ce759a61f48a1c23fe26c4429a, type: 3}
+  - {fileID: 8300000, guid: e853f93aeef1840458dc71386590a465, type: 3}
+  - {fileID: 8300000, guid: 733dc8a0251999c4b882b1d467f85aee, type: 3}
+  - {fileID: 8300000, guid: 7aec8e3899b98424a8907bc6f47c5ef3, type: 3}
 --- !u!114 &5127675108002213694
 MonoBehaviour:
   m_ObjectHideFlags: 0

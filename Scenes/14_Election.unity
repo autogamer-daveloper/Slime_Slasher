@@ -3158,6 +3158,7 @@ GameObject:
   - component: {fileID: 794613199}
   - component: {fileID: 794613198}
   - component: {fileID: 794613200}
+  - component: {fileID: 794613201}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3299,6 +3300,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
   container: {fileID: 11400000, guid: c71f21566239c84439232267d18c315d, type: 2}
+--- !u!114 &794613201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794613196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1bbe500fb32344a1510c6cb64a05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioOnEnable
+  src: {fileID: 426870007}
+  sfx: {fileID: 8300000, guid: 039b0fc5c32d2b042ae89a29a8a499f2, type: 3}
+  isNeedDelay: 1
+  delay: 0.5
+  isSpecLang: 1
+  usingLang: 1
 --- !u!1 &832512849
 GameObject:
   m_ObjectHideFlags: 0
