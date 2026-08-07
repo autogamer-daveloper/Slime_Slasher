@@ -10810,7 +10810,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11354,7 +11354,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416413
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29343,6 +29343,7 @@ GameObject:
   - component: {fileID: 1042628307}
   - component: {fileID: 1042628306}
   - component: {fileID: 1042628308}
+  - component: {fileID: 1042628309}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -29492,6 +29493,19 @@ MonoBehaviour:
   delay: 1
   isSpecLang: 1
   usingLang: 1
+--- !u!114 &1042628309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042628304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  container: {fileID: 11400000, guid: 6ecdbb78fb3b74843a3263802bacd026, type: 2}
 --- !u!1 &1046522427
 GameObject:
   m_ObjectHideFlags: 0
@@ -52110,7 +52124,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

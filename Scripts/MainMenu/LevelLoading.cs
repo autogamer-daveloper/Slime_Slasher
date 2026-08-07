@@ -126,7 +126,7 @@ public class LevelLoading : MonoBehaviour
         loader.SetActive(true);
         PlayButtonSFX();
         music.DOFade(0f, 0.5f);
-        LoadCustomCampaign(_tutorialIndexScene, 1f);
+        StartCoroutine(LoadCustomCampaign(_tutorialIndexScene, 1f));
     }
 
     private void ZeroCampaignStart()
@@ -135,7 +135,7 @@ public class LevelLoading : MonoBehaviour
         loader.SetActive(true);
         PlayButtonSFX();
         music.DOFade(0f, 0.5f);
-        LoadCustomCampaign(_zeroCampaignIndexScene, 1f);
+        StartCoroutine(LoadCustomCampaign(_zeroCampaignIndexScene, 1f));
     }
 
     private void LoadGame() { LoadLevel.LoadLevelById(sceneIndex[_saveIndex]); PlayButtonSFX(); }
