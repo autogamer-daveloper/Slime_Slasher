@@ -30,37 +30,36 @@ public class NewAnimatedPanelsAtMenu : MonoBehaviour
         for (int i = 0; i < panels.Length; i++)
         {
             int index = i;
-            panels[index].action = () => { CallPanel(index); };
-            panels[index].button.onClick.AddListener(panels[index].action);
+            panels[index].show = () => { ShowPanel(index); };
+            panels[index].hide = () => { HidePanel(index); };
+            panels[index].buttonShow.onClick.AddListener(panels[index].show);
+            panels[index].buttonHide.onClick.AddListener(panels[index].hide);
         }
     }
 
-    private void OnDestroy() { foreach (AnimatedPanelForNewMenu pan in panels) { pan.button.onClick.RemoveAllListeners(); } }
+    private void OnDestroy()
+    {
+        foreach (AnimatedPanelForNewMenu pan in panels)
+        {
+            pan.buttonShow.onClick.RemoveAllListeners();
+            pan.buttonHide.onClick.RemoveAllListeners();
+        }
+    }
 
-    private void CallPanel(int id)
+    private void ShowPanel(int id)
+    {
+        _using = id;
+        Background(false);
+        panels[id].panel.DOAnchorPos(shown, timer);
+    }
+
+    private void HidePanel(int id)
     {
         if (_using == id)
         {
             _using = -1;
             Background(true);
             foreach (AnimatedPanelForNewMenu pan in panels) { pan.panel.DOAnchorPos(hidden, timer); }
-        }
-        else
-        {
-            _using = id;
-            Background(false);
-            for (int i = 0; i < panels.Length; i++)
-            {
-                int index = i;
-                if (index == id)
-                {
-                    panels[index].panel.DOAnchorPos(shown, timer);
-                }
-                else
-                {
-                    panels[index].panel.DOAnchorPos(hidden, timer);
-                }
-            }
         }
     }
 
@@ -72,7 +71,7 @@ public class NewAnimatedPanelsAtMenu : MonoBehaviour
             shadowPanel.Play(_hide_shadow_panel);
             _isHiddenLogo = false;
         }
-        else if(_isHiddenLogo == false)
+        else if (_isHiddenLogo == false)
         {
             logo.Play(_hide_logo);
             shadowPanel.Play(_show_shadow_panel);
@@ -85,6 +84,8 @@ public class NewAnimatedPanelsAtMenu : MonoBehaviour
 internal class AnimatedPanelForNewMenu
 {
     public RectTransform panel;
-    public Button button;
-    public UnityAction action;
+    public Button buttonShow;
+    public Button buttonHide;
+    public UnityAction show;
+    public UnityAction hide;
 }
