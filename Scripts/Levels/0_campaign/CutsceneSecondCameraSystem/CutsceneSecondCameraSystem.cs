@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 
 public class CutsceneSecondCameraSystem : MonoBehaviour
@@ -13,6 +14,8 @@ public class CutsceneSecondCameraSystem : MonoBehaviour
     [SerializeField] private Transform cutsceneCameraTransform;
     [SerializeField] private bool needEnd = false;
 
+    private List<Coroutine> activeCoroutines = new List<Coroutine>();
+
     private void Start() { if (atStart) { StartMoving(); } }
 
     public void StartCutsceneCamera() { StartMoving(); }
@@ -22,10 +25,13 @@ public class CutsceneSecondCameraSystem : MonoBehaviour
         playerCamera.SetActive(false);
         cutsceneCamera.SetActive(true);
 
+        activeCoroutines.Clear();
+
         for (int i = 0; i < points.Length; i++)
         {
             int index = i;
-            StartCoroutine(CallMoving(index, points[index].timeToActivate));
+            Coroutine coroutine = StartCoroutine(CallMoving(index, points[index].timeToActivate));
+            activeCoroutines.Add(coroutine);
         }
     }
 
@@ -47,6 +53,17 @@ public class CutsceneSecondCameraSystem : MonoBehaviour
     {
         playerCamera.SetActive(true);
         cutsceneCamera.SetActive(false);
+    }
+
+    public void CancelCutsceneCamera()
+    {
+        CancelInvoke(nameof(EndedCutscene));
+
+        foreach (Coroutine coroutine in activeCoroutines) { if (coroutine != null) { StopCoroutine(coroutine); }}
+        
+        activeCoroutines.Clear();
+
+        EndedCutscene();
     }
 }
 

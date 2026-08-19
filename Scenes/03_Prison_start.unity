@@ -21264,6 +21264,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 895717440}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 2621451664098952117}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -42334,6 +42335,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 697358384}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 8862216999647399869}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -49263,6 +49265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatus
   sceneID: 3
+  isZero: 0
   isFirstNightmare: 0
   nightmare: {fileID: 0}
   healthText: {fileID: 2038880669}
@@ -85200,6 +85203,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  dialogueSFX: {fileID: 0}
 --- !u!114 &1080533702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95327,6 +95331,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 317670903}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 385892621596336002}
   sound: {fileID: 8300000, guid: 23182c6638e9967488534423df4bbc38, type: 3}
@@ -108547,6 +108552,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 154030827}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 3913381803736080939}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -110156,6 +110162,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 2196355}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 8560660231101544666}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -188272,6 +188279,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 4236011002224819124}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: 5cd34354ab0481e418409c5220fc3510, type: 3}
   src: {fileID: 2797485901392743372}
   sound: {fileID: 8300000, guid: e8526c9bb092e9b43a78d5418fec9a49, type: 3}
@@ -191858,6 +191866,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 1703660191}
   doTask: 1
+  dialogueSFX: {fileID: 3008045085905881943}
 --- !u!114 &8395965772186235650
 MonoBehaviour:
   m_ObjectHideFlags: 0

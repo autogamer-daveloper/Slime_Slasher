@@ -9,10 +9,12 @@ public class GetObject : MonoBehaviour
     [SerializeField] private Inventory inventory;
     [SerializeField] private GameObject button;
     [SerializeField] private int id = 0;
+    [Header("__ Experimental __")]
+    [SerializeField] private bool getByTouch = true;
 
-    private string objName = "INVENTORY_FOUNDER";
-    private GameObject obj;
-    private InventoryFounder founder;
+    // private string objName = "INVENTORY_FOUNDER";
+    // private GameObject obj;
+    // private InventoryFounder founder;
 
     private Button _button;
 
@@ -25,37 +27,48 @@ public class GetObject : MonoBehaviour
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         if (inventory == null) { Debug.LogError($"[GetObject {gameObject.name}]: can't find inventory script"); }
 
-        obj = GameObject.Find(objName);
-        if (obj != null)
-        {
-            founder = obj.GetComponent<InventoryFounder>();
-            if (founder != null) { button = founder.GetReceiveButtonById(id); }
-            else { Debug.LogError($"[GetObject {gameObject.name}]: founder is null, something went wrong. Maybe 'obj' is empty"); }
-        }
-        else { Debug.LogError($"[GetObject {gameObject.name}]: not found 'obj' in scene, can't automatically get receive button"); }
+        // obj = GameObject.Find(objName);
+        // if (obj != null)
+        // {
+        //     founder = obj.GetComponent<InventoryFounder>();
+        //     if (founder != null) { button = founder.GetReceiveButtonById(id); }
+        //     else { Debug.LogError($"[GetObject {gameObject.name}]: founder is null, something went wrong. Maybe 'obj' is empty"); }
+        // }
+        // else { Debug.LogError($"[GetObject {gameObject.name}]: not found 'obj' in scene, can't automatically get receive button"); }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            if (button != null)
+            if (!getByTouch)
             {
-                _button.onClick.AddListener(DestroyGameObject);
-                inventory.SerializeReceiveButtons();
-                button.SetActive(true);
+                if (button != null)
+                {
+                    _button.onClick.AddListener(DestroyGameObject);
+                    inventory.SerializeReceiveButtons();
+                    button.SetActive(true);
+                }
+            }
+            else
+            {
+                inventory.GetItemByTouch(id);
+                DestroyGameObject();
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            if (button != null)
+            if (!getByTouch)
             {
-                inventory.SerializeReceiveButtons();
-                button.SetActive(false);
+                if (button != null)
+                {
+                    inventory.SerializeReceiveButtons();
+                    button.SetActive(false);
+                }
             }
         }
     }

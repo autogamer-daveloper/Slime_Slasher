@@ -116,6 +116,22 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    internal void GetItemByTouch(int itemId)
+    {
+        for (int i = 0; i < elements.Length; i++)
+        {
+            var el = elements[i];
+            if (el != null && el.itemId == itemId)
+            {
+                _soundActions[i]?.Invoke();
+                GetItem(i);
+                return;
+            }
+        }
+        
+        Debug.LogWarning($"Item with ID {itemId} not found in inventory");
+    }
+
     private void GetItem(int index)
     {
         if (index < 0 || index >= elements.Length)

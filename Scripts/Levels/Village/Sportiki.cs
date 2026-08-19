@@ -8,7 +8,6 @@ public class Sportiki : MonoBehaviour
     [Header("__ If prisoner killed __")]
     [SerializeField] private GameObject[] ifKilled;
     [SerializeField] private GameObject dialogue;
-    [SerializeField] private float spawn = 10;
     [SerializeField] private GameObject[] realKillers;
     [SerializeField] private Button spawnButton;
     [Header("__ Any __")]
@@ -69,11 +68,10 @@ public class Sportiki : MonoBehaviour
         if (isKilledPrisoner == 0 && wasAtHome == 0)
         {
             dialogue.SetActive(true);
-            Invoke(nameof(SpawnRealKillers), spawn);
         }
     }
 
-    private void SpawnRealKillers()
+    public void SpawnRealKillers()
     {
         foreach (GameObject obj in ifKilled) { obj.SetActive(false); }
         foreach (GameObject obj in realKillers) { obj.SetActive(true); }

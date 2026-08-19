@@ -82,8 +82,17 @@ public class KeyManager : MonoBehaviour
 
     internal static void Receive_Item_Once(int id)
     {
-        if (PlayerPrefs.HasKey(id.ToString())) { return; }
-        else { PlayerPrefs.SetInt(id.ToString(), 1); }
+        int currentCount = PlayerPrefs.GetInt(id.ToString(), 0);
+        
+        if (currentCount <= 0)
+        { 
+            PlayerPrefs.SetInt(id.ToString(), 1);
+            Debug.Log($"Item {id} added once (was {currentCount})");
+        }
+        else
+        {
+            Debug.Log($"Item {id} already have {currentCount}, skipping");
+        }
     }
 
     internal static void Set_Bool_Key(string name, int number)

@@ -9,9 +9,13 @@ public class DelayStartTimer : MonoBehaviour
     [SerializeField] private UnityEvent action;
     [SerializeField] private bool isLoadLevelAction = false;
     [SerializeField] private int index = 0;
+    [Header("__ Skip button __")]
     [Tooltip("Optional. May be used for skip")]
     [SerializeField] private Button CancelInvokeButton;
     [SerializeField] private bool doTask = false;
+    [Header("__ AudioSources for stop dialogue __")]
+    [Tooltip("Optional. For stop dialogue sfx.")]
+    [SerializeField] private AudioSource dialogueSFX;
 
     private void Start() { if (CancelInvokeButton != null) CancelInvokeButton.onClick.AddListener(Cancel); }
 
@@ -29,6 +33,8 @@ public class DelayStartTimer : MonoBehaviour
 
     private void Cancel()
     {
+        if(dialogueSFX != null) { dialogueSFX.Stop(); }
+
         if (isLoadLevelAction == false) { CancelInvoke(nameof(Action)); }
         else { CancelInvoke(nameof(ActionLevelLoad)); }
 
