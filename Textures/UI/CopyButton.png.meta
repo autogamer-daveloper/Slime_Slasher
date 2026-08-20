@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 500edff3bc45a2a45965424adfb2d42c
+guid: 487206c18a516ff449ac37f3e94e5d5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1270385444501127926
-    second: Accessories_00_0
+      213: -4634712607718227142
+    second: CopyButton_0
   - first:
-      213: 682664072772415650
-    second: Accessories_00_1
-  - first:
-      213: 8673495707409671922
-    second: Accessories_00_2
-  - first:
-      213: -2549478318386599335
-    second: Accessories_00_3
-  - first:
-      213: -4637892152713859378
-    second: Accessories_00_4
+      213: -6499163076002285856
+    second: CopyButton_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -125,133 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Accessories_samurai_helmet
+      name: CopyButton_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 317
-        width: 182
-        height: 144
+        x: 16
+        y: 0
+        width: 183
+        height: 219
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f2015bb4d051a110800000000000000
-      internalID: 1270385444501127926
+      spriteID: a334ee460713eafb0800000000000000
+      internalID: -4634712607718227142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Accessories_sniper_hat
+      name: CopyButton_1
       rect:
         serializedVersion: 2
-        x: 271
-        y: 347
-        width: 196
-        height: 104
+        x: 71
+        y: 51
+        width: 168
+        height: 205
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a075867b5f497900800000000000000
-      internalID: 682664072772415650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Accessories_Crown
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 181
-        width: 185
-        height: 116
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f6670944627e5870800000000000000
-      internalID: 8673495707409671922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Accessories_witcher_hat
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 173
-        width: 188
-        height: 136
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95aa1062afe6e9cd0800000000000000
-      internalID: -2549478318386599335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Accessories_cylinder
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 15
-        width: 150
-        height: 134
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ece2be2e8a5e2afb0800000000000000
-      internalID: -4637892152713859378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Accessories_soldier_helmet
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 35
-        width: 175
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9502e90058da654bb8a11f9a63b568a
-      internalID: 771206433
+      spriteID: 0e67c8dcd955ec5a0800000000000000
+      internalID: -6499163076002285856
       vertices: []
       indices: 
       edges: []
@@ -260,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5f1b02f1c5ff3b4499e1aeb19e8ff149
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -270,12 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Accessories_Crown: 8673495707409671922
-      Accessories_cylinder: -4637892152713859378
-      Accessories_samurai_helmet: 1270385444501127926
-      Accessories_sniper_hat: 682664072772415650
-      Accessories_soldier_helmet: 771206433
-      Accessories_witcher_hat: -2549478318386599335
+      CopyButton_0: -4634712607718227142
+      CopyButton_1: -6499163076002285856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

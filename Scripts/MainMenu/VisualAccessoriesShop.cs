@@ -35,19 +35,22 @@ public class VisualAccessoriesShop : MonoBehaviour
 
     private void OnDestroy() { removeVisualAccessories.onClick.RemoveListener(DeleteVisualAccessories); }
 
-    private void UpdateUI() { Debug.LogWarning("|Updated UI|"); astraslimesText.text = _astraslimes.ToString(); }
+    private void UpdateUI() { Debug.Log("|Updated UI|"); astraslimesText.text = _astraslimes.ToString(); }
 
     private void Initialize()
     {
-        Debug.LogWarning("|Initializing visual accessories|");
+        Debug.Log("|Initializing visual accessories|");
         for (int i = 0; i < products.Length; i++)
         {
             int index = i;
             int isBought = KeyManager.Get_Bool_Key(products[index].boughtKey);
-            if (products[index].canBuy)
+            if (products[index].buyButton != null)
             {
                 if (isBought != 0) { products[index].buyButton.SetActive(false); }
                 else { products[index].buyButton.SetActive(true); }
+            }
+            if (products[index].canBuy)
+            {
                 products[index].priceText.text = products[index].price.ToString();
                 products[index].buy.onClick.RemoveAllListeners();
                 products[index].buy.onClick.AddListener(() => { BuyVisualAccessory(index); });
@@ -59,16 +62,22 @@ public class VisualAccessoriesShop : MonoBehaviour
             products[index].use.onClick.AddListener(() => { UseVisualAccessory(index); });
             if (isBought != 0) { products[index].use.interactable = true; }
             else { products[index].use.interactable = false; }
-            Debug.LogWarning($"|Initialized {index} visual accessory|");
+            Debug.Log($"|Initialized {index} visual accessory|");
         }
+    }
+
+    public void GetForFreeVisualAccessory(int id)
+    {
+        KeyManager.Set_Bool_Key(products[id].boughtKey, 1);
+        Initialize(); UpdateUI();
     }
 
     private void BuyVisualAccessory(int id)
     {
-        Debug.LogWarning($"|Buying {id} visual accessory|");
+        Debug.Log($"|Buying {id} visual accessory|");
         if (_astraslimes >= products[id].price)
         {
-            Debug.LogWarning($"|Bought {id} visual accessory|");
+            Debug.Log($"|Bought {id} visual accessory|");
             KeyManager.Set_Bool_Key(products[id].boughtKey, 1);
             _astraslimes -= products[id].price;
             KeyManager.Set_Bool_Key("Astraslimes", _astraslimes);
@@ -84,7 +93,7 @@ public class VisualAccessoriesShop : MonoBehaviour
 
     private void UseVisualAccessory(int id)
     {
-        Debug.LogWarning($"|Using {id} visual accessory|");
+        Debug.Log($"|Using {id} visual accessory|");
         int isBought = KeyManager.Get_Bool_Key(products[id].boughtKey);
         if (isBought != 0) { KeyManager.SetInt_VisualAccessoryID(products[id].visualId); }
         Initialize(); UpdateUI();
@@ -92,7 +101,7 @@ public class VisualAccessoriesShop : MonoBehaviour
 
     private void DeleteVisualAccessories()
     {
-        Debug.LogWarning("|Deleted visual accessories|");
+        Debug.Log("|Deleted visual accessories|");
         KeyManager.SetInt_VisualAccessoryID(0);
         Initialize(); UpdateUI();
     }

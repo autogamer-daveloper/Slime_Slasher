@@ -22391,7 +22391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 98986158}
   - component: {fileID: 98986160}
-  - component: {fileID: 98986159}
+  - component: {fileID: 98986161}
   m_Layer: 0
   m_Name: Farm_Example (1)
   m_TagString: Untagged
@@ -22416,8 +22416,26 @@ Transform:
   - {fileID: 1769745559}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &98986159
-CircleCollider2D:
+--- !u!114 &98986160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98986157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 1769745558}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &98986161
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22451,25 +22469,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &98986160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98986157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 1769745558}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &99026066
 GameObject:
   m_ObjectHideFlags: 0
@@ -31634,7 +31635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 135966990}
   - component: {fileID: 135966992}
-  - component: {fileID: 135966991}
+  - component: {fileID: 135966993}
   m_Layer: 0
   m_Name: Farm_Example (3)
   m_TagString: Untagged
@@ -31659,8 +31660,26 @@ Transform:
   - {fileID: 1733163325}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &135966991
-CircleCollider2D:
+--- !u!114 &135966992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135966989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 1733163324}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &135966993
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -31694,25 +31713,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &135966992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135966989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 1733163324}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &136081176
 GameObject:
   m_ObjectHideFlags: 0
@@ -39711,7 +39713,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -39721,7 +39723,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &175423106
 SpriteRenderer:
@@ -72143,7 +72145,6 @@ MonoBehaviour:
   ifKilled:
   - {fileID: 2098161141}
   dialogue: {fileID: 1013913417}
-  spawn: 10
   realKillers:
   - {fileID: 1283935362}
   spawnButton: {fileID: 1763031034}
@@ -97240,7 +97241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 414004873}
   - component: {fileID: 414004875}
-  - component: {fileID: 414004874}
+  - component: {fileID: 414004876}
   m_Layer: 0
   m_Name: Farm_Example (6)
   m_TagString: Untagged
@@ -97265,8 +97266,26 @@ Transform:
   - {fileID: 529614009}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &414004874
-CircleCollider2D:
+--- !u!114 &414004875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414004872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 529614008}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &414004876
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97300,25 +97319,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &414004875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414004872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 529614008}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &414061940
 GameObject:
   m_ObjectHideFlags: 0
@@ -109194,7 +109196,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109204,7 +109206,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &463184785
 SpriteRenderer:
@@ -191975,7 +191977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808400383}
   - component: {fileID: 808400385}
-  - component: {fileID: 808400384}
+  - component: {fileID: 808400386}
   m_Layer: 0
   m_Name: Farm_Example (7)
   m_TagString: Untagged
@@ -192000,8 +192002,26 @@ Transform:
   - {fileID: 897232581}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &808400384
-CircleCollider2D:
+--- !u!114 &808400385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808400382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 897232580}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &808400386
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -192035,25 +192055,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &808400385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808400382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 897232580}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &808577930
 GameObject:
   m_ObjectHideFlags: 0
@@ -209323,7 +209326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875782597}
   - component: {fileID: 875782599}
-  - component: {fileID: 875782598}
+  - component: {fileID: 875782600}
   m_Layer: 0
   m_Name: Farm_Example (2)
   m_TagString: Untagged
@@ -209348,8 +209351,26 @@ Transform:
   - {fileID: 328674522}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &875782598
-CircleCollider2D:
+--- !u!114 &875782599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875782596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 328674521}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &875782600
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -209383,25 +209404,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &875782599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875782596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 328674521}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &876120403
 GameObject:
   m_ObjectHideFlags: 0
@@ -216610,7 +216614,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -216620,7 +216624,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &912927679
 SpriteRenderer:
@@ -222856,7 +222860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939811422}
   - component: {fileID: 939811424}
-  - component: {fileID: 939811423}
+  - component: {fileID: 939811425}
   m_Layer: 0
   m_Name: Farm_Example (4)
   m_TagString: Untagged
@@ -222881,8 +222885,26 @@ Transform:
   - {fileID: 610871206}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &939811423
-CircleCollider2D:
+--- !u!114 &939811424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939811421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 610871205}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &939811425
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -222916,25 +222938,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &939811424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939811421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 610871205}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &940097027
 GameObject:
   m_ObjectHideFlags: 0
@@ -267872,7 +267877,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -267882,7 +267887,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &1135027335
 SpriteRenderer:
@@ -270718,7 +270723,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -270728,7 +270733,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &1145391801
 SpriteRenderer:
@@ -338264,7 +338269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1426146044}
   - component: {fileID: 1426146046}
-  - component: {fileID: 1426146045}
+  - component: {fileID: 1426146047}
   m_Layer: 0
   m_Name: Farm_Example (5)
   m_TagString: Untagged
@@ -338289,8 +338294,26 @@ Transform:
   - {fileID: 1365536935}
   m_Father: {fileID: 121807620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1426146045
-CircleCollider2D:
+--- !u!114 &1426146046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426146043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
+  getButton: {fileID: 824609764}
+  getButtonObj: {fileID: 824609762}
+  timer: 20
+  harvest: {fileID: 1365536934}
+  inv: {fileID: 1260874431}
+  id: 20
+--- !u!70 &1426146047
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -338324,25 +338347,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
---- !u!114 &1426146046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426146043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8bb4c40414ad40928a14c8a971f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FarmingSpot
-  getButton: {fileID: 824609764}
-  getButtonObj: {fileID: 824609762}
-  timer: 20
-  harvest: {fileID: 1365536934}
-  inv: {fileID: 1260874431}
-  id: 20
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!1 &1427101735
 GameObject:
   m_ObjectHideFlags: 0
@@ -345826,7 +345832,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -345836,7 +345842,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &1459258065
 SpriteRenderer:
@@ -501416,7 +501422,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -501426,7 +501432,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!212 &2147337475
 SpriteRenderer:
@@ -511216,7 +511222,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -511226,7 +511232,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 0.92}
+  m_Size: {x: 1.37, y: 0.83}
   m_EdgeRadius: 0
 --- !u!111 &6944029953225647198
 Animation:
@@ -511895,42 +511901,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &7606352071651971447
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8872789618283327564}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
 --- !u!58 &7615380670561945754
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -514310,7 +514280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5730528511152867804}
   - component: {fileID: 1738426518967412214}
-  - component: {fileID: 7606352071651971447}
+  - component: {fileID: 8872789618283327565}
   m_Layer: 0
   m_Name: Farm_Example
   m_TagString: Untagged
@@ -514318,6 +514288,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!70 &8872789618283327565
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872789618283327564}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.12, y: 2.01}
+  m_Direction: 1
 --- !u!4 &8882632782723158867
 Transform:
   m_ObjectHideFlags: 0
