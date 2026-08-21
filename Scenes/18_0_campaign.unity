@@ -10805,12 +10805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  type: {fileID: 1455715045}
   speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 6081022966757117302}
   runAnim: {fileID: 4149141694061585929}
   cameraAnim: {fileID: 818168770}
-  isAnimated: 1
+  isAnimated: 0
   aimTarget: {fileID: 2794651752461390190}
   aimVector: {fileID: 225220754908482281}
   aimMaxDistance: 2
@@ -25429,6 +25430,8 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
+  - component: {fileID: 1455715045}
+  - component: {fileID: 1455715046}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -25515,6 +25518,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
+--- !u!114 &1455715045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 0
+--- !u!114 &1455715046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b05037656a9bf46a803f92aab024f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetWeapon
+  weaponId: 0
 --- !u!1 &1466820749
 GameObject:
   m_ObjectHideFlags: 0
@@ -42545,6 +42574,7 @@ GameObject:
   - component: {fileID: 2710660849112290224}
   - component: {fileID: 2871013668650033982}
   - component: {fileID: 4901020308119967854}
+  - component: {fileID: 8544199288103292517}
   m_Layer: 5
   m_Name: BlockInput_AngelOfDeath_0_End
   m_TagString: Untagged
@@ -44405,6 +44435,7 @@ GameObject:
   - component: {fileID: 5087169282377795728}
   - component: {fileID: 2803005545710405392}
   - component: {fileID: 8643683683586950800}
+  - component: {fileID: 8643683683586950801}
   m_Layer: 5
   m_Name: BlockInput_AngelOfDeath_0_Start
   m_TagString: Untagged
@@ -47406,6 +47437,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8544199288103292517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4208561152796038384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 0}
 --- !u!4 &8601746560604148530
 Transform:
   m_ObjectHideFlags: 0
@@ -47465,6 +47510,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ac320e2cf4c5c524fb236d3d5c474bfc, type: 3}
   - {fileID: 8300000, guid: 434a505d8cd5c69478d74181de945421, type: 3}
   - {fileID: 8300000, guid: 36961f65115ae8f48b46c8d04814c782, type: 3}
+--- !u!114 &8643683683586950801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888037556524704869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 0}
 --- !u!1 &8647326738954308616
 GameObject:
   m_ObjectHideFlags: 0

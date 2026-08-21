@@ -50762,6 +50762,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1193385820}
+  - {fileID: 1318304813}
   m_Father: {fileID: 651551602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -73527,6 +73528,7 @@ GameObject:
   - component: {fileID: 314873262}
   - component: {fileID: 314873266}
   - component: {fileID: 314873267}
+  - component: {fileID: 314873268}
   m_Layer: 5
   m_Name: BlockInput_DenseTree_Slime
   m_TagString: Untagged
@@ -73688,6 +73690,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &314873268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314873260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &315039555
 GameObject:
   m_ObjectHideFlags: 0
@@ -144524,6 +144540,7 @@ GameObject:
   - component: {fileID: 621318584}
   - component: {fileID: 621318588}
   - component: {fileID: 621318589}
+  - component: {fileID: 621318590}
   m_Layer: 5
   m_Name: BlockInput_Slime_Ellis_TimeLord
   m_TagString: Untagged
@@ -144697,6 +144714,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &621318590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621318581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &621527939
 GameObject:
   m_ObjectHideFlags: 0
@@ -146959,12 +146990,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  type: {fileID: 1455715045}
   speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 2035849052}
   runAnim: {fileID: 2035185518}
   cameraAnim: {fileID: 519420028}
-  isAnimated: 1
+  isAnimated: 0
   aimTarget: {fileID: 2794651752461390190}
   aimVector: {fileID: 225220754908482281}
   aimMaxDistance: 2
@@ -146983,6 +147015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca632e17fba55344b69205705a272f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttacking
+  type: {fileID: 1455715045}
   attackButton:
   - {fileID: 590068147}
   - {fileID: 1651234427}
@@ -239261,6 +239294,7 @@ GameObject:
   - component: {fileID: 1013913419}
   - component: {fileID: 1013913423}
   - component: {fileID: 1013913424}
+  - component: {fileID: 1013913425}
   m_Layer: 5
   m_Name: BlockInput_Slime_Hooligans
   m_TagString: Untagged
@@ -239420,6 +239454,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1013913425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013913417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1014354565
 GameObject:
   m_ObjectHideFlags: 0
@@ -315525,6 +315573,97 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1318304809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318304813}
+  - component: {fileID: 1318304812}
+  - component: {fileID: 1318304811}
+  - component: {fileID: 1318304810}
+  m_Layer: 5
+  m_Name: Mark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1318304810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318304809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1318304811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318304809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1bb1dd18b3301a747b0adc352a24c338, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1318304812
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318304809}
+  m_CullTransparentMesh: 1
+--- !u!224 &1318304813
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318304809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 222065290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 25, y: 25}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1318763973
 GameObject:
   m_ObjectHideFlags: 0
@@ -346222,6 +346361,7 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
+  - component: {fileID: 1455715045}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -346308,6 +346448,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
+--- !u!114 &1455715045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 0
 --- !u!1 &1455741307
 GameObject:
   m_ObjectHideFlags: 0
@@ -363235,6 +363388,7 @@ GameObject:
   - component: {fileID: 1528984974}
   - component: {fileID: 1528984978}
   - component: {fileID: 1528984979}
+  - component: {fileID: 1528984980}
   m_Layer: 5
   m_Name: BlockInput_DenseTreeAlone
   m_TagString: Untagged
@@ -363381,6 +363535,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1528984980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528984972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1529173123
 GameObject:
   m_ObjectHideFlags: 0
@@ -408628,6 +408796,7 @@ GameObject:
   - component: {fileID: 1731230463}
   - component: {fileID: 1731230467}
   - component: {fileID: 1731230468}
+  - component: {fileID: 1731230469}
   m_Layer: 5
   m_Name: BlockInput_Slime_Barmen
   m_TagString: Untagged
@@ -408775,6 +408944,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1731230469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731230461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1731508631
 GameObject:
   m_ObjectHideFlags: 0
@@ -448727,6 +448910,7 @@ GameObject:
   - component: {fileID: 1911828027}
   - component: {fileID: 1911828028}
   - component: {fileID: 1911828029}
+  - component: {fileID: 1911828030}
   m_Layer: 5
   m_Name: BlockInput_Slime_Joe
   m_TagString: Untagged
@@ -448924,6 +449108,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1911828030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911828021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1912134413
 GameObject:
   m_ObjectHideFlags: 0
@@ -479250,6 +479448,7 @@ GameObject:
   - component: {fileID: 2045778616}
   - component: {fileID: 2045778620}
   - component: {fileID: 2045778621}
+  - component: {fileID: 2045778622}
   m_Layer: 5
   m_Name: BlockInput_Slime_0
   m_TagString: Untagged
@@ -479414,6 +479613,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &2045778622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045778613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &2046419180
 GameObject:
   m_ObjectHideFlags: 0
@@ -504076,6 +504289,10 @@ PrefabInstance:
       propertyPath: _helpSkillsObj
       value: 
       objectReference: {fileID: 1594067512}
+    - target: {fileID: 9153724864857844061, guid: b553a0c974ce60749a83e7c2bb16cd25, type: 3}
+      propertyPath: markNewSkillPoint
+      value: 
+      objectReference: {fileID: 1318304809}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -506790,6 +507007,7 @@ GameObject:
   - component: {fileID: 3921380584850188084}
   - component: {fileID: 297069475129650069}
   - component: {fileID: 6783381329216901026}
+  - component: {fileID: 6783381329216901027}
   m_Layer: 5
   m_Name: BlockInput_SlimeAlone
   m_TagString: Untagged
@@ -512932,6 +513150,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &6783381329216901027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435854503990223865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!224 &6855139692087249793
 RectTransform:
   m_ObjectHideFlags: 0

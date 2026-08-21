@@ -44738,6 +44738,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 848090450}
+  - {fileID: 1453175299}
   m_Father: {fileID: 651551602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -96477,6 +96478,7 @@ GameObject:
   - component: {fileID: 621318584}
   - component: {fileID: 621318588}
   - component: {fileID: 621318589}
+  - component: {fileID: 621318590}
   m_Layer: 5
   m_Name: BlockInput_Slime_Nako
   m_TagString: Untagged
@@ -96632,6 +96634,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &621318590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621318581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &621863094
 GameObject:
   m_ObjectHideFlags: 0
@@ -97577,12 +97593,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  type: {fileID: 1455715045}
   speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 970708946}
   runAnim: {fileID: 970708945}
   cameraAnim: {fileID: 239757699}
-  isAnimated: 1
+  isAnimated: 0
   aimTarget: {fileID: 9048115842497757306}
   aimVector: {fileID: 6375373624162262013}
   aimMaxDistance: 2
@@ -97601,6 +97618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca632e17fba55344b69205705a272f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttacking
+  type: {fileID: 1455715045}
   attackButton:
   - {fileID: 590068147}
   - {fileID: 1651234427}
@@ -215987,6 +216005,7 @@ GameObject:
   - component: {fileID: 1384962375}
   - component: {fileID: 1384962379}
   - component: {fileID: 1384962380}
+  - component: {fileID: 1384962381}
   m_Layer: 5
   m_Name: BlockInput_Slime_Nako (GoodEnding)
   m_TagString: Untagged
@@ -216142,6 +216161,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1384962381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384962373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1385345088
 GameObject:
   m_ObjectHideFlags: 0
@@ -225802,6 +225835,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453107079}
   m_CullTransparentMesh: 1
+--- !u!1 &1453175298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453175299}
+  - component: {fileID: 1453175302}
+  - component: {fileID: 1453175301}
+  - component: {fileID: 1453175300}
+  m_Layer: 5
+  m_Name: Mark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1453175299
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453175298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 277056232}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 25, y: 25}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1453175300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453175298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1453175301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453175298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1bb1dd18b3301a747b0adc352a24c338, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1453175302
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453175298}
+  m_CullTransparentMesh: 1
 --- !u!1 &1453411229
 GameObject:
   m_ObjectHideFlags: 0
@@ -226391,6 +226515,7 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
+  - component: {fileID: 1455715045}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -226477,6 +226602,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
+--- !u!114 &1455715045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 0
 --- !u!1 &1456199299
 GameObject:
   m_ObjectHideFlags: 0
@@ -237626,6 +237764,7 @@ GameObject:
   - component: {fileID: 1527818399}
   - component: {fileID: 1527818403}
   - component: {fileID: 1527818404}
+  - component: {fileID: 1527818405}
   m_Layer: 5
   m_Name: BlockInput_SkeletonLordAlone (Secret)
   m_TagString: Untagged
@@ -237772,6 +237911,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1527818405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527818397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1527884253
 GameObject:
   m_ObjectHideFlags: 0
@@ -237878,6 +238031,7 @@ GameObject:
   - component: {fileID: 1528984974}
   - component: {fileID: 1528984978}
   - component: {fileID: 1528984979}
+  - component: {fileID: 1528984980}
   m_Layer: 5
   m_Name: BlockInput_SkeletonLordAlone
   m_TagString: Untagged
@@ -238024,6 +238178,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1528984980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528984972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1529252005
 GameObject:
   m_ObjectHideFlags: 0
@@ -240680,6 +240848,7 @@ GameObject:
   - component: {fileID: 1543470547}
   - component: {fileID: 1543470546}
   - component: {fileID: 1543470550}
+  - component: {fileID: 1543470551}
   m_Layer: 5
   m_Name: BlockInput_Slime_Nako (WorstEnding)
   m_TagString: Untagged
@@ -240813,6 +240982,20 @@ MonoBehaviour:
   rusClip:
   - {fileID: 8300000, guid: 8cacea0e1be07674b9caaf2cda1d4d59, type: 3}
   - {fileID: 8300000, guid: 0374363304d8dcf488daf199b79420b4, type: 3}
+--- !u!114 &1543470551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543470544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1543773234
 GameObject:
   m_ObjectHideFlags: 0
@@ -271343,6 +271526,7 @@ GameObject:
   - component: {fileID: 1758917698}
   - component: {fileID: 1758917702}
   - component: {fileID: 1758917703}
+  - component: {fileID: 1758917704}
   m_Layer: 5
   m_Name: BlockInput_Slime_Nako (BadEnding)
   m_TagString: Untagged
@@ -271489,6 +271673,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1758917704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758917696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1759212188
 GameObject:
   m_ObjectHideFlags: 0
@@ -286484,6 +286682,10 @@ PrefabInstance:
       propertyPath: _helpSkillsObj
       value: 
       objectReference: {fileID: 309025278}
+    - target: {fileID: 9153724864857844061, guid: b553a0c974ce60749a83e7c2bb16cd25, type: 3}
+      propertyPath: markNewSkillPoint
+      value: 
+      objectReference: {fileID: 1453175298}
     - target: {fileID: 9207443407281253982, guid: b553a0c974ce60749a83e7c2bb16cd25, type: 3}
       propertyPath: m_Sprite
       value: 

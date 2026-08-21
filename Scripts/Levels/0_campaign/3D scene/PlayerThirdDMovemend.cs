@@ -51,7 +51,13 @@ public class PlayerMovement : MonoBehaviour
         jumpAction.action.Disable();
     }
 
-    private void Start() {
+    private void Awake()
+    {
+        if(!mobileInput) { joystick.gameObject.SetActive(false); }
+    }
+
+    private void Start()
+    {
         _camera = this.GetComponentInChildren<Camera>();
         movingSource.SetActive(false);
     }

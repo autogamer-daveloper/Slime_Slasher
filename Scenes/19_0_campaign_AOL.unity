@@ -10812,7 +10812,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11356,7 +11356,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416413
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18438,12 +18438,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  type: {fileID: 1455715046}
   speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 6081022966757117302}
   runAnim: {fileID: 4149141694061585929}
   cameraAnim: {fileID: 913022821}
-  isAnimated: 1
+  isAnimated: 0
   aimTarget: {fileID: 2794651752461390190}
   aimVector: {fileID: 225220754908482281}
   aimMaxDistance: 2
@@ -18526,6 +18527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca632e17fba55344b69205705a272f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttacking
+  type: {fileID: 1455715046}
   attackButton:
   - {fileID: 590068147}
   defaultAnimation: {fileID: 142821639}
@@ -40874,7 +40876,7 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
-  - component: {fileID: 1455715045}
+  - component: {fileID: 1455715046}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -40961,7 +40963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
---- !u!114 &1455715045
+--- !u!114 &1455715046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40970,10 +40972,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455715040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b05037656a9bf46a803f92aab024f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SetWeapon
-  weaponId: 0
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 0
 --- !u!1 &1459732616
 GameObject:
   m_ObjectHideFlags: 0
@@ -52060,7 +52062,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -72747,6 +72749,7 @@ GameObject:
   - component: {fileID: 798402389071189632}
   - component: {fileID: 5763438591431003564}
   - component: {fileID: 5125810237306819769}
+  - component: {fileID: 7860792876904305797}
   m_Layer: 5
   m_Name: BlockInput_AngelOfDeath_0_Start
   m_TagString: Untagged
@@ -72754,6 +72757,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7860792876904305797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860792876904305796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318390}
 --- !u!224 &7875238873169399020
 RectTransform:
   m_ObjectHideFlags: 0

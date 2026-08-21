@@ -42,6 +42,7 @@ public class SkillTree : MonoBehaviour
     [SerializeField] private Animation _helpSkills;
     [SerializeField] private Button[] canBeLocked;
     [SerializeField] private GameObject[] unusingFlags;
+    [SerializeField] private GameObject markNewSkillPoint;
     [Header("__ Audio __")]
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip upgrade;
@@ -50,6 +51,7 @@ public class SkillTree : MonoBehaviour
     private int _needKill = 15;
     private int _killed = 0;
     private int _skillPoint = 0;
+    private int _level = 0;
     private int _astraslimes = 0;
 
     private void Start()
@@ -149,6 +151,8 @@ public class SkillTree : MonoBehaviour
     {
         _killed = KeyManager.Get_Bool_Key("killed_enemies");
         _skillPoint = KeyManager.Get_Bool_Key("skill_points");
+        _level = KeyManager.Get_Bool_Key("skill_level");
+        _needKill = Mathf.RoundToInt(15 * Mathf.Pow(1.2f, _level));
         UpdateUI();
     }
 
@@ -209,6 +213,9 @@ public class SkillTree : MonoBehaviour
     {
         skillPointText.text = _skillPoint.ToString();
         killedText.text = _killed.ToString() + "/" + _needKill.ToString();
+
+        if (_skillPoint > 0) { markNewSkillPoint.SetActive(true); }
+        else { markNewSkillPoint.SetActive(false); }
     }
 
     public void KilledEnemy()
@@ -225,11 +232,13 @@ public class SkillTree : MonoBehaviour
         {
             _killed = 0;
             _skillPoint += 1;
+            _level += 1;
             KeyManager.Set_Bool_Key("killed_enemies", _killed);
             KeyManager.Set_Bool_Key("skill_points", _skillPoint);
+            KeyManager.Set_Bool_Key("skill_level", _level);
             src.PlayOneShot(levelUp);
         }
 
-        UpdateUI();
+        Initialize();
     }
 }

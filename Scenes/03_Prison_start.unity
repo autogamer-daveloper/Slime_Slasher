@@ -48999,12 +48999,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  type: {fileID: 1455715045}
   speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 1886922515}
   runAnim: {fileID: 1886922514}
   cameraAnim: {fileID: 1431412114}
-  isAnimated: 1
+  isAnimated: 0
   aimTarget: {fileID: 3126969352120393183}
   aimVector: {fileID: 1048643744327566936}
   aimMaxDistance: 2
@@ -49023,6 +49024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca632e17fba55344b69205705a272f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttacking
+  type: {fileID: 1455715045}
   attackButton:
   - {fileID: 590068147}
   - {fileID: 1651234427}
@@ -50983,6 +50985,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643032219}
   m_CullTransparentMesh: 1
+--- !u!1 &644198867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 644198871}
+  - component: {fileID: 644198870}
+  - component: {fileID: 644198869}
+  - component: {fileID: 644198868}
+  m_Layer: 5
+  m_Name: Mark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &644198868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644198867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &644198869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644198867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1bb1dd18b3301a747b0adc352a24c338, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &644198870
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644198867}
+  m_CullTransparentMesh: 1
+--- !u!224 &644198871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644198867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1777308437}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 25, y: 25}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &647127576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86042,6 +86135,10 @@ PrefabInstance:
       propertyPath: _helpSkillsObj
       value: 
       objectReference: {fileID: 221147030}
+    - target: {fileID: 9153724864857844061, guid: b553a0c974ce60749a83e7c2bb16cd25, type: 3}
+      propertyPath: markNewSkillPoint
+      value: 
+      objectReference: {fileID: 644198867}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -113359,6 +113456,7 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
+  - component: {fileID: 1455715045}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -113445,6 +113543,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
+--- !u!114 &1455715045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 0
 --- !u!1 &1457637123
 GameObject:
   m_ObjectHideFlags: 0
@@ -136840,6 +136951,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1699587177}
+  - {fileID: 644198871}
   m_Father: {fileID: 651551602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -168111,6 +168223,7 @@ GameObject:
   - component: {fileID: 8395965772186235649}
   - component: {fileID: 8395965772186235650}
   - component: {fileID: 8395965772186235651}
+  - component: {fileID: 8395965772186235652}
   m_Layer: 5
   m_Name: BlockInput_Prisoner_Player
   m_TagString: Untagged
@@ -191828,6 +191941,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &8395965772186235652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629438363507495328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &8422152279905760965
 GameObject:
   m_ObjectHideFlags: 0

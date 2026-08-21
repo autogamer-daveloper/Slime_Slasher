@@ -2167,6 +2167,7 @@ GameObject:
   - component: {fileID: 19196069}
   - component: {fileID: 19196073}
   - component: {fileID: 19196074}
+  - component: {fileID: 19196075}
   m_Layer: 5
   m_Name: BlockInput_Slime_Ryan (End)
   m_TagString: Untagged
@@ -2224,9 +2225,9 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
+  CancelInvokeButton: {fileID: 1137101419}
   doTask: 0
-  dialogueSFX: {fileID: 0}
+  dialogueSFX: {fileID: 5521837284257993574}
 --- !u!111 &19196070
 Animation:
   m_ObjectHideFlags: 0
@@ -2313,6 +2314,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &19196075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19196067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &20408840
 GameObject:
   m_ObjectHideFlags: 0
@@ -29160,6 +29175,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339814965}
   m_CullTransparentMesh: 1
+--- !u!1 &339948775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339948776}
+  - component: {fileID: 339948779}
+  - component: {fileID: 339948778}
+  - component: {fileID: 339948777}
+  m_Layer: 5
+  m_Name: Mark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &339948776
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339948775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1900126071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 25, y: 25}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &339948777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339948775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &339948778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339948775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1bb1dd18b3301a747b0adc352a24c338, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &339948779
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339948775}
+  m_CullTransparentMesh: 1
 --- !u!1 &340989852
 GameObject:
   m_ObjectHideFlags: 0
@@ -53065,12 +53171,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037ae328a9932246b7b093cbe5df900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  type: {fileID: 1455715045}
   speed: 12.5
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 938308926}
   runAnim: {fileID: 938308925}
   cameraAnim: {fileID: 177150147}
-  isAnimated: 1
+  isAnimated: 0
   aimTarget: {fileID: 4251415899606400458}
   aimVector: {fileID: 2227221190571943501}
   aimMaxDistance: 2
@@ -53089,6 +53196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca632e17fba55344b69205705a272f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttacking
+  type: {fileID: 1455715045}
   attackButton:
   - {fileID: 590068147}
   - {fileID: 1651234427}
@@ -104326,6 +104434,7 @@ GameObject:
   - component: {fileID: 1240293225}
   - component: {fileID: 1240293229}
   - component: {fileID: 1240293230}
+  - component: {fileID: 1240293231}
   m_Layer: 5
   m_Name: BlockInput_Slime_Ryan (Fight)
   m_TagString: Untagged
@@ -104383,9 +104492,9 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
+  CancelInvokeButton: {fileID: 1137101419}
   doTask: 0
-  dialogueSFX: {fileID: 0}
+  dialogueSFX: {fileID: 5521837284257993574}
 --- !u!111 &1240293226
 Animation:
   m_ObjectHideFlags: 0
@@ -104472,6 +104581,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1240293231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240293223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1240970915
 GameObject:
   m_ObjectHideFlags: 0
@@ -108856,6 +108979,10 @@ PrefabInstance:
       propertyPath: _helpSkillsObj
       value: 
       objectReference: {fileID: 325027098}
+    - target: {fileID: 9153724864857844061, guid: b553a0c974ce60749a83e7c2bb16cd25, type: 3}
+      propertyPath: markNewSkillPoint
+      value: 
+      objectReference: {fileID: 339948775}
     - target: {fileID: 9207443407281253982, guid: b553a0c974ce60749a83e7c2bb16cd25, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -123492,6 +123619,7 @@ GameObject:
   - component: {fileID: 1455715042}
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
+  - component: {fileID: 1455715045}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -123578,6 +123706,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCheckerFollow
   thisObj: {fileID: 1455715041}
   target: {fileID: 627318384}
+--- !u!114 &1455715045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 0
 --- !u!1 &1456640724
 GameObject:
   m_ObjectHideFlags: 0
@@ -151142,6 +151283,7 @@ GameObject:
   - component: {fileID: 1758917698}
   - component: {fileID: 1758917702}
   - component: {fileID: 1758917703}
+  - component: {fileID: 1758917704}
   m_Layer: 5
   m_Name: BlockInput_Slime_Ryan (Not Fight)
   m_TagString: Untagged
@@ -151199,9 +151341,9 @@ MonoBehaviour:
         m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
+  CancelInvokeButton: {fileID: 1137101419}
   doTask: 0
-  dialogueSFX: {fileID: 0}
+  dialogueSFX: {fileID: 5521837284257993574}
 --- !u!111 &1758917699
 Animation:
   m_ObjectHideFlags: 0
@@ -151288,6 +151430,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &1758917704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758917696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!1 &1759172699
 GameObject:
   m_ObjectHideFlags: 0
@@ -165606,6 +165762,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 509193953}
+  - {fileID: 339948776}
   m_Father: {fileID: 651551602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -187880,6 +188037,7 @@ GameObject:
   - component: {fileID: 3754591087062831621}
   - component: {fileID: 8032330545400135470}
   - component: {fileID: 8032330545400135471}
+  - component: {fileID: 8032330545400135472}
   m_Layer: 5
   m_Name: BlockInput_Slime_Ryan
   m_TagString: Untagged
@@ -190049,7 +190207,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 1137101419}
   doTask: 1
-  dialogueSFX: {fileID: 0}
+  dialogueSFX: {fileID: 5521837284257993574}
 --- !u!224 &3827878148739329749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -194025,6 +194183,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
   status: {fileID: 627318389}
+--- !u!114 &8032330545400135472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876656061116075179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843ba8d52a338b4285b77bcf29f1993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockInput
+  controller: {fileID: 627318387}
+  attacking: {fileID: 627318388}
 --- !u!82 &8033704317748454032
 AudioSource:
   m_ObjectHideFlags: 0

@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("__ Input Type __")]
+    [SerializeField] private InputType type;
+
     [Header("__ Main __")]
     [SerializeField] private float speed;
     [SerializeField] private Joystick joystick;
@@ -38,6 +42,18 @@ public class PlayerController : MonoBehaviour
 
     private Animation cameraAnimation;
 
+    private bool isMobileInput = false;
+    private bool dialogueBlock = false;
+
+    private void Awake()
+    {
+        if (type != null) { isMobileInput = type.IsMobileInput(); }
+        else { isMobileInput = true; }
+
+        if (isMobileInput) { joystick.gameObject.SetActive(true); }
+        else { joystick.gameObject.SetActive(false); }
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,22 +69,40 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (lockedInput)
+        if (dialogueBlock)
         {
             moveInput = new Vector2(0, 0);
-            moveVelocity = moveInput.normalized * 0f;
             return;
         }
 
-        moveInput = new Vector2(joystick.Horizontal, joystick.Vertical);
+        if (lockedInput)
+            {
+                moveInput = new Vector2(0, 0);
+                moveVelocity = moveInput.normalized * 0f;
+                return;
+            }
+
+        if (isMobileInput) { moveInput = new Vector2(joystick.Horizontal, joystick.Vertical); }
+        else
+        {
+            Vector2 keyboardInput = Vector2.zero;
+            if (Keyboard.current != null)
+            {
+                if (Keyboard.current.aKey.isPressed) { keyboardInput.x -= 1f; }
+                if (Keyboard.current.dKey.isPressed) { keyboardInput.x += 1f; }
+                if (Keyboard.current.sKey.isPressed) { keyboardInput.y -= 1f; }
+                if (Keyboard.current.wKey.isPressed) { keyboardInput.y += 1f; }
+            }
+            moveInput = keyboardInput.normalized;
+        }
         moveVelocity = moveInput.normalized * speed;
 
-        HandleAimWithJoystick();
+        if (isMobileInput) { HandleAimWithJoystick(); }
+        else { HandleAimWithMouse(); }
 
         if (!facingRight && moveInput.x > 0) { Flip(); }
         else if (facingRight && moveInput.x < 0) { Flip(); }
 
-        if (!isAnimated) return;
         bool nowIdle = moveInput.x == 0f && moveInput.y == 0f;
 
         if (nowIdle && !isIdle)
@@ -176,4 +210,37 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void HandleAimWithMouse()
+    {
+        if (Camera.main == null || Mouse.current == null) { return; }
+
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+
+        mouseWorld.z = transform.position.z;
+
+        Vector2 direction = mouseWorld - transform.position;
+
+        if (direction.sqrMagnitude <= 0.001f) { return; }
+
+        Vector2 normalizedDirection = direction.normalized;
+
+        _lastAimDir = normalizedDirection;
+
+        if (aimTarget != null)
+        {
+            aimTarget.position = transform.position + (Vector3)(normalizedDirection * aimMaxDistance);
+        }
+
+        if (aimVector != null)
+        {
+            float angle = Mathf.Atan2(normalizedDirection.y, normalizedDirection.x) * Mathf.Rad2Deg;
+
+            aimVector.rotation = Quaternion.Euler(0f, 0f, angle + angleOffset);
+        }
+    }
+
+    internal void DialogueBlock(bool status) { dialogueBlock = status; }
 }

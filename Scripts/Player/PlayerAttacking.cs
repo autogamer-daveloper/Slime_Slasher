@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttacking : MonoBehaviour
 {
+    [Header("__ Input Type __")]
+    [SerializeField] private InputType type;
+
     [Header("__ Default __")]
     [SerializeField] private Button[] attackButton;
     [SerializeField] private GameObject defaultAnimation;
@@ -83,6 +86,21 @@ public class PlayerAttacking : MonoBehaviour
     private int _mage_extra_damage = 0;
 
     private Vector2 _lastAimDir = Vector2.right;
+
+    private bool isMobileInput = false;
+    private bool dialogueBlock = false;
+
+    private void Awake()
+    {
+        if (type != null) { isMobileInput = type.IsMobileInput(); }
+        else { isMobileInput = true; }
+
+        if (!isMobileInput)
+        {
+            simpleAttack.SetActive(false);
+            aimJoystick.SetActive(false);
+        }
+    }
 
     private void Start()
     {
@@ -203,16 +221,22 @@ public class PlayerAttacking : MonoBehaviour
         _isUsingRange = answer;
         if (answer)
         {
-            simpleAttack.SetActive(false);
-            aimJoystick.SetActive(true);
+            if (isMobileInput)
+            {
+                simpleAttack.SetActive(false);
+                aimJoystick.SetActive(true);
+            }
             aim.SetActive(true);
 
             if (aim != null) { aim.transform.position = transform.position + Vector3.up * aimMaxDistance; }
         }
         else
         {
-            simpleAttack.SetActive(true);
-            aimJoystick.SetActive(false);
+            if (isMobileInput)
+            {
+                simpleAttack.SetActive(true);
+                aimJoystick.SetActive(false);
+            }
             aim.SetActive(false);
         }
     }
@@ -227,9 +251,11 @@ public class PlayerAttacking : MonoBehaviour
 
     private void Update()
     {
-        //For pc keyboard
-        if (Keyboard.current.spaceKey.wasPressedThisFrame) { Attack(); }
-        if (_isUsingRange) { HandleAimWithJoystick(); }
+        if (!isMobileInput && Mouse.current.rightButton.wasPressedThisFrame) { Attack(); }
+        if (!_isUsingRange) { return; }
+
+        if (isMobileInput) { HandleAimWithJoystick(); }
+        else { HandleAimWithMouse(); }
     }
 
     private void LateUpdate() { if (lockPlayerRotation) { transform.rotation = _initialRotation; } }
@@ -292,8 +318,42 @@ public class PlayerAttacking : MonoBehaviour
         }
     }
 
+    private void HandleAimWithMouse()
+    {
+        if (Camera.main == null || Mouse.current == null) { return; }
+
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        mouseWorld.z = 0f;
+
+        Vector2 direction = mouseWorld - transform.position;
+
+        if (direction.sqrMagnitude <= 0.001f)
+            return;
+
+        Vector2 normalizedDirection = direction.normalized;
+
+        _lastAimDir = normalizedDirection;
+
+        if (aim != null)
+        {
+            aim.transform.position =
+                transform.position +
+                (Vector3)(normalizedDirection * aimMaxDistance);
+        }
+
+        if (arrowSpawn != null)
+        {
+            float angle = Mathf.Atan2(normalizedDirection.y, normalizedDirection.x) * Mathf.Rad2Deg;
+
+            arrowSpawn.rotation = Quaternion.Euler(0f, 0f, angle + angleOffset);
+        }
+    }
+
     private void Attack()
     {
+        if (dialogueBlock) { return; }
         if (_isAttackBlocked) return;
         if (player == null) { Debug.LogError("Player not assigned!"); return; }
 
@@ -372,5 +432,7 @@ public class PlayerAttacking : MonoBehaviour
         else if (w.Type == Objects.Weapons.Weapons.WeaponType.Magic) { damage = w.Damage + _mage_extra_damage; }
     }
 
-    private void SelectWeaponPicture() { foreach(GameObject obj in weaponPictures) { obj.SetActive(false); } weaponPictures[_selectedWeapon].SetActive(true); }
+    private void SelectWeaponPicture() { foreach (GameObject obj in weaponPictures) { obj.SetActive(false); } weaponPictures[_selectedWeapon].SetActive(true); }
+
+    internal void DialogueBlock(bool status) { dialogueBlock = status; }
 }
