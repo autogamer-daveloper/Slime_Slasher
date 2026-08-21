@@ -3476,6 +3476,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1239088091}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: c88dea8cfc4eb644fbbc2aa6fd8c3dfa, type: 3}
   src: {fileID: 5392769949026082998}
   sound: {fileID: 8300000, guid: 86420405c9ce8634e85c0559bb0f4cd5, type: 3}
@@ -32458,6 +32459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatus
   sceneID: 10
+  isZero: 0
   isFirstNightmare: 1
   nightmare: {fileID: 0}
   healthText: {fileID: 2038880669}
@@ -37130,7 +37132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mana Cost: 120'
+  m_text: 'Mana Cost: 75'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -38979,7 +38981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mana Cost: 65'
+  m_text: 'Mana Cost: 35'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -39690,6 +39692,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 1909012335}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: c88dea8cfc4eb644fbbc2aa6fd8c3dfa, type: 3}
   src: {fileID: 1831872878049284955}
   sound: {fileID: 8300000, guid: 86420405c9ce8634e85c0559bb0f4cd5, type: 3}
@@ -70458,7 +70461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mana Cost: 100'
+  m_text: 'Mana Cost: 50'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -75712,7 +75715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mana Cost: 10'
+  m_text: 'Mana Cost: 20'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -104567,6 +104570,7 @@ MonoBehaviour:
       m_Calls: []
   aim: {fileID: 627318384}
   bulletSpawn: {fileID: 250656418}
+  spawnPoints: []
   bullet: {fileID: 4311507231391963243, guid: c88dea8cfc4eb644fbbc2aa6fd8c3dfa, type: 3}
   src: {fileID: 2621273328196170292}
   sound: {fileID: 8300000, guid: 37628fad665c3af4783501fd0ec4e9c9, type: 3}
@@ -120644,6 +120648,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  dialogueSFX: {fileID: 0}
 --- !u!4 &2274499512794293643
 Transform:
   m_ObjectHideFlags: 0
@@ -125442,6 +125447,7 @@ GameObject:
   - component: {fileID: 1014873840318930688}
   - component: {fileID: 2268682319032819306}
   - component: {fileID: 4907116190226936643}
+  - component: {fileID: 4907116190226936644}
   m_Layer: 5
   m_Name: BlockInput_Slime_The_Penguin_King
   m_TagString: Untagged
@@ -131066,6 +131072,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a6a07092c33ce8048908b6fec0f4e17b, type: 3}
   - {fileID: 8300000, guid: 3df60134249746d488a6cfdcb9892c7b, type: 3}
   - {fileID: 8300000, guid: 1138478cb98599046aca81a14b46221d, type: 3}
+--- !u!114 &4907116190226936644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560727180293636292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4300f042cde5bf44cb0700c9dd6950b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlockDamage
+  status: {fileID: 627318389}
 --- !u!61 &4932977162592119097
 BoxCollider2D:
   m_ObjectHideFlags: 0

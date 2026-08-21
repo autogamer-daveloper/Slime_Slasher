@@ -15,13 +15,16 @@ MonoBehaviour:
   Type: 1
   Damage: 17
   Cooldown: 0.85
-  ManaCost: 10
+  ManaCost: 20
   LifeCost: 0
   WeaponId: 14
   ItemId: 0
   Sfx: {fileID: 8300000, guid: 3b86a231a97a03543b0bc534b34257eb, type: 3}
   CustomMeeleAnimation: 0
   MeeleAnimationName: Default Meele Animation Name
+  isHaveEffect: 0
+  isRotatable: 0
+  meeleEffect: {fileID: 0}
   Arrow: {fileID: 0}
   Speed: 10
   LifeTime: 5

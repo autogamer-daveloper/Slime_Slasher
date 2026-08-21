@@ -108,6 +108,8 @@ public class KeyManager : MonoBehaviour
 
     internal static void Delete_All()
     {
+        int playerId = Get_Bool_Key("PlayerID");
+        int isInvited = Get_Bool_Key("IsInvitedBefore");
         int letter = Get_Bool_Key("LetterTriggered");
         int note = Get_Bool_Key("NoteTriggered");
         int lang = Get_Bool_Key("Language");
@@ -118,9 +120,12 @@ public class KeyManager : MonoBehaviour
         int visual3 = Get_Bool_Key("visual_bought_3");
         int visual4 = Get_Bool_Key("visual_bought_4");
         int visual5 = Get_Bool_Key("visual_bought_5");
+        int visual6 = Get_Bool_Key("visual_bought_6");
         int rate = Get_Bool_Key("Rated");
         int usingVisual = GetInt_VisualAccessoryID();
         PlayerPrefs.DeleteAll();
+        Set_Bool_Key("PlayerID", playerId);
+        Set_Bool_Key("IsInvitedBefore", isInvited);
         Set_Bool_Key("LetterTriggered", letter);
         Set_Bool_Key("NoteTriggered", note);
         Set_Bool_Key("Language", lang);
@@ -130,6 +135,8 @@ public class KeyManager : MonoBehaviour
         Set_Bool_Key("visual_bought_2", visual2);
         Set_Bool_Key("visual_bought_3", visual3);
         Set_Bool_Key("visual_bought_4", visual4);
+        Set_Bool_Key("visual_bought_5", visual5);
+        Set_Bool_Key("visual_bought_6", visual6);
         Set_Bool_Key("Rated", rate);
         SetInt_VisualAccessoryID(usingVisual);
     }

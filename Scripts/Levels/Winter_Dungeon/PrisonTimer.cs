@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
@@ -32,6 +33,9 @@ public class PrisonTimer : MonoBehaviour
     [SerializeField] private SetTimeForClocks inPrison;
     [Header("__ Time: count for being at work __")]
     [SerializeField] private SetTimeForClocks atWork;
+    [Header("__ When teleport __")]
+    [Space(10)]
+    [SerializeField] private UnityEvent whenTeleport;
     [Header("__ Autokill __")]
     [SerializeField] private Transform player;
     [SerializeField] private GameObject autoKiller;
@@ -112,6 +116,7 @@ public class PrisonTimer : MonoBehaviour
         _inPrison = false;
         _isCompletedTask = false;
         player.position = work.position;
+        whenTeleport.Invoke();
         SetTimer(1);
         atWorkHelpObj.SetActive(true);
         atWorkHelp.Play();
@@ -124,6 +129,7 @@ public class PrisonTimer : MonoBehaviour
         planCompleted.SetActive(false);
         foreach(GameObject btn in completeTask) { btn.SetActive(true); }
         player.position = prison.position;
+        whenTeleport.Invoke();
         SetTimer(0);
         inPrisonHelpObj.SetActive(true);
         inPrisonHelp.Play();

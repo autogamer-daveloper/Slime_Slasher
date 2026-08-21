@@ -103,7 +103,7 @@ public class PlayerStatus : MonoBehaviour
 
             //healthText.text = health.ToString() + "/" + maxHealth.ToString();
             //manaText.text = mana.ToString() + "/" + maxMana.ToString();
-            
+
             healthText.text = "Inf";
             manaText.text = "Inf";
         }
@@ -136,7 +136,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Regeneration()
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         health += healthRegen + boostHealthRegen + _extraRegen;
         mana += manaRegen + boostManaRegen + _extraManaRegen;
 
@@ -153,7 +153,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void GetExtraMana(int extraMana)
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         src.PlayOneShot(mage);
         mana += extraMana;
         if (mana >= maxMana + _extraMana + _st_mana) { mana = maxMana + _extraMana + _st_mana; }
@@ -163,7 +163,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void GetExtraLife(int extraLife)
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         health += extraLife;
         if (health >= maxHealth + _extraLife + _st_health) { health = maxHealth + _extraLife + _st_health; }
         healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
@@ -172,14 +172,14 @@ public class PlayerStatus : MonoBehaviour
 
     internal void SetBonus(int lifeBonus, int manaBonus)
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         boostHealthRegen = lifeBonus;
         boostManaRegen = manaBonus;
     }
 
     internal void ManaLose(int count, int lifeCount)
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         mana -= count;
         health -= lifeCount;
         healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
@@ -192,7 +192,7 @@ public class PlayerStatus : MonoBehaviour
 
     internal void GetDamage(int dmg)
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         health -= dmg;
         healthText.text = health.ToString() + "/" + (maxHealth + _extraLife + _st_health).ToString();
 
@@ -202,7 +202,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void DeathCheck(bool selfHarm)
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         if (health <= 0)
         {
             src.PlayOneShot(death);
@@ -262,7 +262,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Clear()
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         clearEnemies.Invoke();
 
         health = 100;
@@ -275,11 +275,11 @@ public class PlayerStatus : MonoBehaviour
         manaSlider.value = mana + _extraMana + _st_mana;
     }
 
-    private void DeadCutscene() { if(isZero) { return; } LoadLevel.LoadLevelById(_deathCutsceneIndex); }
+    private void DeadCutscene() { if (isZero) { return; } LoadLevel.LoadLevelById(_deathCutsceneIndex); }
 
     private void Teleport()
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         gameObject.transform.position = spawnPoint.position;
         alivePlayer.SetActive(true);
         deadPlayer.SetActive(false);
@@ -290,9 +290,9 @@ public class PlayerStatus : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(isZero == true) { return; }
-        if (isDead == true) return;
-        if (isBlocked == true) return;
+        if (isZero == true) { return; }
+        if (isDead == true) { return; }
+        if (isBlocked == true) { return; }
         if (other.CompareTag("EnemyAttack"))
         {
             EnemyBullet attack = other.GetComponent<EnemyBullet>();
@@ -321,7 +321,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void CheckAccessories()
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         if (accessories == null || accessories.Length == 0)
         {
             Debug.LogWarning("[PlayerStatus] accessories array is null or empty. No accessory bonuses applied.");
@@ -383,10 +383,12 @@ public class PlayerStatus : MonoBehaviour
 
     internal void UpdateSkills()
     {
-        if(isZero == true) { return; }
+        if (isZero == true) { return; }
         _st_health = KeyManager.Get_Bool_Key("skill_HEALTH");
         _st_mana = KeyManager.Get_Bool_Key("skill_MANA");
     }
 
-    private void SelectAccessoriesPicture(int id) { foreach(GameObject obj in accessoriesPictures) { obj.SetActive(false); } accessoriesPictures[id].SetActive(true); }
+    private void SelectAccessoriesPicture(int id) { foreach (GameObject obj in accessoriesPictures) { obj.SetActive(false); } accessoriesPictures[id].SetActive(true); }
+    
+    internal void BlockDamage(bool answer) { isBlocked = answer; CancelInvoke(nameof(UnlockDamage)); }
 }
