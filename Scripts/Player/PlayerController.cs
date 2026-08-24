@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("__ Animation __")]
     [SerializeField] private GameObject idleAnim;
     [SerializeField] private GameObject runAnim;
+    [SerializeField] private bool isIdleWhenStopped = true;
 
     [Header("__ Camera animation __")]
     [SerializeField] private GameObject cameraAnim;
@@ -72,15 +73,27 @@ public class PlayerController : MonoBehaviour
         if (dialogueBlock)
         {
             moveInput = new Vector2(0, 0);
+            if (isIdleWhenStopped)
+            {
+                if (idleAnim != null) idleAnim.SetActive(true);
+                if (runAnim != null) runAnim.SetActive(false);   
+            }
+            if (src != null) { src.mute = true; }
             return;
         }
 
         if (lockedInput)
+        {
+            moveInput = new Vector2(0, 0);
+            moveVelocity = moveInput.normalized * 0f;
+            if (isIdleWhenStopped)
             {
-                moveInput = new Vector2(0, 0);
-                moveVelocity = moveInput.normalized * 0f;
-                return;
+                if (idleAnim != null) idleAnim.SetActive(true);
+                if (runAnim != null) runAnim.SetActive(false);   
             }
+            if (src != null) { src.mute = true; }
+            return;
+        }
 
         if (isMobileInput) { moveInput = new Vector2(joystick.Horizontal, joystick.Vertical); }
         else
@@ -109,6 +122,7 @@ public class PlayerController : MonoBehaviour
         {
             if (idleAnim != null) idleAnim.SetActive(true);
             if (runAnim != null) runAnim.SetActive(false);
+            if (src != null) { src.mute = true; }
 
             SetCameraIdle();
             isIdle = true;
@@ -117,13 +131,14 @@ public class PlayerController : MonoBehaviour
         {
             if (idleAnim != null) idleAnim.SetActive(false);
             if (runAnim != null) runAnim.SetActive(true);
+            if (src != null) { src.mute = false; }
 
             SetCameraRun();
             isIdle = false;
         }
     }
 
-    private void FixedUpdate() { rb.MovePosition(rb.position + moveVelocity * Time.deltaTime); }
+    private void FixedUpdate() { if (!dialogueBlock) { rb.MovePosition(rb.position + moveVelocity * Time.deltaTime); }}
 
     private void Flip()
     {
@@ -146,7 +161,6 @@ public class PlayerController : MonoBehaviour
         if (!isAnimated) return;
         if (cameraAnimation == null) return;
         if (!cameraAnimation.IsPlaying("Run")) { cameraAnimation.Play("Run"); }
-        if (src != null) { src.mute = false; }
     }
 
     internal void LockInput() { lockedInput = true; }

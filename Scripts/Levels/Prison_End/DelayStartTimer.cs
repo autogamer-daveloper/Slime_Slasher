@@ -31,9 +31,9 @@ public class DelayStartTimer : MonoBehaviour
 
     private void ActionLevelLoad() { LoadLevel.LoadLevelById(index); }
 
-    private void Cancel()
+    internal void Cancel()
     {
-        if(dialogueSFX != null) { dialogueSFX.Stop(); }
+        if (dialogueSFX != null) { dialogueSFX.Stop(); }
 
         if (isLoadLevelAction == false) { CancelInvoke(nameof(Action)); }
         else { CancelInvoke(nameof(ActionLevelLoad)); }
@@ -42,6 +42,17 @@ public class DelayStartTimer : MonoBehaviour
         {
             if (isLoadLevelAction == false) { Action(); }
             else { ActionLevelLoad(); }
+        }
+    }
+
+    internal void CalculateNewTimer(float skipped)
+    {
+        float newTimer = delay - skipped;
+
+        if (doTask)
+        {
+            if (isLoadLevelAction == false) { CancelInvoke(nameof(Action)); Invoke(nameof(Action), newTimer); }
+            else { CancelInvoke(nameof(ActionLevelLoad)); Invoke(nameof(ActionLevelLoad), newTimer); }
         }
     }
 }

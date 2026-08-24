@@ -41,6 +41,12 @@ public class CheckForEnemies : MonoBehaviour
         }
     }
 
+    public bool isHaveEnemiesAround()
+    {
+        if (enemies.Count >= 1) { return true; }
+        else { return false; }
+    }
+
     public Transform[] GetAllEnemiesTransform()
     {
         enemies.RemoveAll(t => t == null);

@@ -402,7 +402,7 @@ MonoBehaviour:
     to live like everyone else.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2251,7 +2251,7 @@ MonoBehaviour:
   m_text: He was very close to his goal. He entertained me.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2563,7 +2563,7 @@ MonoBehaviour:
     leave now, goodbye...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3074,6 +3074,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7838363676159234796, guid: 3af7639210613c5468357976e87be787, type: 3}
   m_PrefabInstance: {fileID: 416223736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &416223738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 807826375354668433, guid: 3af7639210613c5468357976e87be787, type: 3}
+  m_PrefabInstance: {fileID: 416223736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &420051272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,7 +3323,7 @@ MonoBehaviour:
   m_text: Okay, I'll leave you alone with the player. Good luck.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4712,6 +4717,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 501639807}
+  - {fileID: 1574981079}
+  - {fileID: 852273255}
   m_Father: {fileID: 1226278473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4747,10 +4754,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 416223738}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 775894723}
+        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
-  doTask: 0
+  CancelInvokeButton: {fileID: 1574981080}
+  doTask: 1
+  dialogueSFX: {fileID: 6791139063765670356}
 --- !u!111 &621318585
 Animation:
   m_ObjectHideFlags: 0
@@ -4818,6 +4850,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
+  dialogue: {fileID: 621318585}
+  cutscene: {fileID: 775894723}
+  cutsceneDelay: 2
+  stepTimes:
+  - 0.5
+  - 5.5
+  - 11
+  - 16.5
+  - 22
+  - 27.5
+  - 33
+  - 38.5
+  - 44
+  - 49.5
+  - 55
+  - 60.5
+  - 66
+  - 71.5
+  - 77
+  skipStepInDialogue: {fileID: 852273256}
+  timer: {fileID: 621318584}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 6791139063765670356}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -5110,7 +5165,7 @@ MonoBehaviour:
   m_text: Now I'll tell you a little backstory of the brain.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5262,7 +5317,7 @@ MonoBehaviour:
     player what happened.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5879,6 +5934,7 @@ GameObject:
   - component: {fileID: 775894724}
   - component: {fileID: 775894725}
   - component: {fileID: 775894726}
+  - component: {fileID: 775894727}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -5972,6 +6028,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b9f85b658170b4797f4c1880198e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeleteSave
+--- !u!114 &775894727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775894721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff68e6a66febb1749a0e45207d3aca20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolumeManager
+  manageTweenVolume:
+  - {fileID: 8537721862160218019}
+  - {fileID: 974034805}
 --- !u!1 &777063597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6907,6 +6978,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843196015}
   m_CullTransparentMesh: 1
+--- !u!1001 &852273254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 621318582}
+    m_Modifications:
+    - target: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Name
+      value: Skip_Replica_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905849272454664731, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 6791139063765670356}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+--- !u!224 &852273255 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 852273254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &852273256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 852273254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &852389071
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,6 +8064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974034803}
   - component: {fileID: 974034804}
+  - component: {fileID: 974034805}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -8011,6 +8184,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &974034805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974034802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 974034804}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 0.5
 --- !u!1 &981041573
 GameObject:
   m_ObjectHideFlags: 0
@@ -8254,7 +8443,7 @@ MonoBehaviour:
   m_text: Among the society of brains, our character was an outcast.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9572,7 +9761,7 @@ MonoBehaviour:
     gather.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9962,7 +10151,7 @@ MonoBehaviour:
     gives me a spectacle.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12226,6 +12415,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573373528}
   m_CullTransparentMesh: 1
+--- !u!1001 &1574981078
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 621318582}
+    m_Modifications:
+    - target: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_Name
+      value: Skip_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905849272454664731, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 6791139063765670356}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+--- !u!224 &1574981079 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 1574981078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1574981080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 1574981078}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1578771270
 GameObject:
   m_ObjectHideFlags: 0
@@ -12936,7 +13226,7 @@ MonoBehaviour:
   m_text: After that, I thought this show was too boring, so I created a Time Lord.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13665,7 +13955,7 @@ MonoBehaviour:
     want to kill him.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14153,7 +14443,7 @@ MonoBehaviour:
   m_text: And then I decided to help him, I offered him a very profitable deal.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16223,7 +16513,7 @@ MonoBehaviour:
   m_text: The player probably did not expect such an ending.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16375,7 +16665,7 @@ MonoBehaviour:
     slimes.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17510,7 +17800,7 @@ MonoBehaviour:
     slimes died.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19043,6 +19333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2403184741284111989}
   - component: {fileID: 4503601010497922990}
+  - component: {fileID: 8537721862160218019}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -19050,6 +19341,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8537721862160218019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537721862160218018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 4503601010497922990}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 0.5
 --- !u!4 &8681636080100022652
 Transform:
   m_ObjectHideFlags: 0

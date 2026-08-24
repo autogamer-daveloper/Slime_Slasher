@@ -35,6 +35,8 @@ public class DenseTreeLogic : MonoBehaviour
     [SerializeField] private AudioClip winesClip;
     [SerializeField] private AudioClip whoosh;
     [SerializeField] private AudioClip magic;
+    [Header("__ Tags __")]
+    [SerializeField] private GameObject[] untagThis;
 
     private int _isDenseTreeDefeated = 0;
     private bool _isSecondPhase = false;
@@ -58,6 +60,7 @@ public class DenseTreeLogic : MonoBehaviour
     {
         stats.BlockDamage();
         _isDenseTreeDefeated = KeyManager.Get_Bool_Key(bossKey);
+        foreach(GameObject obj in untagThis) { obj.tag = "Untagged"; }
 
         if (_isDenseTreeDefeated == 1)
         {
@@ -84,6 +87,7 @@ public class DenseTreeLogic : MonoBehaviour
     {
         showAnimation(1);
         spawned.Invoke();
+        foreach(GameObject obj in untagThis) { obj.tag = "Enemy"; }
         Invoke(nameof(ShowFirstDialogue), _beforeFirstDialogue);
         healthBar.SetActive(true);
 
@@ -169,6 +173,7 @@ public class DenseTreeLogic : MonoBehaviour
     {
         DeleteAll();
         stats.BlockDamage();
+        foreach(GameObject obj in untagThis) { obj.tag = "Untagged"; }
         CancelInvoke(nameof(SpawnWines));
         CancelInvoke(nameof(SpawnEnemy));
         CancelInvoke(nameof(_SpawnEnemy));
@@ -182,6 +187,7 @@ public class DenseTreeLogic : MonoBehaviour
     {
         if(_isAlreadyKilled) { return; }
         _isAlreadyKilled = true;
+        foreach(GameObject obj in untagThis) { obj.tag = "Untagged"; }
 
         DeleteAll();
         stats.BlockDamage();

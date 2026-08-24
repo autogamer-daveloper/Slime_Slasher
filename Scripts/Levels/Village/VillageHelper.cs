@@ -17,14 +17,15 @@ public class VillageHelper : MonoBehaviour
     [SerializeField] private Animation helpTradeAnim;
     [SerializeField] private string _foundKey = "KeyWasFound";
 
-    [Header("__ Help: Trade __")]
+    [Header("__ Help: Find boss __")]
     [SerializeField] private GameObject helpBoss;
     [SerializeField] private Animation helpBossAnim;
     [SerializeField] private string _foundBoss = "BossWasFound";
 
-    [Header("__ Help: Trade __")]
+    [Header("__ Help: Last help __")]
     [SerializeField] private GameObject helpTeleport;
     [SerializeField] private Animation helpTeleportAnim;
+    [SerializeField] private string _defeatedBoss = "isDenseTreeDefeated";
 
     private void Start()
     {
@@ -32,12 +33,13 @@ public class VillageHelper : MonoBehaviour
         int foundTawern = KeyManager.Get_Bool_Key(_foundTawern);
         int foundKey = KeyManager.Get_Bool_Key(_foundKey);
         int foundBoss = KeyManager.Get_Bool_Key(_foundBoss);
+        int defeatedBoss = KeyManager.Get_Bool_Key(_defeatedBoss);
 
+        if (defeatedBoss == 1) { ShowHint(4); return; }
         if (foundSon == 0) { ShowHint(0); return; }
         if (foundTawern == 0) { ShowHint(1); return; }
         if (foundKey == 0) { ShowHint(2); return; }
         if (foundBoss == 0) { ShowHint(3); return; }
-        if (foundSon == 1 && foundTawern == 1 && foundKey == 1 && foundBoss == 1) { ShowHint(4); return; }
     }
 
     private void ShowHint(int id)

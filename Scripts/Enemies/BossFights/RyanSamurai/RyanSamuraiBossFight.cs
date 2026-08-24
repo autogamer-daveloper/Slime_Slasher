@@ -15,7 +15,6 @@ public class RyanSamuraiBossFight : MonoBehaviour
     [Header("__ Boss defeated key __")]
     [SerializeField] private string bossKey = "isRyanSamuraiDefeated";
     [Header("__ UI __")]
-    [SerializeField] private Button startSkip;
     [SerializeField] private Button startFight;
     [SerializeField] private GameObject startDialogue;
     [SerializeField] private RectTransform fightOrNot;
@@ -51,6 +50,8 @@ public class RyanSamuraiBossFight : MonoBehaviour
     [SerializeField] private AudioClip magic;
     [SerializeField] private AudioClip slash;
     [SerializeField] private AudioClip fear;
+    [Header("__ Tags __")]
+    [SerializeField] private GameObject[] untagThis;
 
     private int _isSamuraiDefeated = 0;
     private bool _isSecondPhase = false;
@@ -62,8 +63,6 @@ public class RyanSamuraiBossFight : MonoBehaviour
     private float _ImmortalTime = 0.75f;
     private float _beforeFirstDialogue = 0.5f;
     private float _firstDialogueDuration = 55.5f;
-    private float _beforeFight = 11.5f;
-    private float _beforeSelfKill = 10.5f;
     private float _afterSpawn = 4f;
     private float _betweenCoilSpawns = 0.15f;
     private float _afterCoilSpawns = 1.25f;
@@ -83,14 +82,14 @@ public class RyanSamuraiBossFight : MonoBehaviour
         playerVisible.SetActive(false);
         stats.BlockDamage();
         _isSamuraiDefeated = KeyManager.Get_Bool_Key(bossKey);
+        foreach (GameObject obj in untagThis) { obj.tag = "Untagged"; }
 
-        if (_isSamuraiDefeated == 1) { showAnimation(5); afterKilling.Invoke(); Invoke(nameof(SendPenguin), 11f); }
+        if (_isSamuraiDefeated == 1) { showAnimation(5); afterKilling.Invoke(); SendPenguin(); }
         else { showAnimation(0); }
 
         startFight.onClick.AddListener(PreStartFight);
         fight.onClick.AddListener(StartFight);
         notFight.onClick.AddListener(NotStartFight);
-        startSkip.onClick.AddListener(StartSkip);
     }
 
     private void OnDestroy()
@@ -98,7 +97,6 @@ public class RyanSamuraiBossFight : MonoBehaviour
         startFight.onClick.RemoveListener(PreStartFight);
         fight.onClick.RemoveListener(StartFight);
         notFight.onClick.RemoveListener(NotStartFight);
-        startSkip.onClick.RemoveListener(StartSkip);
     }
 
     private void showAnimation(int id)
@@ -119,7 +117,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
 
     #region DIALOGUES
 
-    private void StartSkip()
+    public void StartSkip()
     {
         CancelInvoke(nameof(ShowSelecting));
         ShowSelecting();
@@ -144,16 +142,15 @@ public class RyanSamuraiBossFight : MonoBehaviour
     private void StartFight()
     {
         HideSelecting();
+        foreach (GameObject obj in untagThis) { obj.tag = "Enemy"; }
         onStartedFight.Invoke();
         startFightD.SetActive(true);
-        Invoke(nameof(Fight), _beforeFight);
     }
 
     private void NotStartFight()
     {
         HideSelecting();
         notStartFightD.SetActive(true);
-        Invoke(nameof(Suicide), _beforeSelfKill);
     }
 
     private void Suicide()
@@ -163,7 +160,6 @@ public class RyanSamuraiBossFight : MonoBehaviour
         stats.BlockDamage();
         Invoke(nameof(OnBossDefeated), 0.5f);
         KeyManager.Set_Bool_Key(bossKey, 1);
-        Invoke(nameof(SendPenguin), 11f);
     }
 
     private void UnlockDialogueAttack() { attack.UnlockDialogue(); }
@@ -265,6 +261,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
     public void PlayerDead()
     {
         stats.BlockDamage();
+        foreach (GameObject obj in untagThis) { obj.tag = "Untagged"; }
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));
         CancelInvoke(nameof(_SpawnEnemy));
@@ -279,6 +276,7 @@ public class RyanSamuraiBossFight : MonoBehaviour
     public void Killed()
     {
         DeleteSlashes();
+        foreach (GameObject obj in untagThis) { obj.tag = "Untagged"; }
         healthBar.SetActive(false);
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));
@@ -290,7 +288,6 @@ public class RyanSamuraiBossFight : MonoBehaviour
         Invoke(nameof(OnBossDefeated), 2.5f);
         KeyManager.Set_Bool_Key(bossKey, 1);
         afterKilling.Invoke();
-        Invoke(nameof(SendPenguin), 11f);
         showAnimation(5);
     }
 
@@ -317,4 +314,20 @@ public class RyanSamuraiBossFight : MonoBehaviour
     }
 
     private void SendPenguin() { afterFinalDialogue.Invoke(); }
+
+    public void SkipFightDialogue()
+    {
+        Fight();
+    }
+
+    public void SkipAfterFightDialogue()
+    {
+        SendPenguin();
+    }
+
+    public void SkipSuicideDialogue()
+    {
+        Suicide();
+        SendPenguin();
+    }
 }

@@ -16,7 +16,16 @@ public class PlayersInstruments : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip selectItem;
 
-    private void Start() { SerializeButtons(); }
+    private void Start()
+    {
+        SerializeButtons();
+
+        int axeId = KeyManager.GetInt_InstrumentPower_Axe();
+        int pickaxeId = KeyManager.GetInt_InstrumentPower_Pickaxe();
+
+        SelectedAxe(axeId);
+        SelectedPickaxe(pickaxeId);
+    }
 
     private void SerializeButtons()
     {

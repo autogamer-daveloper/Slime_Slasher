@@ -1175,6 +1175,107 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &442996791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3473683406682469298}
+    m_Modifications:
+    - target: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Name
+      value: Skip_Replica_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905849272454664731, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 6791139063765670356}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+--- !u!224 &442996792 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 442996791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &442996793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 442996791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &467549897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1948,6 @@ RectTransform:
   m_Children:
   - {fileID: 954175092}
   - {fileID: 1226278473}
-  - {fileID: 1149134480}
   - {fileID: 145856259}
   - {fileID: 1129390361}
   - {fileID: 1195044234}
@@ -2113,6 +2213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775894722}
   - component: {fileID: 775894723}
+  - component: {fileID: 775894724}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -2163,6 +2264,27 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &775894724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775894721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74d0b027611d584e81aa05675719d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FastSkipCutscene
+  skipButton: {fileID: 1149134482}
+  isSceneLoader: 1
+  action:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneId: 0
+  loader: {fileID: 1195044235}
+  delay: 1
+  dialogueSFX: {fileID: 6791139063765670356}
 --- !u!1 &780789700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,7 +3652,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 651551602}
+    m_TransformParent: {fileID: 3473683406682469298}
     m_Modifications:
     - target: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
       propertyPath: m_Name
@@ -3582,15 +3704,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3607,19 +3729,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1149134483}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
 --- !u!224 &1149134480 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8888911804373179745, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
-  m_PrefabInstance: {fileID: 1149134479}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1149134481 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 1149134479}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1149134482 stripped
@@ -3627,32 +3741,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 1149134479}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149134481}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!114 &1149134483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149134481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a74d0b027611d584e81aa05675719d07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FastSkipCutscene
-  skipButton: {fileID: 1149134482}
-  isSceneLoader: 1
-  action:
-    m_PersistentCalls:
-      m_Calls: []
-  sceneId: 0
-  loader: {fileID: 1195044235}
-  dialogueSFX: {fileID: 6791139063765670356}
 --- !u!1 &1166818773
 GameObject:
   m_ObjectHideFlags: 0
@@ -7854,6 +7948,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3616761442028642478}
+  - {fileID: 1149134480}
+  - {fileID: 442996792}
   m_Father: {fileID: 1226278473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9116,6 +9212,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
+  dialogue: {fileID: 1946145167733606748}
+  cutscene: {fileID: 775894723}
+  cutsceneDelay: 2
+  stepTimes:
+  - 0.5
+  - 4.5
+  - 10.5
+  - 15
+  - 20
+  - 25
+  - 30.5
+  skipStepInDialogue: {fileID: 442996793}
+  timer: {fileID: 6912390850076365424}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 6791139063765670356}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -9530,11 +9641,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isLoadLevelAction: 1
+      - m_Target: {fileID: 775894724}
+        m_TargetAssemblyTypeName: FastSkipCutscene, Assembly-CSharp
+        m_MethodName: Skip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isLoadLevelAction: 0
   index: 0
-  CancelInvokeButton: {fileID: 0}
-  doTask: 0
-  dialogueSFX: {fileID: 0}
+  CancelInvokeButton: {fileID: 1149134482}
+  doTask: 1
+  dialogueSFX: {fileID: 6791139063765670356}
 --- !u!114 &6937756131030955548
 MonoBehaviour:
   m_ObjectHideFlags: 0

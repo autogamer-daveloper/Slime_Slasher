@@ -9,6 +9,9 @@ public class DropType
 
 public class DropSystem : MonoBehaviour
 {
+    [Header("__ Is need custom spawn point? __")]
+    [SerializeField] private bool isCustomSpawn = false;
+    [SerializeField] private Transform targetPoint;
     [Header("__ Dropable items __")]
     [SerializeField] private DropType[] element;
     [Header("__ Extra settings __")]
@@ -29,7 +32,11 @@ public class DropSystem : MonoBehaviour
 
             if (item.chance >= _result)
             {
-                Instantiate(item.item, this.gameObject.transform.position, this.gameObject.transform.rotation);
+                Transform target;
+                if(isCustomSpawn) { target = targetPoint; }
+                else { target = this.gameObject.transform; }
+
+                Instantiate(item.item, target.position, this.gameObject.transform.rotation);
                 Debug.Log($"Dropped item with result: {_result}");
                 if (onlyOneItem)
                 {

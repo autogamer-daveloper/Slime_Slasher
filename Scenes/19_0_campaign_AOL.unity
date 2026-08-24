@@ -2266,19 +2266,19 @@ MonoBehaviour:
     timeToActivate: 10.5
   - point: {fileID: 1485715344}
     timeToMove: 2.5
-    timeToActivate: 15
+    timeToActivate: 18
   - point: {fileID: 1910416452}
     timeToMove: 2.5
-    timeToActivate: 20
+    timeToActivate: 22
   - point: {fileID: 1485715344}
     timeToMove: 2.5
-    timeToActivate: 25
+    timeToActivate: 27
   - point: {fileID: 1910416452}
     timeToMove: 2.5
-    timeToActivate: 30.5
+    timeToActivate: 33.5
   - point: {fileID: 1910416452}
     timeToMove: 1
-    timeToActivate: 34
+    timeToActivate: 38
   atStart: 1
   playerCamera: {fileID: 913022821}
   cutsceneCamera: {fileID: 1987678213}
@@ -18443,6 +18443,7 @@ MonoBehaviour:
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 6081022966757117302}
   runAnim: {fileID: 4149141694061585929}
+  isIdleWhenStopped: 1
   cameraAnim: {fileID: 913022821}
   isAnimated: 0
   aimTarget: {fileID: 2794651752461390190}
@@ -18621,7 +18622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bd9a3629f2b4e48a226c11989a237e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DelayStartTimer
-  delay: 36
+  delay: 39
   action:
     m_PersistentCalls:
       m_Calls:
@@ -37471,6 +37472,107 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1331924201
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2315807476232596590}
+    m_Modifications:
+    - target: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Name
+      value: Skip_Replica_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905849272454664731, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 4667966037794618978}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+--- !u!224 &1331924202 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8888911804373179745, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 1331924201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1331924203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 1331924201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1332152213
 GameObject:
   m_ObjectHideFlags: 0
@@ -39146,7 +39248,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: df5d9ac02ff86af478949125115e5c0a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39230,23 +39332,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!111 &1394686236
-Animation:
+--- !u!114 &1394686236
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394686233}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 1c21eccdb5355f84b960219902b7f24b, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 1c21eccdb5355f84b960219902b7f24b, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 1394686235}
+  startVolumeValue: 0.15
+  endVolumeValue: 0.5
+  fadeTime: 0.5
 --- !u!1 &1396879418
 GameObject:
   m_ObjectHideFlags: 0
@@ -40975,7 +41076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputType
-  buildType: 0
+  buildType: 1
 --- !u!1 &1459732616
 GameObject:
   m_ObjectHideFlags: 0
@@ -63791,9 +63892,9 @@ Animation:
   m_GameObject: {fileID: 7860792876904305796}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: a2c7091e4db96ac4ba659123dbbae563, type: 2}
+  m_Animation: {fileID: 7400000, guid: fdfc3710eda759048904df477e86979e, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: a2c7091e4db96ac4ba659123dbbae563, type: 2}
+  - {fileID: 7400000, guid: fdfc3710eda759048904df477e86979e, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -64493,7 +64594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -65590,6 +65691,7 @@ RectTransform:
   m_Children:
   - {fileID: 2460996573904109426}
   - {fileID: 1978545460}
+  - {fileID: 1331924202}
   m_Father: {fileID: 651551602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -69208,6 +69310,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
+  dialogue: {fileID: 798402389071189632}
+  cutscene: {fileID: 627697623}
+  cutsceneDelay: 0
+  stepTimes:
+  - 0.5
+  - 4.5
+  - 10.5
+  - 16
+  - 22
+  - 27.5
+  - 33
+  skipStepInDialogue: {fileID: 1331924203}
+  timer: {fileID: 5763438591431003564}
+  secondCameraSystem: {fileID: 54353993}
+  cameraPointId: 00000000010000000200000003000000040000000500000006000000
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -70114,7 +70231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bd9a3629f2b4e48a226c11989a237e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DelayStartTimer
-  delay: 35
+  delay: 39
   action:
     m_PersistentCalls:
       m_Calls:
@@ -70146,6 +70263,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1394686236}
+        m_TargetAssemblyTypeName: TweenVolume, Assembly-CSharp
+        m_MethodName: SetNewValue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

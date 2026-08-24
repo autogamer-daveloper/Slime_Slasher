@@ -59,11 +59,27 @@ public class CutsceneSecondCameraSystem : MonoBehaviour
     {
         CancelInvoke(nameof(EndedCutscene));
 
-        foreach (Coroutine coroutine in activeCoroutines) { if (coroutine != null) { StopCoroutine(coroutine); }}
-        
+        foreach (Coroutine coroutine in activeCoroutines) { if (coroutine != null) { StopCoroutine(coroutine); } }
+
         activeCoroutines.Clear();
 
         EndedCutscene();
+    }
+
+    internal void RecalculateCameraWaypoint(int id)
+    {
+        StopAllCoroutines();
+        activeCoroutines.Clear();
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            int index = i;
+            if (points[index].timeToActivate >= points[id].timeToActivate)
+            {
+                Coroutine coroutine = StartCoroutine(CallMoving(index, points[index].timeToActivate - points[id].timeToActivate));
+                activeCoroutines.Add(coroutine);   
+            }
+        }
     }
 }
 

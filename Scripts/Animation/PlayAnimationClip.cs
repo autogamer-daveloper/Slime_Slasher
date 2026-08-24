@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayAnimationClip : MonoBehaviour
 {
     [SerializeField] private Animation anim;
-    [SerializeField] private string name;
+    [SerializeField] private new string name;
     [SerializeField] private bool isDefault = true;
     [SerializeField] private bool isOnEnablePlay = false;
 
@@ -11,7 +11,7 @@ public class PlayAnimationClip : MonoBehaviour
 
     public void PlayAnim()
     {
-        if (isDefault) { anim.Play(); }
+        if (isDefault) { anim.Play(anim.clip.name); }
         else { anim.Play(name); }
     }
 }

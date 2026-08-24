@@ -121,7 +121,7 @@ public class GifTexture : MonoBehaviour
             {
                 yield return null;
             }
-            if (!webRequest.isNetworkError)
+            if (webRequest.result == UnityWebRequest.Result.Success)
             {
                 glfStream = new MemoryStream(webRequest.downloadHandler.data);
 #if UNITY_EDITOR

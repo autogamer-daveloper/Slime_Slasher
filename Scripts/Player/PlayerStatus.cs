@@ -319,6 +319,12 @@ public class PlayerStatus : MonoBehaviour
 
     private void UnlockDamage() { isBlocked = false; }
 
+    public void BoughtNewAccessory(int id)
+    {
+        KeyManager.SetInt_AccessoryID(id);
+        CheckAccessories();
+    }
+
     private void CheckAccessories()
     {
         if (isZero == true) { return; }

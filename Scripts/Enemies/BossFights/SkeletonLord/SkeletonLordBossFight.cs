@@ -37,6 +37,8 @@ public class SkeletonLordBossFight : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip magicAttack;
     [SerializeField] private AudioClip circleAttack;
+    [Header("__ Tags __")]
+    [SerializeField] private GameObject[] untagThis;
 
     private int _isSkeletonLordDefeated = 0;
     private bool _isSecondPhase = false;
@@ -58,6 +60,7 @@ public class SkeletonLordBossFight : MonoBehaviour
     {
         stats.BlockDamage();
         _isSkeletonLordDefeated = KeyManager.Get_Bool_Key(bossKey);
+        foreach(GameObject obj in untagThis) { obj.tag = "Untagged"; }
         playerVision.SetActive(false);
 
         if (_isSkeletonLordDefeated == 1) { showAnimation(5); }
@@ -78,6 +81,7 @@ public class SkeletonLordBossFight : MonoBehaviour
 
     private void StartFight()
     {
+        foreach(GameObject obj in untagThis) { obj.tag = "Enemy"; }
         showAnimation(1);
         spawned.Invoke();
         Invoke(nameof(ShowFirstDialogue), _beforeFirstDialogue);
@@ -170,6 +174,7 @@ public class SkeletonLordBossFight : MonoBehaviour
     {
         playerVision.SetActive(false);
         stats.BlockDamage();
+        foreach(GameObject obj in untagThis) { obj.tag = "Untagged"; }
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));
         CancelInvoke(nameof(_SpawnEnemy));
@@ -184,6 +189,7 @@ public class SkeletonLordBossFight : MonoBehaviour
     {
         playerVision.SetActive(false);
         stats.BlockDamage();
+        foreach(GameObject obj in untagThis) { obj.tag = "Untagged"; }
         CancelInvoke(nameof(SpawnCoils));
         CancelInvoke(nameof(SpawnEnemy));
         CancelInvoke(nameof(_SpawnEnemy));

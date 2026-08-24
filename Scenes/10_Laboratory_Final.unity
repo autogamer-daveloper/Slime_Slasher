@@ -3590,6 +3590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9840e3ca7360e4a8b1a51df3568889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  isCustomSpawn: 0
+  targetPoint: {fileID: 0}
   element:
   - item: {fileID: 937657777}
     chance: 25
@@ -32927,6 +32929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9840e3ca7360e4a8b1a51df3568889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  isCustomSpawn: 0
+  targetPoint: {fileID: 0}
   element:
   - item: {fileID: 937657777}
     chance: 25
@@ -74515,7 +74519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputType
-  buildType: 0
+  buildType: 1
 --- !u!1 &1457637123
 GameObject:
   m_ObjectHideFlags: 0
@@ -120760,7 +120764,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
-  dialogueSFX: {fileID: 0}
+  dialogueSFX: {fileID: 231496797}
 --- !u!4 &2274499512794293643
 Transform:
   m_ObjectHideFlags: 0
@@ -131173,6 +131177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
+  dialogue: {fileID: 0}
+  cutscene: {fileID: 0}
+  stepTimes: []
+  skipStepInDialogue: {fileID: 0}
+  timer: {fileID: 0}
   src: {fileID: 231496797}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}

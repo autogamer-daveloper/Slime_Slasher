@@ -9,13 +9,11 @@ public class NakoDialogue : MonoBehaviour
     [SerializeField] private GameObject Nako;
     [SerializeField] private Button[] hideNako;
     [Header("__ UI __")]
-    [SerializeField] private Button startSkip;
     [SerializeField] private Button startDialogue;
     [SerializeField] private GameObject startDialogueWindow;
     [SerializeField] private float duration = 20f;
     [SerializeField] private RectTransform selectWords;
     [Header("__ Dialogue First __")]
-    [SerializeField] private Button goodSkip;
     [SerializeField] private GameObject goodEnding;
     [SerializeField] private Button goodEndingButton;
     [SerializeField] private float delaySpawn = 20f;
@@ -51,9 +49,6 @@ public class NakoDialogue : MonoBehaviour
         badEndingButton.onClick.AddListener(BadEnding);
         worstEndingButton.onClick.AddListener(WorstEnding);
 
-        startSkip.onClick.AddListener(StartSkip);
-        goodSkip.onClick.AddListener(GoodSkip);
-
         enterSecret.onClick.AddListener(PauseTimer);
         exitSecret.onClick.AddListener(PlayTimer);
 
@@ -67,9 +62,6 @@ public class NakoDialogue : MonoBehaviour
     {
         startDialogue.onClick.RemoveListener(StartDialogue);
         goodEndingButton.onClick.RemoveListener(GoodEnding);
-
-        startSkip.onClick.RemoveListener(StartSkip);
-        goodSkip.onClick.RemoveListener(GoodSkip);
 
         enterSecret.onClick.RemoveListener(PauseTimer);
         exitSecret.onClick.RemoveListener(PlayTimer);
@@ -123,15 +115,21 @@ public class NakoDialogue : MonoBehaviour
     private void _PlayTimer() { PlayTime.Invoke(); }
     private void _PauseTimer() { PauseTime.Invoke(); }
 
-    private void StartSkip()
+    public void StartSkip()
     {
         CancelInvoke(nameof(ShowEndings));
         ShowEndings();
     }
 
-    private void GoodSkip()
+    public void GoodSkip()
     {
         CancelInvoke(nameof(GivingArtifact));
         GivingArtifact();
+    }
+
+    public void WorstSkip()
+    {
+        CancelInvoke(nameof(PlayerKilling));
+        PlayerKilling();
     }
 }

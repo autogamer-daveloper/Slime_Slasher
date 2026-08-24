@@ -5592,13 +5592,14 @@ GameObject:
   m_Component:
   - component: {fileID: 678946655}
   - component: {fileID: 678946656}
+  - component: {fileID: 678946657}
   m_Layer: 0
   m_Name: Sand-Storm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &678946655
 Transform:
   m_ObjectHideFlags: 0
@@ -5711,6 +5712,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &678946657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678946654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 678946656}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 1
 --- !u!1 &683394928
 GameObject:
   m_ObjectHideFlags: 0
@@ -13577,7 +13594,7 @@ MonoBehaviour:
     anything, you... died...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13643,7 +13660,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1756518850
@@ -14630,13 +14647,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1893835034}
   - component: {fileID: 1893835035}
+  - component: {fileID: 1893835036}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1893835034
 Transform:
   m_ObjectHideFlags: 0
@@ -14749,6 +14767,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1893835036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893835033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 1893835035}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 1
 --- !u!1 &1906379703
 GameObject:
   m_ObjectHideFlags: 0
@@ -14852,6 +14886,7 @@ GameObject:
   - component: {fileID: 1912984769}
   - component: {fileID: 1912984770}
   - component: {fileID: 1912984771}
+  - component: {fileID: 1912984772}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -14910,6 +14945,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 0}
   doTask: 0
+  dialogueSFX: {fileID: 0}
 --- !u!111 &1912984770
 Animation:
   m_ObjectHideFlags: 0
@@ -14939,6 +14975,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b9f85b658170b4797f4c1880198e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeleteSave
+--- !u!114 &1912984772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912984767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff68e6a66febb1749a0e45207d3aca20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolumeManager
+  manageTweenVolume:
+  - {fileID: 8291604254644652596}
+  - {fileID: 1893835036}
+  - {fileID: 678946657}
 --- !u!1 &1918237836
 GameObject:
   m_ObjectHideFlags: 0
@@ -16866,13 +16918,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7838621441695615976}
   - component: {fileID: 8291604254644652595}
+  - component: {fileID: 8291604254644652596}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5018936023285045206
 Transform:
   m_ObjectHideFlags: 0
@@ -16976,6 +17029,10 @@ MonoBehaviour:
   - {fileID: 993044083}
   - {fileID: 73516950}
   - {fileID: 1619827680}
+  audioSources:
+  - {fileID: 4318291979218885183}
+  - {fileID: 1893835033}
+  - {fileID: 678946654}
 --- !u!1 &7735280094340066621
 GameObject:
   m_ObjectHideFlags: 0
@@ -17038,7 +17095,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 42e6d0ae219cdf64ead8b8dc632c8a05, type: 3}
+  m_Resource: {fileID: 8300000, guid: 266b8bda9c3a50642b063616223f0160, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -17124,6 +17181,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8291604254644652596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4318291979218885183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 8291604254644652595}
+  startVolumeValue: 0
+  endVolumeValue: 0.25
+  fadeTime: 1
 --- !u!1 &8352536843205908858
 GameObject:
   m_ObjectHideFlags: 0

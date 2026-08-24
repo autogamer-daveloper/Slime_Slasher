@@ -141,6 +141,8 @@ public class PlayerAttacking : MonoBehaviour
 
     private void OnDestroy() { foreach (Button btn in selectWeaponById) { if (btn != null) { btn.onClick.RemoveAllListeners(); } } }
 
+    public void BoughtWeapon(int id) { SelectThisWeapon(id); }
+
     private void SelectThisWeapon(int id)
     {
         Debug.Log("Selected Weapon:" + id);
@@ -358,10 +360,7 @@ public class PlayerAttacking : MonoBehaviour
         if (player == null) { Debug.LogError("Player not assigned!"); return; }
 
         int _mana = player.mana;
-        if (_mana >= _manaCost) { player.ManaLose(_manaCost, _lifeCost); }
-        else return;
-
-        if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfx); }
+        if (_mana < _manaCost) { return; }
 
         if (_type == Objects.Weapons.Weapons.WeaponType.Meele)
         {
@@ -396,6 +395,10 @@ public class PlayerAttacking : MonoBehaviour
         {
             if (_isDamageWeapon)
             {
+                bool haveEnemiesAround = enemiesAround.isHaveEnemiesAround();
+
+                if(!haveEnemiesAround) { return; }
+
                 Transform[] enemiesTransform = enemiesAround.GetAllEnemiesTransform();
                 foreach (Transform enemyTransform in enemiesTransform)
                 {
@@ -411,6 +414,8 @@ public class PlayerAttacking : MonoBehaviour
             }
         }
 
+        if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfx); }
+        player.ManaLose(_manaCost, _lifeCost);
         _isAttackBlocked = true;
         Invoke("UnlockAttack", _cooldown);
     }
