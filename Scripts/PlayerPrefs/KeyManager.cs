@@ -108,12 +108,16 @@ public class KeyManager : MonoBehaviour
 
     internal static void Delete_All()
     {
+        // Я эту пирамиду хеопса потом снесу наху, щя мне лень
         int playerId = Get_Bool_Key("PlayerID");
         int isInvited = Get_Bool_Key("IsInvitedBefore");
         int letter = Get_Bool_Key("LetterTriggered");
         int note = Get_Bool_Key("NoteTriggered");
         int lang = Get_Bool_Key("Language");
         int astraslimes = Get_Bool_Key("Astraslimes");
+        int s_autoUse = Get_Bool_Key("IsNeedAutoUse");
+        int s_enableWarn = Get_Bool_Key("IsShowWarning");
+        int s_volume = Get_Bool_Key("AudioVolume");
         int visual0 = Get_Bool_Key("visual_bought_0");
         int visual1 = Get_Bool_Key("visual_bought_1");
         int visual2 = Get_Bool_Key("visual_bought_2");
@@ -137,6 +141,9 @@ public class KeyManager : MonoBehaviour
         Set_Bool_Key("visual_bought_4", visual4);
         Set_Bool_Key("visual_bought_5", visual5);
         Set_Bool_Key("visual_bought_6", visual6);
+        Set_Bool_Key("IsNeedAutoUse", s_autoUse);
+        Set_Bool_Key("IsShowWarning", s_enableWarn);
+        Set_Bool_Key("AudioVolume", s_volume);
         Set_Bool_Key("Rated", rate);
         SetInt_VisualAccessoryID(usingVisual);
     }

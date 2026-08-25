@@ -43,7 +43,6 @@ public class LevelLoading : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
-        music.DOFade(0.25f, 1.5f);
         _saveIndex = KeyManager.Get_Bool_Key("gameEpisode");
         if (_saveIndex == 0) { continueGame.interactable = false; }
         else { continueGame.interactable = true; }

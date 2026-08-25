@@ -650,6 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221532963}
   - component: {fileID: 221532964}
+  - component: {fileID: 221532965}
   m_Layer: 0
   m_Name: Voices (Normal)
   m_TagString: Untagged
@@ -769,6 +770,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &221532965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221532962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 221532964}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 1
 --- !u!1 &232740232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619394802}
   - component: {fileID: 619394801}
+  - component: {fileID: 619394803}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -2236,8 +2254,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 775894722}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619394803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ffe702dc416394e9b2c49fe21fad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
+  excludedAudioSources:
+  - {fileID: 221532964}
+  - {fileID: 1633701295}
+  - {fileID: 1625077824}
 --- !u!1 &644156733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,6 +3120,7 @@ GameObject:
   - component: {fileID: 775894725}
   - component: {fileID: 775894726}
   - component: {fileID: 775894727}
+  - component: {fileID: 775894728}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -3106,7 +3141,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 619394802}
   - {fileID: 519420032}
   - {fileID: 1138123572}
   - {fileID: 651551602}
@@ -3174,6 +3208,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoseSpecialItems
   idOfItems: 300000003100000032000000
+--- !u!114 &775894728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775894721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff68e6a66febb1749a0e45207d3aca20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolumeManager
+  manageTweenVolume:
+  - {fileID: 221532965}
+  - {fileID: 1633701296}
+  - {fileID: 1625077825}
 --- !u!1 &776846643
 GameObject:
   m_ObjectHideFlags: 0
@@ -5696,6 +5746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625077823}
   - component: {fileID: 1625077824}
+  - component: {fileID: 1625077825}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -5815,6 +5866,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1625077825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625077822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 1625077824}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 1
 --- !u!1 &1633701293
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,6 +5892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633701294}
   - component: {fileID: 1633701295}
+  - component: {fileID: 1633701296}
   m_Layer: 0
   m_Name: Voices (Revolution)
   m_TagString: Untagged
@@ -5944,6 +6012,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1633701296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633701293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecdbb4f0592fb441a64913900095b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TweenVolume
+  src: {fileID: 1633701295}
+  startVolumeValue: 0
+  endVolumeValue: 0.5
+  fadeTime: 1
 --- !u!1 &1649923886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7543,6 +7627,7 @@ MonoBehaviour:
       m_Calls: []
   sceneId: 15
   loader: {fileID: 402945656}
+  delay: 0
   dialogueSFX: {fileID: 0}
 --- !u!114 &38897739316176582
 MonoBehaviour:
@@ -7675,6 +7760,8 @@ MonoBehaviour:
   - 30.5
   skipStepInDialogue: {fileID: 369830792}
   timer: {fileID: 6752209316101648770}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 426870007}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -11306,18 +11393,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 775894725}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isLoadLevelAction: 0
   index: 0
   CancelInvokeButton: {fileID: 2146660613}
@@ -12836,4 +12911,5 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 619394802}
   - {fileID: 775894722}

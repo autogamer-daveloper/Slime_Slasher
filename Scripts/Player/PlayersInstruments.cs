@@ -16,6 +16,8 @@ public class PlayersInstruments : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip selectItem;
 
+    private const string autoUseKey = "IsNeedAutoUse";
+
     private void Start()
     {
         SerializeButtons();
@@ -41,8 +43,22 @@ public class PlayersInstruments : MonoBehaviour
     private void SelectedPickaxe(int id) { foreach (GameObject obj in pickaxePictures) { obj.SetActive(false); } pickaxePictures[id].SetActive(true); }
     private void SelectedAxe(int id) { foreach (GameObject obj in axePictures) { obj.SetActive(false); } axePictures[id].SetActive(true); }
 
-    public void SelectedPickaxePublic(int id) { SelectedPickaxe(id); }
-    public void SelectedAxePublic(int id) { SelectedAxe(id); }
+    public void SelectedPickaxePublic(int id)
+    {
+        if (PlayerPrefs.HasKey(autoUseKey))
+        {
+            int useAutoUse = KeyManager.Get_Bool_Key(autoUseKey);
+            if(useAutoUse == 1) { SelectedPickaxe(id); }
+        } else { SelectedPickaxe(id); }
+    }
+    public void SelectedAxePublic(int id)
+    {
+        if (PlayerPrefs.HasKey(autoUseKey))
+        {
+            int useAutoUse = KeyManager.Get_Bool_Key(autoUseKey);
+            if(useAutoUse == 1) { SelectedAxe(id); }
+        } else { SelectedAxe(id); }
+    }
 
     private void OnDestroy()
     {

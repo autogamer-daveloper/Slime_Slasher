@@ -2311,11 +2311,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 19196070}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 5.5
   skipStepInDialogue: {fileID: 357652050}
   timer: {fileID: 19196069}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -52906,6 +52909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619394802}
   - component: {fileID: 619394801}
+  - component: {fileID: 619394803}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -52980,6 +52984,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619394803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ffe702dc416394e9b2c49fe21fad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
+  excludedAudioSources: []
 --- !u!1 &620289501
 GameObject:
   m_ObjectHideFlags: 0
@@ -53502,6 +53519,7 @@ MonoBehaviour:
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 938308926}
   runAnim: {fileID: 938308925}
+  isIdleWhenStopped: 1
   cameraAnim: {fileID: 177150147}
   isAnimated: 0
   aimTarget: {fileID: 4251415899606400458}
@@ -53604,6 +53622,7 @@ MonoBehaviour:
   - {fileID: 1048571581}
   audioSource: {fileID: 5521837284257993574}
   selectItem: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
+  magicBookHelp: {fileID: 685842647}
   damage: 1
   _manaHealing: 0
   _lifeHealing: 0
@@ -56073,6 +56092,7 @@ RectTransform:
   - {fileID: 142821640}
   - {fileID: 6870156285414595739}
   - {fileID: 95267842}
+  - {fileID: 685842648}
   - {fileID: 975865727}
   - {fileID: 325027097}
   - {fileID: 2641869195708781779}
@@ -59961,6 +59981,97 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &685842646
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 651551602}
+    m_Modifications:
+    - target: {fileID: 4952399543991771511, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_Name
+      value: Help_MagicBook
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+--- !u!111 &685842647 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 2263428945849513042, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+  m_PrefabInstance: {fileID: 685842646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &685842648 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+  m_PrefabInstance: {fileID: 685842646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &685891567
 GameObject:
   m_ObjectHideFlags: 0
@@ -105008,11 +105119,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 1240293226}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 5.5
   skipStepInDialogue: {fileID: 889256893}
   timer: {fileID: 1240293225}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -152181,11 +152295,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 1758917699}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 5.5
   skipStepInDialogue: {fileID: 1334009383}
   timer: {fileID: 1758917698}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -194946,6 +195063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 2698932016612152175}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 5.5
@@ -194959,6 +195077,8 @@ MonoBehaviour:
   - 49.5
   skipStepInDialogue: {fileID: 148750351}
   timer: {fileID: 3754591087062831621}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 5521837284257993574}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}

@@ -13,12 +13,20 @@ public class TweenVolume : MonoBehaviour
     [Tooltip("Set fade time")]
     [SerializeField] private float fadeTime = 0.5f;
 
-    private void Awake() { src.volume = startVolumeValue; }
+    private const string audioVolumeKey = "AudioVolume";
+    private float endVolumeCalculated = 0.25f;
+
+    private void Awake()
+    {
+        src.volume = startVolumeValue;
+        float volumeLevel = KeyManager.Get_Bool_Key(audioVolumeKey);
+        endVolumeCalculated = endVolumeValue * (volumeLevel / 100f);
+    }
 
     public void SetNewValue()
     {
         src.DOKill();
-        src.DOFade(endVolumeValue, fadeTime);
+        src.DOFade(endVolumeCalculated, fadeTime);
     }
 
     public void SetOldValue()

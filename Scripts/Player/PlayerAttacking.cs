@@ -6,43 +6,67 @@ using UnityEngine.InputSystem;
 public class PlayerAttacking : MonoBehaviour
 {
     [Header("__ Input Type __")]
+    [Tooltip("In this class you will select input type.")]
     [SerializeField] private InputType type;
 
     [Header("__ Default __")]
+    [Tooltip("Attack buttons.")]
     [SerializeField] private Button[] attackButton;
+    [Tooltip("Default attack animation.")]
     [SerializeField] private GameObject defaultAnimation;
+    [Tooltip("Spawn point for your bullets/arrows.")]
     [SerializeField] private Transform arrowSpawn;
+    [Tooltip("(Mobile input) Simple attack UI.")]
     [SerializeField] private GameObject simpleAttack;
+    [Tooltip("(Mobile input) Range weapon attack UI.")]
     [SerializeField] private GameObject aimJoystick;
+    [Tooltip("Your aim cursor near to playable character.")]
     [SerializeField] private GameObject aim;
 
     [Header("__ Joystick Settings __")]
+    [Tooltip("(Mobile input) Joystick for aim when use range weapon.")]
     [SerializeField] private Joystick aimStick;
+    [Tooltip("Distance from character to cursor.")]
     [SerializeField] private float aimMaxDistance = 2f;
+    [Tooltip("(Mobile input) How big is dead zone?")]
     [SerializeField] private float aimDeadzone = 0.25f;
+    [Tooltip("Start angle offset for aim cursor object.")]
     [SerializeField] private float angleOffset = -90f;
 
     [Header("__ Rotation / Safety __")]
+    [Tooltip("Why this field available in inspector?")] // Lol for debugging. BTW i answer to myself ^_^
     [SerializeField] private bool lockPlayerRotation = true;
     private Quaternion _initialRotation;
 
     [Header("__ Player Setting __")]
+    [Tooltip("PlayerStatus class connection.")]
     [SerializeField] private PlayerStatus player;
+    [Tooltip("CheckForEnemies class connection.")]
     [SerializeField] private CheckForEnemies enemiesAround;
+    [Tooltip("Buttons, which on click of any of this you will get weapon by button id.")]
     [SerializeField] private Button[] selectWeaponById;
 
     [Header("__ Meele Effect Aim __")]
+    [Tooltip("Like as bullet spawner, but for meele effects.")]
     [SerializeField] private Transform aimVector;
 
     [Header("__ Weapons __")]
+    [Tooltip("Fill this field by weapons data.")]
     [SerializeField] private Weapons[] weapon;
 
     [Header("__ Weapon Pictures __")]
+    [Tooltip("Fill this field by weapons pictures at mini-inventory. This field length must be same as weapon[]'s field length.")]
     [SerializeField] private GameObject[] weaponPictures;
 
     [Header("__ Audio __")]
+    [Tooltip("Main audio source.")]
     [SerializeField] private AudioSource audioSource;
+    [Tooltip("Sound effect. Plays when you select item.")]
     [SerializeField] private AudioClip selectItem;
+
+    [Header("__ Help __")]
+    [Tooltip("Activates when no enemies around and you try to use magic book.")]
+    [SerializeField] private Animation magicBookHelp;
 
     private Animation defaultMeeleAnimation;
 
@@ -57,6 +81,7 @@ public class PlayerAttacking : MonoBehaviour
     private int _lifeCost = 0;
     private bool _isAttackBlocked = false;
     private AudioClip _sfx;
+    private AudioClip _sfxDef;
 
     // meele params
     private bool _customAnimationMeele = false;
@@ -89,6 +114,8 @@ public class PlayerAttacking : MonoBehaviour
 
     private bool isMobileInput = false;
     private bool dialogueBlock = false;
+
+    private const string autoUseKey = "IsNeedAutoUse";
 
     private void Awake()
     {
@@ -141,7 +168,14 @@ public class PlayerAttacking : MonoBehaviour
 
     private void OnDestroy() { foreach (Button btn in selectWeaponById) { if (btn != null) { btn.onClick.RemoveAllListeners(); } } }
 
-    public void BoughtWeapon(int id) { SelectThisWeapon(id); }
+    public void BoughtWeapon(int id)
+    {
+        if (PlayerPrefs.HasKey(autoUseKey))
+        {
+            int useAutoUse = KeyManager.Get_Bool_Key(autoUseKey);
+            if (useAutoUse == 1) { SelectThisWeapon(id); }
+        } else { SelectThisWeapon(id); }
+    }
 
     private void SelectThisWeapon(int id)
     {
@@ -169,6 +203,7 @@ public class PlayerAttacking : MonoBehaviour
         _cooldown = w.Cooldown;
         _type = w.Type;
         _sfx = w.Sfx;
+        _sfxDef = weapon[0].Sfx;
         SelectWeaponPicture();
 
         if (w.Type == Objects.Weapons.Weapons.WeaponType.Meele)
@@ -369,6 +404,7 @@ public class PlayerAttacking : MonoBehaviour
                 defaultMeeleAnimation.Play(_meeleAnimationName);
             }
 
+            AfterAttack(false);
             if (_isHaveEffect == false) { return; }
 
             if (_isRotatable) { Instantiate(_meeleEffect, aimVector.position, aimVector.rotation); }
@@ -387,6 +423,7 @@ public class PlayerAttacking : MonoBehaviour
                     rb2d.linearVelocity = forward * _speed;
                 }
                 Destroy(inst, _lifeTime);
+                AfterAttack(false);
             }
             else { Debug.LogWarning("Arrow or arrowSpawn not set for Range weapon."); }
         }
@@ -397,13 +434,19 @@ public class PlayerAttacking : MonoBehaviour
             {
                 bool haveEnemiesAround = enemiesAround.isHaveEnemiesAround();
 
-                if(!haveEnemiesAround) { return; }
+                if (!haveEnemiesAround)
+                {
+                    magicBookHelp.gameObject.SetActive(true);
+                    magicBookHelp.Play();
+                    return;
+                }
 
                 Transform[] enemiesTransform = enemiesAround.GetAllEnemiesTransform();
                 foreach (Transform enemyTransform in enemiesTransform)
                 {
                     if (_effect != null) { Instantiate(_effect, enemyTransform.position, _effect.transform.rotation); }
                 }
+                AfterAttack(false);
             }
             else
             {
@@ -411,10 +454,22 @@ public class PlayerAttacking : MonoBehaviour
                 {
                     defaultMeeleAnimation.Play(_meeleAnimationName);
                 }
+                AfterAttack(true);
             }
+            
         }
+    }
 
-        if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfx); }
+    private void AfterAttack(bool useDefault)
+    {
+        if (!useDefault)
+        {
+            if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfx); }
+        }
+        else
+        {
+            if (_sfx != null && audioSource != null) { audioSource.PlayOneShot(_sfxDef); }
+        }
         player.ManaLose(_manaCost, _lifeCost);
         _isAttackBlocked = true;
         Invoke("UnlockAttack", _cooldown);

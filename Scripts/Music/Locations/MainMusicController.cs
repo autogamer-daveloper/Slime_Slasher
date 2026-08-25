@@ -4,14 +4,24 @@ using DG.Tweening;
 public class MainMusicController : MonoBehaviour
 {
     [Header("__ Music settings __")]
+    [Tooltip("Audio sources with selected music.")]
     [SerializeField] private AudioSource[] compositions;
+    [Tooltip("Original volume (Before calculating).")]
     [SerializeField] private float volume = 0.5f;
+    [Tooltip("Default music id. Scene will start with music by this id.")]
     [SerializeField] private int defaultMusicId = 0;
 
     private int _usingMusic = -1;
     private bool _isBlocked = true;
+    private const string audioVolumeKey = "AudioVolume";
+    private float volumeCalculated = 0.5f;
 
-    private void Start() { Unlock(); }
+    private void Start()
+    {
+        float volumeLevel = KeyManager.Get_Bool_Key(audioVolumeKey);
+        volumeCalculated = volume * (volumeLevel / 100f);
+        Unlock();
+    }
 
     public void SetAudio(int id)
     {
@@ -20,7 +30,7 @@ public class MainMusicController : MonoBehaviour
         for (int i = 0; i < compositions.Length; i++)
         {
             int index = i;
-            if (index == id) { compositions[index].Stop(); compositions[index].Play(); compositions[index].DOFade(volume, 2f); }
+            if (index == id) { compositions[index].Stop(); compositions[index].Play(); compositions[index].DOFade(volumeCalculated, 2f); }
             else { compositions[index].DOFade(0f, 2f); }
         }
         _usingMusic = id;

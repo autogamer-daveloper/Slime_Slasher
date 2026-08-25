@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: dffba510df843924293247d987912625, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -74159,6 +74159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 314873263}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0
   - 5.5
@@ -74166,6 +74167,8 @@ MonoBehaviour:
   - 16.5
   skipStepInDialogue: {fileID: 256365879}
   timer: {fileID: 314873262}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -144932,6 +144935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619394802}
   - component: {fileID: 619394801}
+  - component: {fileID: 619394803}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -144952,7 +144956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 2
-  m_LightType: 4
+  m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144975,8 +144979,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: 55.633698, y: 94.9103, z: 0}
+    m_Extent: {x: 143.2368, y: 115.8285, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -144987,10 +144991,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -87.10342, y: -20.417236, z: 0}
+  - {x: 197.4311, y: -18.036972, z: 0}
+  - {x: 198.37154, y: 210.23804, z: 0}
+  - {x: -83.699776, y: 207.24583, z: 0}
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -145006,6 +145010,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619394803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ffe702dc416394e9b2c49fe21fad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
+  excludedAudioSources:
+  - {fileID: 699537573}
+  - {fileID: 804831532}
+  - {fileID: 800672420}
+  - {fileID: 774608769}
+  - {fileID: 799616073}
+  - {fileID: 737653762}
+  - {fileID: 560439183}
+  - {fileID: 1438576593}
+  - {fileID: 1394686235}
+  - {fileID: 614919661}
+  - {fileID: 1796583455}
 --- !u!1 &620289501
 GameObject:
   m_ObjectHideFlags: 0
@@ -145377,6 +145405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 621318585}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 5.5
@@ -145396,6 +145425,8 @@ MonoBehaviour:
   - 82.5
   skipStepInDialogue: {fileID: 912158966}
   timer: {fileID: 621318584}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -147710,6 +147741,7 @@ MonoBehaviour:
   joystick: {fileID: 791375744}
   idleAnim: {fileID: 2035849052}
   runAnim: {fileID: 2035185518}
+  isIdleWhenStopped: 1
   cameraAnim: {fileID: 519420028}
   isAnimated: 0
   aimTarget: {fileID: 2794651752461390190}
@@ -147812,6 +147844,7 @@ MonoBehaviour:
   - {fileID: 480151304}
   audioSource: {fileID: 4667966037794618978}
   selectItem: {fileID: 8300000, guid: 1791b9134097a2b4f818dea23d7f490a, type: 3}
+  magicBookHelp: {fileID: 1817559207}
   damage: 1
   _manaHealing: 0
   _lifeHealing: 0
@@ -154014,6 +154047,7 @@ RectTransform:
   - {fileID: 1676073811}
   - {fileID: 299225318}
   - {fileID: 2982352}
+  - {fileID: 1817559208}
   - {fileID: 649536899}
   - {fileID: 1594067513}
   - {fileID: 6230439987942554059}
@@ -162143,6 +162177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioControllerMain
   source: {fileID: 800672420}
+  volume: 0.5
 --- !u!1 &683443223
 GameObject:
   m_ObjectHideFlags: 0
@@ -189358,6 +189393,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791422090}
   m_CullTransparentMesh: 1
+--- !u!1 &791995122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791995124}
+  - component: {fileID: 791995123}
+  m_Layer: 0
+  m_Name: Cave Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &791995123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791995122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 223.67365, y: 27.855299, z: 0}
+    m_Extent: {x: 27.983345, y: 40.229797, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: 196.67392, y: -11.873579, z: 0}
+  - {x: 250.46417, y: -11.827753, z: 0}
+  - {x: 251.15805, y: 65.79494, z: 0}
+  - {x: 196.19109, y: 67.58502, z: 0}
+--- !u!4 &791995124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791995122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.46, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792830942
 GameObject:
   m_ObjectHideFlags: 0
@@ -240495,11 +240614,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 1013913420}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 1.25
   - 6
   skipStepInDialogue: {fileID: 983273258}
   timer: {fileID: 1013913419}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -244858,6 +244980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioControllerMain
   source: {fileID: 804831532}
+  volume: 0.5
 --- !u!1 &1031939594
 GameObject:
   m_ObjectHideFlags: 0
@@ -256594,6 +256717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioControllerMain
   source: {fileID: 699537573}
+  volume: 0.5
 --- !u!1 &1080087856
 GameObject:
   m_ObjectHideFlags: 0
@@ -334484,6 +334608,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400877559}
   m_CullTransparentMesh: 1
+--- !u!1 &1400927452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400927454}
+  - component: {fileID: 1400927453}
+  m_Layer: 0
+  m_Name: Room Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1400927453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400927452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 493.8223, y: 34.857452, z: 0}
+    m_Extent: {x: 69.06119, y: 49.56575, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: 425.2602, y: -14.207563, z: 0}
+  - {x: 562.3834, y: -9.941414, z: 0}
+  - {x: 560.99384, y: 83.883286, z: 0}
+  - {x: 430.75607, y: 83.92288, z: 0}
+--- !u!4 &1400927454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400927452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.46, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1401138227
 GameObject:
   m_ObjectHideFlags: 0
@@ -365187,9 +365395,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 0}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes: []
   skipStepInDialogue: {fileID: 0}
   timer: {fileID: 0}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -411165,11 +411376,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 1731230464}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 5
   skipStepInDialogue: {fileID: 1874460426}
   timer: {fileID: 1731230463}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -433147,6 +433361,97 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1817559206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 651551602}
+    m_Modifications:
+    - target: {fileID: 4952399543991771511, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_Name
+      value: Help_MagicBook
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+--- !u!111 &1817559207 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 2263428945849513042, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+  m_PrefabInstance: {fileID: 1817559206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1817559208 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5881750633878317531, guid: 43ae0855618d5be49845852cdad39982, type: 3}
+  m_PrefabInstance: {fileID: 1817559206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1818418897
 GameObject:
   m_ObjectHideFlags: 0
@@ -451763,6 +452068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 1911828024}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 4.5
@@ -451773,6 +452079,8 @@ MonoBehaviour:
   - 30.5
   skipStepInDialogue: {fileID: 1018867790}
   timer: {fileID: 1911828023}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -482464,6 +482772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 2045778617}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   - 4.5
@@ -482474,6 +482783,8 @@ MonoBehaviour:
   - 30.5
   skipStepInDialogue: {fileID: 1241392134}
   timer: {fileID: 2045778616}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -507395,10 +507706,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
   dialogue: {fileID: 6783381329216901025}
   cutscene: {fileID: 0}
+  cutsceneDelay: 0
   stepTimes:
   - 0.5
   skipStepInDialogue: {fileID: 0}
   timer: {fileID: 3921380584850188084}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -519966,6 +520280,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 619394802}
+  - {fileID: 791995124}
+  - {fileID: 1400927454}
   - {fileID: 1455715041}
   - {fileID: 9076939732207313274}
   - {fileID: 627318384}

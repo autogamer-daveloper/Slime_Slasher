@@ -14977,8 +14977,9 @@ GameObject:
   - component: {fileID: 1661557706}
   - component: {fileID: 1661557705}
   - component: {fileID: 1661557708}
+  - component: {fileID: 1661557709}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Global Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15106,6 +15107,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RenderSettings
   SpecAsset: {fileID: 11400000, guid: 39aa890fa88cd7b4e9141ca87fd0cbe3, type: 2}
+--- !u!114 &1661557709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661557704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ffe702dc416394e9b2c49fe21fad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
+  excludedAudioSources: []
 --- !u!1 &1668734805
 GameObject:
   m_ObjectHideFlags: 0
@@ -19331,6 +19345,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
+  dialogue: {fileID: 0}
+  cutscene: {fileID: 0}
+  cutsceneDelay: 0
+  stepTimes: []
+  skipStepInDialogue: {fileID: 0}
+  timer: {fileID: 0}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 4667966037794618978}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}

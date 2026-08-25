@@ -75,6 +75,8 @@ public class PlayerStatus : MonoBehaviour
     private int _st_health = 0;
     private int _st_mana = 0;
 
+    private const string autoUseKey = "IsNeedAutoUse";
+
     private void Start()
     {
         SetAccessoriesButtons();
@@ -321,8 +323,20 @@ public class PlayerStatus : MonoBehaviour
 
     public void BoughtNewAccessory(int id)
     {
-        KeyManager.SetInt_AccessoryID(id);
-        CheckAccessories();
+        if (PlayerPrefs.HasKey(autoUseKey))
+        {
+            int useAutoUse = KeyManager.Get_Bool_Key(autoUseKey);
+            if (useAutoUse == 1)
+            { 
+                KeyManager.SetInt_AccessoryID(id);
+                CheckAccessories();
+            }
+        }
+        else
+        {
+            KeyManager.SetInt_AccessoryID(id);
+            CheckAccessories();
+        }
     }
 
     private void CheckAccessories()
