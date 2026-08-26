@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Objects.Weapons;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Objects.Weapons;
 
 public class PlayerAttacking : MonoBehaviour
 {
@@ -288,7 +289,7 @@ public class PlayerAttacking : MonoBehaviour
 
     private void Update()
     {
-        if (!isMobileInput && Mouse.current.rightButton.wasPressedThisFrame) { Attack(); }
+        if (!isMobileInput && Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject()) { Attack(); }
         if (!_isUsingRange) { return; }
 
         if (isMobileInput) { HandleAimWithJoystick(); }
