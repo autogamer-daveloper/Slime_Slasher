@@ -1669,6 +1669,7 @@ MonoBehaviour:
   healthText: {fileID: 1943952111}
   healthBar: {fileID: 541447509}
   autoUnlock: 1
+  bloodEffect: {fileID: 313223824}
   needSave: 0
   healthEvents: []
   src: {fileID: 5392769949026082998}
@@ -3451,6 +3452,7 @@ Transform:
   - {fileID: 485424856}
   - {fileID: 631894706}
   - {fileID: 3847599950026907717}
+  - {fileID: 313223823}
   m_Father: {fileID: 1400528123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &74875935
@@ -4917,6 +4919,7 @@ MonoBehaviour:
   healthText: {fileID: 347962900}
   healthBar: {fileID: 1558762786}
   autoUnlock: 1
+  bloodEffect: {fileID: 274672570}
   needSave: 0
   healthEvents: []
   src: {fileID: 2621273328196170292}
@@ -14974,6 +14977,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274229456}
   m_CullTransparentMesh: 1
+--- !u!1001 &274672568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2015335480}
+    m_Modifications:
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684124638438436395, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Blood)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+--- !u!4 &274672569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 274672568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &274672570 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5320592095310145333, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 274672568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &275358256
 GameObject:
   m_ObjectHideFlags: 0
@@ -17081,6 +17123,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311253779}
   m_CullTransparentMesh: 1
+--- !u!1001 &313223822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 74875934}
+    m_Modifications:
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684124638438436395, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Blood)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+--- !u!4 &313223823 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 313223822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &313223824 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5320592095310145333, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 313223822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &316795384
 GameObject:
   m_ObjectHideFlags: 0
@@ -39876,6 +39957,7 @@ Transform:
   - {fileID: 1893782091}
   - {fileID: 76344222}
   - {fileID: 7412787392643273640}
+  - {fileID: 2027988817}
   m_Father: {fileID: 1400528123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &753688224
@@ -69267,6 +69349,7 @@ MonoBehaviour:
   healthText: {fileID: 304698892}
   healthBar: {fileID: 280364542}
   autoUnlock: 1
+  bloodEffect: {fileID: 2027988818}
   needSave: 0
   healthEvents: []
   src: {fileID: 1831872878049284955}
@@ -74529,6 +74612,7 @@ GameObject:
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
   - component: {fileID: 1455715045}
+  - component: {fileID: 1455715046}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -74628,6 +74712,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputType
   buildType: 1
+--- !u!114 &1455715046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200b19f719ef59a43bfa3d261e050681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HideInterface
+  ui:
+  - {fileID: 558353889}
+  - {fileID: 409844300}
+  - {fileID: 1534933797}
+  - {fileID: 780931874}
+  - {fileID: 3836050748907719357}
+  - {fileID: 142821639}
 --- !u!1 &1457637123
 GameObject:
   m_ObjectHideFlags: 0
@@ -80524,7 +80627,11 @@ MonoBehaviour:
   - {fileID: 36335666}
   - {fileID: 1251070484}
   - {fileID: 161101756}
-  autoHideAll: {fileID: 1325255695}
+  autoHideAll:
+  - {fileID: 1768419694}
+  - {fileID: 113723418}
+  - {fileID: 1286336870}
+  - {fileID: 1325255695}
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
@@ -104769,6 +104876,7 @@ Transform:
   - {fileID: 942291232}
   - {fileID: 915379608}
   - {fileID: 6616700733383602887}
+  - {fileID: 274672569}
   m_Father: {fileID: 1400528123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2015335481
@@ -105749,6 +105857,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026195898}
   m_CullTransparentMesh: 1
+--- !u!1001 &2027988816
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 753688223}
+    m_Modifications:
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684124638438436395, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Blood)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+--- !u!4 &2027988817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 2027988816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2027988818 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5320592095310145333, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 2027988816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2029072486
 GameObject:
   m_ObjectHideFlags: 0

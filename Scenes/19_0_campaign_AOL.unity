@@ -10994,7 +10994,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11538,7 +11538,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416413
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -37842,12 +37842,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
   m_PrefabInstance: {fileID: 1331924201}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1331924204}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1331924204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 1331924201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1332152213
 GameObject:
   m_ObjectHideFlags: 0
@@ -41253,6 +41258,7 @@ GameObject:
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
   - component: {fileID: 1455715046}
+  - component: {fileID: 1455715047}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -41352,6 +41358,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputType
   buildType: 1
+--- !u!114 &1455715047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200b19f719ef59a43bfa3d261e050681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HideInterface
+  ui:
+  - {fileID: 558353889}
+  - {fileID: 409844300}
+  - {fileID: 1534933797}
+  - {fileID: 3836050748907719357}
+  - {fileID: 142821639}
+  - {fileID: 1978545462}
+  - {fileID: 1331924204}
 --- !u!1 &1459732616
 GameObject:
   m_ObjectHideFlags: 0
@@ -45249,7 +45275,11 @@ MonoBehaviour:
   - {fileID: 1081263319}
   - {fileID: 1771312996}
   - {fileID: 1668734806}
-  autoHideAll: {fileID: 1325255695}
+  autoHideAll:
+  - {fileID: 1768419694}
+  - {fileID: 113723418}
+  - {fileID: 1286336870}
+  - {fileID: 1325255695}
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
@@ -52439,7 +52469,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.010416667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -57373,12 +57403,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 1978545459}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1978545462}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1978545462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 1978545459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1986956062
 GameObject:
   m_ObjectHideFlags: 0
@@ -63513,6 +63548,7 @@ MonoBehaviour:
   healthText: {fileID: 7721357250384472107}
   healthBar: {fileID: 4097819344193966030}
   autoUnlock: 1
+  bloodEffect: {fileID: 0}
   needSave: 0
   healthEvents: []
   src: {fileID: 5345707304973494853}

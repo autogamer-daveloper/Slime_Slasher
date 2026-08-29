@@ -2607,6 +2607,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 219496921}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &35866138
@@ -10714,6 +10715,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1814166403}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &129798351
@@ -12171,6 +12173,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1468099665}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &145856258
@@ -15928,6 +15931,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 521727590}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &190997994
@@ -18224,6 +18228,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1268990300}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &217998881
@@ -24895,6 +24900,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1381623212}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &299862338
@@ -28606,6 +28612,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 312251213}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &339793138
@@ -29806,6 +29813,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1217892037}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &355446752
@@ -34322,6 +34330,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 136166373}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &420898920
@@ -38713,6 +38722,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1588097734}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &477873256
@@ -46291,12 +46301,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 570042010}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 570042013}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &570042013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 570042010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570331611
 GameObject:
   m_ObjectHideFlags: 0
@@ -69460,6 +69475,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 555375684}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &855285452
@@ -74848,6 +74864,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1914251690}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &920624261
@@ -77664,6 +77681,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 2108640053}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &949212186
@@ -85832,6 +85850,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 452824852}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &1052307668
@@ -87566,6 +87585,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1633804136}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &1068660496
@@ -105243,6 +105263,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1449155801}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &1311325887
@@ -119760,6 +119781,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 687282561}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &1502330840
@@ -129604,6 +129626,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 869069350}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &1631480071
@@ -140602,6 +140625,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 909763836}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &1791770313
@@ -148609,6 +148633,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1585582079}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 31
 --- !u!1 &1899102693
@@ -152011,12 +152036,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
   m_PrefabInstance: {fileID: 1944741584}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1944741587}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1944741587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 1944741584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1946712609
 GameObject:
   m_ObjectHideFlags: 0
@@ -162737,6 +162767,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 0}
   timer: 20
   harvest: {fileID: 1884572404}
+  particleEffect: {fileID: 0}
   inv: {fileID: 0}
   id: 32
 --- !u!1 &2085758620
@@ -232881,6 +232912,7 @@ GameObject:
   - component: {fileID: 7016674298156104332}
   - component: {fileID: 8698218081384656389}
   - component: {fileID: 8698218081384656390}
+  - component: {fileID: 8698218081384656391}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -280428,6 +280460,21 @@ MonoBehaviour:
   - {fileID: 97990531}
   - {fileID: 1941378093}
   - {fileID: 533161445}
+--- !u!114 &8698218081384656391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934497341703108816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200b19f719ef59a43bfa3d261e050681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HideInterface
+  ui:
+  - {fileID: 570042013}
+  - {fileID: 1944741587}
 --- !u!212 &8699707565489915559
 SpriteRenderer:
   serializedVersion: 2

@@ -21450,7 +21450,8 @@ MonoBehaviour:
   - {fileID: 495115454279397747}
   - {fileID: 6896161616521302598}
   - {fileID: 8032017605019944850}
-  autoHideAll: {fileID: 5469890643912789075}
+  autoHideAll:
+  - {fileID: 5469890643912789075}
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
@@ -28156,6 +28157,7 @@ MonoBehaviour:
   - {fileID: 2764151828933761851}
   - {fileID: 571832864165762108}
   - {fileID: 5274177150227735517}
+  markNewSkillPoint: {fileID: 0}
   src: {fileID: 0}
   upgrade: {fileID: 8300000, guid: 3b86a231a97a03543b0bc534b34257eb, type: 3}
   levelUp: {fileID: 8300000, guid: 066bcb86a6574ea4497baa19346dfcab, type: 3}

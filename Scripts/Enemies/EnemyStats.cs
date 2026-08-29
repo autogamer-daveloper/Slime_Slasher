@@ -24,6 +24,8 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private bool autoUnlock = true;
+    [Tooltip("Select particle system for this enemy, if you will use it.")]
+    [SerializeField] private ParticleSystem bloodEffect;
     [Header("__ Boss fight __")]
     [SerializeField] private bool needSave = false;
     [SerializeField] private HealthEvents[] healthEvents;
@@ -70,6 +72,7 @@ public class EnemyStats : MonoBehaviour
             healthBar.value = _health;
             healthText.text = maxHealth.ToString() + "/" + _health.ToString();
             src.PlayOneShot(dmg);
+            if (bloodEffect != null) { bloodEffect.Clear(); bloodEffect.Play(); }
         }
         else
         {

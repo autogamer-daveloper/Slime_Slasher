@@ -14333,7 +14333,11 @@ MonoBehaviour:
   - {fileID: 1081263319}
   - {fileID: 1771312996}
   - {fileID: 1668734806}
-  autoHideAll: {fileID: 1325255695}
+  autoHideAll:
+  - {fileID: 1768419694}
+  - {fileID: 113723418}
+  - {fileID: 1286336870}
+  - {fileID: 1325255695}
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
@@ -14978,6 +14982,7 @@ GameObject:
   - component: {fileID: 1661557705}
   - component: {fileID: 1661557708}
   - component: {fileID: 1661557709}
+  - component: {fileID: 1661557710}
   m_Layer: 0
   m_Name: Global Light
   m_TagString: Untagged
@@ -15120,6 +15125,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
   excludedAudioSources: []
+--- !u!114 &1661557710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661557704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200b19f719ef59a43bfa3d261e050681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HideInterface
+  ui:
+  - {fileID: 558353889}
+  - {fileID: 409844300}
+  - {fileID: 142821639}
+  - {fileID: 1534933797}
+  - {fileID: 3836050748907719357}
 --- !u!1 &1668734805
 GameObject:
   m_ObjectHideFlags: 0

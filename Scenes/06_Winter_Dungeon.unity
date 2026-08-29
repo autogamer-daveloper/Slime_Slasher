@@ -4753,6 +4753,7 @@ Transform:
   m_Children:
   - {fileID: 2038437657}
   - {fileID: 219496922}
+  - {fileID: 1405916754}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &34469029
@@ -4807,6 +4808,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 219496921}
+  particleEffect: {fileID: 1405916755}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &35866138
@@ -6320,6 +6322,7 @@ MonoBehaviour:
   healthText: {fileID: 1466163255}
   healthBar: {fileID: 797543441}
   autoUnlock: 1
+  bloodEffect: {fileID: 0}
   needSave: 0
   healthEvents: []
   src: {fileID: 4622831958706421730}
@@ -20554,6 +20557,7 @@ Transform:
   m_Children:
   - {fileID: 1904380548}
   - {fileID: 1814166404}
+  - {fileID: 1574113833}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &129389850
@@ -20608,6 +20612,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 1814166403}
+  particleEffect: {fileID: 1574113834}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &129798351
@@ -22788,6 +22793,7 @@ Transform:
   m_Children:
   - {fileID: 55801069}
   - {fileID: 1468099666}
+  - {fileID: 1545498868}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &145004540
@@ -22842,6 +22848,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 1468099665}
+  particleEffect: {fileID: 1545498869}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &145265784
@@ -26312,6 +26319,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7701708792212485495, guid: 1905d45759d78fc42a611ee30e77f8f4, type: 3}
   m_PrefabInstance: {fileID: 165540630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &165782004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1135823090}
+    m_Modifications:
+    - target: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684124638438436395, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Bone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+--- !u!4 &165782005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+  m_PrefabInstance: {fileID: 165782004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &165782006 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5320592095310145333, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+  m_PrefabInstance: {fileID: 165782004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &165964883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26407,12 +26453,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 165964883}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 165964886}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &165964886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 165964883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &166392265
 GameObject:
   m_ObjectHideFlags: 0
@@ -29829,6 +29880,7 @@ Transform:
   m_Children:
   - {fileID: 1092790296}
   - {fileID: 521727591}
+  - {fileID: 457962226}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &189879761
@@ -29883,6 +29935,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 521727590}
+  particleEffect: {fileID: 457962227}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &190282550
@@ -34233,6 +34286,7 @@ Transform:
   m_Children:
   - {fileID: 1447737602}
   - {fileID: 1268990301}
+  - {fileID: 217012562}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &216839604
@@ -34287,8 +34341,64 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 1268990300}
+  particleEffect: {fileID: 217012563}
   inv: {fileID: 1260874431}
   id: 32
+--- !u!1001 &217012561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 216839603}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &217012562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 217012561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &217012563 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 217012561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217055806
 GameObject:
   m_ObjectHideFlags: 0
@@ -38980,12 +39090,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
   m_PrefabInstance: {fileID: 246595323}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 246595326}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &246595326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 246595323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &246795835
 GameObject:
   m_ObjectHideFlags: 0
@@ -47843,6 +47958,7 @@ Transform:
   m_Children:
   - {fileID: 1026353681}
   - {fileID: 1381623213}
+  - {fileID: 983349649}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &299227474
@@ -47897,6 +48013,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 1381623212}
+  particleEffect: {fileID: 983349650}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &299862338
@@ -52193,6 +52310,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &326520202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2085721694}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &326520203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 326520202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &326520204 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 326520202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326930875
 GameObject:
   m_ObjectHideFlags: 0
@@ -54577,6 +54749,7 @@ Transform:
   m_Children:
   - {fileID: 1895993215}
   - {fileID: 312251214}
+  - {fileID: 1040748641}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &338806097
@@ -54631,6 +54804,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 312251213}
+  particleEffect: {fileID: 1040748642}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &339793138
@@ -56952,6 +57126,7 @@ Transform:
   m_Children:
   - {fileID: 1332118018}
   - {fileID: 1217892038}
+  - {fileID: 391389745}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &355390512
@@ -57006,6 +57181,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 1217892037}
+  particleEffect: {fileID: 391389746}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &355446752
@@ -61424,6 +61600,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388442479}
   m_CullTransparentMesh: 1
+--- !u!1001 &391389744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 355390511}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &391389745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 391389744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &391389746 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 391389744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &392538465
 GameObject:
   m_ObjectHideFlags: 0
@@ -63423,12 +63654,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 401107598}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 401107601}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &401107601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 401107598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &401794648
 GameObject:
   m_ObjectHideFlags: 0
@@ -66555,6 +66791,7 @@ Transform:
   m_Children:
   - {fileID: 1544828163}
   - {fileID: 136166374}
+  - {fileID: 1975711276}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &419435472
@@ -66609,6 +66846,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 136166373}
+  particleEffect: {fileID: 1975711277}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &420898920
@@ -72816,6 +73054,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &457962225
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 189879760}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &457962226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 457962225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &457962227 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 457962225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &458524668
 GameObject:
   m_ObjectHideFlags: 0
@@ -75010,6 +75303,7 @@ Transform:
   m_Children:
   - {fileID: 677102377}
   - {fileID: 1588097735}
+  - {fileID: 1927638384}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &477182412
@@ -75064,6 +75358,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 1588097734}
+  particleEffect: {fileID: 1927638385}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &477873256
@@ -94518,12 +94813,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
   m_PrefabInstance: {fileID: 605749288}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 605749291}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &605749291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 605749288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &606088682
 GameObject:
   m_ObjectHideFlags: 0
@@ -112862,6 +113162,61 @@ Transform:
   - {fileID: 205873506}
   m_Father: {fileID: 899233623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &709722426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1309055037}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &709722427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 709722426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &709722428 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 709722426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710173356
 GameObject:
   m_ObjectHideFlags: 0
@@ -114254,6 +114609,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &727482366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 948180215}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &727482367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 727482366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &727482368 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 727482366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &729026281
 GameObject:
   m_ObjectHideFlags: 0
@@ -120301,6 +120711,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &767863485
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1898917502}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &767863486 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 767863485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &767863487 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 767863485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &768004331
 GameObject:
   m_ObjectHideFlags: 0
@@ -129636,6 +130101,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &823405191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 855030062}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &823405192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 823405191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &823405193 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 823405191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &824135742
 GameObject:
   m_ObjectHideFlags: 0
@@ -130703,6 +131223,7 @@ MonoBehaviour:
   healthText: {fileID: 494119873}
   healthBar: {fileID: 109243117}
   autoUnlock: 1
+  bloodEffect: {fileID: 0}
   needSave: 0
   healthEvents: []
   src: {fileID: 2388399551338466416}
@@ -136173,6 +136694,7 @@ Transform:
   m_Children:
   - {fileID: 1474999762}
   - {fileID: 555375685}
+  - {fileID: 823405192}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &855030063
@@ -136227,6 +136749,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 555375684}
+  particleEffect: {fileID: 823405193}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &855285452
@@ -141427,6 +141950,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &887586456
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1051316519}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &887586457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 887586456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &887586458 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 887586456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887676257
 GameObject:
   m_ObjectHideFlags: 0
@@ -146147,6 +146725,7 @@ Transform:
   m_Children:
   - {fileID: 782639197}
   - {fileID: 1914251691}
+  - {fileID: 1450621396}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &919258482
@@ -146201,6 +146780,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 1914251690}
+  particleEffect: {fileID: 1450621397}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &920624261
@@ -147221,12 +147801,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
   m_PrefabInstance: {fileID: 925809776}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 925809779}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &925809779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 925809776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &927663570
 GameObject:
   m_ObjectHideFlags: 0
@@ -150447,6 +151032,7 @@ Transform:
   m_Children:
   - {fileID: 796831135}
   - {fileID: 2108640054}
+  - {fileID: 727482367}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &948180216
@@ -150501,6 +151087,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 2108640053}
+  particleEffect: {fileID: 727482368}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &948339224
@@ -150593,13 +151180,14 @@ MonoBehaviour:
   damaged:
     m_PersistentCalls:
       m_Calls: []
-  maxHealth: 750
+  maxHealth: 1200
   healthText: {fileID: 235517243}
   healthBar: {fileID: 350857728}
   autoUnlock: 0
+  bloodEffect: {fileID: 165782006}
   needSave: 1
   healthEvents:
-  - health: 300
+  - health: 600
     action:
       m_PersistentCalls:
         m_Calls:
@@ -155853,6 +156441,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974462515}
   m_CullTransparentMesh: 1
+--- !u!1001 &974697577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1145916993}
+    m_Modifications:
+    - target: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684124638438436395, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Bone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+--- !u!4 &974697578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+  m_PrefabInstance: {fileID: 974697577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &974697579 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5320592095310145333, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+  m_PrefabInstance: {fileID: 974697577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &976275241
 GameObject:
   m_ObjectHideFlags: 0
@@ -156837,6 +157464,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &983349648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 299227473}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &983349649 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 983349648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &983349650 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 983349648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983771269
 GameObject:
   m_ObjectHideFlags: 0
@@ -158606,6 +159288,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992217371}
   m_CullTransparentMesh: 1
+--- !u!1001 &992360579
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1630913365}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &992360580 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 992360579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &992360581 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 992360579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992612289
 GameObject:
   m_ObjectHideFlags: 0
@@ -164905,6 +165642,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1040748640
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 338806096}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1040748641 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1040748640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1040748642 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1040748640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1040877462
 GameObject:
   m_ObjectHideFlags: 0
@@ -166258,6 +167050,7 @@ Transform:
   m_Children:
   - {fileID: 554873241}
   - {fileID: 452824853}
+  - {fileID: 887586457}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1051316520
@@ -166312,6 +167105,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 452824852}
+  particleEffect: {fileID: 887586458}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &1051833438
@@ -169355,6 +170149,7 @@ Transform:
   m_Children:
   - {fileID: 1180520725}
   - {fileID: 1633804137}
+  - {fileID: 1928825792}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1067230738
@@ -169409,6 +170204,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 1633804136}
+  particleEffect: {fileID: 1928825793}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &1068660496
@@ -179304,6 +180100,7 @@ Transform:
   - {fileID: 985022184}
   - {fileID: 870381511}
   - {fileID: 3850232259284872741}
+  - {fileID: 165782005}
   m_Father: {fileID: 781336543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1135823091
@@ -180796,6 +181593,7 @@ Transform:
   - {fileID: 110862447}
   - {fileID: 671594554}
   - {fileID: 716622740100737308}
+  - {fileID: 974697578}
   m_Father: {fileID: 675660918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1145916994
@@ -186225,12 +187023,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
   m_PrefabInstance: {fileID: 1181502183}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1181502186}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1181502186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 2d3317e1fc02b3b42a14cece46541f3f, type: 3}
+  m_PrefabInstance: {fileID: 1181502183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1181540268
 GameObject:
   m_ObjectHideFlags: 0
@@ -206286,6 +207089,7 @@ Transform:
   m_Children:
   - {fileID: 868681572}
   - {fileID: 1449155802}
+  - {fileID: 709722427}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1309055038
@@ -206340,6 +207144,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 1449155801}
+  particleEffect: {fileID: 709722428}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &1310208673
@@ -219686,6 +220491,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1405916753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 34469028}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1405916754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1405916753}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1405916755 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1405916753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1406430460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -219781,12 +220641,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 1406430460}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1406430463}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1406430463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 1406430460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408428045
 GameObject:
   m_ObjectHideFlags: 0
@@ -221330,6 +222195,7 @@ MonoBehaviour:
   healthText: {fileID: 24495059}
   healthBar: {fileID: 1070634679}
   autoUnlock: 0
+  bloodEffect: {fileID: 974697579}
   needSave: 1
   healthEvents:
   - health: 1250
@@ -226077,6 +226943,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450222965}
   m_CullTransparentMesh: 1
+--- !u!1001 &1450621395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 919258481}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1450621396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1450621395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1450621397 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1450621395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1450899163
 GameObject:
   m_ObjectHideFlags: 0
@@ -226956,6 +227877,7 @@ GameObject:
   - component: {fileID: 1455715043}
   - component: {fileID: 1455715044}
   - component: {fileID: 1455715045}
+  - component: {fileID: 1455715046}
   m_Layer: 0
   m_Name: EnemyChecker
   m_TagString: Untagged
@@ -227055,6 +227977,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputType
   buildType: 1
+--- !u!114 &1455715046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200b19f719ef59a43bfa3d261e050681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HideInterface
+  ui:
+  - {fileID: 558353889}
+  - {fileID: 409844300}
+  - {fileID: 1534933797}
+  - {fileID: 277056231}
+  - {fileID: 5082107072930905277}
+  - {fileID: 3836050748907719357}
+  - {fileID: 142821639}
+  - {fileID: 1654310007}
+  - {fileID: 605749291}
+  - {fileID: 165964886}
+  - {fileID: 246595326}
+  - {fileID: 1867305048}
+  - {fileID: 1181502186}
+  - {fileID: 2075847075}
+  - {fileID: 925809779}
+  - {fileID: 1406430463}
+  - {fileID: 401107601}
 --- !u!1 &1456199299
 GameObject:
   m_ObjectHideFlags: 0
@@ -230263,6 +231215,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470736358}
   m_CullTransparentMesh: 1
+--- !u!1001 &1471522037
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1791424943}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1471522038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1471522037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1471522039 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1471522037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1472214553
 GameObject:
   m_ObjectHideFlags: 0
@@ -234119,6 +235126,7 @@ Transform:
   m_Children:
   - {fileID: 1534892200}
   - {fileID: 687282562}
+  - {fileID: 1757652960}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1497033254
@@ -234173,6 +235181,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 687282561}
+  particleEffect: {fileID: 1757652961}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &1497136451
@@ -242016,6 +243025,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545423698}
   m_CullTransparentMesh: 1
+--- !u!1001 &1545498867
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 145004539}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1545498868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1545498867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1545498869 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1545498867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1546179284
 GameObject:
   m_ObjectHideFlags: 0
@@ -244843,7 +245907,11 @@ MonoBehaviour:
   - {fileID: 36335666}
   - {fileID: 1251070484}
   - {fileID: 161101756}
-  autoHideAll: {fileID: 1325255695}
+  autoHideAll:
+  - {fileID: 1768419694}
+  - {fileID: 113723418}
+  - {fileID: 1286336870}
+  - {fileID: 1325255695}
   shown: {x: 0, y: 0}
   hidden: {x: 0, y: -2000}
   timer: 0.5
@@ -245960,6 +247028,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1574113832
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 129389849}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1574113833 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1574113832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1574113834 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1574113832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575506713
 GameObject:
   m_ObjectHideFlags: 0
@@ -254690,6 +255813,7 @@ Transform:
   m_Children:
   - {fileID: 1647639715}
   - {fileID: 869069351}
+  - {fileID: 992360580}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1630913366
@@ -254744,6 +255868,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 869069350}
+  particleEffect: {fileID: 992360581}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &1631480071
@@ -259314,12 +260439,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 1654310004}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1654310007}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1654310007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 1654310004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654488465
 GameObject:
   m_ObjectHideFlags: 0
@@ -259722,6 +260852,7 @@ MonoBehaviour:
   healthText: {fileID: 1352395276}
   healthBar: {fileID: 1634645419}
   autoUnlock: 1
+  bloodEffect: {fileID: 0}
   needSave: 0
   healthEvents: []
   src: {fileID: 712447956896436717}
@@ -264607,6 +265738,7 @@ MonoBehaviour:
   healthText: {fileID: 1141712408}
   healthBar: {fileID: 870696670}
   autoUnlock: 1
+  bloodEffect: {fileID: 0}
   needSave: 0
   healthEvents: []
   src: {fileID: 2871880532804827834}
@@ -272005,6 +273137,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757385180}
   m_CullTransparentMesh: 1
+--- !u!1001 &1757652959
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1497033253}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1757652960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1757652959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1757652961 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1757652959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758304051
 GameObject:
   m_ObjectHideFlags: 0
@@ -278141,6 +279328,7 @@ Transform:
   m_Children:
   - {fileID: 1279094005}
   - {fileID: 909763837}
+  - {fileID: 1471522038}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1791424944
@@ -278195,6 +279383,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 909763836}
+  particleEffect: {fileID: 1471522039}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &1791743617
@@ -292494,12 +293683,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 1867305045}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1867305048}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1867305048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 1867305045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1868153981
 GameObject:
   m_ObjectHideFlags: 0
@@ -296837,6 +298031,7 @@ Transform:
   m_Children:
   - {fileID: 1311325888}
   - {fileID: 1585582080}
+  - {fileID: 767863486}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1898917503
@@ -296891,6 +298086,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 20
   harvest: {fileID: 1585582079}
+  particleEffect: {fileID: 767863487}
   inv: {fileID: 1260874431}
   id: 31
 --- !u!1 &1899102693
@@ -300962,6 +302158,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1927638383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 477182411}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1927638384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1927638383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1927638385 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1927638383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1928119782
 GameObject:
   m_ObjectHideFlags: 0
@@ -301144,6 +302395,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1928825791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1067230737}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1928825792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1928825791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1928825793 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1928825791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1929119479
 GameObject:
   m_ObjectHideFlags: 0
@@ -307238,6 +308544,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975251235}
   m_CullTransparentMesh: 1
+--- !u!1001 &1975711275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 419435471}
+    m_Modifications:
+    - target: {fileID: 2500752006165159761, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ccfaf9b8891a478348889cf9fde7a, type: 2}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202831157809620, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+      propertyPath: m_Name
+      value: Particle System (Stone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+--- !u!4 &1975711276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7662883570654023274, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1975711275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1975711277 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3551217110237996457, guid: 294d4ae1fe0ce0e45859d43adbf4946d, type: 3}
+  m_PrefabInstance: {fileID: 1975711275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976531760
 GameObject:
   m_ObjectHideFlags: 0
@@ -322686,12 +324047,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069741947812054304, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
   m_PrefabInstance: {fileID: 2075847072}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2075847075}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &2075847075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844315958949965442, guid: 7a10e3ad688011d47bf91426ce0ccbfb, type: 3}
+  m_PrefabInstance: {fileID: 2075847072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2076517360
 GameObject:
   m_ObjectHideFlags: 0
@@ -324404,6 +325770,7 @@ Transform:
   m_Children:
   - {fileID: 686289223}
   - {fileID: 1884572405}
+  - {fileID: 326520203}
   m_Father: {fileID: 1617810780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2085721695
@@ -324458,6 +325825,7 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 20
   harvest: {fileID: 1884572404}
+  particleEffect: {fileID: 326520204}
   inv: {fileID: 1260874431}
   id: 32
 --- !u!1 &2085758620
@@ -339768,6 +341136,10 @@ MonoBehaviour:
   button: {fileID: 1855067177}
   id: 40
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &398217841547125537
 Transform:
   m_ObjectHideFlags: 0
@@ -353383,6 +354755,10 @@ MonoBehaviour:
   button: {fileID: 2082060548}
   id: 34
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1356741523868715125
 Transform:
   m_ObjectHideFlags: 0
@@ -360902,6 +362278,10 @@ MonoBehaviour:
   button: {fileID: 804758703}
   id: 41
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1811596816083156823
 SpriteRenderer:
   serializedVersion: 2
@@ -375045,6 +376425,10 @@ MonoBehaviour:
   button: {fileID: 1883994816}
   id: 33
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &2919449222643715425
 Transform:
   m_ObjectHideFlags: 0
@@ -379761,6 +381145,10 @@ MonoBehaviour:
   button: {fileID: 770749931}
   id: 46
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3242221042911026553
 GameObject:
   m_ObjectHideFlags: 0
@@ -423272,6 +424660,10 @@ MonoBehaviour:
   button: {fileID: 148977356}
   id: 18
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &6273262849924846126
 SpriteRenderer:
   serializedVersion: 2
@@ -445684,6 +447076,10 @@ MonoBehaviour:
   button: {fileID: 659484404}
   id: 35
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &8029077790777306020
 SpriteRenderer:
   serializedVersion: 2
@@ -451349,6 +452745,10 @@ MonoBehaviour:
   button: {fileID: 553553145}
   id: 5
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8492503178903738716
 GameObject:
   m_ObjectHideFlags: 0
@@ -455285,6 +456685,10 @@ MonoBehaviour:
   button: {fileID: 1247067319}
   id: 11
   getByTouch: 1
+  useEvents: 0
+  actionAfterPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &8765759361397089699
 Transform:
   m_ObjectHideFlags: 0

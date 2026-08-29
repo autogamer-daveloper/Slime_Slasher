@@ -8,7 +8,7 @@ public class InventoryInfoPanels : MonoBehaviour
     [Header("__ Panels __")]
     [SerializeField] private RectTransform[] panels;
     [Header("__ Buttons __")]
-    [SerializeField] private Button autoHideAll;
+    [SerializeField] private Button[] autoHideAll;
     [Header("__ Settings __")]
     [SerializeField] private Vector2 shown = new Vector2(0, 0);
     [SerializeField] private Vector2 hidden = new Vector2(0, -2000);
@@ -17,8 +17,8 @@ public class InventoryInfoPanels : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip click;
 
-    private void Start() { autoHideAll.onClick.AddListener(AutoHideAll); }
-    private void OnDestroy() { autoHideAll.onClick.RemoveListener(AutoHideAll); }
+    private void Start() { foreach (Button btn in autoHideAll) { btn.onClick.AddListener(AutoHideAll); } }
+    private void OnDestroy() { foreach (Button btn in autoHideAll) { btn.onClick.RemoveListener(AutoHideAll); } }
 
     private void AutoHideAll() { foreach (RectTransform panel in panels) { panel.DOAnchorPos(hidden, timer); }}
 

@@ -9,6 +9,8 @@ public class FarmingSpot : MonoBehaviour
     [SerializeField] private GameObject getButtonObj;
     [SerializeField] private int timer = 10;
     [SerializeField] private GameObject harvest;
+    [Tooltip("If you will use particle, set this field.")]
+    [SerializeField] private ParticleSystem particleEffect;
     [Header("__ Item settings __")]
     [SerializeField] private Inventory inv;
     [SerializeField] private int id = 20;
@@ -51,6 +53,9 @@ public class FarmingSpot : MonoBehaviour
     {
         bool canGet = CanGetItem();
         if (canGet == false) return;
+
+        if (particleEffect != null) { particleEffect.Clear(); }
+        if (particleEffect != null) { particleEffect.Play(); }
 
         getButtonObj.SetActive(false);
         getButton.onClick.RemoveListener(GetItem);
