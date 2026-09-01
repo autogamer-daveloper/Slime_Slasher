@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Sportiki : MonoBehaviour
@@ -14,6 +15,13 @@ public class Sportiki : MonoBehaviour
     [SerializeField] private GameObject Jo;
     [SerializeField] private GameObject[] any;
     [SerializeField] private GameObject[] anyDestroy;
+    [Header("__ Actions __")]
+    [Tooltip("What to do when leave house you will meet hooligans.")]
+    [Space(5)]
+    [SerializeField] private UnityEvent withHooligans;
+    [Tooltip("What to do when leave house you won't meet hooligans.")]
+    [Space(5)]
+    [SerializeField] private UnityEvent withoutHooligans;
 
     private int isKilledPrisoner = 0;
     private int wasAtHome = 0;
@@ -48,6 +56,8 @@ public class Sportiki : MonoBehaviour
         foreach (GameObject obj in anyDestroy) { obj.SetActive(false); }
 
         Jo.SetActive(true);
+
+        withoutHooligans.Invoke();
     }
 
     private void NotKilled()
@@ -61,6 +71,8 @@ public class Sportiki : MonoBehaviour
 
             foreach (GameObject obj in ifKilled) { obj.SetActive(true); }
         }
+
+        withHooligans.Invoke();
     }
 
     private void InvokeReal()

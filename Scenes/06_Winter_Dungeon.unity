@@ -48437,7 +48437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Regen: -15'
+  m_text: 'Regen: -25'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -62137,6 +62137,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4074163416432660048}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -151177,6 +151189,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4074163416432660048}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damaged:
     m_PersistentCalls:
       m_Calls: []
@@ -222188,6 +222212,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4074163416432660048}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damaged:
     m_PersistentCalls:
       m_Calls: []
@@ -266276,7 +266312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1698198771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4074163416432660048}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1698198771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290813,7 +290861,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1853708808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4074163416432660048}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1853708808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328845,7 +328905,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2099204196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4074163416432660048}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2099204196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392914,6 +392986,8 @@ GameObject:
   - component: {fileID: 2130397390081608722}
   - component: {fileID: 308156242134636699}
   - component: {fileID: 4074163416432660047}
+  - component: {fileID: 4074163416432660049}
+  - component: {fileID: 4074163416432660048}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -392934,6 +393008,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
   excludedAudioSources: []
+--- !u!114 &4074163416432660048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074163416432660046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0621388f1e22c48a326833c6659c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager.MomentsBoard.SaveMoment
+  momentsManager: {fileID: 4074163416432660049}
+  memoriesForSaving:
+  - campaignId: 1
+    memoryId: 10
+  - campaignId: 1
+    memoryId: 11
+  - campaignId: 1
+    memoryId: 12
+  - campaignId: 1
+    memoryId: 13
+  - campaignId: 1
+    memoryId: 14
+  - campaignId: 1
+    memoryId: 15
+--- !u!114 &4074163416432660049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074163416432660046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8dbfae571c8b443b233a0f5677ae73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager.MomentsBoard.MomentsSaveManager
+  usingInterface: 0
+  memories: []
+  unknownSprite: {fileID: 0}
+  callAtStart: 0
+  atStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4075598704455434148
 Transform:
   m_ObjectHideFlags: 0

@@ -199,7 +199,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,7 +221,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -230,6 +230,28 @@ TextureImporter:
       bones: []
       spriteID: edb402730cdf1184a81219f99dc5ba05
       internalID: 1454110125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game_Icons_Codex
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09de8143a9b496499addf727fb5a677
+      internalID: 1737684904
       vertices: []
       indices: 
       edges: []
@@ -254,6 +276,7 @@ TextureImporter:
       Game_Icons_4: -4193486316282083009
       Game_Icons_Accessories: -253071442
       Game_Icons_BugReport: -127153286
+      Game_Icons_Codex: 1737684904
       Game_Icons_Exit: -1753043663
       Game_Icons_Language: 1454110125
       Game_Icons_Play: -4054436150008077265

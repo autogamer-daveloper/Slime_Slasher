@@ -7059,6 +7059,8 @@ GameObject:
   - component: {fileID: 949987884}
   - component: {fileID: 949987883}
   - component: {fileID: 949987882}
+  - component: {fileID: 949987886}
+  - component: {fileID: 949987885}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -7150,6 +7152,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949987885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949987881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0621388f1e22c48a326833c6659c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager.MomentsBoard.SaveMoment
+  momentsManager: {fileID: 949987886}
+  memoriesForSaving:
+  - campaignId: 1
+    memoryId: 2
+--- !u!114 &949987886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949987881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8dbfae571c8b443b233a0f5677ae73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager.MomentsBoard.MomentsSaveManager
+  usingInterface: 0
+  memories: []
+  unknownSprite: {fileID: 0}
+  callAtStart: 1
+  atStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 949987885}
+        m_TargetAssemblyTypeName: SaveManager.MomentsBoard.SaveMoment, Assembly-CSharp
+        m_MethodName: SaveMemoryId
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &960310531
 PrefabInstance:
   m_ObjectHideFlags: 0
