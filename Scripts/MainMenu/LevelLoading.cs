@@ -3,8 +3,13 @@ using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class LevelLoading : MonoBehaviour
+public class MenuLevelLoading : MonoBehaviour
 {
+    [Header("__ Input type __")]
+    [SerializeField] private InputType type;
+    [Header("__ Menu panel __")]
+    [SerializeField] private GameObject steamPanel;
+    [SerializeField] private GameObject mobilePanel;
     [Header("__ Loading panels __")]
     [SerializeField] private GameObject loader;
     [SerializeField] private int[] sceneIndex;
@@ -13,7 +18,7 @@ public class LevelLoading : MonoBehaviour
     [SerializeField] private RectTransform panelContinue;
     [SerializeField] private RectTransform panelExit;
     [Header("__ Show panels __")]
-    [SerializeField] private Button exit;
+    [SerializeField] private Button[] exit;
     [SerializeField] private Button startNew;
     [SerializeField] private Button continueGame;
     [SerializeField] private Button tutorial;
@@ -43,6 +48,13 @@ public class LevelLoading : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
+        steamPanel.SetActive(false);
+        mobilePanel.SetActive(false);
+
+        bool isMobile = type.IsMobileInput();
+        if (isMobile) { mobilePanel.SetActive(true); }
+        else { steamPanel.SetActive(true); }
+
         _saveIndex = KeyManager.Get_Bool_Key("gameEpisode");
         if (_saveIndex == 0) { continueGame.interactable = false; }
         else { continueGame.interactable = true; }
@@ -53,7 +65,7 @@ public class LevelLoading : MonoBehaviour
 
         startNew.onClick.AddListener(ShowStart);
         continueGame.onClick.AddListener(ShowContinue);
-        exit.onClick.AddListener(ShowExit);
+        foreach (Button btn in exit) { btn.onClick.AddListener(ShowExit); }
 
         tutorial.onClick.AddListener(ShowTutorial);
         zeroCampaign.onClick.AddListener(ZeroCampaignStart);
@@ -68,7 +80,7 @@ public class LevelLoading : MonoBehaviour
 
         startNew.onClick.RemoveListener(ShowStart);
         continueGame.onClick.RemoveListener(ShowContinue);
-        exit.onClick.RemoveListener(ShowExit);
+        foreach (Button btn in exit) { btn.onClick.RemoveListener(ShowExit); }
 
         tutorial.onClick.RemoveListener(ShowTutorial);
         zeroCampaign.onClick.RemoveListener(ZeroCampaignStart);

@@ -9360,7 +9360,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -26662,7 +26662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0002746582}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 475}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &980122749
@@ -39886,6 +39886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200b19f719ef59a43bfa3d261e050681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HideInterface
+  isDebug: 1
   ui:
   - {fileID: 558353889}
   - {fileID: 409844300}
@@ -41005,7 +41006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0002746582}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 475}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1512643214
@@ -48963,7 +48964,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.010416667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

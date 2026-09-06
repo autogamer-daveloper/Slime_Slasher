@@ -10,9 +10,14 @@ public class MainButtonsPanel : MonoBehaviour
     [Header("__ Buttons __")]
     [SerializeField] private Button[] showPanelButtons;
     [SerializeField] private Button[] hidePanelButtons;
+    [Header("__ Input type __")]
+    [SerializeField] private InputType type;
 
     private Vector2 shown = new Vector2(0, 100);
     private Vector2 hidden = new Vector2(0, -300);
+
+    private Vector2 shownPC = new Vector2(-250, 375);
+    private Vector2 hiddenPC = new Vector2(250, 375);
 
     private UnityAction show;
     private UnityAction hide;
@@ -34,7 +39,10 @@ public class MainButtonsPanel : MonoBehaviour
 
     private void MovePanel(bool showPanel)
     {
-        Vector2 target = showPanel ? shown : hidden;
+        bool isMobile = type.IsMobileInput();
+        Vector2 target = new Vector2(0, 0);
+        if (isMobile) { target = showPanel ? shown : hidden; }
+        else { target = showPanel ? shownPC : hiddenPC; }
         mainButtonsPanel.DOKill();
         mainButtonsPanel.DOAnchorPos(target, 0.5f);
     }

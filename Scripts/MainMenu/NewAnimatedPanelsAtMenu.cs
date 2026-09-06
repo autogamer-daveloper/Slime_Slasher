@@ -59,7 +59,10 @@ public class NewAnimatedPanelsAtMenu : MonoBehaviour
         {
             _using = -1;
             Background(true);
-            foreach (AnimatedPanelForNewMenu pan in panels) { pan.panel.DOAnchorPos(hidden, timer); }
+            foreach (AnimatedPanelForNewMenu pan in panels)
+            {
+                pan.panel.DOAnchorPos(hidden, timer);
+            }
         }
     }
 
