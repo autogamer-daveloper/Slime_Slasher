@@ -293,7 +293,7 @@ TextureImporter:
         width: 256
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -302,6 +302,50 @@ TextureImporter:
       bones: []
       spriteID: 55d73e2bbcabce44cb443b2aa8c720b7
       internalID: 987998108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory_01
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 317
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d220e1f3d4c97b84e90214bfa80eab04
+      internalID: -2003085144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instruments_01
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 317
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd023ec4d6752b458bef8e041773275
+      internalID: 611403539
       vertices: []
       indices: 
       edges: []
@@ -320,6 +364,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Instruments_01: 611403539
+      Inventory_01: -2003085144
       Square_button_00: 987998108
       Steam_Green_button: 9196969993108638379
       Steam_accept_button: 6554746280520564152

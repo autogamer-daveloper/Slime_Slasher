@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -221,7 +221,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_0
+      name: Accessory_Shield_01
       rect:
         serializedVersion: 2
         x: 6
@@ -229,7 +229,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,15 +243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_1
+      name: Accessory_Mana_Ring_01
       rect:
         serializedVersion: 2
         x: 47
-        y: 232
+        y: 225
         width: 35
-        height: 21
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,15 +265,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_2
+      name: Accessory_Health_Ring_01
       rect:
         serializedVersion: 2
         x: 88
-        y: 231
+        y: 225
         width: 35
-        height: 23
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_3
+      name: w_Wooden_Bow_01
       rect:
         serializedVersion: 2
         x: 154
@@ -295,7 +295,7 @@ TextureImporter:
         width: 44
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_4
+      name: w_Iron_Bow_01
       rect:
         serializedVersion: 2
         x: 203
@@ -317,7 +317,7 @@ TextureImporter:
         width: 45
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,7 +331,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_5
+      name: w_Golden_Bow_01
       rect:
         serializedVersion: 2
         x: 254
@@ -339,7 +339,7 @@ TextureImporter:
         width: 44
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,7 +353,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_6
+      name: w_Frost_Bow_01
       rect:
         serializedVersion: 2
         x: 312
@@ -361,7 +361,7 @@ TextureImporter:
         width: 40
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,15 +375,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_7
+      name: Accessory_Mana_Stars_01
       rect:
         serializedVersion: 2
-        x: 9
+        x: 7
         y: 182
-        width: 32
+        width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -397,15 +397,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_8
+      name: Accessory_Lamp_Of_Souls_01
       rect:
         serializedVersion: 2
         x: 45
-        y: 184
+        y: 178
         width: 48
-        height: 34
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -419,15 +419,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_9
+      name: Accessory_Phoenix_Ring_01
       rect:
         serializedVersion: 2
         x: 96
-        y: 184
-        width: 39
-        height: 35
+        y: 182
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -441,7 +441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_10
+      name: Empty_01
       rect:
         serializedVersion: 2
         x: 5
@@ -449,7 +449,7 @@ TextureImporter:
         width: 43
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -463,7 +463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_11
+      name: w_Old_Small_Knife_01
       rect:
         serializedVersion: 2
         x: 59
@@ -471,7 +471,7 @@ TextureImporter:
         width: 17
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -485,7 +485,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_12
+      name: w_Iron_Sword_01
       rect:
         serializedVersion: 2
         x: 85
@@ -493,7 +493,7 @@ TextureImporter:
         width: 23
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -507,7 +507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_13
+      name: w_Golden_Sword
       rect:
         serializedVersion: 2
         x: 115
@@ -515,7 +515,7 @@ TextureImporter:
         width: 23
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -529,37 +529,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_14
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 125
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 923a99a95b13d8160800000000000000
-      internalID: 7029329249447813929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_15
+      name: w_Frost_Sword_01
       rect:
         serializedVersion: 2
         x: 149
         y: 103
-        width: 23
+        width: 24
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -573,29 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_16
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 124
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0d734ee6c74cae90800000000000000
-      internalID: -7013151599996207857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_17
+      name: w_Ryan_Katana_01
       rect:
         serializedVersion: 2
         x: 180
@@ -603,7 +559,7 @@ TextureImporter:
         width: 29
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -617,7 +573,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_18
+      name: w_Dark_Sword_01
       rect:
         serializedVersion: 2
         x: 220
@@ -625,7 +581,7 @@ TextureImporter:
         width: 27
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -639,7 +595,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_19
+      name: w_Pistol_01
       rect:
         serializedVersion: 2
         x: 266
@@ -647,7 +603,7 @@ TextureImporter:
         width: 44
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -661,7 +617,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_20
+      name: w_CrossBow_01
       rect:
         serializedVersion: 2
         x: 317
@@ -669,7 +625,7 @@ TextureImporter:
         width: 48
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -683,7 +639,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_21
+      name: Attack_01
       rect:
         serializedVersion: 2
         x: 5
@@ -691,7 +647,7 @@ TextureImporter:
         width: 27
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -705,7 +661,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_22
+      name: w_Book_Of_Damage_01_01
       rect:
         serializedVersion: 2
         x: 96
@@ -713,7 +669,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -727,7 +683,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_23
+      name: w_Book_Of_Damage_02_01
       rect:
         serializedVersion: 2
         x: 132
@@ -735,7 +691,7 @@ TextureImporter:
         width: 38
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -749,7 +705,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_24
+      name: SkillTree_01
       rect:
         serializedVersion: 2
         x: 172
@@ -757,7 +713,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -771,7 +727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_25
+      name: w_Book_Of_Mana_Heal_01
       rect:
         serializedVersion: 2
         x: 210
@@ -779,7 +735,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -793,7 +749,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_26
+      name: w_Book_Of_Sunstrike_01
       rect:
         serializedVersion: 2
         x: 248
@@ -801,7 +757,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -815,7 +771,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_27
+      name: Wooden_Arrow_01
       rect:
         serializedVersion: 2
         x: 5
@@ -823,7 +779,7 @@ TextureImporter:
         width: 8
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -837,7 +793,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_28
+      name: Iron_Arrow_01
       rect:
         serializedVersion: 2
         x: 21
@@ -845,7 +801,7 @@ TextureImporter:
         width: 8
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -859,7 +815,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_29
+      name: Golden_Arrow_01
       rect:
         serializedVersion: 2
         x: 36
@@ -867,7 +823,7 @@ TextureImporter:
         width: 8
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -881,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_30
+      name: Frost_Arrow_01
       rect:
         serializedVersion: 2
         x: 52
@@ -889,7 +845,7 @@ TextureImporter:
         width: 8
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -903,7 +859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_31
+      name: Fire_Arrow_01
       rect:
         serializedVersion: 2
         x: 65
@@ -911,7 +867,7 @@ TextureImporter:
         width: 12
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -925,7 +881,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_32
+      name: Bullet_01
       rect:
         serializedVersion: 2
         x: 85
@@ -933,7 +889,7 @@ TextureImporter:
         width: 7
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -947,7 +903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_33
+      name: w_Book_Of_Heal_01
       rect:
         serializedVersion: 2
         x: 115
@@ -955,7 +911,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -969,7 +925,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_34
+      name: w_Book_Of_Frost_Dragon
       rect:
         serializedVersion: 2
         x: 155
@@ -977,7 +933,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -991,7 +947,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_35
+      name: w_Book_Of_Shadows_01
       rect:
         serializedVersion: 2
         x: 194
@@ -999,7 +955,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1013,7 +969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWeapons_and_accessories_01_36
+      name: w_Unknown_Book_01
       rect:
         serializedVersion: 2
         x: 233
@@ -1021,7 +977,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1038,7 +994,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 24895ad9e5f410247b0285a1b2d29647
     internalID: 0
     vertices: []
     indices: 
@@ -1048,43 +1004,43 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerWeapons_and_accessories_01_0: -4516108886432467262
-      PlayerWeapons_and_accessories_01_1: 7263060818401015347
-      PlayerWeapons_and_accessories_01_10: -226137008093160501
-      PlayerWeapons_and_accessories_01_11: -7878293108527931585
-      PlayerWeapons_and_accessories_01_12: -7130001985358440516
-      PlayerWeapons_and_accessories_01_13: -1923247582175430920
+      Accessory_Health_Ring_01: -7107216268043603175
+      Accessory_Lamp_Of_Souls_01: 4573065105966452526
+      Accessory_Mana_Ring_01: 7263060818401015347
+      Accessory_Mana_Stars_01: -929583815088767256
+      Accessory_Phoenix_Ring_01: 624553977090070393
+      Accessory_Shield_01: -4516108886432467262
+      Attack_01: -1512613019373516154
+      Bullet_01: 1562235880628667861
+      Empty_01: -226137008093160501
+      Fire_Arrow_01: 2047239369794278089
+      Frost_Arrow_01: -326168197511877768
+      Golden_Arrow_01: -8020798987807574081
+      Iron_Arrow_01: -1634731065710010046
       PlayerWeapons_and_accessories_01_14: 7029329249447813929
-      PlayerWeapons_and_accessories_01_15: -5708759117788741229
       PlayerWeapons_and_accessories_01_16: -7013151599996207857
-      PlayerWeapons_and_accessories_01_17: 847887321577690208
-      PlayerWeapons_and_accessories_01_18: 7169245516933563482
-      PlayerWeapons_and_accessories_01_19: -413654380010511967
-      PlayerWeapons_and_accessories_01_2: -7107216268043603175
-      PlayerWeapons_and_accessories_01_20: -5019764215097685278
-      PlayerWeapons_and_accessories_01_21: -1512613019373516154
-      PlayerWeapons_and_accessories_01_22: -8505164780339757203
-      PlayerWeapons_and_accessories_01_23: 8772610834022408445
-      PlayerWeapons_and_accessories_01_24: 6640230330133069177
-      PlayerWeapons_and_accessories_01_25: -8528422825839800748
-      PlayerWeapons_and_accessories_01_26: 1563533608157821364
-      PlayerWeapons_and_accessories_01_27: -6338295152399816384
-      PlayerWeapons_and_accessories_01_28: -1634731065710010046
-      PlayerWeapons_and_accessories_01_29: -8020798987807574081
-      PlayerWeapons_and_accessories_01_3: -2908294389260954762
-      PlayerWeapons_and_accessories_01_30: -326168197511877768
-      PlayerWeapons_and_accessories_01_31: 2047239369794278089
-      PlayerWeapons_and_accessories_01_32: 1562235880628667861
-      PlayerWeapons_and_accessories_01_33: 6126797813031804679
-      PlayerWeapons_and_accessories_01_34: -3266980821889123134
-      PlayerWeapons_and_accessories_01_35: 6346197785551494545
-      PlayerWeapons_and_accessories_01_36: -1934557994007260416
-      PlayerWeapons_and_accessories_01_4: 1694316827376786870
-      PlayerWeapons_and_accessories_01_5: 2458592013504382025
-      PlayerWeapons_and_accessories_01_6: -1591066058488393179
-      PlayerWeapons_and_accessories_01_7: -929583815088767256
-      PlayerWeapons_and_accessories_01_8: 4573065105966452526
-      PlayerWeapons_and_accessories_01_9: 624553977090070393
+      SkillTree_01: 6640230330133069177
+      Wooden_Arrow_01: -6338295152399816384
+      w_Book_Of_Damage_01_01: -8505164780339757203
+      w_Book_Of_Damage_02_01: 8772610834022408445
+      w_Book_Of_Frost_Dragon: -3266980821889123134
+      w_Book_Of_Heal_01: 6126797813031804679
+      w_Book_Of_Mana_Heal_01: -8528422825839800748
+      w_Book_Of_Shadows_01: 6346197785551494545
+      w_Book_Of_Sunstrike_01: 1563533608157821364
+      w_CrossBow_01: -5019764215097685278
+      w_Dark_Sword_01: 7169245516933563482
+      w_Frost_Bow_01: -1591066058488393179
+      w_Frost_Sword_01: -5708759117788741229
+      w_Golden_Bow_01: 2458592013504382025
+      w_Golden_Sword: -1923247582175430920
+      w_Iron_Bow_01: 1694316827376786870
+      w_Iron_Sword_01: -7130001985358440516
+      w_Old_Small_Knife_01: -7878293108527931585
+      w_Pistol_01: -413654380010511967
+      w_Ryan_Katana_01: 847887321577690208
+      w_Unknown_Book_01: -1934557994007260416
+      w_Wooden_Bow_01: -2908294389260954762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

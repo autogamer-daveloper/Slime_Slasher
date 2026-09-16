@@ -36,8 +36,8 @@ public class PlayersInstruments : MonoBehaviour
         ironPickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(2); src.PlayOneShot(selectItem); SelectedPickaxe(2); });
         goldenPickaxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Pickaxe(3); src.PlayOneShot(selectItem); SelectedPickaxe(3); });
         //axe
-        ironAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(2); src.PlayOneShot(selectItem); SelectedAxe(1); });
-        goldenAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(3); src.PlayOneShot(selectItem); SelectedAxe(2); });
+        ironAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(2); src.PlayOneShot(selectItem); SelectedAxe(2); });
+        goldenAxe.onClick.AddListener(() => { KeyManager.SetInt_InstrumentPower_Axe(3); src.PlayOneShot(selectItem); SelectedAxe(3); });
     }
 
     private void SelectedPickaxe(int id) { foreach (GameObject obj in pickaxePictures) { obj.SetActive(false); } pickaxePictures[id].SetActive(true); }

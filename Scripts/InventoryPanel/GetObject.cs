@@ -30,9 +30,19 @@ public class GetObject : MonoBehaviour
 
     private void Start()
     {
-        if (button == null) { Debug.LogError("[GetObject.cs]:" + gameObject.name + " button hasn't selected!"); return; }
-        _button = button.GetComponent<Button>();
-        if (_button == null) { Debug.LogError("[GetObject.cs]:" + button.name + " object hasn't button component!"); }
+        if (button == null)
+        {
+            if (getByTouch != true)
+            {
+                Debug.LogWarning("[GetObject.cs]:" + gameObject.name + " button hasn't selected! You can receive item only by touch!");
+                getByTouch = true;   
+            }
+        }
+        else
+        {
+            _button = button.GetComponent<Button>();
+            if (_button == null) { Debug.LogError("[GetObject.cs]:" + button.name + " object hasn't button component!"); }
+        }
 
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         if (inventory == null) { Debug.LogError($"[GetObject {gameObject.name}]: can't find inventory script"); }

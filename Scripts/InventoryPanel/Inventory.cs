@@ -60,22 +60,27 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < elements.Length; i++)
         {
             var el = elements[i];
-            if (el == null || el.receive == null) continue;
-
-            if (_receiveActions[i] != null) { el.receive.onClick.RemoveListener(_receiveActions[i]); }
-
-            if (_soundActions[i] != null) { el.receive.onClick.RemoveListener(_soundActions[i]); }
-
             int id = i;
-            //int id = el.itemId;
+
+            if (el == null) continue;
+
+            if (el.receive != null)
+            {
+                if (_receiveActions[id] != null) { el.receive.onClick.RemoveListener(_receiveActions[id]); }
+                if (_soundActions[id] != null) { el.receive.onClick.RemoveListener(_soundActions[id]); }
+            }
 
             UnityAction itemAction = () => GetItem(id);
-            _receiveActions[i] = itemAction;
-            el.receive.onClick.AddListener(itemAction);
+            _receiveActions[id] = itemAction;
 
             UnityAction soundAction = () => { if (src != null && el.receiveClip != null) { src.PlayOneShot(el.receiveClip); }};
-            _soundActions[i] = soundAction;
-            el.receive.onClick.AddListener(soundAction);
+            _soundActions[id] = soundAction;
+
+            if (el.receive != null)
+            {
+                el.receive.onClick.AddListener(itemAction);
+                el.receive.onClick.AddListener(soundAction);
+            }
         }
     }
 
@@ -123,7 +128,6 @@ public class Inventory : MonoBehaviour
             var el = elements[i];
             if (el != null && el.itemId == itemId)
             {
-                _soundActions[i]?.Invoke();
                 GetItem(i);
                 return;
             }
@@ -148,6 +152,9 @@ public class Inventory : MonoBehaviour
             return;
         }
         Debug.Log($"Item id = {el.itemId}");
+
+        if(_soundActions.Length <= 0 || _soundActions[index] == null) { Debug.LogWarning("No sound clip for this item!"); }
+        else { _soundActions[index].Invoke(); }
 
         if (el.type == InstrumentType.None) { Debug.Log("This item no need to have any instrument"); }
         else if (el.type == InstrumentType.Axe)

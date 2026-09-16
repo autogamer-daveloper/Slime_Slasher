@@ -16,8 +16,8 @@ public class MainButtonsPanel : MonoBehaviour
     private Vector2 shown = new Vector2(0, 100);
     private Vector2 hidden = new Vector2(0, -300);
 
-    private Vector2 shownPC = new Vector2(-250, 375);
-    private Vector2 hiddenPC = new Vector2(250, 375);
+    private Vector2 shownPC = new Vector2(-200, 375);
+    private Vector2 hiddenPC = new Vector2(400, 375);
 
     private UnityAction show;
     private UnityAction hide;

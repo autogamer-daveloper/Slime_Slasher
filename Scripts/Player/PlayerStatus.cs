@@ -207,6 +207,7 @@ public class PlayerStatus : MonoBehaviour
         if (isZero == true) { return; }
         if (health <= 0)
         {
+            healthText.text = "0" + "/" + (maxHealth + _extraLife + _st_health).ToString();
             src.PlayOneShot(death);
             Debug.Log("You died!");
             alivePlayer.SetActive(false);

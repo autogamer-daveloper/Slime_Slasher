@@ -35,6 +35,7 @@ public class EnemyStats : MonoBehaviour
 
     private int _health = 15;
     private bool _blockedDamage = false;
+    private bool _isDead = false;
 
     private void OnEnable()
     {
@@ -49,7 +50,8 @@ public class EnemyStats : MonoBehaviour
 
     private void GetDamage(int damage)
     {
-        if (_blockedDamage) return;
+        if (_isDead) { return; }
+        if (_blockedDamage) { return; }
         Debug.Log("Damaged");
         _health -= damage;
         if (healthEvents != null)
@@ -76,11 +78,12 @@ public class EnemyStats : MonoBehaviour
         }
         else
         {
+            _isDead = true;
             healthBar.value = 0;
             healthText.text = maxHealth.ToString() + "/" + "0";
             action.Invoke();
 
-            if (needSave) return;
+            if (needSave) { return; }
 
             GameObject temp;
             if (deadBody != null)
@@ -90,8 +93,6 @@ public class EnemyStats : MonoBehaviour
                 temp.transform.localScale = deadScale;
             }
             Destroy(toDestroy);
-
-            return;
         }
     }
 
