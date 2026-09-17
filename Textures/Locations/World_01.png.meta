@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,10 +149,10 @@ TextureImporter:
       name: World_01_grass
       rect:
         serializedVersion: 2
-        x: 27
-        y: 683
-        width: 302
-        height: 284
+        x: 9
+        y: 173
+        width: 71
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: World_01_ground
       rect:
         serializedVersion: 2
-        x: 355
-        y: 684
-        width: 292
-        height: 282
+        x: 89
+        y: 172
+        width: 71
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,11 +193,11 @@ TextureImporter:
       name: World_01_swamp
       rect:
         serializedVersion: 2
-        x: 673
-        y: 684
-        width: 318
-        height: 280
-      alignment: 0
+        x: 169
+        y: 172
+        width: 76
+        height: 69
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -215,10 +215,10 @@ TextureImporter:
       name: World_01_sand
       rect:
         serializedVersion: 2
-        x: 35
-        y: 376
-        width: 289
-        height: 269
+        x: 10
+        y: 95
+        width: 70
+        height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: World_01_stone
       rect:
         serializedVersion: 2
-        x: 345
-        y: 376
-        width: 311
-        height: 268
+        x: 88
+        y: 95
+        width: 72
+        height: 66
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: World_01_stone_road
       rect:
         serializedVersion: 2
-        x: 675
-        y: 374
-        width: 317
-        height: 268
+        x: 170
+        y: 95
+        width: 75
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: World_01_water
       rect:
         serializedVersion: 2
-        x: 67
-        y: 55
-        width: 254
-        height: 254
+        x: 16
+        y: 14
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +303,10 @@ TextureImporter:
       name: World_01_stone_decor_00
       rect:
         serializedVersion: 2
-        x: 389
-        y: 191
-        width: 206
-        height: 132
+        x: 98
+        y: 43
+        width: 50
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: World_01_stone_decor_01
       rect:
         serializedVersion: 2
-        x: 597
-        y: 183
-        width: 212
-        height: 126
+        x: 150
+        y: 43
+        width: 51
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,10 +347,10 @@ TextureImporter:
       name: World_01_grass_decor_00
       rect:
         serializedVersion: 2
-        x: 403
-        y: 39
-        width: 134
-        height: 112
+        x: 101
+        y: 6
+        width: 32
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,10 +369,10 @@ TextureImporter:
       name: World_01_grass_decor_01
       rect:
         serializedVersion: 2
-        x: 537
-        y: 31
-        width: 150
-        height: 102
+        x: 135
+        y: 4
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: World_01_mushrooms_decor
       rect:
         serializedVersion: 2
-        x: 711
-        y: 47
-        width: 140
-        height: 98
+        x: 179
+        y: 7
+        width: 33
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,6 +423,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      World_01_0: 240541430
       World_01_grass: 2592363033082029318
       World_01_grass_decor_00: -3890498408816512706
       World_01_grass_decor_01: 339933033022130234
