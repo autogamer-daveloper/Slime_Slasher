@@ -13610,7 +13610,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 294176113}
   m_HandleRect: {fileID: 294176112}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -28134,8 +28134,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 611493317}
   m_HandleRect: {fileID: 611493316}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.6937932
+  m_Value: 0.99999946
+  m_Size: 0.6937933
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -31636,6 +31636,7 @@ GameObject:
   - component: {fileID: 651551605}
   - component: {fileID: 651551604}
   - component: {fileID: 651551603}
+  - component: {fileID: 651551606}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -31770,6 +31771,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 20
   m_TargetDisplay: 0
+--- !u!114 &651551606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651551601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
+  m_Padding: {x: -1, y: -1, z: -1, w: -1}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &657650349
 GameObject:
   m_ObjectHideFlags: 0
@@ -36305,7 +36320,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1765798909}
   m_HandleRect: {fileID: 1765798908}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
