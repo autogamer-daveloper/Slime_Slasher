@@ -6175,7 +6175,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -9342,6 +9342,7 @@ GameObject:
   - component: {fileID: 775894723}
   - component: {fileID: 775894724}
   - component: {fileID: 775894725}
+  - component: {fileID: 775894726}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -9421,6 +9422,19 @@ MonoBehaviour:
   - {fileID: 97990532}
   - {fileID: 1941378094}
   - {fileID: 533161446}
+--- !u!114 &775894726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775894721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ada5cac8e1fc94b8e34607e7c0489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PProfileAnimationChange
+  main: {fileID: 1110262313}
 --- !u!1 &782639196
 GameObject:
   m_ObjectHideFlags: 0
@@ -13335,6 +13349,72 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1110262310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110262312}
+  - component: {fileID: 1110262311}
+  - component: {fileID: 1110262313}
+  m_Layer: 0
+  m_Name: Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1110262311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110262310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 2b897c59398d8c14a80efcf443ec4e9c, type: 2}
+--- !u!4 &1110262312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110262310}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110262313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110262310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9759097ca60394bb834b01a0306cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PostProcessingProfileMain
+  volume: {fileID: 1110262311}
+  profiles:
+  - {fileID: 11400000, guid: 2b897c59398d8c14a80efcf443ec4e9c, type: 2}
+  - {fileID: 11400000, guid: 4ef6568c719fb904583f8eb89fb1128d, type: 2}
 --- !u!1 &1114530098
 GameObject:
   m_ObjectHideFlags: 0
@@ -33874,6 +33954,8 @@ GameObject:
   - component: {fileID: 8698218081384656391}
   - component: {fileID: 8698218081384656393}
   - component: {fileID: 8698218081384656392}
+  - component: {fileID: 8698218081384656395}
+  - component: {fileID: 8698218081384656394}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -39063,6 +39145,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8698218081384656394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934497341703108816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05823e71cd382f74ea8c9c17dce39fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PostProcessingController
+  isMainMenu: 0
+  inputType: {fileID: 8698218081384656395}
+  toggle: {fileID: 0}
+  src: {fileID: 0}
+  clip: {fileID: 0}
+  volumes:
+  - {fileID: 1110262311}
+--- !u!114 &8698218081384656395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934497341703108816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 1
+  isHaveMobileObjects: 0
+  mobileObjects: []
+  isHaveComputerObjects: 0
+  computerObjects: []
 --- !u!1 &8720097483893882004
 GameObject:
   m_ObjectHideFlags: 0
@@ -40263,3 +40381,4 @@ SceneRoots:
   - {fileID: 9109315349853989942}
   - {fileID: 8884911639236824127}
   - {fileID: 775894722}
+  - {fileID: 1110262312}

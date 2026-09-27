@@ -257,6 +257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 394359540791260387}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &56538591352968639
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4435139967048402465}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &86110465294086223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,6 +1796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 427782749248738136}
   yourValue: 1
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &170824055699677827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +2114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 6536178484309713828}
   yourValue: 40
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &194115027264281577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,6 +2899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7870676966489857643}
   yourValue: 5
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &329602674482090278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,8 +3383,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128135015672552764}
-  - component: {fileID: 5958649396044792508}
-  - component: {fileID: 610054559361777452}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -3403,44 +3411,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5958649396044792508
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441076203966909207}
-  m_CullTransparentMesh: 1
---- !u!114 &610054559361777452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441076203966909207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9764151, b: 0.9764151, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c705ad3f04503284f9e14c2debb0c3b6, type: 3}
-  m_Type: 2
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1.24
 --- !u!1 &441266762146874505
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,6 +4770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 564183749523988262}
   yourValue: 25
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &543351452545641829
 GameObject:
   m_ObjectHideFlags: 0
@@ -5057,6 +5029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7639528302493573642}
   yourValue: 5
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &570895414469450446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5223,6 +5197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2612540922952112612}
   yourValue: 20
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &598821540056904742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5389,6 +5365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8328374729009611924}
   yourValue: 175
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &599433322664681207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5706,6 +5684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5914501510016787355}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &607464578491760478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5872,6 +5852,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8105192915145767849}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &622544372230567553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6565,6 +6547,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1230396751240266109}
   yourValue: 20
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &681404802761732457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7814,6 +7798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 6870278970109474417}
   yourValue: -30
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &730923362415428683
 GameObject:
   m_ObjectHideFlags: 0
@@ -9274,6 +9260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1867257889817082543}
   yourValue: 35
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &837344563122078769
 GameObject:
   m_ObjectHideFlags: 0
@@ -9917,6 +9905,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2487173722063178272}
   yourValue: 10
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &896404963444546280
 GameObject:
   m_ObjectHideFlags: 0
@@ -10397,6 +10387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7076972207902144831}
   yourValue: 50
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &929927698972700871
 GameObject:
   m_ObjectHideFlags: 0
@@ -10565,6 +10557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3871501079766333265}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &942929105395336696
 GameObject:
   m_ObjectHideFlags: 0
@@ -11021,6 +11015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3769717807925570148}
   yourValue: 35
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &967317312176920853
 GameObject:
   m_ObjectHideFlags: 0
@@ -11187,6 +11183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3517939897679127980}
   yourValue: 50
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1016537012024269962
 GameObject:
   m_ObjectHideFlags: 0
@@ -11727,6 +11725,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3630129215434018585}
   yourValue: 75
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1057717188728334920
 GameObject:
   m_ObjectHideFlags: 0
@@ -11893,6 +11893,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1344289624489173159}
   yourValue: 3
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1083784975408091197
 GameObject:
   m_ObjectHideFlags: 0
@@ -12134,6 +12136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 6824005866895662750}
   yourValue: 25
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1104504375389182298
 GameObject:
   m_ObjectHideFlags: 0
@@ -15216,6 +15220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4962420461290244989}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1573817461815161543
 GameObject:
   m_ObjectHideFlags: 0
@@ -15519,6 +15525,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4358224900155712597}
   yourValue: 65
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1656221823805415695
 GameObject:
   m_ObjectHideFlags: 0
@@ -16426,6 +16434,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4134278414930048809}
   yourValue: 5
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1783148608916204990
 GameObject:
   m_ObjectHideFlags: 0
@@ -17574,6 +17584,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 965829297938844248}
   yourValue: 3
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &1979082866100644875
 GameObject:
   m_ObjectHideFlags: 0
@@ -19510,7 +19522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -20397,6 +20409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3039902955066468004}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &2281826209918642603
 GameObject:
   m_ObjectHideFlags: 0
@@ -21582,6 +21596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3576465281700926941}
   yourValue: 15
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &2455916915202258149
 GameObject:
   m_ObjectHideFlags: 0
@@ -24664,6 +24680,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 862411340762161140}
   yourValue: 10
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &2783673482878285757
 GameObject:
   m_ObjectHideFlags: 0
@@ -25935,7 +25953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -27935,6 +27953,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3942525115910875006}
   yourValue: -25
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &3206361439804987036
 GameObject:
   m_ObjectHideFlags: 0
@@ -28404,6 +28424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2626798368601612125}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &3249166426002673174
 GameObject:
   m_ObjectHideFlags: 0
@@ -31131,6 +31153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5449026645933351915}
   yourValue: 60
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &3598667711251318427
 GameObject:
   m_ObjectHideFlags: 0
@@ -32602,6 +32626,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 6420346029914658683}
   yourValue: -25
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &3810187122065415122
 GameObject:
   m_ObjectHideFlags: 0
@@ -32992,6 +33018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7338592824368975946}
   yourValue: 20
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &3875265170210241929
 GameObject:
   m_ObjectHideFlags: 0
@@ -34958,6 +34986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1362434991268643143}
   yourValue: 105
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4142052325377757164
 GameObject:
   m_ObjectHideFlags: 0
@@ -35555,6 +35585,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4217430846456520138}
   yourValue: 2
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4203350368686090378
 GameObject:
   m_ObjectHideFlags: 0
@@ -37445,6 +37477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3258595475787548653}
   yourValue: 1
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4414215162421440441
 GameObject:
   m_ObjectHideFlags: 0
@@ -37891,6 +37925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7559113652044978896}
   yourValue: 75
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4470724634867285764
 GameObject:
   m_ObjectHideFlags: 0
@@ -38698,6 +38734,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1935793454834397912}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4535197475965245529
 GameObject:
   m_ObjectHideFlags: 0
@@ -39528,6 +39566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7017914676607125921}
   yourValue: 30
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4592700302103785906
 GameObject:
   m_ObjectHideFlags: 0
@@ -40102,6 +40142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3987016509757298057}
   yourValue: 1
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4638337479432606256
 GameObject:
   m_ObjectHideFlags: 0
@@ -40647,6 +40689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5628908508158238011}
   yourValue: -20
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4649761148097694587
 GameObject:
   m_ObjectHideFlags: 0
@@ -41490,6 +41534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5883883345562359317}
   yourValue: 150
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4717643356805875100
 GameObject:
   m_ObjectHideFlags: 0
@@ -42287,7 +42333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -43031,6 +43077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 533879271984352033}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4906877586349164042
 GameObject:
   m_ObjectHideFlags: 0
@@ -43197,6 +43245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2055907044975261417}
   yourValue: 75
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4911651202397752767
 GameObject:
   m_ObjectHideFlags: 0
@@ -43438,6 +43488,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7548170390750698520}
   yourValue: 5
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &4962258312335592749
 GameObject:
   m_ObjectHideFlags: 0
@@ -44305,6 +44357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8566272047057178421}
   yourValue: 20
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5070115036321528959
 GameObject:
   m_ObjectHideFlags: 0
@@ -45481,6 +45535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4862308498917396683}
   yourValue: 1
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5218961318607063340
 GameObject:
   m_ObjectHideFlags: 0
@@ -47726,6 +47782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8186228611686487701}
   yourValue: 125
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5376130176603173104
 GameObject:
   m_ObjectHideFlags: 0
@@ -50387,6 +50445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8190255067129703799}
   yourValue: 10
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5703468147231112511
 GameObject:
   m_ObjectHideFlags: 0
@@ -50553,6 +50613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3029984081985071432}
   yourValue: 2
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5721669497059131406
 GameObject:
   m_ObjectHideFlags: 0
@@ -51644,6 +51706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 384616928071699334}
   yourValue: 15
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5815930251344721674
 GameObject:
   m_ObjectHideFlags: 0
@@ -52635,6 +52699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1533783618274478486}
   yourValue: 25
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5857944008885214663
 GameObject:
   m_ObjectHideFlags: 0
@@ -52801,6 +52867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5959301131486259246}
   yourValue: 250
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &5878454704844502378
 GameObject:
   m_ObjectHideFlags: 0
@@ -53586,6 +53654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5668030988249353174}
   yourValue: 12
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6041582755722072948
 GameObject:
   m_ObjectHideFlags: 0
@@ -54384,6 +54454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5817739225038163459}
   yourValue: 1
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6167518959834451495
 GameObject:
   m_ObjectHideFlags: 0
@@ -55021,6 +55093,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2579981933105985137}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6236622222735013483
 GameObject:
   m_ObjectHideFlags: 0
@@ -55187,6 +55261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3225452096263596221}
   yourValue: 30
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6239122848930357025
 GameObject:
   m_ObjectHideFlags: 0
@@ -55487,6 +55563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5156183188138597350}
   yourValue: 35
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6248171505775185020
 GameObject:
   m_ObjectHideFlags: 0
@@ -56636,6 +56714,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7047641032488628996}
   yourValue: 1000
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6399090922547852866
 GameObject:
   m_ObjectHideFlags: 0
@@ -57332,6 +57412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2423473104324057950}
   yourValue: 1
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6423558618609846927
 GameObject:
   m_ObjectHideFlags: 0
@@ -57589,6 +57671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4274694404257195608}
   yourValue: -2
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6445838134729094880
 GameObject:
   m_ObjectHideFlags: 0
@@ -58486,6 +58570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7534264446123175567}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6598151645686661987
 GameObject:
   m_ObjectHideFlags: 0
@@ -59460,6 +59546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1981482882195465439}
   yourValue: 35
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6663765867317837071
 GameObject:
   m_ObjectHideFlags: 0
@@ -60072,6 +60160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1960115491065522934}
   yourValue: 30
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &6735713655270577064
 GameObject:
   m_ObjectHideFlags: 0
@@ -62569,6 +62659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8991129779751817442}
   yourValue: -4
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7057438940358123537
 GameObject:
   m_ObjectHideFlags: 0
@@ -62826,6 +62918,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1000623739715369986}
   yourValue: 50
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7079158865030061928
 GameObject:
   m_ObjectHideFlags: 0
@@ -65850,6 +65944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 1443165738672311469}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7399454769217223435
 GameObject:
   m_ObjectHideFlags: 0
@@ -68643,6 +68739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2362953226579413044}
   yourValue: 5
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7654779398104262536
 GameObject:
   m_ObjectHideFlags: 0
@@ -69733,7 +69831,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2626701551761137041}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.16153847
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -70255,6 +70353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7794043391567931281}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7832160636735456363
 GameObject:
   m_ObjectHideFlags: 0
@@ -70756,6 +70856,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 5772785864277088797}
   yourValue: 50
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7958007394875178573
 GameObject:
   m_ObjectHideFlags: 0
@@ -71073,6 +71175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 3000138138732872173}
   yourValue: 45
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &7989210840217317434
 GameObject:
   m_ObjectHideFlags: 0
@@ -71239,6 +71343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4767121342808897879}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8016059359009946233
 GameObject:
   m_ObjectHideFlags: 0
@@ -73039,6 +73145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 7457761025622627257}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8204762863940692949
 GameObject:
   m_ObjectHideFlags: 0
@@ -73356,6 +73464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8419761037706102338}
   yourValue: 150
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8222128030661650596
 GameObject:
   m_ObjectHideFlags: 0
@@ -74273,6 +74383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 848174636520790685}
   yourValue: 18
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8326406144242791956
 GameObject:
   m_ObjectHideFlags: 0
@@ -74995,6 +75107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 6700525364292612575}
   yourValue: 10
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8394952297103898734
 GameObject:
   m_ObjectHideFlags: 0
@@ -75161,6 +75275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 393965889193894913}
   yourValue: 3
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8400108748726013657
 GameObject:
   m_ObjectHideFlags: 0
@@ -76338,6 +76454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8764805471837142288}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8461185237452596121
 GameObject:
   m_ObjectHideFlags: 0
@@ -77242,6 +77360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 2397822893035921464}
   yourValue: 10
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8608159420734351472
 GameObject:
   m_ObjectHideFlags: 0
@@ -77634,6 +77754,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 248532755318519506}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8670241979087795811
 GameObject:
   m_ObjectHideFlags: 0
@@ -78391,6 +78513,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8145243082724622777}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8719888210750525229
 GameObject:
   m_ObjectHideFlags: 0
@@ -79411,6 +79535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 8091445168761487122}
   yourValue: 0
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1 &8852912731164179048
 GameObject:
   m_ObjectHideFlags: 0
@@ -82092,6 +82218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadStats
   textSource: {fileID: 4863812295527198959}
   yourValue: 17
+  isUsingPrefix: 0
+  prefix: 
 --- !u!1001 &4025151731127504856
 PrefabInstance:
   m_ObjectHideFlags: 0

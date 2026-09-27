@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class LanguageMain : MonoBehaviour
 {
     [Header("__ UI __")]
+    [Tooltip("Buttons, which on click you change game's language to button index (EXAMPLE: button[0] (first button in massive) changes game's language to 0 = English.)")]
     [SerializeField] private ChangeLangButton[] btn;
+    [Tooltip("Optional panel for soft reload scene.")]
     [SerializeField] private GameObject loadLevel;
 
     private int _usingLang;
@@ -29,8 +31,15 @@ public class LanguageMain : MonoBehaviour
         _usingLang = id;
         KeyManager.Set_Bool_Key("Language", _usingLang);
 
-        loadLevel.SetActive(true);
-        Invoke(nameof(LoadScene), 1f);
+        if (loadLevel != null)
+        {
+            loadLevel.SetActive(true);
+            Invoke(nameof(LoadScene), 1f);
+        }
+        else
+        {
+            LoadScene();
+        }
     }
 
     private void LoadScene() { LoadLevel.LoadLevelById(0); }
@@ -39,6 +48,8 @@ public class LanguageMain : MonoBehaviour
 [System.Serializable]
 internal class ChangeLangButton
 {
+    [Tooltip("Button for change language")]
     public Button button;
+    //We save action with index from Start() method there
     public UnityAction action;
 }

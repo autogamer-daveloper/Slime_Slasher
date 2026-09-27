@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Input")]
     [SerializeField] private bool isEnabledJump = true;
     [SerializeField] private LookArea lookArea;
-    [SerializeField] private bool mobileInput;
+    [SerializeField] private InputType inputType;
     [SerializeField] private float mobileSensitivity = 0.35f;
     [Header("Audio System")]
     [SerializeField] private GameObject movingSource;
@@ -53,7 +53,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        if(!mobileInput) { joystick.gameObject.SetActive(false); }
+        bool isMobile = inputType.IsMobileInput();
+        if (!isMobile) { joystick.gameObject.SetActive(false); }
     }
 
     private void Start()
@@ -64,7 +65,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update() {
         Vector2 mouseVector;
-        if (mobileInput)
+        bool isMobile = inputType.IsMobileInput();
+        if (isMobile)
         {
             _direction = new Vector2(joystick.Horizontal, joystick.Vertical);
             mouseVector = lookArea.IsDragging

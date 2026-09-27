@@ -377,6 +377,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6677263632416784899, guid: d481f6b1aeac5164ca18b652c9d0e853, type: 3}
   m_PrefabInstance: {fileID: 120236715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &176832552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176832554}
+  - component: {fileID: 176832553}
+  m_Layer: 0
+  m_Name: Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &176832553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176832552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 2b897c59398d8c14a80efcf443ec4e9c, type: 2}
+--- !u!4 &176832554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176832552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &300727902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 539467061113579214, guid: ced18c1964fbd8946ac09a9033b4892a, type: 3}
@@ -530,6 +579,8 @@ GameObject:
   - component: {fileID: 437921677}
   - component: {fileID: 437921679}
   - component: {fileID: 437921678}
+  - component: {fileID: 437921681}
+  - component: {fileID: 437921680}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -681,6 +732,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &437921680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437921673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05823e71cd382f74ea8c9c17dce39fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PostProcessingController
+  isMainMenu: 0
+  inputType: {fileID: 437921681}
+  toggle: {fileID: 0}
+  src: {fileID: 0}
+  clip: {fileID: 0}
+  volumes:
+  - {fileID: 176832553}
+--- !u!114 &437921681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437921673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a97082a1f026f44a2da7eab22701b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputType
+  buildType: 1
+  isHaveMobileObjects: 0
+  mobileObjects: []
+  isHaveComputerObjects: 0
+  computerObjects: []
 --- !u!1 &563272595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,7 +2955,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -25789,3 +25876,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 437921675}
   - {fileID: 1912984768}
+  - {fileID: 176832554}

@@ -16,6 +16,12 @@ public class GlobalSettings : MonoBehaviour
     [Header("__ Global Audio Volume Setting __")]
     [Tooltip("Need for volume slider working.")]
     [SerializeField] private GlobalAudioVolumeSetting audioVolumeSetting;
+    [Space(5)]
+    [Header("__ Audio __")]
+    [Tooltip("Audio source for 'click' clip.")]
+    [SerializeField] private AudioSource src;
+    [Tooltip("Audio effect for click event for toggles.")]
+    [SerializeField] private AudioClip click;
 
     private const string autoUseKey = "IsNeedAutoUse";
     private const string showWarningKey = "IsShowWarning";
@@ -85,19 +91,21 @@ public class GlobalSettings : MonoBehaviour
 
     private void onChangedAutoUse(bool status)
     {
+        PlaySFX(click);
         int statusInt;
         if (status == true) { statusInt = 1; }
         else { statusInt = 0; }
-        
+
         KeyManager.Set_Bool_Key(autoUseKey, statusInt);
     }
 
     private void onChangedShowWarning(bool status)
     {
+        PlaySFX(click);
         int statusInt;
         if (status == true) { statusInt = 1; }
         else { statusInt = 0; }
-        
+
         KeyManager.Set_Bool_Key(showWarningKey, statusInt);
     }
 
@@ -108,6 +116,12 @@ public class GlobalSettings : MonoBehaviour
         audioVolumeText.text = result.ToString();
         audioVolumeSetting.Recalculate();
     }
+
+    #endregion
+
+    #region Simple audio
+    
+    private void PlaySFX(AudioClip clip) { src.PlayOneShot(clip); }
 
     #endregion
 }
