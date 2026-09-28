@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 365d7e72d658d40439fff178d6c0056d
+guid: f8930a9fcce0cc04a89869ef2c8be80a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2815360766980410426
-    second: Steam_Gameplay_00_0
+      213: 3505620861024041140
+    second: Inv_panel_black_0
+  - first:
+      213: -4049655112657306488
+    second: Inv_panel_black_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Steam_Gameplay_00_Square_Button
+      name: Inv_panel_black_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 11
+        y: 9
+        width: 636
+        height: 320
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,30 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3c407e73bb221720800000000000000
-      internalID: 2815360766980410426
+      spriteID: 4b8798a799776a030800000000000000
+      internalID: 3505620861024041140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Steam_Gameplay_00_Circle_Button
+      name: Inv_panel_black_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
+        x: 674
+        y: 9
+        width: 121
+        height: 320
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4bbd5768e26528e4e924804739e330e4
-      internalID: 178834175
+      spriteID: 88c773b812cbcc7c0800000000000000
+      internalID: -4049655112657306488
       vertices: []
       indices: 
       edges: []
@@ -160,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dc3027a29e9ad6145a98f9cc8c6dbe25
+    spriteID: d796bb1be2c43e4478ff1b41196a44a3
     internalID: 0
     vertices: []
     indices: 
@@ -170,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Steam_Gameplay_00_Circle_Button: 178834175
-      Steam_Gameplay_00_Square_Button: 2815360766980410426
+      Inv_panel_black_0: 3505620861024041140
+      Inv_panel_black_1: -4049655112657306488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
