@@ -60,11 +60,11 @@ public class PostProcessingController : MonoBehaviour
         }
 
         //Connect events for toggle with method
-        toggle.onValueChanged.AddListener(OnSwitchedSetting);
+        if (isMainMenu) { toggle.onValueChanged.AddListener(OnSwitchedSetting); }
     }
 
     //Disconnect events for toggle with method when object destroyed / game turned off
-    private void OnDestroy() { toggle.onValueChanged.RemoveListener(OnSwitchedSetting); }
+    private void OnDestroy() { if (isMainMenu) { toggle.onValueChanged.RemoveListener(OnSwitchedSetting); } }
 
     private void OnSwitchedSetting(bool answer)
     {
