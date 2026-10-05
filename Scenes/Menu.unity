@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 57e5244ce0e975b4ab84d5512486eb70, type: 2}
 --- !u!1 &15396955
 GameObject:
@@ -973,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3a48c19b037f2cf469d1689864cfcc99, type: 2}
 --- !u!114 &27680815
 MonoBehaviour:
@@ -1224,6 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d13449b8deebda14aa2f7b119d9a8396, type: 2}
 --- !u!1 &29969406
 GameObject:
@@ -1375,6 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ef788754a18d8364fb22209a44169e0d, type: 2}
 --- !u!1 &32931464
 GameObject:
@@ -2189,6 +2193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 65e2372d89f7cc54db01f9f5976ad88a, type: 2}
 --- !u!114 &52158198
 MonoBehaviour:
@@ -2440,6 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ae94eca416a0509439444a30e52a0165, type: 2}
 --- !u!1 &62096931
 GameObject:
@@ -3012,6 +3018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c89b5409f48d035448d753500086d4ac, type: 2}
 --- !u!114 &78585376
 MonoBehaviour:
@@ -3768,6 +3775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &92851508
 MonoBehaviour:
@@ -3995,6 +4003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 732845c73a40ba84399d2d855710054c, type: 2}
 --- !u!114 &98897797
 MonoBehaviour:
@@ -4246,6 +4255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a34916beea333924783a10fe93163804, type: 2}
 --- !u!1 &99754924
 GameObject:
@@ -4845,7 +4855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111778604
@@ -5463,6 +5473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a89626cbfccd8044f97f8ece4922f200, type: 2}
 --- !u!114 &123133097
 MonoBehaviour:
@@ -5716,6 +5727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &129247459
 GameObject:
@@ -6021,6 +6033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 003bccda3d03f3f48a784fbdb8cd0e05, type: 2}
 --- !u!1 &130098128
 GameObject:
@@ -6311,6 +6324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &133190384
 GameObject:
@@ -6555,6 +6569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &136131729
 GameObject:
@@ -7057,6 +7072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &144842088
 GameObject:
@@ -7301,6 +7317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &148115869
 GameObject:
@@ -7563,6 +7580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &149924180
 GameObject:
@@ -7791,6 +7809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a27f546077b770449842bd0cf6a8c7a1, type: 2}
 --- !u!1 &155690338
 GameObject:
@@ -7942,6 +7961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: be31537da2fe12a4bb1bedc6c95cbbbb, type: 2}
 --- !u!1 &157370909
 GameObject:
@@ -8748,6 +8768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &187088777
 GameObject:
@@ -9202,6 +9223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05c92335cd366da43abbf844d4e7b41e, type: 2}
 --- !u!1 &196581313
 GameObject:
@@ -9254,6 +9276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &196581316
 MonoBehaviour:
@@ -9580,6 +9603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d4ebfd11ded393e4194f2d27bdba49ae, type: 2}
 --- !u!1 &197910183
 GameObject:
@@ -9731,6 +9755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a1565a04634f91443bb9416854e18f81, type: 2}
 --- !u!1 &198861720
 GameObject:
@@ -9973,6 +9998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: fa86974b860a1a541906178f8ff06c8a, type: 2}
 --- !u!1 &203215756
 GameObject:
@@ -10126,6 +10152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &203332387
 GameObject:
@@ -11217,6 +11244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &215787900
 GameObject:
@@ -11359,6 +11387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c36ba076dc523ae42adb93140e7290af, type: 2}
 --- !u!114 &217655834
 MonoBehaviour:
@@ -12288,6 +12317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &227431276
 GameObject:
@@ -13024,6 +13054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 1fbe6764c3c04e544991f81d81107751, type: 2}
 --- !u!1 &244577729
 GameObject:
@@ -14123,6 +14154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &265777886
 GameObject:
@@ -14783,6 +14815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8a6efc1e93f6c44fa1e608858d3ffbd, type: 2}
 --- !u!1 &277711565
 GameObject:
@@ -16006,6 +16039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &294747400
 GameObject:
@@ -16417,6 +16451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &303908520
 GameObject:
@@ -16918,6 +16953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &310910610
 GameObject:
@@ -17071,6 +17107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8012e7f9cb34b64e81e826239108c71, type: 2}
 --- !u!1 &314616066
 GameObject:
@@ -17410,6 +17447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: aec247634364efb4b8d47482f5d09c1a, type: 2}
 --- !u!1 &317115292
 GameObject:
@@ -17563,6 +17601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &319231086
 GameObject:
@@ -18609,6 +18648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &350322126
 GameObject:
@@ -19534,6 +19574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 330c7acd03e92a54ead652adb8422648, type: 2}
 --- !u!114 &368332855
 MonoBehaviour:
@@ -19787,6 +19828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &391192573
 GameObject:
@@ -20122,6 +20164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &397793278
 GameObject:
@@ -20853,6 +20896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &404589940
 GameObject:
@@ -21273,6 +21317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &419173694
 GameObject:
@@ -21324,6 +21369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 302a9f3eafe668b4c8a1b5bc09d380b7, type: 2}
 --- !u!114 &419173697
 MonoBehaviour:
@@ -21475,6 +21521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: ec24a90523c25f547b96b3334c2a6931, type: 2}
 --- !u!114 &419496813
 MonoBehaviour:
@@ -21701,6 +21748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ea6b2878514eff84b86e3a21d7197b46, type: 2}
 --- !u!114 &422143727
 MonoBehaviour:
@@ -22083,6 +22131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3a49a42bed9e3844ea14db6fd1d8455f, type: 2}
 --- !u!1 &429970591
 GameObject:
@@ -22134,6 +22183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c36ba076dc523ae42adb93140e7290af, type: 2}
 --- !u!114 &429970594
 MonoBehaviour:
@@ -22637,6 +22687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ac793e9f486a60047a2f34f78406ca8a, type: 2}
 --- !u!114 &434565293
 MonoBehaviour:
@@ -22979,6 +23030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: fcc2d9030ecb8264aa2cfefdbdc38b1b, type: 2}
 --- !u!1 &441346154
 GameObject:
@@ -23751,6 +23803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 430e368052bf3904390c06507d11dc01, type: 2}
 --- !u!1 &457628428
 GameObject:
@@ -23923,6 +23976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d5185caa0c75ac440bc3d1d04b78eaa5, type: 2}
 --- !u!1 &458441134
 GameObject:
@@ -24259,6 +24313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &470354350
 GameObject:
@@ -24401,6 +24456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 6851c247c34e67b48a61a517b9811329, type: 2}
 --- !u!114 &471016525
 MonoBehaviour:
@@ -24689,6 +24745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: ea6b2878514eff84b86e3a21d7197b46, type: 2}
 --- !u!114 &471970204
 MonoBehaviour:
@@ -24840,6 +24897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 1b7613b87bccfa34c874c7b64adae77f, type: 2}
 --- !u!114 &473396365
 MonoBehaviour:
@@ -25166,6 +25224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: b237af9b88960614ca925244d9f532a5, type: 2}
 --- !u!1 &477022400
 GameObject:
@@ -25622,6 +25681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 15d9bb022f1a3ec41991cc1ab5827559, type: 2}
 --- !u!1 &481491143
 GameObject:
@@ -25971,6 +26031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ae6abfaa5abdacf42b79d48b76da0c70, type: 2}
 --- !u!114 &485408798
 MonoBehaviour:
@@ -26319,6 +26380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3f944167c8592e94bb61815efbd30042, type: 2}
 --- !u!1 &490122712
 GameObject:
@@ -26915,6 +26977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &498499360
 GameObject:
@@ -27848,6 +27911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 58e37d7efa5554e46947c631d719448f, type: 2}
 --- !u!114 &515374924
 MonoBehaviour:
@@ -29025,6 +29089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &530146249
 MonoBehaviour:
@@ -29276,6 +29341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a1565a04634f91443bb9416854e18f81, type: 2}
 --- !u!1 &538166961
 GameObject:
@@ -29550,6 +29616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c321e3ca5955e5649a3a328aeec07f7a, type: 2}
 --- !u!114 &551535286
 MonoBehaviour:
@@ -29803,6 +29870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4e8fe593cc89e6249a53c0585a62ee75, type: 2}
 --- !u!1 &557492862
 GameObject:
@@ -30221,6 +30289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &561096713
 MonoBehaviour:
@@ -31128,6 +31197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 1d38acfd965c81c45b279219cd33eb17, type: 2}
 --- !u!114 &578299006
 MonoBehaviour:
@@ -31933,6 +32003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: 6851c247c34e67b48a61a517b9811329, type: 2}
 --- !u!114 &602426448
 MonoBehaviour:
@@ -32184,6 +32255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 07ddbf3de14acb747a58566ba833b3b8, type: 2}
 --- !u!1 &606694835
 GameObject:
@@ -33663,6 +33735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &629779933
 GameObject:
@@ -33816,6 +33889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8012e7f9cb34b64e81e826239108c71, type: 2}
 --- !u!1 &633261468
 GameObject:
@@ -33867,6 +33941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05f79775ab7cf4b4786b5bda4bb14f9f, type: 2}
 --- !u!114 &633261471
 MonoBehaviour:
@@ -34210,6 +34285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 28548f04a28e55642987c97bab4c5cb1, type: 2}
 --- !u!1 &643234116
 GameObject:
@@ -34835,6 +34911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &652529984
 GameObject:
@@ -34988,6 +35065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &654011410
 GameObject:
@@ -35272,6 +35350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &657795501
 GameObject:
@@ -35666,6 +35745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &675429435
 GameObject:
@@ -35819,6 +35899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &678450009
 GameObject:
@@ -36322,6 +36403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 7a3709fd8da6f1e4995d19ef9109739f, type: 2}
 --- !u!114 &696927506
 MonoBehaviour:
@@ -36473,6 +36555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &699346504
 MonoBehaviour:
@@ -36761,6 +36844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c89b5409f48d035448d753500086d4ac, type: 2}
 --- !u!114 &701150369
 MonoBehaviour:
@@ -36799,7 +36883,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -36914,6 +36998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a6deb12ee3e0c414b91581fbe54df741, type: 2}
 --- !u!114 &704455830
 MonoBehaviour:
@@ -37167,6 +37252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &709755286
 GameObject:
@@ -37413,6 +37499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ae94eca416a0509439444a30e52a0165, type: 2}
 --- !u!1 &713029383
 GameObject:
@@ -37745,6 +37832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3fb4b67c7be4c714ebc6cdef97fcc52f, type: 2}
 --- !u!114 &724123475
 MonoBehaviour:
@@ -38163,6 +38251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 1fbe6764c3c04e544991f81d81107751, type: 2}
 --- !u!1 &742763660
 GameObject:
@@ -38316,6 +38405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &743277005
 GameObject:
@@ -38631,6 +38721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 813aa46e6556e2a48ba3a81b33ff8564, type: 2}
 --- !u!114 &755034415
 MonoBehaviour:
@@ -38782,6 +38873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: cc358f3b1a86e114a9a2d71bcf8e2a78, type: 2}
 --- !u!114 &755826410
 MonoBehaviour:
@@ -39263,6 +39355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &759905599
 GameObject:
@@ -39665,6 +39758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 69c9c2e55c0292a48bcd83432aebef65, type: 2}
 --- !u!1 &769886976
 GameObject:
@@ -39818,6 +39912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &770344719
 GameObject:
@@ -40125,6 +40220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &772028023
 GameObject:
@@ -40490,6 +40586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4e8fe593cc89e6249a53c0585a62ee75, type: 2}
 --- !u!1 &773610595
 GameObject:
@@ -41362,6 +41459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3b39b2eaa65f5d8459e21e1f60b6702c, type: 2}
 --- !u!1 &786716638
 GameObject:
@@ -42690,6 +42788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &833124651
 GameObject:
@@ -42843,6 +42942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &833361333
 GameObject:
@@ -43130,7 +43230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 16+
+  m_text: 13+
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
   m_sharedMaterial: {fileID: -5045527851715265934, guid: 9326acc03c560944a93ec177a6bc6343, type: 2}
@@ -43351,6 +43451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c4ffb5030fbe15944af48074fab34eb6, type: 2}
 --- !u!114 &841034461
 MonoBehaviour:
@@ -43639,6 +43740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4556ef4f881f5b344934acd60d16ad9b, type: 2}
 --- !u!114 &846827584
 MonoBehaviour:
@@ -43867,6 +43969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c36ba076dc523ae42adb93140e7290af, type: 2}
 --- !u!114 &849061014
 MonoBehaviour:
@@ -44195,6 +44298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 29233336ea4335e4fad2a7859c569419, type: 2}
 --- !u!1 &854785776
 GameObject:
@@ -44530,6 +44634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &861021996
 GameObject:
@@ -44681,6 +44786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 74cd42c5a37cb2841a1c83ee33aaced0, type: 2}
 --- !u!1 &863454290
 GameObject:
@@ -44834,6 +44940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a27f546077b770449842bd0cf6a8c7a1, type: 2}
 --- !u!1 &863487335
 GameObject:
@@ -45283,6 +45390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 62097cdbc726011409167d86196342f5, type: 2}
 --- !u!1 &872499922
 GameObject:
@@ -45434,6 +45542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a1565a04634f91443bb9416854e18f81, type: 2}
 --- !u!1 &885131584
 GameObject:
@@ -45719,6 +45828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c36ba076dc523ae42adb93140e7290af, type: 2}
 --- !u!114 &902952145
 MonoBehaviour:
@@ -46045,6 +46155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 7733bdca7dfa86b4a8a5ae723886eabe, type: 2}
 --- !u!1 &910187213
 GameObject:
@@ -46506,6 +46617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 1f530f5242668c0458edd7f6a2541ae4, type: 2}
 --- !u!114 &914348086
 MonoBehaviour:
@@ -47255,6 +47367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: fae08a7c81835ec4fbf9014499d8554a, type: 2}
 --- !u!1 &933532910
 GameObject:
@@ -47773,6 +47886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d272972de2e9ec847812ce9c2b3c64bd, type: 2}
 --- !u!1 &945381871
 GameObject:
@@ -48830,6 +48944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &960369495
 GameObject:
@@ -48959,7 +49074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 0}
+  m_AnchoredPosition: {x: -175, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963054159
@@ -49894,6 +50009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 07ddbf3de14acb747a58566ba833b3b8, type: 2}
 --- !u!1 &977470628
 GameObject:
@@ -50138,6 +50254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &983511391
 GameObject:
@@ -50190,6 +50307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &983511394
 MonoBehaviour:
@@ -50534,6 +50652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &994529328
 GameObject:
@@ -50911,6 +51030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1000522009
 GameObject:
@@ -51064,6 +51184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &1002605695
 GameObject:
@@ -51418,6 +51539,7 @@ MonoBehaviour:
   btn:
   - button: {fileID: 963054160}
   - button: {fileID: 111778605}
+  - button: {fileID: 1515168534}
   loadLevel: {fileID: 2085020315}
 --- !u!114 &1007695679
 MonoBehaviour:
@@ -51831,7 +51953,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -51908,6 +52030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 7d8e2bb5b54698c4da45b317a6a1c320, type: 2}
 --- !u!1 &1011184715
 GameObject:
@@ -52634,6 +52757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e94bb368d7aca7545a52c887621ca56b, type: 2}
 --- !u!1 &1036143438
 GameObject:
@@ -52787,6 +52911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1036196581
 GameObject:
@@ -54223,6 +54348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2417b0864a491e742b88f4f9653d08b3, type: 2}
 --- !u!114 &1066196538
 MonoBehaviour:
@@ -54733,6 +54859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1075312691
 GameObject:
@@ -55387,6 +55514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1085363062
 GameObject:
@@ -55438,6 +55566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3a48c19b037f2cf469d1689864cfcc99, type: 2}
 --- !u!114 &1085363065
 MonoBehaviour:
@@ -55689,6 +55818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1093811041
 GameObject:
@@ -55741,6 +55871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &1093811044
 MonoBehaviour:
@@ -55994,6 +56125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &1095565782
 GameObject:
@@ -56633,6 +56765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a27f546077b770449842bd0cf6a8c7a1, type: 2}
 --- !u!1 &1115413168
 GameObject:
@@ -57425,6 +57558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ae94eca416a0509439444a30e52a0165, type: 2}
 --- !u!1 &1135618698
 GameObject:
@@ -57732,6 +57866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &1140395907
 GameObject:
@@ -57883,6 +58018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1140500102
 GameObject:
@@ -58591,6 +58727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8012e7f9cb34b64e81e826239108c71, type: 2}
 --- !u!1 &1148200395
 GameObject:
@@ -58759,6 +58896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 0}
   container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &1155064345
 MonoBehaviour:
@@ -59012,6 +59150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &1160789381
 GameObject:
@@ -59519,6 +59658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 8ea88e8911c48414eba3718c27d3acaf, type: 2}
 --- !u!114 &1170086561
 MonoBehaviour:
@@ -59954,6 +60094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 286e3e3a4b518e843884a9dc67235aee, type: 2}
 --- !u!1 &1172210559
 GameObject:
@@ -60005,6 +60146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 27c1273eaccbae64c9b2e1795915dc87, type: 2}
 --- !u!114 &1172210562
 MonoBehaviour:
@@ -60256,6 +60398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 838d63ab736a98149bb742c59a902196, type: 2}
 --- !u!1 &1175451666
 GameObject:
@@ -60762,6 +60905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c36ba076dc523ae42adb93140e7290af, type: 2}
 --- !u!114 &1184177997
 MonoBehaviour:
@@ -60913,6 +61057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &1185512594
 MonoBehaviour:
@@ -61164,6 +61309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e0d6df2fc076414499a98644a8da0600, type: 2}
 --- !u!1 &1197079906
 GameObject:
@@ -61499,6 +61645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1205371104
 GameObject:
@@ -62529,6 +62676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ec24a90523c25f547b96b3334c2a6931, type: 2}
 --- !u!114 &1228580022
 MonoBehaviour:
@@ -62680,6 +62828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 310888a5409535d468c370594790b91f, type: 2}
 --- !u!114 &1228745110
 MonoBehaviour:
@@ -62933,6 +63082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &1233767135
 GameObject:
@@ -63160,6 +63310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 7733bdca7dfa86b4a8a5ae723886eabe, type: 2}
 --- !u!1 &1234554782
 GameObject:
@@ -63484,6 +63635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c5aa1f59d4d022548b066a6dbc24a735, type: 2}
 --- !u!1 &1240955910
 GameObject:
@@ -63626,6 +63778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3a48c19b037f2cf469d1689864cfcc99, type: 2}
 --- !u!114 &1245235947
 MonoBehaviour:
@@ -64828,6 +64981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: cf44f0f3eb4c437429bc669842ee0dc0, type: 2}
 --- !u!1 &1273888276
 GameObject:
@@ -65135,6 +65289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 354b5828d3292cc4f925fe0a802e2893, type: 2}
 --- !u!114 &1275817432
 MonoBehaviour:
@@ -65691,6 +65846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &1297956758
 GameObject:
@@ -65842,6 +65998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 78df93acbf1a17643895b9f2b16e7272, type: 2}
 --- !u!1 &1298345138
 GameObject:
@@ -66657,6 +66814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a77a477dd5c3f1243b0e6fed66e6838d, type: 2}
 --- !u!1 &1323752066
 GameObject:
@@ -67011,6 +67169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 9dea2e699a479dc4f8488c228231184b, type: 2}
 --- !u!114 &1328829020
 MonoBehaviour:
@@ -67262,6 +67421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a99e853f24bf0dc4290480841b73483f, type: 2}
 --- !u!1 &1330807125
 GameObject:
@@ -67598,6 +67758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c0647ef8523499d47b58c26448d50b3c, type: 2}
 --- !u!1 &1337944519
 GameObject:
@@ -67751,6 +67912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4e8fe593cc89e6249a53c0585a62ee75, type: 2}
 --- !u!1 &1340879282
 GameObject:
@@ -67944,6 +68106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &1346123032
 GameObject:
@@ -68190,6 +68353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4e8fe593cc89e6249a53c0585a62ee75, type: 2}
 --- !u!1 &1353025629
 GameObject:
@@ -69539,6 +69703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1376783437
 GameObject:
@@ -69696,6 +69861,7 @@ RectTransform:
   m_Children:
   - {fileID: 963054158}
   - {fileID: 111778603}
+  - {fileID: 1515168531}
   m_Father: {fileID: 401391933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -70103,6 +70269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a5e7567ed6ad24449aae3fab8fe52c81, type: 2}
 --- !u!114 &1393515313
 MonoBehaviour:
@@ -70356,6 +70523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4e8fe593cc89e6249a53c0585a62ee75, type: 2}
 --- !u!1 &1401811504
 GameObject:
@@ -70778,6 +70946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1408817135
 GameObject:
@@ -71513,6 +71682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 330c7acd03e92a54ead652adb8422648, type: 2}
 --- !u!114 &1421609986
 MonoBehaviour:
@@ -71906,6 +72076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 8aaf0744adedf7842b6ddc79cdbfbb2c, type: 2}
 --- !u!114 &1429516089
 MonoBehaviour:
@@ -72250,6 +72421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &1433688022
 GameObject:
@@ -72816,7 +72988,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -72893,6 +73065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d157c7f0acfa1f34caa4598cc8d8ed87, type: 2}
 --- !u!1 &1443126464
 GameObject:
@@ -72944,6 +73117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &1443126467
 MonoBehaviour:
@@ -73095,6 +73269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 48c2c95e51385ba4d886f7cc77cfa43e, type: 2}
 --- !u!114 &1448172840
 MonoBehaviour:
@@ -74165,6 +74340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1474622351
 GameObject:
@@ -74307,6 +74483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: be33c031fb6830c4d8c6aedba0088777, type: 2}
 --- !u!114 &1476256498
 MonoBehaviour:
@@ -74635,6 +74812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1485786735
 GameObject:
@@ -74884,6 +75062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1491406441
 GameObject:
@@ -75811,6 +75990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d78e2211288373147960d4f3c04d148f, type: 2}
 --- !u!1 &1505235081
 GameObject:
@@ -75962,6 +76142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8a6efc1e93f6c44fa1e608858d3ffbd, type: 2}
 --- !u!1 &1512423694
 GameObject:
@@ -76099,6 +76280,159 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512423694}
+  m_CullTransparentMesh: 1
+--- !u!1 &1515168530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515168531}
+  - component: {fileID: 1515168536}
+  - component: {fileID: 1515168535}
+  - component: {fileID: 1515168534}
+  - component: {fileID: 1515168533}
+  - component: {fileID: 1515168532}
+  m_Layer: 0
+  m_Name: Lang_CHI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1515168531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515168530}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1377537581}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 175, y: 0}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1515168532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515168530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdd33dc669de1a4f9594bd3fa735703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioButtonTrigger
+  button: {fileID: 1515168534}
+  src: {fileID: 356894605}
+  sfx: {fileID: 8300000, guid: 831a40d87869091419f88b2e73530618, type: 3}
+  isPrivate: 1
+--- !u!114 &1515168533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515168530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1515168534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515168530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1515168535}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1515168535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515168530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 621925499, guid: 3dde7b215798b2741b0e9a3f10bff573, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1515168536
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515168530}
   m_CullTransparentMesh: 1
 --- !u!1 &1516133960
 GameObject:
@@ -77758,6 +78092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 07ddbf3de14acb747a58566ba833b3b8, type: 2}
 --- !u!1 &1568227529
 GameObject:
@@ -77909,6 +78244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1571654805
 GameObject:
@@ -78375,6 +78711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8012e7f9cb34b64e81e826239108c71, type: 2}
 --- !u!1 &1574487864
 GameObject:
@@ -78628,6 +78965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: dad2b2827bde8524687591d591c39e53, type: 2}
 --- !u!114 &1581789105
 MonoBehaviour:
@@ -79061,6 +79399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1590447475
 GameObject:
@@ -79493,6 +79832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 11306ea22812e664aa352f9a85681a9b, type: 2}
 --- !u!114 &1593627972
 MonoBehaviour:
@@ -79986,6 +80326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0b776a2eab274e446abe0ff3dcfaa894, type: 2}
 --- !u!1 &1598216477
 GameObject:
@@ -80139,6 +80480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1603473063
 GameObject:
@@ -80190,6 +80532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &1603473066
 MonoBehaviour:
@@ -80417,6 +80760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c36ba076dc523ae42adb93140e7290af, type: 2}
 --- !u!114 &1606305666
 MonoBehaviour:
@@ -80887,6 +81231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f6e909ae6872ddb499de58eede511122, type: 2}
 --- !u!114 &1621057793
 MonoBehaviour:
@@ -81192,6 +81537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 3a48c19b037f2cf469d1689864cfcc99, type: 2}
 --- !u!114 &1629744406
 MonoBehaviour:
@@ -82056,6 +82402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a27f546077b770449842bd0cf6a8c7a1, type: 2}
 --- !u!1 &1656063006
 GameObject:
@@ -82107,6 +82454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 8b126dc86d5889e4fafdfb9e54963291, type: 2}
 --- !u!114 &1656063009
 MonoBehaviour:
@@ -82561,7 +82909,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -82638,6 +82986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: b3699203719ee464ea6763c1d7d09568, type: 2}
 --- !u!1 &1666130209
 GameObject:
@@ -82789,6 +83138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 39d9eba12c9bc5d42bae9722681d2f8c, type: 2}
 --- !u!1 &1666853470
 GameObject:
@@ -83118,6 +83468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 6fd2ecc958ab4f34889089cdb4825a2f, type: 2}
 --- !u!1 &1670290937
 GameObject:
@@ -83533,6 +83884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 53f17eb1d1b61fe4092f5e2e0dfbdaf5, type: 2}
 --- !u!114 &1681094787
 MonoBehaviour:
@@ -83569,7 +83921,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -83784,6 +84136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 07ddbf3de14acb747a58566ba833b3b8, type: 2}
 --- !u!1 &1688323324
 GameObject:
@@ -84102,6 +84455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e403f29e147a0694b9d1f89407cb1099, type: 2}
 --- !u!1 &1696564352
 GameObject:
@@ -84435,6 +84789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 650bc698faa9e544799fe860883b7969, type: 2}
 --- !u!1 &1708120864
 GameObject:
@@ -85006,6 +85361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a27f546077b770449842bd0cf6a8c7a1, type: 2}
 --- !u!1 &1716777391
 GameObject:
@@ -85232,6 +85588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1719369955
 GameObject:
@@ -85383,6 +85740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: beeaec3ba61d5ac44a1196bd0cae369a, type: 2}
 --- !u!1 &1720108926
 GameObject:
@@ -85627,6 +85985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &1726635629
 GameObject:
@@ -85792,7 +86151,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -85869,6 +86228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 9ca39bce6a1a9c64d8e0f1d49732ee52, type: 2}
 --- !u!1 &1732196847
 GameObject:
@@ -86111,6 +86471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c20084f4db517f848afe2ee7683b7fa1, type: 2}
 --- !u!1 &1733147442
 GameObject:
@@ -86299,6 +86660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: d43ae1c1dd477ea43a9709c372e9b0d1, type: 2}
 --- !u!114 &1734467713
 MonoBehaviour:
@@ -86593,6 +86955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1746499044
 GameObject:
@@ -86746,6 +87109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: a27f546077b770449842bd0cf6a8c7a1, type: 2}
 --- !u!1 &1750344222
 GameObject:
@@ -87133,6 +87497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e4eec1c0613d455479224c890f3983f4, type: 2}
 --- !u!114 &1759746191
 MonoBehaviour:
@@ -87284,6 +87649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c5804876f6d45f0468533eff01c6ca6a, type: 2}
 --- !u!114 &1759796370
 MonoBehaviour:
@@ -87320,7 +87686,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -87571,6 +87937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1763235015
 GameObject:
@@ -88115,6 +88482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 85e10ffb42ce01a4b84e68bb932a5cfc, type: 2}
 --- !u!114 &1780726923
 MonoBehaviour:
@@ -88657,6 +89025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e0301194e37005847863e496fe4bb83c, type: 2}
 --- !u!1 &1795685800
 GameObject:
@@ -88783,6 +89152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 534249b23b861f64ea094197e927dd6e, type: 2}
 --- !u!114 &1796279417
 MonoBehaviour:
@@ -89038,6 +89408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8012e7f9cb34b64e81e826239108c71, type: 2}
 --- !u!1 &1804731973
 GameObject:
@@ -89816,6 +90187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 765f0fcd40287414a92092ff8c116bb5, type: 2}
 --- !u!1 &1825524783
 GameObject:
@@ -90152,6 +90524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1833794260
 GameObject:
@@ -90383,6 +90756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: c27600f1335b4a54bbda329d8d4dab57, type: 2}
 --- !u!1 &1844383869
 GameObject:
@@ -91022,6 +91396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 1fbe6764c3c04e544991f81d81107751, type: 2}
 --- !u!1 &1858676856
 GameObject:
@@ -91239,6 +91614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: e6ac25fea6d4fe14caaab81affbd2e4f, type: 2}
 --- !u!114 &1860601248
 MonoBehaviour:
@@ -92568,6 +92944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1902970447
 GameObject:
@@ -92927,6 +93304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1916219043
 GameObject:
@@ -93874,6 +94252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 557499c17e39886448fad2628dee0059, type: 2}
 --- !u!1 &1932793385
 GameObject:
@@ -94027,6 +94406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &1938834559
 GameObject:
@@ -95837,6 +96217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1984765399
 GameObject:
@@ -96470,6 +96851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1993258755
 GameObject:
@@ -96623,6 +97005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &1993520806
 GameObject:
@@ -96902,6 +97285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 93a0d6d2f3488f349bcfc3b0c772f8cd, type: 2}
 --- !u!114 &1996179448
 MonoBehaviour:
@@ -97053,6 +97437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2417b0864a491e742b88f4f9653d08b3, type: 2}
 --- !u!114 &1998071196
 MonoBehaviour:
@@ -97089,7 +97474,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -97516,6 +97901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 0fb2b16633756914e999c8c4ec261f0c, type: 2}
 --- !u!1 &2003819076
 GameObject:
@@ -97658,6 +98044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 53f17eb1d1b61fe4092f5e2e0dfbdaf5, type: 2}
 --- !u!114 &2004196647
 MonoBehaviour:
@@ -97694,7 +98081,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -98917,6 +99304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 61bb870efe4470d46a5a55dc7ab75b8a, type: 2}
 --- !u!114 &2028527766
 MonoBehaviour:
@@ -99519,6 +99907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 07ddbf3de14acb747a58566ba833b3b8, type: 2}
 --- !u!1 &2033186930
 GameObject:
@@ -99763,6 +100152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 05dc5ef00b23ae14a91978c5b0f24e6c, type: 2}
 --- !u!1 &2035104136
 GameObject:
@@ -100452,6 +100842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &2044269361
 GameObject:
@@ -100605,6 +100996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &2044310911
 GameObject:
@@ -101068,6 +101460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 09380e4be245c21418502fc5d060bd49, type: 2}
 --- !u!1 &2051274269
 GameObject:
@@ -101767,6 +102160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: ce93d183b7cb37749898314c24fc91fe, type: 2}
 --- !u!1 &2064636472
 GameObject:
@@ -102089,6 +102483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 81bdabfa4c5e05948ad9e4181b5ed095, type: 2}
 --- !u!1 &2065288991
 GameObject:
@@ -102843,6 +103238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 144e458578846b244b35279928b32cb0, type: 2}
 --- !u!1 &2086689509
 GameObject:
@@ -103332,6 +103728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 4e8fe593cc89e6249a53c0585a62ee75, type: 2}
 --- !u!1 &2107491747
 GameObject:
@@ -103543,7 +103940,7 @@ MonoBehaviour:
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -103620,6 +104017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 7fd93ff3850d00540812975d09f2f973, type: 2}
 --- !u!1 &2115832463
 GameObject:
@@ -104029,6 +104427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: f8a6efc1e93f6c44fa1e608858d3ffbd, type: 2}
 --- !u!1 &2119305897
 GameObject:
@@ -104499,6 +104898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 57c99d749a5a33945bf399da21c1f3dc, type: 2}
 --- !u!1 &2131851471
 GameObject:
@@ -104650,6 +105050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 29ff33d4114f0b94da2f41d0941a41ea, type: 2}
 --- !u!1 &2134714821
 GameObject:
@@ -105074,6 +105475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 6105145fd81d70944b047e0456a35631, type: 2}
 --- !u!1 &2140021645
 GameObject:
@@ -105227,6 +105629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 2a5f606e4a97efe4eba3342a8f73ed35, type: 2}
 --- !u!1 &2141327451
 GameObject:
@@ -105811,6 +106214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: 394ae162272e2644d88515700ffb1afb, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

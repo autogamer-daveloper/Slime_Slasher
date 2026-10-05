@@ -119,10 +119,10 @@ TextureImporter:
       name: Languages_ENG
       rect:
         serializedVersion: 2
-        x: 17
-        y: 30
-        width: 224
-        height: 205
+        x: 1
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Languages_RUS
       rect:
         serializedVersion: 2
-        x: 271
-        y: 30
-        width: 224
-        height: 205
+        x: 66
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,6 +155,28 @@ TextureImporter:
       bones: []
       spriteID: 9e030c212e5520ae0800000000000000
       internalID: -1584609689415438103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Languages_CHI
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013d440697b6b564d991596839de9477
+      internalID: 621925499
       vertices: []
       indices: 
       edges: []
@@ -173,6 +195,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Languages_CHI: 621925499
       Languages_ENG: 5081281843945458345
       Languages_RUS: -1584609689415438103
   mipmapLimitGroupName: 
