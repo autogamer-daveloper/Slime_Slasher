@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 36e261e2ba002484aa5c207c5c5f927d
+guid: 42e6ac9d6f32dc146af55d5144a46ee3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5684327315910396547
-    second: Blood_0
+      213: 8973751460926325698
+    second: Blood_Chinese_0
   - first:
-      213: -1189345562256101844
-    second: Blood_1
+      213: 8075111670037473237
+    second: Blood_Chinese_1
   - first:
-      213: 5722333315871558701
-    second: Blood_2
+      213: -8302921625303719830
+    second: Blood_Chinese_2
   - first:
-      213: 3909595645733894167
-    second: Blood_3
+      213: -3163026229881601742
+    second: Blood_Chinese_3
   - first:
-      213: -374699494892873770
-    second: Blood_4
+      213: -2532811163557872142
+    second: Blood_Chinese_4
   - first:
-      213: 5281811327271454313
-    second: Blood_5
+      213: 7767458859897860064
+    second: Blood_Chinese_5
   - first:
-      213: -2044344349260785571
-    second: Blood_6
+      213: -5424971568353787963
+    second: Blood_Chinese_6
   - first:
-      213: 1295801174852132906
-    second: Blood_7
+      213: 7312810307721043342
+    second: Blood_Chinese_7
+  - first:
+      213: -7798502092573177528
+    second: Blood_Chinese_8
+  - first:
+      213: 2084652084491232374
+    second: Blood_Chinese_9
+  - first:
+      213: -2966245737385236320
+    second: Blood_Chinese_10
+  - first:
+      213: 3524609235785894292
+    second: Blood_Chinese_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +105,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -134,7 +146,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blood_0
+      name: Blood_Chinese_0
       rect:
         serializedVersion: 2
         x: 12
@@ -149,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38a83e3b399c2ee40800000000000000
-      internalID: 5684327315910396547
+      spriteID: 2c30823a86b298c70800000000000000
+      internalID: 8973751460926325698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blood_1
+      name: Blood_Chinese_1
       rect:
         serializedVersion: 2
         x: 102
@@ -171,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2c48e225dfc96f40800000000000000
-      internalID: 5722333315871558701
+      spriteID: 5d7e136b74f801070800000000000000
+      internalID: 8075111670037473237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blood_2
+      name: Blood_Chinese_2
       rect:
         serializedVersion: 2
         x: 178
@@ -193,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d7546d6bcccccaf0800000000000000
-      internalID: -374699494892873770
+      spriteID: 2310aa0076caa14d0800000000000000
+      internalID: -3163026229881601742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blood_3
+      name: Blood_Chinese_3
       rect:
         serializedVersion: 2
         x: 9
@@ -215,36 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96646acfa63cc4940800000000000000
-      internalID: 5281811327271454313
+      spriteID: 5cfbdafe911a6b4b0800000000000000
+      internalID: -5424971568353787963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blood_4
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 21
-        width: 65
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d58dbbf45a701a3e0800000000000000
-      internalID: -2044344349260785571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blood_5
+      name: Blood_Chinese_5
       rect:
         serializedVersion: 2
         x: 181
@@ -259,8 +249,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2068969d4c9bf110800000000000000
-      internalID: 1295801174852132906
+      spriteID: 84909004aa726c390800000000000000
+      internalID: -7798502092573177528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_Chinese_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 21
+        width: 65
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499441ffc6de9e030800000000000000
+      internalID: 3524609235785894292
       vertices: []
       indices: 
       edges: []
@@ -269,7 +281,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bb76d8fac125cac4397b4f074b982589
+    spriteID: bec0eb53eb798fe4981a75c4518c8442
     internalID: 0
     vertices: []
     indices: 
@@ -279,12 +291,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blood_0: 5684327315910396547
-      Blood_1: 5722333315871558701
-      Blood_2: -374699494892873770
-      Blood_3: 5281811327271454313
-      Blood_4: -2044344349260785571
-      Blood_5: 1295801174852132906
+      Blood_Chinese_0: 8973751460926325698
+      Blood_Chinese_1: 8075111670037473237
+      Blood_Chinese_10: -2966245737385236320
+      Blood_Chinese_2: -3163026229881601742
+      Blood_Chinese_3: -5424971568353787963
+      Blood_Chinese_4: 3524609235785894292
+      Blood_Chinese_5: -7798502092573177528
+      Blood_Chinese_7: 7312810307721043342
+      Blood_Chinese_9: 2084652084491232374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
