@@ -221,6 +221,7 @@ MonoBehaviour:
   index: 0
   CancelInvokeButton: {fileID: 6718433080612408745}
   doTask: 1
+  dialogueSFX: {fileID: 0}
 --- !u!114 &1497007859693148113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909868e1b69bcff44b05ef48aeeb7321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
+  dialogue: {fileID: 0}
+  cutscene: {fileID: 0}
+  cutsceneDelay: 0
+  stepTimes: []
+  skipStepInDialogue: {fileID: 0}
+  timer: {fileID: 0}
+  secondCameraSystem: {fileID: 0}
+  cameraPointId: 
   src: {fileID: 0}
   whoosh: {fileID: 8300000, guid: f27b921322945de45bbdeea4710d675d, type: 3}
   defaultClip: {fileID: 8300000, guid: e89e7577e1b8a874b8ec840a1a892475, type: 3}
@@ -700,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
   container: {fileID: 11400000, guid: eeba73a02800e5443b6ecaea8e533fe4, type: 2}
 --- !u!1 &8063392652806592397
 GameObject:
