@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2615695062321316549}
+  - component: {fileID: 7262094874622933691}
   m_Layer: 0
   m_Name: Dead_Body_Druid_02
   m_TagString: Untagged
@@ -35,6 +36,34 @@ Transform:
   - {fileID: 1300169788831043373}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7262094874622933691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966508714223591087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7f9522dcee3de4f9af186a2766035d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CensorMomental
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
+  useResprite: 0
+  resprite: []
+  useReimage: 0
+  reimage: []
+  useSpriteRecolor: 0
+  spriteRecolor: []
+  useUIRecolor: 0
+  uiRecolor: []
+  useParticlesRecolor: 1
+  particleRecolor:
+  - particleRenderer: {fileID: 7886902798493924897}
+    normalMaterial: {fileID: 2100000, guid: 0a596a7f136bed74895a7be292f557d4, type: 2}
+    censoredMaterial: {fileID: 2100000, guid: 184727267fffb2545a5d70426aa442e0, type: 2}
+  useHidingObjects: 0
+  objects: []
 --- !u!1 &4498925816565608693
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +318,11 @@ PrefabInstance:
 --- !u!4 &1300169788831043373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
+  m_PrefabInstance: {fileID: 2959346173821424274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &7886902798493924897 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 4927604182309547187, guid: 22a3cc059fb58d44cbab5e8debd8c10b, type: 3}
   m_PrefabInstance: {fileID: 2959346173821424274}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4077548825038073841

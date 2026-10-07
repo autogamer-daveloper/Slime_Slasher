@@ -30,11 +30,11 @@ public class TmpTranslator : MonoBehaviour
 
         if (globalSettings != null)
         {
-            if(globalSettings.container[lang] == null) { Debug.LogError($"[TmpTranslator] Missing in global settings link to - container '{lang}'!"); return; }
+            if(globalSettings.container[lang] == null) { Debug.LogError($"[TmpTranslator] Missing in global settings link to - container '{lang}'!", this); return; }
 
             if (globalSettings.container[lang].isUsingFontAsset)
             {
-                if (globalSettings.container[lang].fontAsset == null) { Debug.LogError($"[TmpTranslator] Missing in language settings '{lang}' link to - fontAsset!"); return; }
+                if (globalSettings.container[lang].fontAsset == null) { Debug.LogError($"[TmpTranslator] Missing in language settings '{lang}' link to - fontAsset!", this); return; }
                 else { txt.font = globalSettings.container[lang].fontAsset; }
             }
             if (globalSettings.container[lang].recalculateScale)
@@ -42,6 +42,6 @@ public class TmpTranslator : MonoBehaviour
                 txt.fontSize *= globalSettings.container[lang].scaler;
             }
         }
-        else { Debug.LogError($"[TmpTranslator] Missing global language's settings!"); }
+        else { Debug.LogError($"[TmpTranslator] Missing global language's settings!", this); }
     }
 }

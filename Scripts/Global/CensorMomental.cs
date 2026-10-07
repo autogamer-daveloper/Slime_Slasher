@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using AGamesStudio.Censor.Containers;
 
-public class Censor : MonoBehaviour
+public class CensorMomental : MonoBehaviour
 {
     [Header("__ Global language data __")]
     [Tooltip("Global settings container, which have all language's specific settings.")]
@@ -23,7 +23,9 @@ public class Censor : MonoBehaviour
     [SerializeField] private bool useHidingObjects = false;
     [SerializeField] private GameObject[] objects;
 
-    private void Awake()
+    private void Awake() { CensorCheck(); }
+
+    internal void CensorCheck()
     {
         int lang = KeyManager.Get_Bool_Key("Language");
 
@@ -124,48 +126,5 @@ public class Censor : MonoBehaviour
         {
             _objects.SetActive(isCensored ? false : true);
         }
-    }
-}
-
-namespace AGamesStudio.Censor.Containers
-{
-    [System.Serializable]
-    internal class Resprite
-    {
-        [SerializeField] internal SpriteRenderer spriteRenderer;
-        [SerializeField] internal Sprite normalSprite;
-        [SerializeField] internal Sprite censoredSprite;
-    }
-
-    [System.Serializable]
-    internal class Reimage
-    {
-        [SerializeField] internal Image image;
-        [SerializeField] internal Sprite normalSprite;
-        [SerializeField] internal Sprite censoredSprite;
-    }
-
-    [System.Serializable]
-    internal class SpriteRecolor
-    {
-        [SerializeField] internal SpriteRenderer spriteRenderer;
-        [SerializeField] internal Color normalColor;
-        [SerializeField] internal Color censoredColor;
-    }
-
-    [System.Serializable]
-    internal class UIRecolor
-    {
-        [SerializeField] internal Image image;
-        [SerializeField] internal Color normalColor;
-        [SerializeField] internal Color censoredColor;
-    }
-
-    [System.Serializable]
-    internal class ParticleReimage
-    {
-        [SerializeField] internal ParticleSystemRenderer particleRenderer;
-        [SerializeField] internal Material normalMaterial;
-        [SerializeField] internal Material censoredMaterial;
     }
 }

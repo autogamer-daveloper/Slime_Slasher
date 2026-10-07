@@ -3,8 +3,8 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Censor))]
-public class CensorEditor : Editor
+[CustomEditor(typeof(CensorMomental))]
+public class CensorMomentalEditor : Editor
 {
     private GUIStyle titleStyle;
     private GUIStyle subtitleStyle;

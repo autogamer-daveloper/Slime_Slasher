@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2615695062321316549}
+  - component: {fileID: 7191879013916419672}
   m_Layer: 0
   m_Name: Dead_Body_Skeleton_01
   m_TagString: Untagged
@@ -35,6 +36,37 @@ Transform:
   - {fileID: 4501579960957601144}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7191879013916419672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966508714223591087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7f9522dcee3de4f9af186a2766035d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CensorMomental
+  globalSettings: {fileID: 11400000, guid: fa65c00e6c0adb146a818be51ee9c18b, type: 2}
+  useResprite: 1
+  resprite:
+  - spriteRenderer: {fileID: 5766983061375508454}
+    normalSprite: {fileID: 2658268868511054802, guid: 0b03e4ce7e739a54ab87c164504671b6, type: 3}
+    censoredSprite: {fileID: 1476613736485436826, guid: 5eadaa707a604c14aa523f3b6956476a, type: 3}
+  useReimage: 0
+  reimage: []
+  useSpriteRecolor: 0
+  spriteRecolor: []
+  useUIRecolor: 0
+  uiRecolor: []
+  useParticlesRecolor: 1
+  particleRecolor:
+  - particleRenderer: {fileID: 4683773127688107124}
+    normalMaterial: {fileID: 2100000, guid: c6b1478656262ef49b744800a06a71ee, type: 2}
+    censoredMaterial: {fileID: 2100000, guid: 876c8c8a11f13f4438f871ab89001743, type: 2}
+  useHidingObjects: 0
+  objects: []
 --- !u!1 &4498925816565608693
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +96,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.046, y: 0, z: 0}
-  m_LocalScale: {x: -1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2615695062321316549}
@@ -118,9 +150,9 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 3fd90c97532ed374681f6f6279e71cd5, type: 3}
+  m_Sprite: {fileID: 2658268868511054802, guid: 0b03e4ce7e739a54ab87c164504671b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -229,6 +261,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4258879274484866495, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
   m_PrefabInstance: {fileID: 387950847307585735}
   m_PrefabAsset: {fileID: 0}
+--- !u!199 &4683773127688107124 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 4927604182309547187, guid: c0a1febf59db21746b96751a3f85501f, type: 3}
+  m_PrefabInstance: {fileID: 387950847307585735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3201710088010027866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,7 +338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 176409948755698853, guid: f50aa4c94e155994e85740c40589ce91, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.96
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 176409948755698853, guid: f50aa4c94e155994e85740c40589ce91, type: 3}
       propertyPath: m_LocalScale.y
@@ -313,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 176409948755698853, guid: f50aa4c94e155994e85740c40589ce91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.83
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 176409948755698853, guid: f50aa4c94e155994e85740c40589ce91, type: 3}
       propertyPath: m_LocalPosition.z
