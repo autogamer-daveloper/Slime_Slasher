@@ -143,7 +143,7 @@ public class CensorEditor : Editor
                 rect.width - 100f,
                 22f
             ),
-            "CENSOR",
+            "Censor",
             titleStyle
         );
 

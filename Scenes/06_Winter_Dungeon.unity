@@ -4943,13 +4943,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1419739570937491052, guid: fcbe1665b6fb67648b9ff27b499f968e, type: 3}
+  m_Sprite: {fileID: -3047597608192568032, guid: bebb660fe099b94479a0ec715e7862db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -100088,6 +100088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
   excludedAudioSources: []
+  includedAudioSources: []
 --- !u!114 &4074163416432660048
 MonoBehaviour:
   m_ObjectHideFlags: 0

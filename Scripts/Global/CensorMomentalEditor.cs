@@ -143,7 +143,7 @@ public class CensorMomentalEditor : Editor
                 rect.width - 100f,
                 22f
             ),
-            "CENSOR",
+            "Censor momental",
             titleStyle
         );
 

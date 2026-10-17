@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class WarningMessage : MonoBehaviour
 {
+    [Header("__ Input type __")]
+    [SerializeField] private InputType inputType;
+
     [Header("__ UI: Panels __")]
     [Tooltip("Warning panel, shows when game start.")]
     [SerializeField] private GameObject warning;
@@ -12,13 +15,14 @@ public class WarningMessage : MonoBehaviour
 
     private void Start()
     {
+        bool isMobile = inputType.IsMobileInput();
         int x = KeyManager.Get_Bool_Key("WarningShowed");
         int u = KeyManager.Get_Bool_Key("Rated");
         int i = KeyManager.Get_Bool_Key("IsRatedShowed");
         if (x == 1)
         {
             warning.SetActive(false);
-            if (u != 1 && i == 0) { rateGame.SetActive(true); }
+            if (u != 1 && i == 0 && isMobile) { rateGame.SetActive(true); }
         }
         else { TryToShowWarning(); }
         KeyManager.Set_Bool_Key("WarningShowed", 0);

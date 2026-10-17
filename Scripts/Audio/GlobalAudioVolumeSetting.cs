@@ -4,8 +4,10 @@ using System.Collections.Generic;
 public class GlobalAudioVolumeSetting : MonoBehaviour
 {
     [Header("Audio Source Exceptions")]
-    [Tooltip("Select audio sources, which won't change volume by this class.")]
+    [Tooltip("Select audio sources, which won't change volume by this class. (Has more priority then included field).")]
     [SerializeField] private AudioSource[] excludedAudioSources;
+    [Tooltip("Select all inactive audio sources there, because only active audio sources will be found (without included field) at awake.")]
+    [SerializeField] private AudioSource[] includedAudioSources;
 
     private Dictionary<AudioSource, float> originalVolumes = new Dictionary<AudioSource, float>();
     private const string audioVolumeKey = "AudioVolume";
@@ -32,10 +34,18 @@ public class GlobalAudioVolumeSetting : MonoBehaviour
         foreach (AudioSource audioSource in allFoundAudioSources)
         {
             if (audioSource == null || IsExcluded(audioSource)) { continue; }
-
             if (!originalVolumes.ContainsKey(audioSource)) { originalVolumes.Add(audioSource, audioSource.volume); }
-
             audioSource.volume = originalVolumes[audioSource] * multiplier;
+        }
+
+        if (includedAudioSources != null && includedAudioSources.Length > 0)
+        {
+            foreach (AudioSource audioSource in includedAudioSources)
+            {
+                if (audioSource == null || IsExcluded(audioSource)) { continue; }
+                if (!originalVolumes.ContainsKey(audioSource)) { originalVolumes.Add(audioSource, audioSource.volume); }
+                audioSource.volume = originalVolumes[audioSource] * multiplier;
+            }
         }
 
         Debug.Log($"Found AudioSources: {allFoundAudioSources.Length}");

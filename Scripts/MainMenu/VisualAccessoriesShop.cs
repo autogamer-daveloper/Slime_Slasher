@@ -32,6 +32,8 @@ public class VisualAccessoryProduct
 
 public class VisualAccessoriesShop : MonoBehaviour
 {
+    [Header("__ Input type __")]
+    [SerializeField] private InputType inputType;
     [Header("__ Products __")]
     [Tooltip("Set up your accessories.")]
     [SerializeField] private VisualAccessoryProduct[] products;
@@ -51,7 +53,19 @@ public class VisualAccessoriesShop : MonoBehaviour
 
     private int _astraslimes = 0;
 
-    private void Start() { _astraslimes = KeyManager.Get_Bool_Key("Astraslimes"); Initialize(); UpdateUI(); removeVisualAccessories.onClick.AddListener(DeleteVisualAccessories); }
+    private void Start()
+    {
+        _astraslimes = KeyManager.Get_Bool_Key("Astraslimes");
+        Initialize();
+        UpdateUI();
+        removeVisualAccessories.onClick.AddListener(DeleteVisualAccessories);
+
+        bool isMobile = inputType.IsMobileInput();
+        if (isMobile)
+        {
+            GetForFreeVisualAccessory(4);
+        }
+    }
 
     private void OnDestroy() { removeVisualAccessories.onClick.RemoveListener(DeleteVisualAccessories); }
 

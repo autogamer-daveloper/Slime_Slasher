@@ -9141,7 +9141,6 @@ GameObject:
   - component: {fileID: 196581314}
   - component: {fileID: 196581317}
   - component: {fileID: 196581316}
-  - component: {fileID: 196581315}
   m_Layer: 0
   m_Name: price
   m_TagString: Untagged
@@ -9169,20 +9168,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 12.5}
   m_SizeDelta: {x: 200, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &196581315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196581313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
-  globalSettings: {fileID: 0}
-  container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &196581316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13088,6 +13073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d96eb46fc186a84eb922decfe175fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisualAccessoriesShop
+  inputType: {fileID: 1007695684}
   products:
   - visualId: 1
     boughtKey: visual_bought_1
@@ -24425,7 +24411,6 @@ GameObject:
   - component: {fileID: 471970202}
   - component: {fileID: 471970205}
   - component: {fileID: 471970204}
-  - component: {fileID: 471970203}
   m_Layer: 0
   m_Name: count
   m_TagString: Untagged
@@ -24452,20 +24437,6 @@ RectTransform:
   m_AnchoredPosition: {x: 175, y: 0}
   m_SizeDelta: {x: 320, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &471970203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471970201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
-  globalSettings: {fileID: 0}
-  container: {fileID: 11400000, guid: ea6b2878514eff84b86e3a21d7197b46, type: 2}
 --- !u!114 &471970204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50136,7 +50107,6 @@ GameObject:
   - component: {fileID: 983511392}
   - component: {fileID: 983511395}
   - component: {fileID: 983511394}
-  - component: {fileID: 983511393}
   m_Layer: 0
   m_Name: price
   m_TagString: Untagged
@@ -50164,20 +50134,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 12.5}
   m_SizeDelta: {x: 200, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &983511393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983511391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
-  globalSettings: {fileID: 0}
-  container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &983511394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51331,6 +51287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd14960828a634586176d7c0f097b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WarningMessage
+  inputType: {fileID: 1007695684}
   warning: {fileID: 356152979}
   rateGame: {fileID: 1049301159}
 --- !u!114 &1007695680
@@ -51366,6 +51323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
   excludedAudioSources: []
+  includedAudioSources: []
 --- !u!114 &1007695682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55609,7 +55567,6 @@ GameObject:
   - component: {fileID: 1093811042}
   - component: {fileID: 1093811045}
   - component: {fileID: 1093811044}
-  - component: {fileID: 1093811043}
   m_Layer: 0
   m_Name: price
   m_TagString: Untagged
@@ -55637,20 +55594,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 12.5}
   m_SizeDelta: {x: 200, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1093811043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093811041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
-  globalSettings: {fileID: 0}
-  container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &1093811044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58634,7 +58577,6 @@ GameObject:
   - component: {fileID: 1155064343}
   - component: {fileID: 1155064346}
   - component: {fileID: 1155064345}
-  - component: {fileID: 1155064344}
   m_Layer: 0
   m_Name: price
   m_TagString: Untagged
@@ -58662,20 +58604,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 12.5}
   m_SizeDelta: {x: 200, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1155064344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155064342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbb65991041d8a4cba872c9833843fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TmpTranslator
-  globalSettings: {fileID: 0}
-  container: {fileID: 11400000, guid: db091b949c5dd744fb9adf08fd3df798, type: 2}
 --- !u!114 &1155064345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105712,11 +105640,11 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1007695675}
   - {fileID: 619394802}
   - {fileID: 1138123572}
   - {fileID: 651551602}
   - {fileID: 1733147446}
   - {fileID: 356894606}
   - {fileID: 1451529626}
-  - {fileID: 1007695675}
   - {fileID: 80616792}

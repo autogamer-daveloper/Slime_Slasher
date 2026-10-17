@@ -31,8 +31,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio System")]
     [SerializeField] private GameObject movingSource;
 
+    private bool _blockedRotation = false;
+
     private Vector3 _velocity;
     private Vector2 _direction;
+    private Vector2 _mouseVector;
 
     private Camera _camera;
     private Vector2 _rotation;
@@ -63,29 +66,30 @@ public class PlayerMovement : MonoBehaviour
         movingSource.SetActive(false);
     }
 
-    private void Update() {
-        Vector2 mouseVector;
+    private void Update()
+    {
         bool isMobile = inputType.IsMobileInput();
         if (isMobile)
         {
             _direction = new Vector2(joystick.Horizontal, joystick.Vertical);
-            mouseVector = lookArea.IsDragging
+            _mouseVector = lookArea.IsDragging
                 ? lookArea.Delta * mobileSensitivity
                 : Vector2.zero;
         }
         else
         {
             _direction = moveAction.action.ReadValue<Vector2>();
-            mouseVector = lookAction.action.ReadValue<Vector2>();
+            if (!_blockedRotation) { _mouseVector = lookAction.action.ReadValue<Vector2>(); }
+            else { _mouseVector = Vector2.zero; }
         }
 
         _direction *= moveSpeed;
         Vector3 move = Quaternion.Euler(0, _camera.transform.eulerAngles.y, 0) * new Vector3(_direction.x, 0, _direction.y);
         _velocity = new Vector3(move.x, _velocity.y, move.z);
 
-        if(_direction.x > 0f || _direction.y > 0f) { movingSource.SetActive(true); }
+        if (_direction.x > 0f || _direction.y > 0f) { movingSource.SetActive(true); }
         else { movingSource.SetActive(false); }
-        
+
         character.Move(_velocity * Time.deltaTime);
 
         if (character.isGrounded && isEnabledJump)
@@ -96,10 +100,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else { _velocity.y += gravityForce * Time.deltaTime; }
 
-        mouseVector *= rotateSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.up * mouseVector.x);
-        _rotation.y -= mouseVector.y;
+        _mouseVector *= rotateSpeed * Time.deltaTime;
+        transform.Rotate(Vector3.up * _mouseVector.x);
+        _rotation.y -= _mouseVector.y;
         _rotation.y = Mathf.Clamp(_rotation.y, minFov, maxFov);
-        _camera.transform.localRotation = Quaternion.Euler(_rotation.y, 0, 0);
+        _camera.transform.localRotation = Quaternion.Euler(_rotation.y, 0, 0);   
     }
+    
+    public void IsBlockedRotation(bool status) { _blockedRotation = status; }
 }
