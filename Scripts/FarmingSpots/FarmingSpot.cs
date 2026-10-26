@@ -9,6 +9,8 @@ public class FarmingSpot : MonoBehaviour
     [SerializeField] private GameObject getButtonObj;
     [SerializeField] private int timer = 10;
     [SerializeField] private GameObject harvest;
+    [SerializeField] private bool useSpot;
+    [SerializeField] private GameObject spot;
     [Tooltip("If you will use particle, set this field.")]
     [SerializeField] private ParticleSystem particleEffect;
     [Header("__ Item settings __")]
@@ -45,6 +47,7 @@ public class FarmingSpot : MonoBehaviour
 
     private void VisibilityOfHarvest(bool answer)
     {
+        if(useSpot) { spot.SetActive(!answer); };
         harvest.SetActive(answer);
         _isGrown = answer;
     }
