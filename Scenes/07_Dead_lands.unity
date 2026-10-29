@@ -19245,8 +19245,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffe702dc416394e9b2c49fe21fad39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioVolumeSetting
-  excludedAudioSources: []
-  includedAudioSources: []
+  excludedAudioSources:
+  - {fileID: 1621542045}
+  - {fileID: 542865828}
+  includedAudioSources:
+  - {fileID: 5521837284257993574}
+  - {fileID: 3179392337519127836}
+  - {fileID: 8033704317748454032}
+  - {fileID: 1135903531752135914}
 --- !u!114 &619394804
 MonoBehaviour:
   m_ObjectHideFlags: 0
