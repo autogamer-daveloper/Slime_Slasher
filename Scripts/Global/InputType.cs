@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class InputType : MonoBehaviour
 {
-    private enum BuildType
-    {
-        Mobile,
-        PC
-    }
-
     [Header("__ Platform settings __")]
-    [SerializeField] private BuildType buildType = BuildType.Mobile;
+    [SerializeField] private BuildTypeScriptable build;
     [Space(5)]
     [Tooltip("Is need to have only mobile objects.")]
     [SerializeField] private bool isHaveMobileObjects;
@@ -22,13 +16,13 @@ public class InputType : MonoBehaviour
 
     internal bool IsMobileInput()
     {
-        if (buildType == BuildType.Mobile) { return true; }
+        if (build.buildType == BuildType.Mobile) { return true; }
         else { return false; }
     }
 
     private void Start()
     {
-        switch (buildType)
+        switch (build.buildType)
         {
             case BuildType.Mobile:
                 if(isHaveMobileObjects) { foreach(GameObject obj in mobileObjects) { obj.SetActive(true); }}

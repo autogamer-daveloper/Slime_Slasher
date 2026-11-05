@@ -15,7 +15,10 @@ public class PlayerStatus : MonoBehaviour
 {
     [Header("__ Scene ID __")]
     [SerializeField] private int sceneID = 0;
+    [Tooltip("Zero mode character, can't be damaged, inf health and mana mode.")]
     [SerializeField] private bool isZero = false;
+    [Tooltip("God mode character, can spend health and mana, but not below 1.")]
+    [SerializeField] private bool isUnkillable = false;
     [Header("__ Special __")]
     [SerializeField] private bool isFirstNightmare = false;
     [SerializeField] private ActivateTrapsNightmare nightmare;
@@ -207,6 +210,12 @@ public class PlayerStatus : MonoBehaviour
         if (isZero == true) { return; }
         if (health <= 0)
         {
+            if(isUnkillable)
+            {
+                healthText.text = "1" + "/" + (maxHealth + _extraLife + _st_health).ToString();
+                health = 1;
+                return;
+            }
             healthText.text = "0" + "/" + (maxHealth + _extraLife + _st_health).ToString();
             src.PlayOneShot(death);
             Debug.Log("You died!");

@@ -40,11 +40,11 @@ public class InputTypeEditor : Editor
 
         EditorGUILayout.Space(6f);
 
-        SerializedProperty buildType = serializedObject.FindProperty("buildType");
+        SerializedProperty build = serializedObject.FindProperty("build");
         SerializedProperty isHaveMobileObjects = serializedObject.FindProperty("isHaveMobileObjects");
         SerializedProperty isHaveComputerObjects = serializedObject.FindProperty("isHaveComputerObjects");
 
-        EditorGUILayout.PropertyField(buildType);
+        EditorGUILayout.PropertyField(build);
         EditorGUILayout.PropertyField(isHaveMobileObjects);
         EditorGUILayout.PropertyField(isHaveComputerObjects);
 
