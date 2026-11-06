@@ -18,7 +18,7 @@ public class ActivateTrapsNightmare : MonoBehaviour
     [SerializeField] private UnityEvent Dead;
 
     private int _minutes = 0;
-    private int _seconds = 45;
+    private int _seconds = 10;
 
     private void Start() { activate.onClick.AddListener(ActivateTrap); }
 
