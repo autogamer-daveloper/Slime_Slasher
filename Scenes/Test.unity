@@ -6669,6 +6669,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1920036141}
   timer: 35
   harvest: {fileID: 1436736844}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 31
@@ -11688,6 +11690,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1845903274}
   timer: 50
   harvest: {fileID: 1707850323}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 22
@@ -15226,8 +15230,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921756828}
   m_HandleRect: {fileID: 1921756827}
   m_Direction: 2
-  m_Value: 0.99999976
-  m_Size: 0.45714292
+  m_Value: 1
+  m_Size: 0.45714286
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15917,8 +15921,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575506715}
   m_HandleRect: {fileID: 1575506714}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.5485715
+  m_Value: 1
+  m_Size: 0.5485714
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19162,6 +19166,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1567651186}
   timer: 45
   harvest: {fileID: 1001768042}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 29
@@ -28246,6 +28252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatus
   sceneID: 0
   isZero: 0
+  isUnkillable: 0
   isFirstNightmare: 0
   nightmare: {fileID: 0}
   healthText: {fileID: 2038880669}
@@ -29319,6 +29326,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1769918700}
   timer: 30
   harvest: {fileID: 2062951615}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 23
@@ -31353,7 +31362,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &674363446
 Transform:
@@ -33916,7 +33925,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &724924506
 GameObject:
@@ -34359,6 +34368,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 683731780}
   timer: 55
   harvest: {fileID: 802219323}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 27
@@ -37321,7 +37332,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &802219325
 Transform:
@@ -38785,7 +38796,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &822270986
 GameObject:
@@ -41524,7 +41535,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &844928935
 Transform:
@@ -44464,6 +44475,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1503501260}
   timer: 60
   harvest: {fileID: 1888420100}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 28
@@ -46811,6 +46824,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1813559790}
   timer: 45
   harvest: {fileID: 982632761}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 25
@@ -47131,6 +47146,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 923817725}
   timer: 45
   harvest: {fileID: 674363444}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 21
@@ -47225,7 +47242,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &982632763
 Transform:
@@ -47878,6 +47895,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1763613707}
   timer: 37
   harvest: {fileID: 1961511856}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 32
@@ -48351,7 +48370,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1001768044
 Transform:
@@ -49566,7 +49585,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1039758858
 GameObject:
@@ -50279,7 +50298,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1045973684
 Transform:
@@ -65973,7 +65992,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1396359596
 GameObject:
@@ -67600,7 +67619,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1436736846
 Transform:
@@ -73902,7 +73921,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1557750268
 GameObject:
@@ -78501,7 +78520,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1654469773
 Transform:
@@ -80895,7 +80914,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1707850325
 Transform:
@@ -84936,8 +84955,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664007846}
   m_HandleRect: {fileID: 664007845}
   m_Direction: 2
-  m_Value: 0.9999972
-  m_Size: 0.88073415
+  m_Value: 1
+  m_Size: 0.88073397
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -89521,6 +89540,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 468254193}
   timer: 50
   harvest: {fileID: 844928933}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 26
@@ -90900,6 +90921,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1103025961}
   timer: 70
   harvest: {fileID: 1045973682}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 30
@@ -91115,7 +91138,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1888420102
 Transform:
@@ -93615,7 +93638,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1961511858
 Transform:
@@ -95050,7 +95073,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1985612583
 GameObject:
@@ -99094,7 +99117,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2062951617
 Transform:
@@ -100723,6 +100746,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 1812047391}
   timer: 20
   harvest: {fileID: 1654469771}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 24
@@ -102382,12 +102407,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3719068211130651045, guid: dcd28230c6e8c5c4d815a1ef14015d50, type: 3}
+  m_Sprite: {fileID: 3168504048300293370, guid: 7244e921c5d5312478f648a7514feb7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.62, y: 1.56}
+  m_Size: {x: 0.55, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102984,7 +103009,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!58 &929694387912379416
 CircleCollider2D:
@@ -103136,7 +103161,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &984438376985105058
 Transform:
@@ -103380,7 +103405,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1214586018159511506
 MonoBehaviour:
@@ -103398,6 +103423,8 @@ MonoBehaviour:
   getButtonObj: {fileID: 824609762}
   timer: 20
   harvest: {fileID: 5726025975080906227}
+  useSpot: 0
+  spot: {fileID: 0}
   particleEffect: {fileID: 0}
   inv: {fileID: 1260874431}
   id: 20
@@ -103473,7 +103500,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1235359321485450265
 Transform:
@@ -103600,7 +103627,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1428027970166418743
 CircleCollider2D:
@@ -103960,7 +103987,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1737915058926647899
 Transform:
@@ -104034,7 +104061,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1758501409384161807
 GameObject:
@@ -104147,7 +104174,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1857235751325888998
 Rigidbody2D:
@@ -104285,7 +104312,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1983587475172860681
 Rigidbody2D:
@@ -104477,7 +104504,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!58 &2198550939011597800
 CircleCollider2D:
@@ -104745,7 +104772,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!58 &2405153516606264817
 CircleCollider2D:
@@ -105342,7 +105369,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3261969578584792889
 MonoBehaviour:
@@ -105509,7 +105536,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &3468803876668111271
 Rigidbody2D:
@@ -106034,7 +106061,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &4240990693757094494
 Rigidbody2D:
@@ -106659,7 +106686,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &4988971721764355716
 Transform:
@@ -106749,7 +106776,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5060269596048475041
 GameObject:
@@ -106994,7 +107021,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5354098648930637752
 GameObject:
@@ -107071,7 +107098,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5420113435656344129
 GameObject:
@@ -107347,7 +107374,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5726025975080906227
 GameObject:
@@ -107845,12 +107872,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3004918560657441691, guid: dcd28230c6e8c5c4d815a1ef14015d50, type: 3}
+  m_Sprite: {fileID: 3168504048300293370, guid: 7244e921c5d5312478f648a7514feb7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.62, y: 1.56}
+  m_Size: {x: 0.55, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108077,7 +108104,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6895809272911181324
 GameObject:
@@ -108376,7 +108403,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7129422570666249617
 GameObject:
@@ -108454,7 +108481,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7204704234705541322
 MonoBehaviour:
@@ -108534,7 +108561,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7260634860057324363
 MonoBehaviour:
@@ -108630,7 +108657,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &7445967011855602335
 Rigidbody2D:
@@ -109463,7 +109490,7 @@ SpriteRenderer:
   m_Size: {x: 1.62, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &8553916006484069565
 Rigidbody2D:
@@ -109729,12 +109756,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1013099012324604318, guid: dcd28230c6e8c5c4d815a1ef14015d50, type: 3}
+  m_Sprite: {fileID: 3168504048300293370, guid: 7244e921c5d5312478f648a7514feb7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.62, y: 1.56}
+  m_Size: {x: 0.55, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -109919,12 +109946,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5248844365648247204, guid: dcd28230c6e8c5c4d815a1ef14015d50, type: 3}
+  m_Sprite: {fileID: 3168504048300293370, guid: 7244e921c5d5312478f648a7514feb7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.62, y: 1.56}
+  m_Size: {x: 0.55, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -1,16 +1,29 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class MicroAudioSettings : MonoBehaviour
+public class MicroAudioVolumeSetting : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private const string audioVolumeKey = "AudioVolume";
+
+    private void Awake() { CalculateVolume(); }
+
+    private AudioSource GetAudioSource() { return this.gameObject.GetComponent<AudioSource>(); }
+
+    private void CalculateVolume()
     {
-        
+        float volumeInSettings = 100f;
+
+        if (PlayerPrefs.HasKey(audioVolumeKey)) { volumeInSettings = KeyManager.Get_Bool_Key(audioVolumeKey); }
+
+        float multiplier = volumeInSettings / 100f;
+        AudioSource src = GetAudioSource();
+        if(src == null) { Debug.LogError($"[MicroAudioVolumeSetting.cs]: can't find audio source on object {this.gameObject.name}"); return; }
+        float originalVolume = src.volume;
+        src.volume = originalVolume * multiplier;
+
+        Debug.Log($"Volume setting: {volumeInSettings}");
+        Debug.Log($"Multiplier: {multiplier}");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    internal void Recalculate() { CalculateVolume(); }
 }

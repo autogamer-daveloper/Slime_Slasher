@@ -36255,7 +36255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5310775134183352810, guid: fcbe1665b6fb67648b9ff27b499f968e, type: 3}
+  m_Sprite: {fileID: 178834175, guid: 365d7e72d658d40439fff178d6c0056d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -47899,6 +47899,12 @@ MonoBehaviour:
   - image: {fileID: 283863321}
     normalSprite: {fileID: 21300000, guid: 7d7363902893a8a4989f7fb6133d4b63, type: 3}
     censoredSprite: {fileID: 21300000, guid: f261243b6d492c2419d95624933b5898, type: 3}
+  - image: {fileID: 1539195874}
+    normalSprite: {fileID: -8660797451126471611, guid: a1fd9bfcb2548c04bbbcc9d238088ff8, type: 3}
+    censoredSprite: {fileID: 1694239839273058071, guid: 21e863afe2e4a7448937ecc555683a8b, type: 3}
+  - image: {fileID: 2087336843}
+    normalSprite: {fileID: -8660797451126471611, guid: a1fd9bfcb2548c04bbbcc9d238088ff8, type: 3}
+    censoredSprite: {fileID: 1694239839273058071, guid: 21e863afe2e4a7448937ecc555683a8b, type: 3}
   useSpriteRecolor: 0
   spriteRecolor: []
   useUIRecolor: 0
@@ -47923,40 +47929,8 @@ MonoBehaviour:
   - particleRenderer: {fileID: 974697580}
     normalMaterial: {fileID: 2100000, guid: c6b1478656262ef49b744800a06a71ee, type: 2}
     censoredMaterial: {fileID: 2100000, guid: 876c8c8a11f13f4438f871ab89001743, type: 2}
-  useHidingObjects: 1
-  objects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  useHidingObjects: 0
+  objects: []
 --- !u!4 &1251926457
 Transform:
   m_ObjectHideFlags: 0
@@ -60827,7 +60801,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 211.9, y: 232.51}
+  m_SizeDelta: {x: 200, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539195873
 MonoBehaviour:
@@ -60858,13 +60832,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6309443083074984716, guid: 1e642c3af8b858a40a5fc76b55bec37f, type: 3}
+  m_Sprite: {fileID: 1838707043958515767, guid: a1fd9bfcb2548c04bbbcc9d238088ff8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -81076,7 +81050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5310775134183352810, guid: fcbe1665b6fb67648b9ff27b499f968e, type: 3}
+  m_Sprite: {fileID: 178834175, guid: 365d7e72d658d40439fff178d6c0056d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -82236,7 +82210,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 211.9, y: 232.51}
+  m_SizeDelta: {x: 200, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087336842
 MonoBehaviour:
@@ -82267,13 +82241,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6309443083074984716, guid: 1e642c3af8b858a40a5fc76b55bec37f, type: 3}
+  m_Sprite: {fileID: 1838707043958515767, guid: a1fd9bfcb2548c04bbbcc9d238088ff8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -92794,6 +92768,34 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 394307189}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[5].m_Data
+      value: 
+      objectReference: {fileID: 1242675254284985645, guid: c20c535d97504894fa60e501f2f311ad, type: 3}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[9].m_Data
+      value: 
+      objectReference: {fileID: -6459750639907848495, guid: c20c535d97504894fa60e501f2f311ad, type: 3}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[9].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_Tiles.Array.data[0].second.m_TileSpriteIndex
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701672176398965792, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
+      propertyPath: m_Tiles.Array.data[32].second.m_TileSpriteIndex
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8779832011546361292, guid: a63771eaec042cd41af6c41d1cce09fc, type: 3}
       propertyPath: m_Name
       value: Dungeon (Secret)

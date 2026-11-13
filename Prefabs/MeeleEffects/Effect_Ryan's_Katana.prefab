@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6079096721352564492}
+  - component: {fileID: 8432443990873665488}
   - component: {fileID: 429410376800417343}
   m_Layer: 0
   m_Name: Audio Source
@@ -32,6 +33,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5146213387219384100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8432443990873665488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676498819895279297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f8beb45feddf145b2c053dfcc7d171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MicroAudioVolumeSetting
 --- !u!82 &429410376800417343
 AudioSource:
   m_ObjectHideFlags: 0
